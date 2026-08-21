@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+
+# Printer-specific generated output
+*.gcode
+*.gcode.3mf
+*.bgcode
+
+# Slicer and CAD temporary files
+*.tmp
+*.bak
+*.autosave
+~$*
