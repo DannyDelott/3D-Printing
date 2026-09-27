@@ -486,7 +486,7 @@
       "part": "stiles",
       "path": "stiles/revisions/v12",
       "title": "Stile V12 \u00b7 0.05 / 0.00 mm fit coupons",
-      "status": "User approved the .05 socket: worked great. Zero-clearance alternative not selected. Applied to full stile V13.",
+      "status": "User approved the .05 socket: worked great. Zero-clearance alternative not selected. Applied to full stile V13. Full V13 subsequently reported too tight with bowed socket arms.",
       "template_thickness_mm": 12.7,
       "artifacts": {
         "stile-dovetail-v12-comparison.3mf": "fit-test/stile-dovetail-v12-comparison.3mf",
@@ -525,8 +525,8 @@
     {
       "id": "v13",
       "part": "stiles",
-      "title": "Stile V13 \u00b7 approved 0.05 mm fit",
-      "status": "Full stile with the user-approved V12 .05 socket fit. Joint fit approved; full-template strength untested.",
+      "title": "Stile V13 \u00b7 0.05 mm \u00b7 fit failed",
+      "status": "Full stile fit failed: too tight; socket arms bow during assembly. Correction pending.",
       "template_thickness_mm": 12.7,
       "path": "stiles/revisions/v13",
       "artifacts": {
@@ -562,7 +562,7 @@
     "split_rail_candidate": "v10",
     "split_stiles": "v13",
     "fit_test": "rail-native-dovetail-v9-fit-test-sliced.3mf",
-    "physical_approval": "Rail V9 joint and stile V12 .05 joint fits approved by user. Rail V10 and stile V13 are the current full models; full-template strength remains untested.",
+    "physical_approval": "Rail V9 coupon fit approved. Stile V12 .05 coupon passed, but the full V13 print was subsequently reported too tight with bowed socket arms. Full-stile fit correction pending.",
     "compatibility": "Rail V10 retains the approved broad V9 joint. Stile V10 has a narrower joint and its own full-width coupon; rail and stile halves are not interchangeable.",
     "approved_joint": {
       "revision": "v9",
@@ -580,7 +580,9 @@
       "depth_clearance_mm": 0.1,
       "coupon_fit": "approved",
       "user_feedback": "the .05 worked great",
-      "applied_full_revision": "v13"
+      "applied_full_revision": "v13",
+      "full_model_fit": "failed: too tight; socket arms bow",
+      "full_model_feedback_date": "2026-09-27"
     }
   }
 }

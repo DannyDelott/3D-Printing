@@ -68,8 +68,8 @@ def split_payload(part, stem, sliced, flip=False, reinforced=False):
                 view_bounds_mm=geometry.extents.tolist(),split_outlines_inches=[loop.round(6).tolist() for loop in loops],
                 sha256=hashlib.sha256(artifact_path(stem+'.3mf').read_bytes()).hexdigest(),
                 downloads={'3mf':artifact_url(sliced),'step':artifact_url(stem+'.step'),'stl':artifact_url(stem+'.stl')},
-                status='V12 .05 coupon fit approved · full stile V13' if reinforced else 'V9 coupon fit approved · full template strength untested')
-    part['fields'] += [['Dovetail clearance','0.05 mm total' if reinforced else '0.20 mm total'],['Joint fit','Coupon approved']]
+                status='Full V13 fit failed · socket arms bow' if reinforced else 'V9 coupon fit approved · full template strength untested')
+    part['fields'] += [['Dovetail clearance','0.05 mm total' if reinforced else '0.20 mm total'],['Joint fit','Full print failed' if reinforced else 'Coupon approved']]
     if reinforced:part['fields'] += [['Socket width','36.85 mm nominal'],['Side arms','10.15 mm nominal · 10.01 mm at rounded lip']]
     return part
 
@@ -91,10 +91,10 @@ def coupon_payload(stile=False):
     assert artifact_path(f'{name}.stl').is_file(), 'Generate the selected coupon STL before publishing'
     return {'file':name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'vertices':vertices.reshape(-1).round(6).tolist(),
             'bounds_mm':geometry.extents.tolist(),'view_bounds_mm':geometry.extents.tolist(),'outlines_inches':outlines,'holes_inches':[],
-            'status':'V12 .05 coupon fit approved by user' if stile else 'Physical coupon fit approved by user','horizontal':False,'kind':'coupon','revision':revision.upper(),'title':'Stile fit coupon' if stile else 'Rail fit coupon','description':'Actual 2¼″ stile width · reinforced arms' if stile else 'Rounded joint · two test pieces · ½″ thick',
+            'status':'V12 coupon passed · full V13 print failed' if stile else 'Physical coupon fit approved by user','horizontal':False,'kind':'coupon','revision':revision.upper(),'title':'Stile fit coupon' if stile else 'Rail fit coupon','description':'Actual 2¼″ stile width · reinforced arms' if stile else 'Rounded joint · two test pieces · ½″ thick',
             'downloads':{'3mf':artifact_url(f'{name}-sliced.3mf'),'stl':artifact_url(f'{name}.stl')},
             'fields':([['Stile width','57.15 mm'],['Socket width','36.85 mm nominal'],['Side arms','10.15 mm nominal · 10.01 mm at rounded lip']] if stile else []) + [['Thickness','½″ · 12.70 mm'],['External radius','0.30 mm'],['Internal radius','0.20 mm'],['Total width clearance',f"{settings['width_tolerance_mm']:.2f} mm · {settings['width_tolerance_mm']/2:.3f} per side"],['Depth clearance',f"{settings['depth_tolerance_mm']:.2f} mm"],['Taper','2°'],['Print estimate',f"{round(estimate['seconds']/60)} min · {estimate['grams']:.2f} g"]],
-            'note':'Reference coupon with the same mating surfaces as your successful V12 .05 test. That fit is now applied to the full V13 stile. Keep both top faces up and slide together along the thickness.' if stile else 'This V9 coupon passed the physical fit test. It remains the joint used by the current rail. The narrower V13 stile has its own coupon.'}
+            'note':'Reference coupon with the same mating surfaces as your successful V12 .05 test. The full V13 print was subsequently reported too tight with bowed socket arms. Keep both top faces up and slide together along the thickness.' if stile else 'This V9 coupon passed the physical fit test. It remains the joint used by the current rail. The narrower V13 stile has its own coupon.'}
 
 
 def build():
@@ -113,7 +113,7 @@ def build():
     data['parts']['rail'].update(description='13 hexagons · five on the short side · approved V9 joint',note='Two pieces arranged for the P1S. Assemble with both printed top faces facing the same way; rotate the assembled template 180° in plane for the upper rail.')
     for side in ['left','right']:
         split_payload(data['parts'][side],'stile-template-left-dovetail-v13','stile-template-left-dovetail-v13-sliced.3mf',flip=side=='right',reinforced=True)
-        data['parts'][side].update(description='Curved ends · narrower dovetail · thicker socket arms',note='Your successful V12 .05 coupon fit is now applied to this full V13 stile: 0.05 mm total width clearance, with the tail preserved. Side arms are 10.15 mm nominal, about 10.01 mm at the rounded lip. One assembled template rotates 180° in plane for the opposite stile. Full-template strength remains untested.')
+        data['parts'][side].update(description='Curved ends · narrower dovetail · thicker socket arms',note='Your successful V12 .05 coupon fit is now applied to this full V13 stile: 0.05 mm total width clearance, with the tail preserved. Side arms are 10.15 mm nominal, about 10.01 mm at the rounded lip. One assembled template rotates 180° in plane for the opposite stile. The full V13 print was reported too tight with bowed socket arms. Hold further full-stile prints pending correction.')
     data['parts']['coupon']=coupon_payload()
     data['parts']['stile-coupon']=coupon_payload(stile=True)
     data['designs']={'ellipse':{'title':'Elliptical arc','summary':'Chosen design · two reusable templates make the four frame pieces. Rotate the rail or stile 180° in its plane for the opposite side.','parts':data['parts']}}

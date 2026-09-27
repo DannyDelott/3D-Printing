@@ -74,14 +74,14 @@
     <dl id="part-dimensions"></dl>
     <a id="part-3mf" class="download-main" href="models/rail-template-elliptical-honeycomb-half-inch.3mf" download>Download this 3MF</a>
     <a id="part-stl" href="models/rail-template-elliptical-honeycomb-half-inch.stl" download>STL</a><a id="part-step" href="models/rail-template-elliptical-honeycomb-half-inch.step" download>STEP</a>
-    <p id="part-note" class="small"></p><p id="stile-cut-link" class="small" hidden><a href="stile-dovetail-v13.html">V13 stile · approved 0.05 mm joint</a></p>
+    <p id="part-note" class="small"></p><p id="stile-cut-link" class="small" hidden><a href="stile-dovetail-v13.html">V13 stile · 0.05 mm · full fit failed</a></p>
   </div>
 </section>
 <svg id="part-schematic" viewBox="0 0 760 170" role="img" aria-label="Dimensioned stile template" hidden></svg>
 <details id="ellipse-history"><summary>Elliptical iterations &amp; dovetail versions</summary>
 <p class="small">Current previews and downloads use ½″ stock. Older iterations below retain their historical thickness and joint geometry.</p>
 <div class="history">
-<span>Stile V13 · approved 0.05 mm joint</span><div><a href="half-inch-templates.html">Current stile downloads</a><a href="stile-template-left-dovetail-v13-bambu.3mf" download>Bambu project · 12.70 mm</a></div>
+<span>Stile V13 · 0.05 mm · full fit failed</span><div><a href="half-inch-templates.html">Current stile downloads</a><a href="stile-template-left-dovetail-v13-bambu.3mf" download>Bambu project · 12.70 mm</a></div>
 <span>Rail V10 · five short-side hexagons</span><div><a href="rail-v10.html">View current rail</a><a href="rail-template-native-dovetail-v10-bambu.3mf" download>Bambu 3MF</a></div>
 <span>Rounded dovetail V9 · 0.20 mm clearance</span><div><a href="dovetail-v9.html">View V9 datasheet</a><a href="rail-template-native-dovetail-v9-bambu.3mf" download>Bambu 3MF</a></div>
 <span>Rounded dovetail V8 · 0.40 mm clearance</span><div><a href="dovetail-v8.html">View V8 datasheet</a><a href="rail-template-native-dovetail-v8-bambu.3mf" download>Bambu 3MF</a></div>
