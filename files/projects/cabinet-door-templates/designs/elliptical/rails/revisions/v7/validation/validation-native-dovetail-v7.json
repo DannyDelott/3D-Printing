@@ -1,0 +1,338 @@
+{
+  "revision": 7,
+  "method": "V6 Bambu-native mating planes reconstructed against V3 STEP, then exact CAD edge fillets",
+  "source_v6_sha256": "0279b441a7c919dfd81d420f30a961fad5ec7964decb2640ec34cb92616b8a89",
+  "settings": {
+    "external_radius_mm": 0.3,
+    "internal_radius_mm": 0.2,
+    "width_tolerance_mm": 0.1,
+    "depth_tolerance_mm": 0.1,
+    "groove_angle_degrees": 2,
+    "thickness_mm": 12.7
+  },
+  "joint_center_y_mm": 45.235059230000005,
+  "lower_base_y_mm": 25.904669300000002,
+  "flank_slope": 0.5777022431625186,
+  "filleted_edges": {
+    "Right tongue": [
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.55144472646701,
+        "midpoint_mm": [
+          201.66250000000002,
+          22.26514516807613,
+          -1.616192323404223e-16
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 53.218876387695474,
+        "midpoint_mm": [
+          195.3625,
+          45.23505923,
+          0.0
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.551444726467007,
+        "midpoint_mm": [
+          201.66250000000002,
+          68.20497329192388,
+          1.9079320354602922e-16
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.551444726467011,
+        "midpoint_mm": [
+          201.66250000000005,
+          22.708638940621334,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 52.33188884260508,
+        "midpoint_mm": [
+          195.36249999999998,
+          45.235059230000005,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.551444726467011,
+        "midpoint_mm": [
+          201.66250000000005,
+          67.76147951937867,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "type": "internal",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          207.9625,
+          26.1264161862726,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          195.3625,
+          18.84736792242487,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          195.3625,
+          71.62275053757514,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "type": "internal",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          207.9625,
+          64.34370227372742,
+          6.3500000000000005
+        ]
+      }
+    ],
+    "Left socket": [
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.66693238302626,
+        "midpoint_mm": [
+          201.6125,
+          68.28385840408197,
+          -1.6243056654943055e-16
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 53.434416836327955,
+        "midpoint_mm": [
+          195.26250000000005,
+          45.235059230000005,
+          0.0
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.666932383026262,
+        "midpoint_mm": [
+          201.6125,
+          22.186260055917995,
+          -5.140316682268739e-16
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          207.9625,
+          26.0764161862726,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.666932383026257,
+        "midpoint_mm": [
+          201.6125,
+          67.8403646315368,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 52.54742929123756,
+        "midpoint_mm": [
+          195.26250000000005,
+          45.235059230000005,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 14.666932383026264,
+        "midpoint_mm": [
+          201.6125,
+          22.629753828463166,
+          12.7
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "type": "external",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          207.9625,
+          64.39370227372741,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "type": "internal",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          195.26250000000005,
+          71.73052076189138,
+          6.3500000000000005
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "type": "internal",
+        "original_length_mm": 12.707741212595037,
+        "midpoint_mm": [
+          195.26250000000005,
+          18.73959769810862,
+          6.3500000000000005
+        ]
+      }
+    ]
+  },
+  "measured_fit_clearance": [
+    {
+      "z_mm": 0.5,
+      "gaps_mm": [
+        0.05000000000002913,
+        0.049999999999968736
+      ]
+    },
+    {
+      "z_mm": 6.35,
+      "gaps_mm": [
+        0.05000000000002913,
+        0.04999999999998295
+      ]
+    },
+    {
+      "z_mm": 12.2,
+      "gaps_mm": [
+        0.05000000000001492,
+        0.049999999999954525
+      ]
+    }
+  ],
+  "assembled_cad_overlap_mm3": 0.0,
+  "full": [
+    {
+      "name": "Right tongue",
+      "bounds_mm": [
+        [
+          24.068749999999966,
+          97.8,
+          0.0
+        ],
+        [
+          231.93124999999998,
+          250.2,
+          12.700000000000061
+        ]
+      ],
+      "volume_mm3": 232856.42450930687,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Left socket",
+      "bounds_mm": [
+        [
+          24.01874999999994,
+          5.494901516290035,
+          0.0
+        ],
+        [
+          231.98125000000005,
+          95.90509848370996,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 178320.54453848113,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "test": [
+    {
+      "name": "Right tongue",
+      "bounds_mm": [
+        [
+          136.7,
+          97.5,
+          0.0
+        ],
+        [
+          153.29999999999998,
+          158.5,
+          12.700000000000061
+        ]
+      ],
+      "volume_mm3": 10375.143145839034,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Left socket",
+      "bounds_mm": [
+        [
+          101.64999999999995,
+          97.5,
+          0.0
+        ],
+        [
+          118.35000000000002,
+          158.5,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 5569.921547019843,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "fit_status": "V6 was almost perfect but broke during insertion. V7 rounded fit remains physically unconfirmed.",
+  "source": "source/round_native_dovetail.py",
+  "test_slice": {
+    "seconds": 1372,
+    "grams": 13.61,
+    "outside": "false",
+    "support_used": "false",
+    "file": "rail-native-dovetail-v7-fit-test-sliced.3mf"
+  },
+  "full_slice": {
+    "seconds": 12912,
+    "grams": 193.02,
+    "outside": "false",
+    "support_used": "false",
+    "file": "rail-template-native-dovetail-v7-sliced.3mf"
+  }
+}

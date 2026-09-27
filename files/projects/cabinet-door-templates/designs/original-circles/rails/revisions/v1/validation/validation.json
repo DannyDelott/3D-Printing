@@ -1,0 +1,36 @@
+{
+  "status": "user dimensions confirmed; CAD and mesh validated; not physically printed or routed",
+  "parameters": {
+    "width": 15.875,
+    "left_height": 3,
+    "right_height": 6,
+    "radius_left": 60,
+    "radius_right": 18,
+    "thickness_mm": 19.05
+  },
+  "join_height_inches": 3.2512514063330937,
+  "circle_centers_mm": [
+    [
+      52.69583005103675,
+      1599.2886873374225
+    ],
+    [
+      156.937499015311,
+      537.5938562058292
+    ]
+  ],
+  "tangent_angle_degrees": 5.607567731201283,
+  "files": {
+    "rail-template": {
+      "size_mm": [
+        403.2250061035156,
+        152.39999389648438,
+        19.049999237060547
+      ],
+      "volume_cm3": 713.3181433370625,
+      "triangles": 1116,
+      "watertight": true,
+      "bodies": 1
+    }
+  }
+}

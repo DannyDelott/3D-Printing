@@ -1,0 +1,15 @@
+[2026-09-22 11:09:50.100702] [0x00000001f1aaa180] [trace]   Initializing StaticPrintConfigs
+[stile-template-left-v1.stl]
+size_x = 57.150002
+size_y = 486.750671
+size_z = 19.049999
+min_x = 0.000000
+min_y = 0.000000
+min_z = 0.000000
+max_x = 57.150002
+max_y = 486.750671
+max_z = 19.049999
+number_of_facets = 1136
+manifold = yes
+number_of_parts =  1
+volume = 431667.156250

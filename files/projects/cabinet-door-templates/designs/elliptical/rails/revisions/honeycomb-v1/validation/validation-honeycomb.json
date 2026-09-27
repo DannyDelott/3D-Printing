@@ -1,0 +1,30 @@
+{
+  "curve": "unchanged exact elliptical arc",
+  "hole_count": 12,
+  "hole_across_flats_mm": 32.0,
+  "minimum_web_mm": 3.199999999999984,
+  "minimum_perimeter_rim_mm": 10.0,
+  "solid_center_band_mm": 88.89999999999999,
+  "split_x_mm": 201.61249999999998,
+  "solid_band_x_mm": [
+    157.1625,
+    246.06249999999997
+  ],
+  "solid_each_side_of_split_mm": 44.449999999999996,
+  "requested_dovetail_width_mm": 38.099999999999994,
+  "original_solid_volume_cm3": 742.1587731176867,
+  "removed_volume_cm3": 202.72476908044564,
+  "solid_volume_reduction_percent": 27.31555246983503,
+  "mesh": {
+    "size_mm": [
+      403.2250061035156,
+      152.39999389648438,
+      19.049999237060547
+    ],
+    "volume_cm3": 539.435639932587,
+    "triangles": 2124,
+    "watertight": true,
+    "bodies": 1
+  },
+  "status": "digital validation passed; filament usage depends on slicing settings; no physical load test"
+}

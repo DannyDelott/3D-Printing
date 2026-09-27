@@ -1,0 +1,160 @@
+{
+  "revision": 10,
+  "hole_count": 13,
+  "short_side_holes": 5,
+  "tall_side_holes": 8,
+  "hole_across_flats_mm": 25.2,
+  "hole_centers_mm": [
+    [
+      28.475208614068027,
+      26
+    ],
+    [
+      56.47520861406802,
+      48
+    ],
+    [
+      84.47520861406802,
+      26
+    ],
+    [
+      112.47520861406802,
+      48
+    ],
+    [
+      140.47520861406804,
+      26
+    ],
+    [
+      272.34796231976594,
+      26.0
+    ],
+    [
+      272.34796231976594,
+      61.2
+    ],
+    [
+      302.8320565329782,
+      43.6
+    ],
+    [
+      302.8320565329782,
+      78.80000000000001
+    ],
+    [
+      333.31615074619043,
+      26.0
+    ],
+    [
+      333.31615074619043,
+      61.2
+    ],
+    [
+      363.8002449594027,
+      43.6
+    ],
+    [
+      363.8002449594027,
+      78.80000000000001
+    ]
+  ],
+  "minimum_web_mm": 10.0,
+  "minimum_perimeter_rim_mm": 13.4,
+  "solid_band_x_mm": [
+    157.1625,
+    246.0625
+  ],
+  "split_x_mm": 201.6125,
+  "thickness_mm": 12.7,
+  "mesh": {
+    "size_mm": [
+      403.225,
+      152.4,
+      12.7
+    ]
+  },
+  "approved_joint_revision": 9,
+  "width_clearance_mm": 0.2,
+  "joint_identity": {
+    "right-tongue": {
+      "joint_difference_from_v9_mm3": 0.0,
+      "source_sha256": "96305dc4beec1d9e9f9fe0ce8aa63d44b0cdc6e3e67d3aced351c68d4121e515"
+    },
+    "left-socket": {
+      "joint_difference_from_v9_mm3": 0.0,
+      "source_sha256": "aa942c43858c01ac08eb4ed10a2bf9c9482699f4787cbfd634bc4148f47ea5dd"
+    }
+  },
+  "parts": [
+    {
+      "name": "Right tongue",
+      "bounds_mm": [
+        [
+          24.068749999999966,
+          97.8,
+          0.0
+        ],
+        [
+          231.93124999999998,
+          250.2,
+          12.7
+        ]
+      ],
+      "volume_mm3": 232856.42458408242,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Left socket",
+      "bounds_mm": [
+        [
+          24.018749999999997,
+          5.49490151629,
+          0.0
+        ],
+        [
+          231.98125,
+          95.90509848371,
+          12.7
+        ]
+      ],
+      "volume_mm3": 171280.9850571349,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "slice": {
+    "seconds": 13024,
+    "grams": 193.15,
+    "outside": false,
+    "supports": false
+  },
+  "slicer_mesh_precision": {
+    "maximum_restored_coordinate_delta_mm": 4.0000000041118255e-06,
+    "watertight_bodies": 2,
+    "gcode_sha256": {
+      "Metadata/plate_1.gcode": "76aa2edc5a193a60a4a14c74adcc9b8953d87fe419b6691ca9df84eb6a06862c"
+    },
+    "bambu_final_import": [
+      {
+        "volume_mm3": 232848.953125,
+        "facets": 25174,
+        "dimensions_mm": [
+          207.862503,
+          152.399994,
+          12.7
+        ]
+      },
+      {
+        "volume_mm3": 171276.265625,
+        "facets": 7498,
+        "dimensions_mm": [
+          207.962494,
+          90.410194,
+          12.7
+        ]
+      }
+    ]
+  },
+  "physical_status": "Unchanged V9 joint fit approved from coupon; revised full rail untested"
+}

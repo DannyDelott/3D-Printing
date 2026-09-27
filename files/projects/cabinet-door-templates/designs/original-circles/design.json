@@ -1,0 +1,52 @@
+{
+  "id": "original-circles",
+  "title": "Original circles",
+  "dimensions": {
+    "cabinet_width_inches": 18,
+    "cabinet_height_inches": 27,
+    "door_width_inches": 15.875,
+    "door_height_inches": 27,
+    "stile_width_inches": 2.25,
+    "mounting": "Inset at sides; flush at top and bottom"
+  },
+  "revisions": [
+    {
+      "id": "v1",
+      "title": "Original two-circle rail",
+      "status": "Earlier curve design",
+      "template_thickness_mm": 19.05,
+      "path": "rails/revisions/v1",
+      "artifacts": {
+        "rail-template.3mf": "models/rail-template.3mf",
+        "rail-template.step": "models/rail-template.step",
+        "rail-template.stl": "models/rail-template.stl",
+        "validation.json": "validation/validation.json",
+        "rail-preview.png": "images/rail-preview.png",
+        "original-circles-rails-v1-datasheet.html": "datasheet.html"
+      },
+      "part": "rails",
+      "generated_datasheet": true,
+      "datasheet": "datasheet.html"
+    },
+    {
+      "id": "half-inch",
+      "title": "Original circles \u00b7 half-inch",
+      "status": "Comparison alternative",
+      "template_thickness_mm": 12.7,
+      "path": "rails/revisions/half-inch",
+      "artifacts": {
+        "rail-template-original-circles-half-inch.3mf": "models/rail-template-original-circles-half-inch.3mf",
+        "rail-template-original-circles-half-inch.step": "models/rail-template-original-circles-half-inch.step",
+        "rail-template-original-circles-half-inch.stl": "models/rail-template-original-circles-half-inch.stl",
+        "original-circles-rails-half-inch-datasheet.html": "datasheet.html"
+      },
+      "part": "rails",
+      "generated_datasheet": true,
+      "datasheet": "datasheet.html"
+    }
+  ],
+  "selection": {
+    "unsplit_rail": "half-inch",
+    "stiles": null
+  }
+}

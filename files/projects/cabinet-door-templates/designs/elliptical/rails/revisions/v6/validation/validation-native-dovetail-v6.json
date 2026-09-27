@@ -1,0 +1,139 @@
+{
+  "source": "models/native-v6-source/native-cut-project.3mf",
+  "source_sha256": "d29ba60b93f3a39b75c3c612832b7e2d73bea01ae7405581002a6bcb9c439697",
+  "method": "Bambu Studio 2.8.2.60 native Cut / Dovetail, exported in the GUI",
+  "settings": {
+    "rotation_degrees": [
+      90,
+      0,
+      90
+    ],
+    "depth_mm": 12.7,
+    "width_mm": 38.1,
+    "flap_angle_degrees": 60,
+    "groove_angle_degrees": 2,
+    "width_tolerance_mm": 0.1,
+    "depth_tolerance_mm": 0.1
+  },
+  "measured_fit_clearance": [
+    {
+      "height_mm": 0.2,
+      "side_gaps_mm": [
+        0.050009814512101514,
+        0.05000594648841172
+      ],
+      "total_width_clearance_mm": 0.10001576100051324
+    },
+    {
+      "height_mm": 9.525,
+      "side_gaps_mm": [
+        0.050011680197666664,
+        0.05000575086573633
+      ],
+      "total_width_clearance_mm": 0.100017431063403
+    },
+    {
+      "height_mm": 18.85,
+      "side_gaps_mm": [
+        0.05001278042364987,
+        0.050005749277318046
+      ],
+      "total_width_clearance_mm": 0.10001852970096792
+    }
+  ],
+  "joint_center_y_mm": 45.235059213079836,
+  "numerical_shell_join_overlap_mm": 1e-05,
+  "assembled_overlap_mm3": 0.00897736419482364,
+  "full": [
+    {
+      "name": "Right tongue",
+      "bounds_mm": [
+        [
+          24.06875347412111,
+          97.80000305175781,
+          0.0
+        ],
+        [
+          231.93124652587892,
+          250.1999969482422,
+          19.05000877380371
+        ]
+      ],
+      "volume_mm3": 349075.9481252317,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Left socket",
+      "bounds_mm": [
+        [
+          24.018741607666016,
+          5.494841766357425,
+          0.0
+        ],
+        [
+          231.98125839233398,
+          95.90515823364258,
+          19.049999237060547
+        ]
+      ],
+      "volume_mm3": 267217.1929344535,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "test": [
+    {
+      "name": "Right tongue",
+      "bounds_mm": [
+        [
+          136.70000152587892,
+          97.5,
+          0.0
+        ],
+        [
+          153.2999984741211,
+          158.5,
+          19.05000877380371
+        ]
+      ],
+      "volume_mm3": 15515.459281027752,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Left socket",
+      "bounds_mm": [
+        [
+          101.64999168588088,
+          97.5,
+          0.0
+        ],
+        [
+          118.35000831411912,
+          158.5,
+          19.049999237060547
+        ]
+      ],
+      "volume_mm3": 8401.157724183331,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "fit_status": "UNCONFIRMED - print the extracted joint test before either full half",
+  "existing_v4_compatibility": "Not compatible: the native dovetail changes shape and reverses which half contains the tongue.",
+  "test_slice": {
+    "seconds": 1822,
+    "grams": 20.19,
+    "outside": "false",
+    "support_used": "false",
+    "file": "rail-native-dovetail-v6-fit-test-sliced.3mf"
+  },
+  "full_slice": {
+    "seconds": 17001,
+    "grams": 266.47,
+    "outside": "false",
+    "support_used": "false",
+    "file": "rail-template-native-dovetail-v6-sliced.3mf"
+  }
+}

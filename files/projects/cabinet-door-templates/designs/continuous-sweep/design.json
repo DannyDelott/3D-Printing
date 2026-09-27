@@ -1,0 +1,51 @@
+{
+  "id": "continuous-sweep",
+  "title": "Continuous sweep",
+  "dimensions": {
+    "cabinet_width_inches": 18,
+    "cabinet_height_inches": 27,
+    "door_width_inches": 15.875,
+    "door_height_inches": 27,
+    "stile_width_inches": 2.25,
+    "mounting": "Inset at sides; flush at top and bottom"
+  },
+  "revisions": [
+    {
+      "id": "v2",
+      "title": "Continuous sweep rail",
+      "status": "Earlier curve design",
+      "template_thickness_mm": 19.05,
+      "path": "rails/revisions/v2",
+      "artifacts": {
+        "rail-template-smooth-v2.3mf": "models/rail-template-smooth-v2.3mf",
+        "rail-template-smooth-v2.step": "models/rail-template-smooth-v2.step",
+        "rail-template-smooth-v2.stl": "models/rail-template-smooth-v2.stl",
+        "validation-smooth-v2.json": "validation/validation-smooth-v2.json",
+        "continuous-sweep-rails-v2-datasheet.html": "datasheet.html"
+      },
+      "part": "rails",
+      "generated_datasheet": true,
+      "datasheet": "datasheet.html"
+    },
+    {
+      "id": "half-inch",
+      "title": "Continuous sweep \u00b7 half-inch",
+      "status": "Comparison alternative",
+      "template_thickness_mm": 12.7,
+      "path": "rails/revisions/half-inch",
+      "artifacts": {
+        "rail-template-continuous-sweep-half-inch.3mf": "models/rail-template-continuous-sweep-half-inch.3mf",
+        "rail-template-continuous-sweep-half-inch.step": "models/rail-template-continuous-sweep-half-inch.step",
+        "rail-template-continuous-sweep-half-inch.stl": "models/rail-template-continuous-sweep-half-inch.stl",
+        "continuous-sweep-rails-half-inch-datasheet.html": "datasheet.html"
+      },
+      "part": "rails",
+      "generated_datasheet": true,
+      "datasheet": "datasheet.html"
+    }
+  ],
+  "selection": {
+    "unsplit_rail": "half-inch",
+    "stiles": null
+  }
+}

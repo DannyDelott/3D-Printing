@@ -1,0 +1,3 @@
+[2026-09-22 12:58:07.549905] [0x00000001f1aaa180] [trace]   Initializing StaticPrintConfigs
+[2026-09-22 12:58:07.562137] [0x00000001f1aaa180] [error]   run 3002: process not compatible with printer.
+run found error, exit

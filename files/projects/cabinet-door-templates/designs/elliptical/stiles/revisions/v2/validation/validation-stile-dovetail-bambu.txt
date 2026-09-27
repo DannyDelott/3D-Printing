@@ -1,0 +1,29 @@
+[2026-09-22 12:56:17.861293] [0x00000001f1aaa180] [trace]   Initializing StaticPrintConfigs
+[stile-template-left-dovetail-v2-plate.3mf]
+size_x = 57.150002
+size_y = 252.900337
+size_z = 19.049999
+min_x = -28.574997
+min_y = -126.450172
+min_z = -9.525000
+max_x = 28.575005
+max_y = 126.450165
+max_z = 9.525000
+number_of_facets = 208
+manifold = yes
+number_of_parts =  1
+volume = 223843.687500
+[stile-template-left-dovetail-v2-plate.3mf]
+size_x = 57.149994
+size_y = 252.700325
+size_z = 19.049999
+min_x = -28.574997
+min_y = -126.350166
+min_z = -9.525000
+max_x = 28.574997
+max_y = 126.350159
+max_z = 9.525000
+number_of_facets = 972
+manifold = yes
+number_of_parts =  1
+volume = 207404.531250

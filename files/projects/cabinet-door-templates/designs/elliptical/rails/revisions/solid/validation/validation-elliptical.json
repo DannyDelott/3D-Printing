@@ -1,0 +1,32 @@
+{
+  "curve": "exact elliptical arc from comparison",
+  "q": 0.95,
+  "semi_axes_inches": [
+    16.710526315789476,
+    4.362049528819679
+  ],
+  "center_inches": [
+    0,
+    7.362049528819679
+  ],
+  "width_inches": 15.875,
+  "end_heights_inches": [
+    3.0,
+    6.0
+  ],
+  "thickness_mm": 19.05,
+  "max_preview_error_mm": 1.1368683772161603e-13,
+  "analytic_volume_cm3": 742.1587731176867,
+  "mesh": {
+    "size_mm": [
+      403.2250061035156,
+      152.39999389648438,
+      19.049999237060547
+    ],
+    "volume_cm3": 742.1603728801199,
+    "triangles": 1788,
+    "watertight": true,
+    "bodies": 1
+  },
+  "status": "digital validation passed; not physically printed or routed"
+}

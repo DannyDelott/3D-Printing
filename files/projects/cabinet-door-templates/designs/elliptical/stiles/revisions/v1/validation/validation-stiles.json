@@ -1,0 +1,48 @@
+{
+  "cabinet_height_inches": 27.0,
+  "door_height_inches": 27.0,
+  "vertical_clearance_inches": 0,
+  "mounting": "inset at sides; flush with cabinet at top and bottom",
+  "door_width_inches": 15.875,
+  "stile_width_inches": 2.25,
+  "thickness_mm": 19.05,
+  "outer_edge_length_inches": 18.0,
+  "inner_edge_length_inches": 19.12369093874647,
+  "bounding_length_inches": 19.163412588245702,
+  "left_assembly_y_inches": [
+    2.9999999999999996,
+    22.163412588245702
+  ],
+  "split_from_template_bottom_mm": 243.37533987072044,
+  "solid_center_band_mm": 88.89999999999999,
+  "hole_count": 8,
+  "minimum_web_mm": 9.999999999999943,
+  "minimum_perimeter_rim_mm": 14.025773216421427,
+  "rotation_reuse": "same template rotated 180 degrees makes opposite stile",
+  "joinery_allowance": "none; finished curved profile only",
+  "models": {
+    "stile-template-left-v1": {
+      "size_mm": [
+        57.150001525878935,
+        486.7506866455078,
+        19.049999237060547
+      ],
+      "volume_cm3": 431.66751997594463,
+      "triangles": 1136,
+      "watertight": true,
+      "bodies": 1
+    },
+    "stile-template-right-v1": {
+      "size_mm": [
+        57.149993896484375,
+        486.7506561279297,
+        19.049999237060547
+      ],
+      "volume_cm3": 431.6674519157824,
+      "triangles": 1136,
+      "watertight": true,
+      "bodies": 1
+    }
+  },
+  "status": "digitally verified; no physical print or fit test"
+}
