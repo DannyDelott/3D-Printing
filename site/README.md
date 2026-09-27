@@ -33,9 +33,15 @@ Some existing Bambu projects have a derived STL in `site/assets/` for viewing. D
 
 ## Publish
 
-Updates may be pushed directly to `main` after checks; no PR or user code review is required for this project. `.github/workflows/pages.yml` validates the site and deploys updates to `main` to the `github-pages` environment. It also validates any optional pull requests. A manual workflow run on `main` can republish the current revision.
+After committing the accepted changes on `main`, run:
 
-Enable **Settings → Pages → Source → GitHub Actions** once. Private repositories require a GitHub plan that supports Pages. Do not change repository visibility as part of site setup. Review site visibility and project-specific redistribution rights before the first deployment.
+```sh
+python3 site/build/publish.py
+```
+
+This builds and checks the site, verifies that published inputs are committed, pushes `main`, and updates `gh-pages`. GitHub Pages automatically deploys that branch. Wait for the Pages deployment and verify `build-info.json` matches the source commit before reporting the site live.
+
+The repository is public. Pages uses **Deploy from a branch → gh-pages → / (root)**. This supported branch-based setup avoids the additional OAuth workflow permission required to create custom Actions workflows. No extra credentials are stored.
 
 ## UI conventions
 

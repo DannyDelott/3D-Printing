@@ -2,7 +2,7 @@
 
 A home base for printable models, slicer projects, experiments, and notes.
 
-The [static model library](site/README.md) provides searchable project pages, interactive previews, specifications, and downloads. Build it with `python3 site/build/build.py`; accepted updates to `main` publish through GitHub Pages once Pages is enabled.
+The [static model library](site/README.md) provides searchable project pages, interactive previews, specifications, and downloads. Build it with `python3 site/build/build.py`; publish accepted updates with `python3 site/build/publish.py`.
 
 Each idea lives in its own folder under [`projects/`](projects/). A project can contain printable files in `models/`, editable CAD or generator files in `source/`, photos in `images/`, and its own README with printing and provenance notes.
 
