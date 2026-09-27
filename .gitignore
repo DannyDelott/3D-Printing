@@ -11,3 +11,10 @@ Thumbs.db
 *.bak
 *.autosave
 ~$*
+
+# Static site build and local design experiments
+_site/
+site-prototype/
+.playwright-mcp/
+__pycache__/
+.venv/

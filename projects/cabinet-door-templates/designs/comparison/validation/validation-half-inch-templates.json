@@ -1,0 +1,77 @@
+{
+  "thickness_mm": 12.7,
+  "models": {
+    "rail-template-elliptical-honeycomb-half-inch": {
+      "source": "rail-template-elliptical-honeycomb-v3",
+      "size_mm": [
+        403.225,
+        152.4,
+        12.7
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    },
+    "stile-template-left-half-inch": {
+      "source": "stile-template-left-v1",
+      "size_mm": [
+        57.15000000000003,
+        486.75067974144,
+        12.7
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    },
+    "stile-template-right-half-inch": {
+      "source": "stile-template-right-v1",
+      "size_mm": [
+        57.15000000000333,
+        486.75067974145,
+        12.7
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    },
+    "rail-template-elliptical-solid-half-inch": {
+      "source": "rail-template-elliptical",
+      "size_mm": [
+        403.225,
+        152.4,
+        12.7
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    },
+    "rail-template-continuous-sweep-half-inch": {
+      "source": "rail-template-smooth-v2",
+      "size_mm": [
+        403.22500010000005,
+        152.4000001,
+        12.699999949999999
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    },
+    "rail-template-original-circles-half-inch": {
+      "source": "rail-template",
+      "size_mm": [
+        403.22500000001463,
+        152.4,
+        12.7
+      ],
+      "watertight": true,
+      "bodies": 1,
+      "split_for_p1s": true
+    }
+  },
+  "split_stile_slice": {
+    "seconds": 9570,
+    "grams": 141.31,
+    "outside": false,
+    "supports": false
+  }
+}

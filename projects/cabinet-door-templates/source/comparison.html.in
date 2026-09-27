@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cabinet frame · design comparison</title>
+<style>
+  :root { color-scheme: light; color: #243e36; background: #faf8f3; font-family: 'Avenir Next', Avenir, sans-serif; }
+  * { box-sizing: border-box; }
+  body { max-width: 1140px; margin: auto; padding: 42px 32px; }
+  h1 { font-family: Georgia, serif; font-size: clamp(30px,4vw,46px); font-weight: normal; margin: 0 0 12px; }
+  p { line-height: 1.6; color: #53615b; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 18px; }
+  button { font: inherit; color: inherit; padding: 12px 18px; background: transparent; border: 1px solid #c9cabe; border-radius: 5px; cursor: pointer; }
+  button[aria-pressed=true] { background: #236b60; color: white; border-color: #236b60; }
+  button:hover { border-color: #236b60; }
+  button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #c47741; outline-offset: 4px; }
+  .toolbar { display: flex; justify-content: space-between; gap: 14px; align-items: center; flex-wrap: wrap; }
+  label { font-size: 14px; cursor: pointer; }
+  input { accent-color: #236b60; }
+  select { font: inherit; color: inherit; background: #faf8f3; padding: 6px 8px; border: 1px solid #c9cabe; border-radius: 4px; }
+  svg { width: 100%; height: auto; margin-top: 14px; }
+  .foot { border-top: 1px solid #d9d9ce; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+  a { color: #236b60; text-underline-offset: 4px; margin-right: 15px; }
+  .small { font-size: 13px; }
+  #note { min-height: 25px; }
+  h2 { font-family: Georgia, serif; font-size: 25px; font-weight: normal; margin: 0 0 8px; }
+  .print-preview { display:grid; grid-template-columns:minmax(0,1fr) 255px; gap:26px; padding:24px 0 28px; border-block:1px solid #d9d9ce; margin:24px 0 30px; }
+  #print-canvas { width:100%; height:275px; display:block; cursor:grab; touch-action:none; border:1px solid #e1dfd5; border-radius:5px; }
+  #print-canvas:active { cursor:grabbing; }
+  .view-controls { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .view-controls button { font-size:13px; padding:7px 11px; }
+  .view-controls span { font-size:12px; color:#66736a; margin-left:auto; }
+  dl { display:grid; grid-template-columns:1fr auto; gap:9px 14px; font-size:14px; margin:22px 0; }
+  dd { margin:0; font-variant-numeric:tabular-nums; } dt { color:#53615b; }
+  .download-main { display:block; text-align:center; background:#236b60; color:#fff; border-radius:5px; text-decoration:none; padding:12px 15px; margin:10px 0 12px; }
+  [hidden] { display:none !important; }
+  .design-heading { margin-top:30px; }
+  #design-summary { margin-top:0; }
+  #component-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:16px 0 0; }
+  .component { text-align:left; padding:16px; min-width:0; }
+  .component[aria-pressed=true] { background:#e7eee8; color:#243e36; border-color:#236b60; box-shadow:inset 0 0 0 1px #236b60; }
+  .component strong, .component span { display:block; }
+  .component span { font-size:12px; margin-top:6px; }
+  .component svg { height:65px; margin:8px 0 0; }
+  details { border-top:1px solid #d9d9ce; padding-top:18px; margin:24px 0; }
+  summary { cursor:pointer; }
+  .history { display:grid; grid-template-columns:minmax(170px,1fr) 2fr; gap:14px; margin-top:20px; font-size:14px; }
+  #print-error { color:#8e462e; }
+  @media(max-width:760px) { .print-preview { grid-template-columns:1fr; } #print-canvas { height:245px; } dl { margin:15px 0; } }
+  @media(max-width:600px) { body { padding: 24px 16px; } #component-list { grid-template-columns:1fr; } .component svg { height:45px; } .history { grid-template-columns:1fr; } button { padding: 10px; } }
+</style>
+<h1>Cabinet door templates.</h1>
+<p><b>18″ × 27″ cabinet</b> · <b>15⅞″ × 27″ door</b> · <b>2¼″ stiles</b>. Flush at the top and bottom; inset at the sides.</p>
+<p class="small"><a href="#design-library">Browse all designs and revisions</a></p>
+<nav aria-label="Design selection">
+  <button data-id="original" aria-pressed="false">Original circles</button>
+  <button data-id="bezier" aria-pressed="false">Continuous sweep</button>
+  <button data-id="ellipse" aria-pressed="true">Elliptical arc · chosen design</button>
+</nav>
+<section id="design-group" aria-labelledby="design-title">
+<h2 id="design-title" class="design-heading">Elliptical arc</h2>
+<p id="design-summary"></p>
+<div class="toolbar"><p id="note" aria-live="polite"></p><label>Compare stiles <select id="stile"><option value="2.25">2¼″ — new</option><option value="3">3″ — drawing</option></select></label><label><input id="overlay" type="checkbox"> Overlay original curve</label></div>
+<svg viewBox="0 0 760 385" role="img" aria-label="Cabinet front with stiles, cabinet sides, and curved rails, alongside an enlarged rail profile" id="drawing"></svg>
+<p id="midpoint" class="small"></p>
+<h2>Templates &amp; fit tests</h2>
+<nav id="component-list" aria-label="Print component"></nav>
+<section class="print-preview" aria-label="Actual print template">
+  <div><canvas id="print-canvas" tabindex="0" aria-label="Interactive 3D preview of the selected template or fit coupon. Drag or use arrow keys to rotate; use zoom buttons to zoom."></canvas>
+    <p id="print-error" hidden></p>
+    <div class="view-controls"><button id="view-reset">Reset 3D</button><button id="view-top">Top view</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><span>Drag to orbit · scroll to zoom</span></div>
+  </div>
+  <div><h2 id="part-title">Rail template</h2><p class="small"><span id="part-description">Elliptical honeycomb · ½″</span><br><span id="part-status">Digitally checked</span></p>
+    <dl id="part-dimensions"></dl>
+    <a id="part-3mf" class="download-main" href="models/rail-template-elliptical-honeycomb-half-inch.3mf" download>Download this 3MF</a>
+    <a id="part-stl" href="models/rail-template-elliptical-honeycomb-half-inch.stl" download>STL</a><a id="part-step" href="models/rail-template-elliptical-honeycomb-half-inch.step" download>STEP</a>
+    <p id="part-note" class="small"></p><p id="stile-cut-link" class="small" hidden><a href="stile-dovetail-v13.html">V13 stile · approved 0.05 mm joint</a></p>
+  </div>
+</section>
+<svg id="part-schematic" viewBox="0 0 760 170" role="img" aria-label="Dimensioned stile template" hidden></svg>
+<details id="ellipse-history"><summary>Elliptical iterations &amp; dovetail versions</summary>
+<p class="small">Current previews and downloads use ½″ stock. Older iterations below retain their historical thickness and joint geometry.</p>
+<div class="history">
+<span>Stile V13 · approved 0.05 mm joint</span><div><a href="half-inch-templates.html">Current stile downloads</a><a href="stile-template-left-dovetail-v13-bambu.3mf" download>Bambu project · 12.70 mm</a></div>
+<span>Rail V10 · five short-side hexagons</span><div><a href="rail-v10.html">View current rail</a><a href="rail-template-native-dovetail-v10-bambu.3mf" download>Bambu 3MF</a></div>
+<span>Rounded dovetail V9 · 0.20 mm clearance</span><div><a href="dovetail-v9.html">View V9 datasheet</a><a href="rail-template-native-dovetail-v9-bambu.3mf" download>Bambu 3MF</a></div>
+<span>Rounded dovetail V8 · 0.40 mm clearance</span><div><a href="dovetail-v8.html">View V8 datasheet</a><a href="rail-template-native-dovetail-v8-bambu.3mf" download>Bambu 3MF</a></div>
+<span>Rounded dovetail V7 · ½″</span><div><a href="dovetail-v7.html">View V7 datasheet</a><a href="models/rail-template-native-dovetail-v7-bambu.3mf" download>Bambu 3MF</a></div>
+<span>Honeycomb · ½″ · 10 mm webs</span><a href="models/rail-template-elliptical-honeycomb-half-inch.3mf" download>3MF</a>
+<span>Honeycomb V2 · 6.4 mm webs</span><a href="models/rail-template-elliptical-honeycomb-v2.3mf" download>3MF</a>
+<span>Honeycomb V1 · 3.2 mm webs</span><a href="models/rail-template-elliptical-honeycomb.3mf" download>3MF</a>
+<span>Original solid ellipse</span><a href="models/rail-template-elliptical.3mf" download>3MF</a>
+</div></details>
+</section>
+<p class="small">Honeycomb openings belong to the routing templates; the wooden frame stays solid. The cabinet and door are both 27″ tall, flush at the top and bottom. Hinges and the ⅜″ hinge strip are on the right; the knob is centered on the left stile. Cabinet sides and two ⅛″ side gaps are shown. The round knob is shown at approximately 1¼″ diameter; no drill hole is added to the templates. The stiles fit between the curved rails; templates include no tenon or other joinery allowance. Panel shading is illustrative.</p>
+/*DESIGN_LIBRARY*/
+<script>
+const data = /*CURVE_DATA*/;
+let selected = 'ellipse';
+let selectedPart=['#coupon','#stile-coupon','#left','#right','#rail'].includes(location.hash)?location.hash.slice(1):'rail', activePrint=data.print, previewRenderer=null;
+const svg = document.querySelector('#drawing');
+function line(y) { return data.x.map((x,i) => `${i?'L':'M'}${x.toFixed(5)},${y[i].toFixed(5)}`).join(' '); }
+function at(y,x) { const t=x/data.width*(y.length-1), i=Math.floor(t); return i===y.length-1?y[i]:y[i]+(y[i+1]-y[i])*(t-i); }
+function polygonPath(points) {return points.map((p,i)=>`${i?'L':'M'}${p[0]},${p[1]}`).join(' ')+' Z';}
+function partPath(part) {
+  const rotate=points=>part.horizontal?points.map(([x,y])=>[y,2.25-x]):points;
+  if(part.split_outlines_inches)return part.split_outlines_inches.map(p=>polygonPath(rotate(p))).join(' ');
+  return (part.outlines_inches||[part.outline_inches]).map(p=>polygonPath(rotate(p))).concat(part.holes_inches.map(p=>polygonPath(rotate(p)))).join(' ');
+}
+function draw() {
+  const c = data.curves.find(c=>c.id===selected), w=data.width, h=data.height_display;
+  const s=Number(document.querySelector('#stile').value);
+  const edge=line(c.y), base=line(data.curves[0].y);
+  const outline = `M0,0 L${w},0 ` + data.x.map((x,i)=>`L${data.x[data.x.length-1-i]},${c.y[c.y.length-1-i]}`).join(' ')+' Z';
+  const showOriginal = document.querySelector('#overlay').checked && selected!=='original';
+  const face = `<path d="${outline}" fill="#e4cfaa" stroke="#a39174" stroke-width=".04"/><path d="${edge}" fill="none" stroke="${c.color}" stroke-width=".095"/>`;
+  const overlay = showOriginal ? `<path d="${base}" fill="none" stroke="#916c56" stroke-width=".055" stroke-dasharray=".22 .19"/>` : '';
+  const printShape=polygonPath(data.print.outline_inches)+' '+data.print.holes_inches.map(polygonPath).join(' ');
+  const templateFace=selected==='ellipse'?`<path id="honeycomb-schematic" d="${printShape}" fill="#e4cfaa" fill-rule="evenodd" stroke="#998568" stroke-width=".04"/><path d="M${data.print.split_inches} 0 V${at(c.y,data.print.split_inches)}" stroke="#53615b" stroke-width=".035" stroke-dasharray=".16 .13"/>`:face;
+  const stiles=[0,w-s].map((x,i)=>`<rect x="${x}" y="0" width="${s}" height="${h}" fill="${selected==='ellipse' && selectedPart===(i?'right':'left')?'#9ebfb5':'#e4cfaa'}"/>`).join('');
+  const seams=[s,w-s].map(x=>`<path d="M${x} ${at(c.y,x)} V${h-at(c.y,w-x)}" stroke="#998568" stroke-width=".055"/>`).join('');
+  const sides=`<rect width=".75" height="${h}" fill="#b6a386" stroke="#998568" stroke-width=".045"/><rect id="hinge-strip" x="16.875" width=".375" height="${h}" fill="#cabb9f" stroke="#998568" stroke-width=".035"/><rect x="17.25" width=".75" height="${h}" fill="#b6a386" stroke="#998568" stroke-width=".045"/>`;
+  svg.innerHTML = `<g transform="translate(35 310) scale(10 -10)">${sides}<g transform="translate(0.875 0)"><rect width="${w}" height="${h}" fill="#eee4d3" stroke="#b3a58b" stroke-width=".045"/>${stiles}${face}${overlay}<g transform="translate(${w} ${h}) rotate(180)">${face}${overlay}</g>${seams}<circle id="cabinet-knob" cx="${s/2}" cy="${(at(c.y,s/2)+h-at(c.y,w-s/2))/2}" r=".625" fill="#665542" stroke="#44392e" stroke-width=".055"><title>1¼-inch diameter knob centered on left stile</title></circle></g></g>
+    <g transform="translate(290 239) scale(25 -25)">${templateFace}${overlay}</g>
+    <g fill="#53615b" font-family="Avenir, sans-serif" font-size="12"><text x="35" y="339">18″ cabinet · ${s===2.25?'2¼':'3'}″ stiles</text><text x="35" y="360">${s===2.25?'11⅜':'9⅞'}″ between stiles</text><text x="290" y="275">${selected==='ellipse'?'Print template · ½″':'Curve profile'} · 15⅞″ wide</text>${selected==='ellipse'?'<text x="290" y="298">10 mm webs · 3½″ solid center · ½″ thick</text>':''}<text x="270" y="168">3″</text><text x="698" y="91">6″</text></g>`;
+  document.querySelector('#note').textContent=c.note;
+  document.querySelector('#midpoint').textContent=`Height at midpoint: ${c.y[400].toFixed(3)}″`;
+  document.querySelectorAll('button[data-id]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.id===selected)));
+}
+document.querySelectorAll('button[data-id]').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.id;updateDesign();}));
+document.querySelector('#overlay').addEventListener('change',draw);
+document.querySelector('#stile').addEventListener('change',draw);
+draw();
+
+function updatePart() {
+  activePrint=data.designs[selected].parts[selectedPart];
+  document.querySelector('#stile-cut-link').hidden=!['left','right'].includes(selectedPart);
+  document.querySelector('#part-title').textContent=activePrint.title;
+  document.querySelector('#part-description').textContent=activePrint.description;
+  document.querySelector('#part-status').textContent=activePrint.status||'Digitally checked · physical fit unconfirmed';
+  document.querySelector('#part-dimensions').innerHTML=activePrint.fields.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('');
+  for(const ext of ['3mf','stl','step']) {
+    const link=document.querySelector(`#part-${ext}`),url=activePrint.downloads[ext];
+    link.hidden=!url;if(url)link.href=url;
+  }
+  document.querySelector('#part-3mf').textContent=activePrint.kind==='coupon'?'Download fit-test 3MF':activePrint.kind==='split'?'Download arranged 3MF':'Download this 3MF';
+  document.querySelector('#part-note').textContent=activePrint.note||(selectedPart==='rail'?'Print flat at 100%. Split at the midpoint. Rotate 180° in its plane for the upper rail.':'Print flat at 100%. Split 243.375 mm from either end of the bounding box. Left and right are the same shape rotated 180° in the plane; one template makes both.');
+  document.querySelector('#print-canvas').setAttribute('aria-label',`Interactive 3D preview: ${activePrint.title}. Drag to rotate or use arrow keys.`);
+  document.querySelectorAll('[data-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.part===selectedPart)));
+  const schematic=document.querySelector('#part-schematic');schematic.toggleAttribute('hidden',!['left','right'].includes(selectedPart));
+  if(['left','right'].includes(selectedPart)) {
+    const rotate=points=>points.map(([x,y])=>[y,2.25-x]);
+    const shape=activePrint.split_outlines_inches?partPath(activePrint):polygonPath(rotate(activePrint.outline_inches))+' '+activePrint.holes_inches.map(p=>polygonPath(rotate(p))).join(' ');
+    schematic.innerHTML=`<g transform="translate(38 95) scale(35 -35)"><path d="${shape}" fill="#dcc29a" fill-rule="evenodd" stroke="#998568" stroke-width=".035"/><path d="M${activePrint.split_inches} 0 V2.25" stroke="#53615b" stroke-width=".025" stroke-dasharray=".15 .12"/></g><g font-family="Avenir, sans-serif" font-size="12" fill="#53615b"><text x="38" y="120">19.163″ bounding length · 2¼″ wide · ½″ thick</text><text x="38" y="145">18″ outside edge · 19.124″ inside edge · dashed line marks the joint center</text></g>`;
+  }
+  if(previewRenderer)previewRenderer.setModel();draw();
+}
+function updateDesign() {
+  const design=data.designs[selected];
+  if(!design.parts[selectedPart])selectedPart='rail';
+  document.querySelector('#design-title').textContent=design.title;
+  document.querySelector('#design-summary').textContent=design.summary;
+  document.querySelector('#ellipse-history').hidden=selected!=='ellipse';
+  document.querySelector('#component-list').innerHTML=Object.entries(design.parts).map(([id,part])=>{
+    const shape=partPath(part);
+    const w=part.view_bounds_mm[0]/25.4,h=part.view_bounds_mm[1]/25.4;
+    return `<button class="component" data-part="${id}" aria-pressed="${id===selectedPart}"><strong>${part.title}</strong><span>${part.revision} · ${part.kind==='coupon'?(id==='coupon'?'fit approved':'test required'):id==='rail'?'use for top & bottom':'rotate 180° for opposite side'}</span><svg viewBox="-.4 -.4 ${w+.8} ${h+.8}" aria-hidden="true"><g transform="translate(0 ${h}) scale(1 -1)"><path d="${shape}" fill="#d9bd92" fill-rule="evenodd" stroke="#998568" stroke-width=".06"/></g></svg></button>`;
+  }).join('');
+  document.querySelectorAll('[data-part]').forEach(b=>b.addEventListener('click',()=>{selectedPart=b.dataset.part;history.replaceState(null,'',design.parts[selectedPart].kind==='coupon'?'#'+selectedPart:location.pathname);updatePart();}));
+  updatePart();
+}
+updateDesign();
+
+// Display the triangle positions and normals extracted from the exact download.
+// Local WebGL keeps this page self-contained, including when opened offline.
+function startPreview() {
+  const canvas=document.querySelector('#print-canvas');
+  const gl=canvas.getContext('webgl',{antialias:true,alpha:false,preserveDrawingBuffer:true});
+  if(!gl) throw new Error('3D rendering is unavailable in this browser. The dimensioned view and downloads below remain available.');
+  function shader(type,source) {const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
+  const program=gl.createProgram();
+  gl.attachShader(program,shader(gl.VERTEX_SHADER,`attribute vec3 position;attribute vec3 normal;uniform mat3 rotation;uniform vec2 scale;varying vec3 n;void main(){vec3 p=rotation*position;gl_Position=vec4(p.x*scale.x,p.y*scale.y,-p.z/800.0,1.0);n=rotation*normal;}`));
+  gl.attachShader(program,shader(gl.FRAGMENT_SHADER,`precision mediump float;varying vec3 n;void main(){float light=.43+.57*max(0.0,dot(normalize(n),normalize(vec3(-.35,.5,1.0))));gl_FragColor=vec4(vec3(.81,.65,.42)*light,1.0);}`));
+  gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));
+  gl.useProgram(program);
+  const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(activePrint.vertices),gl.STATIC_DRAW);
+  for(const [name,offset] of [['position',0],['normal',12]]) {const id=gl.getAttribLocation(program,name);gl.enableVertexAttribArray(id);gl.vertexAttribPointer(id,3,gl.FLOAT,false,24,offset);}
+  const rotation=gl.getUniformLocation(program,'rotation'),scale=gl.getUniformLocation(program,'scale');
+  gl.enable(gl.DEPTH_TEST);gl.clearColor(250/255,248/255,243/255,1);
+  let azimuth=-.12,tilt=.78,zoom=1;
+  function render() {
+    const ratio=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(canvas.clientWidth*ratio)),h=Math.max(1,Math.round(canvas.clientHeight*ratio));
+    if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+    gl.viewport(0,0,w,h);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    const c=Math.cos(azimuth),s=Math.sin(azimuth),ct=Math.cos(tilt),st=Math.sin(tilt);
+    gl.uniformMatrix3fv(rotation,false,new Float32Array([c,ct*s,st*s,-s,ct*c,st*c,0,-st,ct]));
+    const px=zoom*Math.min(w/(activePrint.view_bounds_mm[0]*1.14),h/(activePrint.view_bounds_mm[1]*1.5));
+    gl.uniform2f(scale,2*px/w,2*px/h);gl.drawArrays(gl.TRIANGLES,0,activePrint.vertices.length/6);
+    canvas.dataset.model=activePrint.file;
+    canvas.dataset.rendered='true';canvas.dataset.zoom=zoom.toFixed(2);canvas.dataset.azimuth=azimuth.toFixed(3);canvas.dataset.tilt=tilt.toFixed(3);
+  }
+  function zoomBy(factor){zoom=Math.max(.4,Math.min(3,zoom*factor));render();}
+  document.querySelector('#view-reset').addEventListener('click',()=>{azimuth=-.12;tilt=.78;zoom=1;render();});
+  document.querySelector('#view-top').addEventListener('click',()=>{azimuth=0;tilt=0;zoom=1;render();});
+  document.querySelector('#zoom-in').addEventListener('click',()=>zoomBy(1.2));
+  document.querySelector('#zoom-out').addEventListener('click',()=>zoomBy(1/1.2));
+  let pointer=null;
+  canvas.addEventListener('pointerdown',e=>{pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});
+  canvas.addEventListener('pointermove',e=>{if(!pointer||pointer.id!==e.pointerId)return;azimuth+=(e.clientX-pointer.x)*.008;tilt+=(e.clientY-pointer.y)*.008;pointer.x=e.clientX;pointer.y=e.clientY;render();});
+  canvas.addEventListener('pointerup',()=>{pointer=null;});canvas.addEventListener('pointercancel',()=>{pointer=null;});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();zoomBy(Math.exp(-e.deltaY*.001));},{passive:false});
+  canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();if(e.key==='ArrowLeft')azimuth-=.12;if(e.key==='ArrowRight')azimuth+=.12;if(e.key==='ArrowUp')tilt-=.12;if(e.key==='ArrowDown')tilt+=.12;render();});
+  new ResizeObserver(render).observe(canvas);render();
+  return {setModel(){gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(activePrint.vertices),gl.STATIC_DRAW);azimuth=-.12;tilt=.78;zoom=1;render();}};
+}
+try {previewRenderer=startPreview();} catch(error) {const message=document.querySelector('#print-error');message.hidden=false;message.textContent=error.message;}
+</script>
+</html>

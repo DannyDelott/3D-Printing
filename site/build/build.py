@@ -1,0 +1,202 @@
+"""Build the static library from the catalog and existing project artifacts."""
+import json
+import posixpath
+import shutil
+from html import escape
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import quote, unquote, urlsplit
+
+ROOT = Path(__file__).resolve().parents[2]
+SITE = ROOT / 'site'
+OUT = ROOT / '_site'
+FORMATS = {'.3mf', '.stl', '.step', '.brep', '.fcstd'}
+PUBLISHED = FORMATS | {'.html', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.json', '.md', '.py', '.txt', '.css', '.js', '.in'}
+EXCLUDED = {'archive', '.venv', '__pycache__', 'work', 'node_modules'}
+ICONS = {
+    'cube': 'M12 3 3 8v9l9 5 9-5V8L12 3Zm0 10v9M3 8l9 5 9-5M7.5 5.5l9 5v5',
+    'arrow': 'M5 12h14m-6-6 6 6-6 6',
+    'left': 'M19 12H5m6-6-6 6 6 6',
+    'search': 'M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',
+    'download': 'M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4',
+    'external': 'M14 3h7v7M21 3 10 14M10 3H3v18h18v-7',
+}
+
+
+def icon(name):
+    return f'<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="{ICONS[name]}"/></svg>'
+
+
+def href(page, target):
+    return quote(posixpath.relpath(target, posixpath.dirname(page) or '.'), safe='/')
+
+
+def artifact(path):
+    return path if path.startswith('assets/') else 'files/' + path
+
+
+def badge(p):
+    kind = 'test' if p['status'] == 'Test print next' else 'unknown' if p['status'] == 'Fit undocumented' else ''
+    return f'<span class="pill {kind}">{escape(p["status"])}</span>'
+
+
+def frame(page, title, body, description):
+    home = href(page, 'index.html')
+    return f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{escape(title)} · 3D Library</title><meta name="description" content="{escape(description, quote=True)}">
+<link rel="stylesheet" href="{href(page, 'style.css')}"><link rel="icon" href="{href(page, 'favicon.svg')}" type="image/svg+xml">
+<script type="module" src="{href(page, 'client.js')}"></script></head><body>
+<a class="skip" href="#main">Skip to content</a><div class="shell">
+<header class="header"><a href="{home}" class="brand">{icon('cube')}<span>3D Library.</span></a>
+<nav aria-label="Main"><a href="{home}">Collection</a>
+<a href="https://github.com/DannyDelott/3D-Printing" target="_blank" rel="noreferrer">GitHub {icon('external')}</a></nav></header>
+<main id="main">{body}</main>
+</div></body></html>'''
+
+
+def index(projects):
+    page = 'index.html'
+    filters = ''.join(f'<button type="button" data-category="{escape(c)}" aria-pressed="{str(i == 0).lower()}">{escape(c)}</button>' for i, c in enumerate(['All projects'] + sorted({p['category'] for p in projects})))
+    rows = ''
+    for p in projects:
+        text = escape(' '.join([p['title'], p['description'], p['category'], p['revision']]).lower(), quote=True)
+        rows += f'''<a href="{href(page, 'projects/' + p['slug'] + '/index.html')}" class="project-row" data-category="{escape(p['category'])}" data-search="{text}">
+<img src="{href(page, p['preview'])}" alt="" loading="lazy" width="90" height="70"><div><h2>{escape(p['title'])}</h2><p>{escape(p['revision'])}</p></div>
+<span class="row-category">{escape(p['category'])}</span><span class="row-status">{badge(p)}</span>{icon('arrow')}</a>'''
+    body = f'''<section class="index-intro"><h1>Models</h1><p>{len(projects)} projects</p></section>
+<div class="toolbar" id="filters" hidden><div class="filters" aria-label="Project categories">{filters}</div><label class="search">{icon('search')}<input id="search" type="search" aria-label="Search projects" placeholder="Find a project…"></label></div>
+<div class="table-head" aria-hidden="true"><span>Model</span><span>Project / revision</span><span class="row-category">Category</span><span class="row-status">Design status</span><span></span></div>
+<div id="results">{rows}</div><p id="empty" class="empty" hidden>No projects match. Try another name or category. <button id="clear-search" class="secondary">Clear filters</button></p>
+
+'''
+    return frame(page, 'Collection', body, 'A growing collection of 3D models, dimensions, print notes, and downloadable project files.')
+
+
+def file_link(page, name, path):
+    original = SITE / path if path.startswith('assets/') else ROOT / path
+    size = original.stat().st_size
+    units = f'{size / 1_000_000:.1f} MB' if size >= 1_000_000 else f'{max(1, round(size / 1000))} KB'
+    return f'<a href="{href(page, artifact(path))}" download><span class="format">{escape(original.suffix[1:].upper())}</span><span class="dl-name">{escape(name)}</span><span class="file-size">{units}</span>{icon("download")}</a>'
+
+
+def project_page(p, published):
+    page = f'projects/{p["slug"]}/index.html'
+    downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
+    dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
+    sources = ''.join(file_link(page, Path(path).name, path) for path in p['source'])
+    selected_paths = {path for _, path in p['downloads']}
+    extras = [path for path in published if path.startswith(p['root'] + '/') and Path(path).suffix.lower() in FORMATS and path not in selected_paths]
+    extra_links = ''.join(file_link(page, str(Path(path).relative_to(p['root'])), path) for path in extras)
+    datasheets = [path for path in published if path.startswith(p['root'] + '/') and Path(path).name == 'datasheet.html']
+    sheet_links = ''.join(f'<li><a href="{href(page, artifact(path))}">{escape(str(Path(path).parent.relative_to(p["root"])))}</a></li>' for path in datasheets)
+    legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
+    caption = p.get('previewCaption', p['revision'])
+    body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} Back to the collection</a>
+<div class="detail-heading"><div>{badge(p)}<h1>{escape(p['title'])}</h1></div><span class="revision muted">{escape(p['revision'])}</span></div>
+<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
+<span class="viewer-label">{escape(caption)}</span><img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
+<canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Use arrow keys to orbit; plus and minus to zoom."></canvas></div>
+<div class="viewer-caption"><span id="viewer-status" role="status">Model preview</span><div class="viewer-controls"><button id="load-model" hidden>Explore in 3D</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
+<nav class="tabline" aria-label="Datasheet sections"><a href="#dimensions">Specifications</a><a href="#print-notes">Print notes</a><a href="#fit-status">Fit & validation</a><a href="#files">All files</a></nav>
+<section class="notes" id="print-notes"><h2>Print & assembly notes</h2><p>{escape(p['print'])}</p></section>
+<section class="notes" id="fit-status"><h2>Validation</h2><p>{escape(p['notes'])}</p></section>
+<div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
+</div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
+<section id="downloads"><h2>Downloads</h2><p class="small muted" style="margin-top:10px">Selected files · {escape(p['revision'])}</p><div class="download-list">{downloads}</div>
+</section>
+<section class="notes"><h2>Source & attribution</h2><p>{escape(p['license'])}</p>{f'<div class="download-list">{sources}</div>' if sources else ''}</section></aside></div>
+<section class="file-archive" id="files"><h2>Project files & revisions</h2><p class="muted">Earlier revisions and alternatives.</p>
+{f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
+{f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else '<p class="small muted">All model files for this project are listed above.</p>'}</section>'''
+    return frame(page, p['title'], body, p['description'])
+
+
+def inventory(projects):
+    files = {'NOTICE.md'}
+    for root in sorted({p['root'] for p in projects}):
+        for path in (ROOT / root).rglob('*'):
+            if not path.is_file() or any(part in EXCLUDED for part in path.relative_to(ROOT).parts):
+                continue
+            if path.suffix.lower() not in PUBLISHED or '.gcode.' in path.name:
+                continue
+            # The two older standalone projects also hold scratch builds outside output/.
+            relative = path.relative_to(ROOT / root)
+            if root.startswith('closet-') and len(relative.parts) > 1 and relative.parts[0] not in {'output', 'source'}:
+                continue
+            files.add(path.relative_to(ROOT).as_posix())
+    return sorted(files)
+
+
+def validate_catalog(projects):
+    seen = set()
+    for p in projects:
+        slug = p['slug']
+        if slug in seen or not slug or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in slug):
+            raise ValueError(f'Invalid or duplicate project slug: {slug}')
+        seen.add(slug)
+        paths = [p['root'], p['readme'], p['preview'], p['previewModel'], *p['source'], *(path for _, path in p['downloads'])]
+        if p.get('datasheet'):
+            paths.append(p['datasheet'])
+        for path in paths:
+            base = SITE if path.startswith('assets/') else ROOT
+            resolved = (base / path).resolve()
+            if not resolved.is_relative_to(base.resolve()) or not resolved.exists():
+                raise ValueError(f'{slug}: missing or unsafe path {path}')
+
+
+class Links(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.paths = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        for key in ('href', 'src', 'data-model'):
+            if key in attrs:
+                self.paths.append(attrs[key])
+
+
+def check_links():
+    errors = []
+    for page in OUT.rglob('*.html'):
+        parser = Links()
+        parser.feed(page.read_text())
+        for value in parser.paths:
+            url = urlsplit(value)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            target = (page.parent / unquote(url.path)).resolve()
+            if not target.is_relative_to(OUT.resolve()) or not target.exists():
+                errors.append(f'{page.relative_to(OUT)} -> {value}')
+    if errors:
+        raise ValueError('Broken site links:\n' + '\n'.join(errors))
+
+
+def build():
+    projects = json.loads((SITE / 'catalog.json').read_text())
+    validate_catalog(projects)
+    published = inventory(projects)
+    if OUT.exists():
+        shutil.rmtree(OUT)
+    OUT.mkdir()
+    shutil.copytree(SITE / 'assets', OUT / 'assets')
+    for filename in ('style.css', 'client.js', 'viewer.js', 'favicon.svg'):
+        shutil.copy2(SITE / filename, OUT / filename)
+    for path in published:
+        target = OUT / 'files' / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / path, target)
+    (OUT / 'index.html').write_text(index(projects))
+    for p in projects:
+        target = OUT / 'projects' / p['slug'] / 'index.html'
+        target.parent.mkdir(parents=True)
+        target.write_text(project_page(p, published))
+    (OUT / '.nojekyll').touch()
+    (OUT / 'publication.json').write_text(json.dumps({'projects': len(projects), 'files': published}, indent=2) + '\n')
+    check_links()
+    print(f'Built {len(projects)} project pages and {len(published)} project artifacts. All local HTML links resolve.')
+
+
+if __name__ == '__main__':
+    build()

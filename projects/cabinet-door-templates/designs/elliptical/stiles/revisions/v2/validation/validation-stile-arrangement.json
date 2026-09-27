@@ -1,0 +1,41 @@
+{
+  "source": "stile-template-left-dovetail-v2-before-arrangement.3mf",
+  "file": "stile-template-left-dovetail-v2-bambu.3mf",
+  "preserved": "Original mesh geometry, Z scale, filament, printer and process settings",
+  "parts": [
+    {
+      "object": "2",
+      "bounds_mm": [
+        [
+          1.5498350000000016,
+          59.4250031,
+          2.705719204243451e-09
+        ],
+        [
+          254.450172,
+          116.5750046,
+          12.749999997294282
+        ]
+      ],
+      "rotation_degrees": 90
+    },
+    {
+      "object": "4",
+      "bounds_mm": [
+        [
+          1.649840999999995,
+          129.4250031,
+          2.705719204243451e-09
+        ],
+        [
+          254.350166,
+          186.5749969,
+          12.749999997294282
+        ]
+      ],
+      "rotation_degrees": 90
+    }
+  ],
+  "front_clearance_mm": 59.4250031,
+  "status": "Loaded and sliced successfully in Bambu Studio; visual preview confirms front purge line clear. Saved current project."
+}

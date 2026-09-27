@@ -1,0 +1,593 @@
+[
+  {
+    "id": "cabinet",
+    "title": "Cabinet door templates",
+    "category": "Woodworking",
+    "description": "Curved rail and stile routing templates for an inset cabinet door.",
+    "revision": "Rail V10 \u00b7 Stile V13",
+    "status": "Joint fit approved",
+    "dimensions": [
+      [
+        "Door",
+        "15\u215e \u00d7 27 in"
+      ],
+      [
+        "Template thickness",
+        "12.70 mm"
+      ],
+      [
+        "Stile width",
+        "57.15 mm"
+      ],
+      [
+        "Stile joint clearance",
+        "0.05 mm total"
+      ]
+    ],
+    "notes": "Rail and stile coupons have passed physical fit checks. Full-template strength remains untested. Keep each pair of halves on the same joint revision.",
+    "print": "Two stile halves arranged flat for the Bambu P1S. The V13 sliced project estimates 2 h 40 min and 141.3 g.",
+    "model": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
+    "downloads": [
+      [
+        "Rail V10 \u00b7 Bambu project",
+        "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10-bambu.3mf"
+      ],
+      [
+        "Stile V13 \u00b7 Bambu project",
+        "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13-bambu.3mf"
+      ],
+      [
+        "Stile V13 \u00b7 fit coupon",
+        "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test-bambu.3mf"
+      ],
+      [
+        "Rail V10 \u00b7 editable STEP",
+        "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.step"
+      ]
+    ],
+    "datasheet": "projects/cabinet-door-templates/index.html",
+    "readme": "projects/cabinet-door-templates/README.md",
+    "preview": "assets/cabinet.png",
+    "previewModel": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
+    "slug": "cabinet-door-templates",
+    "root": "projects/cabinet-door-templates",
+    "source": [
+      "projects/cabinet-door-templates/source/README.md"
+    ],
+    "license": "No license declared; see project provenance.",
+    "previewCaption": "Rail V10 \u00b7 assembled preview"
+  },
+  {
+    "id": "stencil",
+    "title": "Eighth-circle stencil",
+    "category": "Woodworking",
+    "description": "Nineteen labeled radii. One small tool for finding the right curve.",
+    "revision": "1\u201310 inch radii",
+    "status": "Test print next",
+    "dimensions": [
+      [
+        "Footprint",
+        "232.9 \u00d7 232.9 mm"
+      ],
+      [
+        "Body thickness",
+        "3.2 mm"
+      ],
+      [
+        "Raised labels",
+        "0.4 mm"
+      ],
+      [
+        "Arc",
+        "45\u00b0"
+      ]
+    ],
+    "notes": "Ready for a first test print. Use light pencil pressure along the curved edges. Let the long, thin rails cool before removal.",
+    "print": "PLA \u00b7 0.20 mm layers \u00b7 0.4 mm nozzle \u00b7 3 walls \u00b7 no supports. Keep the stencil flat on the bed at 100% scale.",
+    "model": "projects/quarter-circle-stencil/models/eighth-circle-stencil-1-to-10-inch.stl",
+    "readme": "projects/quarter-circle-stencil/README.md",
+    "downloads": [
+      [
+        "Portable mesh",
+        "projects/quarter-circle-stencil/models/eighth-circle-stencil-1-to-10-inch.stl"
+      ]
+    ],
+    "preview": "assets/stencil.png",
+    "previewModel": "projects/quarter-circle-stencil/models/eighth-circle-stencil-1-to-10-inch.stl",
+    "slug": "eighth-circle-stencil",
+    "root": "projects/quarter-circle-stencil",
+    "source": [
+      "projects/quarter-circle-stencil/source/generate_stencil.py"
+    ],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "caul",
+    "title": "Fingernail-profile caul",
+    "category": "Woodworking",
+    "description": "A light, continuous contact face for a 2\u00d74-backed veneer glue-up.",
+    "revision": "250 mm \u00b7 2\u00d74 backed",
+    "status": "Test print next",
+    "dimensions": [
+      [
+        "Length",
+        "250 mm"
+      ],
+      [
+        "Width",
+        "31.75 mm"
+      ],
+      [
+        "Profile radius",
+        "38.10 mm"
+      ],
+      [
+        "Minimum thickness",
+        "4 mm"
+      ]
+    ],
+    "notes": "CAD and mesh dimensions are verified. Physical fit against the routed board still needs checking. The 2\u00d74 supplies stiffness along the length.",
+    "print": "Flat clamp face on the bed, no supports. 4 walls and 15\u201320% infill for the thin backed version. Disable brims that exceed the bed.",
+    "model": "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.stl",
+    "readme": "projects/fingernail-profile-clamping-caul/README.md",
+    "downloads": [
+      [
+        "Printable model",
+        "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.3mf"
+      ],
+      [
+        "Portable mesh",
+        "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.stl"
+      ],
+      [
+        "Editable CAD",
+        "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.step"
+      ]
+    ],
+    "preview": "assets/caul.png",
+    "previewModel": "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.stl",
+    "slug": "fingernail-profile-caul",
+    "root": "projects/fingernail-profile-clamping-caul",
+    "source": [
+      "projects/fingernail-profile-clamping-caul/source/generate_caul.py"
+    ],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "tote",
+    "title": "Interchangeable tote grip",
+    "category": "Woodworking",
+    "description": "One comfortable grip for a growing family of profile jigs.",
+    "revision": "Saddle + fit coupon",
+    "status": "Test print next",
+    "dimensions": [
+      [
+        "Overall size",
+        "39 \u00d7 100 \u00d7 99.3 mm"
+      ],
+      [
+        "Mounting width",
+        "31.75 mm"
+      ],
+      [
+        "Saddle clearance",
+        "0.50 mm total"
+      ],
+      [
+        "Hardware",
+        "2 \u00d7 M3 nuts & screws"
+      ]
+    ],
+    "notes": "Print the saddle coupon before the full tote. Two screws lock the grip onto the existing chamfered profile interface.",
+    "print": "Upright with a brim, 5 walls and 25\u201335% gyroid infill. The 45\u00b0 internal roof is designed to avoid supports.",
+    "model": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
+    "readme": "projects/fingernail-profile-clamping-caul/README.md",
+    "downloads": [
+      [
+        "Printable model",
+        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.3mf"
+      ],
+      [
+        "Portable mesh",
+        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl"
+      ],
+      [
+        "Editable CAD",
+        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.step"
+      ]
+    ],
+    "preview": "assets/tote.png",
+    "previewModel": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
+    "slug": "interchangeable-tote-grip",
+    "root": "projects/fingernail-profile-clamping-caul",
+    "source": [
+      "projects/fingernail-profile-clamping-caul/source/generate_tote_grip.py",
+      "projects/fingernail-profile-clamping-caul/source/profile_interface.py"
+    ],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "closet",
+    "title": "Closet space saver",
+    "category": "Home & storage",
+    "description": "A lighter basket with regular hex panels and reinforced mounting holes.",
+    "revision": "Parametric rebuild",
+    "status": "Test print next",
+    "dimensions": [
+      [
+        "Design envelope",
+        "220 \u00d7 220 \u00d7 250 mm"
+      ],
+      [
+        "Basket angle",
+        "25\u00b0"
+      ],
+      [
+        "Hex across flats",
+        "18 mm"
+      ],
+      [
+        "Mounting holes",
+        "4 \u00d7 5 mm"
+      ]
+    ],
+    "notes": "One connected, watertight body verified in CAD. Not yet physically test-printed. Inspired by EmrakulVs15Squirtles; CC BY-NC-SA 4.0.",
+    "print": "Starting point: 0.20 mm layers, 0.4 mm nozzle, 3 walls, no supports. Use the supplied print orientation.",
+    "model": "closet-space-saver-rebuilt/output/closet-space-saver-simple-small-hex-print-ready.stl",
+    "readme": "closet-space-saver-rebuilt/README.md",
+    "downloads": [
+      [
+        "Printable model",
+        "closet-space-saver-rebuilt/output/closet-space-saver-simple-small-hex-print-ready.3mf"
+      ],
+      [
+        "Portable mesh",
+        "closet-space-saver-rebuilt/output/closet-space-saver-simple-small-hex-print-ready.stl"
+      ]
+    ],
+    "preview": "assets/closet.png",
+    "previewModel": "closet-space-saver-rebuilt/output/closet-space-saver-simple-small-hex-print-ready.stl",
+    "slug": "closet-space-saver-rebuilt",
+    "root": "closet-space-saver-rebuilt",
+    "source": [
+      "closet-space-saver-rebuilt/build_rebuilt_model.py"
+    ],
+    "license": "CC BY-NC-SA 4.0 \u00b7 inspired by EmrakulVs15Squirtles"
+  },
+  {
+    "id": "closet-remix",
+    "slug": "closet-space-saver-remix",
+    "title": "Closet space saver \u00b7 remix",
+    "category": "Home & storage",
+    "description": "The earlier hex-cutout remix, preserving the original basket and hook geometry.",
+    "revision": "Hex-cutout remix",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Design envelope",
+        "220 \u00d7 220 \u00d7 250 mm"
+      ],
+      [
+        "Basket angle",
+        "25\u00b0"
+      ],
+      [
+        "Mounting holes",
+        "4 \u00d7 5 mm"
+      ]
+    ],
+    "notes": "CAD checks found one valid, connected solid and watertight meshes. Physical fit has not been documented.",
+    "print": "Geometry and orientation only. Select machine and filament in your slicer. The original starting point was PLA, 0.20 mm layers, two walls, and 15% infill.",
+    "root": "closet-space-saver-hex",
+    "readme": "closet-space-saver-hex/README.md",
+    "license": "CC BY-NC-SA 4.0 \u00b7 original model by EmrakulVs15Squirtles",
+    "source": [
+      "closet-space-saver-hex/build_hex_model.py"
+    ],
+    "model": "closet-space-saver-hex/output/closet-space-saver-hex-print-ready.stl",
+    "previewModel": "closet-space-saver-hex/output/closet-space-saver-hex-print-ready.stl",
+    "preview": "assets/closet-remix.png",
+    "downloads": [
+      [
+        "Print-oriented model",
+        "closet-space-saver-hex/output/closet-space-saver-hex-print-ready.3mf"
+      ],
+      [
+        "Portable mesh",
+        "closet-space-saver-hex/output/closet-space-saver-hex-print-ready.stl"
+      ],
+      [
+        "Editable CAD",
+        "closet-space-saver-hex/output/closet-space-saver-hex-design.step"
+      ]
+    ]
+  },
+  {
+    "id": "bin",
+    "title": "Gridfinity rebuilt bin",
+    "category": "Home & storage",
+    "description": "A standard bin for a modular drawer system.",
+    "revision": "4 \u00d7 3 \u00d7 8",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "4 \u00d7 3 \u00d7 8"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/gridfinity/rebuilt-bin-4x3x8/models/rebuilt-bin-4x3x8-standard.3mf",
+    "downloads": [
+      [
+        "rebuilt bin 4x3x8 standard",
+        "projects/gridfinity/rebuilt-bin-4x3x8/models/rebuilt-bin-4x3x8-standard.3mf"
+      ]
+    ],
+    "readme": "projects/gridfinity/rebuilt-bin-4x3x8/README.md",
+    "preview": "assets/bin.png",
+    "previewModel": "assets/bin.stl",
+    "slug": "gridfinity-rebuilt-bin",
+    "root": "projects/gridfinity/rebuilt-bin-4x3x8",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "jae",
+    "title": "Jae drawer",
+    "category": "Home & storage",
+    "description": "Baseplates and spacers, fitted to a specific drawer.",
+    "revision": "319 \u00d7 423 mm",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "319 \u00d7 423 mm"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/gridfinity/jae-drawer/models/jae-drawer-base-spacer.3mf",
+    "downloads": [
+      [
+        "jae drawer base spacer",
+        "projects/gridfinity/jae-drawer/models/jae-drawer-base-spacer.3mf"
+      ],
+      [
+        "jae drawer baseplate 319x423",
+        "projects/gridfinity/jae-drawer/models/jae-drawer-baseplate-319x423.3mf"
+      ]
+    ],
+    "readme": "projects/gridfinity/jae-drawer/README.md",
+    "preview": "assets/jae.png",
+    "previewModel": "assets/jae.stl",
+    "slug": "gridfinity-jae-drawer",
+    "root": "projects/gridfinity/jae-drawer",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "tea",
+    "title": "Tea drawer",
+    "category": "Home & storage",
+    "description": "A five-plate base for keeping the tea drawer organized.",
+    "revision": "342 \u00d7 472 mm",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "342 \u00d7 472 mm"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/gridfinity/tea-drawer/models/tea-drawer-baseplate-342x472.3mf",
+    "downloads": [
+      [
+        "tea drawer baseplate 342x472",
+        "projects/gridfinity/tea-drawer/models/tea-drawer-baseplate-342x472.3mf"
+      ]
+    ],
+    "readme": "projects/gridfinity/tea-drawer/README.md",
+    "preview": "assets/tea.png",
+    "previewModel": "assets/tea.stl",
+    "slug": "gridfinity-tea-drawer",
+    "root": "projects/gridfinity/tea-drawer",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "filing",
+    "title": "Small filing cabinet",
+    "category": "Home & storage",
+    "description": "Baseplate iterations and compartment bins.",
+    "revision": "235 \u00d7 375 mm candidate",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "235 \u00d7 375 mm candidate"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-final-235x375.3mf",
+    "downloads": [
+      [
+        "baseplate 374x235 v1",
+        "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-374x235-v1.3mf"
+      ],
+      [
+        "baseplate 374x235 v2",
+        "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-374x235-v2.3mf"
+      ],
+      [
+        "baseplate final 235x375",
+        "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-final-235x375.3mf"
+      ],
+      [
+        "bins",
+        "projects/gridfinity/jae-small-filing-cabinet/models/bins.3mf"
+      ]
+    ],
+    "readme": "projects/gridfinity/jae-small-filing-cabinet/README.md",
+    "preview": "assets/filing.png",
+    "previewModel": "assets/filing.stl",
+    "slug": "gridfinity-filing-cabinet",
+    "root": "projects/gridfinity/jae-small-filing-cabinet",
+    "source": [],
+    "license": "Bins include Gridfinity Extended by ostat with embedded BY-SA metadata. See original attribution."
+  },
+  {
+    "id": "uhk",
+    "title": "UHK foot",
+    "category": "Everyday objects",
+    "description": "A replacement support foot for an Ultimate Hacking Keyboard.",
+    "revision": "Fit to be documented",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "Fit to be documented"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/uhk-foot/models/uhk-foot.3mf",
+    "downloads": [
+      [
+        "uhk foot",
+        "projects/uhk-foot/models/uhk-foot.3mf"
+      ]
+    ],
+    "readme": "projects/uhk-foot/README.md",
+    "preview": "assets/uhk.png",
+    "previewModel": "assets/uhk.stl",
+    "slug": "uhk-foot",
+    "root": "projects/uhk-foot",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "deckpass",
+    "title": "Deckpass",
+    "category": "Everyday objects",
+    "description": "The original Deckpass Bambu Studio project.",
+    "revision": "V1.1",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "V1.1"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/deckpass/models/deckpass-v1.1.3mf",
+    "downloads": [
+      [
+        "deckpass v1.1",
+        "projects/deckpass/models/deckpass-v1.1.3mf"
+      ]
+    ],
+    "readme": "projects/deckpass/README.md",
+    "preview": "assets/deckpass.png",
+    "previewModel": "assets/deckpass.stl",
+    "slug": "deckpass",
+    "root": "projects/deckpass",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "tail",
+    "title": "Ping-pong tail attachment",
+    "category": "Everyday objects",
+    "description": "Loose and tight side-clip variants for a 40 mm ball.",
+    "revision": "Five build plates",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Configuration",
+        "Five build plates"
+      ],
+      [
+        "Print format",
+        "3MF"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Use the original project in your slicer and confirm scale, orientation, material, and machine settings before printing.",
+    "model": "projects/ping-pong-ball-tail-attachment/models/ping-pong-ball-tail-attachment.3mf",
+    "downloads": [
+      [
+        "ping pong ball tail attachment",
+        "projects/ping-pong-ball-tail-attachment/models/ping-pong-ball-tail-attachment.3mf"
+      ]
+    ],
+    "readme": "projects/ping-pong-ball-tail-attachment/README.md",
+    "preview": "assets/tail.png",
+    "previewModel": "assets/tail.stl",
+    "slug": "ping-pong-tail-attachment",
+    "root": "projects/ping-pong-ball-tail-attachment",
+    "source": [],
+    "license": "Imported 3DBenchy / Creative Tools material is embedded. Review archive attribution before redistribution."
+  },
+  {
+    "id": "handle",
+    "title": "Long handle",
+    "category": "Everyday objects",
+    "description": "A long handle mesh, ready for its next iteration.",
+    "revision": "Original mesh",
+    "status": "Fit undocumented",
+    "dimensions": [
+      [
+        "Mesh bounds",
+        "30.5 \u00d7 262.0 \u00d7 15.0 units"
+      ],
+      [
+        "Units",
+        "Not encoded in STL"
+      ]
+    ],
+    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
+    "print": "Confirm units in the slicer before printing; millimeters are assumed but unverified. Record mounting dimensions, orientation, material, and strength requirements.",
+    "model": "projects/handle/models/handle.stl",
+    "downloads": [
+      [
+        "handle",
+        "projects/handle/models/handle.stl"
+      ]
+    ],
+    "readme": "projects/handle/README.md",
+    "preview": "assets/handle.png",
+    "previewModel": "projects/handle/models/handle.stl",
+    "slug": "long-handle",
+    "root": "projects/handle",
+    "source": [],
+    "license": "No license declared; see project provenance."
+  }
+]

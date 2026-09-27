@@ -2,12 +2,19 @@
 
 A home base for printable models, slicer projects, experiments, and notes.
 
+The [static model library](site/README.md) provides searchable project pages, interactive previews, specifications, and downloads. Build it with `python3 site/build/build.py`; accepted updates to `main` publish through GitHub Pages once Pages is enabled.
+
 Each idea lives in its own folder under [`projects/`](projects/). A project can contain printable files in `models/`, editable CAD or generator files in `source/`, photos in `images/`, and its own README with printing and provenance notes.
 
 ## Projects
 
 | Project | What is here | Files |
 | --- | --- | --- |
+| [Cabinet door templates](projects/cabinet-door-templates/) | Curved rail and stile routing templates, with dovetail print variants | 3MF, STL, STEP + interactive datasheets |
+| [Fingernail-profile caul and tote](projects/fingernail-profile-clamping-caul/) | Cauls, interchangeable tote grip, and fit coupon | 3MF, STL, STEP + generators |
+| [Closet space saver rebuild](closet-space-saver-rebuilt/) | Parametric hex-panel basket | 3MF, STL, STEP + generator |
+| [Closet space saver remix](closet-space-saver-hex/) | Earlier hex-cutout remix | 3MF, STL, STEP + generator |
+| [Eighth-circle stencil](projects/quarter-circle-stencil/) | Labeled 1–10 inch, 45-degree furniture-layout curve stencil | 1 × STL + editable generator |
 | [Deckpass](projects/deckpass/) | Deckpass v1.1 Bambu Studio project | 1 × 3MF |
 | [UHK foot](projects/uhk-foot/) | Replacement/support foot for an Ultimate Hacking Keyboard | 1 × 3MF |
 | [Handle](projects/handle/) | Long handle mesh | 1 × STL |

@@ -4,3 +4,9 @@
 *.stp binary
 *.f3d binary
 *.blend binary
+*.brep binary
+*.FCStd binary
+
+# Existing generated geometry datasheets
+projects/cabinet-door-templates/**/datasheet.html linguist-generated
+projects/cabinet-door-templates/index.html linguist-generated

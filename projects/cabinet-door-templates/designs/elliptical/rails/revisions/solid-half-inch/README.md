@@ -1,0 +1,15 @@
+# Elliptical arc · Solid elliptical rail · half-inch
+
+Unsplit alternative.
+
+[Interactive datasheet](datasheet.html) · [Design manifest](../../../design.json) · [All designs](../../../../../index.html)
+
+Nominal CAD template thickness: **12.7 mm**. Slicer variants may retain different historical settings; see the datasheet and validation.
+
+## Models
+
+- [rail-template-elliptical-solid-half-inch.3mf](models/rail-template-elliptical-solid-half-inch.3mf)
+- [rail-template-elliptical-solid-half-inch.step](models/rail-template-elliptical-solid-half-inch.step)
+- [rail-template-elliptical-solid-half-inch.stl](models/rail-template-elliptical-solid-half-inch.stl)
+
+Shared generators remain in the project’s [source directory](../../../../../source/README.md). Earlier decisions are preserved in [project history](../../../../../archive/project-history.md).

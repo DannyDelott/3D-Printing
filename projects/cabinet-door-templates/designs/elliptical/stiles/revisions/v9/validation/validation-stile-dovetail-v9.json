@@ -1,0 +1,149 @@
+{
+  "revision": 9,
+  "joint": "Exact approved V9 rail joint, transferred without scaling",
+  "thickness_mm": 12.7,
+  "width_clearance_mm": 0.2,
+  "depth_clearance_mm": 0.1,
+  "external_radius_mm": 0.3,
+  "internal_radius_mm": 0.2,
+  "taper_degrees": 2,
+  "dimensions_mm": [
+    486.7506797414408,
+    57.15,
+    12.7
+  ],
+  "split_mm": 243.3753398707204,
+  "measured_clearance": [
+    {
+      "height_mm": 0.5,
+      "side_clearances_mm": [
+        0.10000000000078035,
+        0.10000000000077591
+      ]
+    },
+    {
+      "height_mm": 6.35,
+      "side_clearances_mm": [
+        0.10000000000077147,
+        0.10000000000077591
+      ]
+    },
+    {
+      "height_mm": 12.2,
+      "side_clearances_mm": [
+        0.10000000000078124,
+        0.10000000000077591
+      ]
+    }
+  ],
+  "joint_identity": {
+    "tongue": {
+      "source_rail_step_sha256": "96305dc4beec1d9e9f9fe0ce8aa63d44b0cdc6e3e67d3aced351c68d4121e515",
+      "local_joint_difference_mm3": 0.0
+    },
+    "socket": {
+      "source_rail_step_sha256": "aa942c43858c01ac08eb4ed10a2bf9c9482699f4787cbfd634bc4148f47ea5dd",
+      "local_joint_difference_mm3": 0.0
+    }
+  },
+  "assembled_overlap_mm3": 0.0,
+  "minimum_nominal_socket_side_wall_mm": 1.8077915818360175,
+  "parts": [
+    {
+      "name": "tongue",
+      "bounds_mm": [
+        [
+          3.1873300646401788,
+          61.424999999999976,
+          0.0
+        ],
+        [
+          252.81266993535985,
+          118.57500000000002,
+          12.7
+        ]
+      ],
+      "volume_mm3": 141972.43785548437,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "socket",
+      "bounds_mm": [
+        [
+          3.137330064639798,
+          137.425,
+          0.0
+        ],
+        [
+          252.8626699353602,
+          194.575,
+          12.7
+        ]
+      ],
+      "volume_mm3": 145671.21947407044,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "physical_status": "V9 coupon fit approved by user; full stile strength untested",
+  "note": "The 57.15 mm stile leaves approximately 1.81 mm of material beside the widest socket. The fit coupon is wider; its approval does not establish full stile strength.",
+  "rotation_reuse": "Rotate the assembled template 180 degrees in plane for the opposite stile.",
+  "slicer_mesh_precision": {
+    "maximum_restored_coordinate_delta_mm": 4.0000000041118255e-06,
+    "watertight_bodies": 2,
+    "gcode_sha256": {
+      "Metadata/plate_1.gcode": "fca601c30e128d3f19ef911956593c42a61bb30773a9f4865f3ff64f6bfd7021"
+    },
+    "bambu_final_import": [
+      {
+        "volume_mm3": 141966.0625,
+        "facets": 25074,
+        "dimensions_mm": [
+          249.625336,
+          57.150002,
+          12.7
+        ]
+      },
+      {
+        "volume_mm3": 145669.921875,
+        "facets": 7444,
+        "dimensions_mm": [
+          249.725342,
+          57.150002,
+          12.7
+        ]
+      }
+    ]
+  },
+  "slice": {
+    "seconds": 9728,
+    "grams": 141.31,
+    "outside": false,
+    "supports": false
+  },
+  "assembly_import": [
+    {
+      "volume_mm3": 141966.1875,
+      "facets": 25074,
+      "dimensions_mm": [
+        249.625336,
+        57.150002,
+        12.7
+      ]
+    },
+    {
+      "volume_mm3": 145669.859375,
+      "facets": 7444,
+      "dimensions_mm": [
+        249.725342,
+        57.150002,
+        12.7
+      ]
+    }
+  ],
+  "outline_preservation": {
+    "missing_volume_outside_joint_mm3": 0.0,
+    "volume_outside_source_outline_mm3": 0.0
+  }
+}

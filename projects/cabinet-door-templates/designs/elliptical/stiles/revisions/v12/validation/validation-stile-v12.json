@@ -1,0 +1,603 @@
+{
+  "revision": 12,
+  "scope": "Fit coupons only; full stile and rail files unchanged",
+  "width_clearances_mm": [
+    0.05,
+    0.0
+  ],
+  "thickness_mm": 12.7,
+  "depth_clearance_mm": 0.1,
+  "taper_degrees": 2,
+  "external_radius_mm": 0.3,
+  "internal_radius_mm": 0.2,
+  "coupon_assembled_dimensions_mm": [
+    36,
+    57.15,
+    12.7
+  ],
+  "pairs": [
+    {
+      "clearance_mm": 0.05,
+      "socket_engraving": ".05",
+      "plate_center_y_mm": 90,
+      "maximum_nominal_socket_width_mm": 36.85,
+      "minimum_nominal_arm_mm": 10.149999999999999,
+      "measurements": [
+        {
+          "z_mm": 0.5,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            0.025000000000508393,
+            0.025000000000481748
+          ]
+        },
+        {
+          "z_mm": 0.5,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            0.02500000000199165,
+            0.025000000001959677
+          ]
+        },
+        {
+          "z_mm": 0.5,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            0.025000000003473133,
+            0.025000000003451817
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            0.025000000000435563,
+            0.025000000000410694
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            0.02500000000190994,
+            0.025000000001895728
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            0.025000000003384315,
+            0.02500000000336655
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            0.02500000000036451,
+            0.02500000000033964
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            0.025000000001842437,
+            0.025000000001824674
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            0.025000000003316813,
+            0.025000000003295497
+          ]
+        }
+      ],
+      "engraving_depth_mm": 0.4,
+      "bambu_import": [
+        {
+          "volume_mm3": 13086.324219,
+          "facets": 25348,
+          "dimensions_mm": [
+            24.25,
+            57.150002,
+            12.7
+          ]
+        },
+        {
+          "volume_mm3": 12979.538086,
+          "facets": 12600,
+          "dimensions_mm": [
+            24.35,
+            57.150002,
+            12.7
+          ]
+        }
+      ],
+      "filleted_edges": [
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026264,
+          "midpoint_mm": [
+            201.6125,
+            59.54815621337282,
+            12.699999999999998
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 35.9630124549096,
+          "midpoint_mm": [
+            195.26250000000002,
+            45.235059230000005,
+            12.7
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026264,
+          "midpoint_mm": [
+            201.6125,
+            30.921962246627174,
+            12.7
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026264,
+          "midpoint_mm": [
+            201.6125,
+            59.99164998591802,
+            -1.6121356523591818e-16
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 36.849999999999994,
+          "midpoint_mm": [
+            195.26250000000002,
+            45.235059230000005,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026262,
+          "midpoint_mm": [
+            201.6125,
+            30.478468474081975,
+            -5.140316682268739e-16
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            207.9625,
+            34.36862460443658,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            207.9625,
+            56.101493855563426,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "type": "internal",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            195.26250000000005,
+            63.4383123437274,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "type": "internal",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            195.26250000000005,
+            27.031806116272605,
+            6.3500000000000005
+          ]
+        }
+      ]
+    },
+    {
+      "clearance_mm": 0.0,
+      "socket_engraving": ".00",
+      "plate_center_y_mm": 166,
+      "maximum_nominal_socket_width_mm": 36.8,
+      "minimum_nominal_arm_mm": 10.174999999999999,
+      "measurements": [
+        {
+          "z_mm": 0.5,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            4.956035581926699e-13,
+            4.831690603168681e-13
+          ]
+        },
+        {
+          "z_mm": 0.5,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            1.971756091734278e-12,
+            1.9682033780554775e-12
+          ]
+        },
+        {
+          "z_mm": 0.5,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            3.446132268436486e-12,
+            3.453237695794087e-12
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            4.2454928461665986e-13,
+            4.192202140984591e-13
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            1.900701818158268e-12,
+            1.9042545318370685e-12
+          ]
+        },
+        {
+          "z_mm": 6.35,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            3.3857361358968774e-12,
+            3.367972567502875e-12
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 238.3753398707204,
+          "side_clearances_mm": [
+            3.5704772471945034e-13,
+            3.410605131648481e-13
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 243.3753398707204,
+          "side_clearances_mm": [
+            1.8403056856186595e-12,
+            1.8189894035458565e-12
+          ]
+        },
+        {
+          "z_mm": 12.2,
+          "x_mm": 248.3753398707204,
+          "side_clearances_mm": [
+            3.3217872896784684e-12,
+            3.289812866569264e-12
+          ]
+        }
+      ],
+      "engraving_depth_mm": 0.4,
+      "bambu_import": [
+        {
+          "volume_mm3": 13086.324219,
+          "facets": 25348,
+          "dimensions_mm": [
+            24.25,
+            57.150002,
+            12.7
+          ]
+        },
+        {
+          "volume_mm3": 12987.592773,
+          "facets": 12812,
+          "dimensions_mm": [
+            24.35,
+            57.150002,
+            12.7
+          ]
+        }
+      ],
+      "filleted_edges": [
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026262,
+          "midpoint_mm": [
+            201.6125,
+            59.52315621337283,
+            12.7
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 35.913012454909605,
+          "midpoint_mm": [
+            195.2625,
+            45.235059230000005,
+            12.7
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026262,
+          "midpoint_mm": [
+            201.6125,
+            30.946962246627173,
+            12.7
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026262,
+          "midpoint_mm": [
+            201.6125,
+            59.966649985918025,
+            1.9160453775503757e-16
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 36.8,
+          "midpoint_mm": [
+            195.2625,
+            45.235059230000005,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 14.666932383026262,
+          "midpoint_mm": [
+            201.6125,
+            30.503468474081988,
+            -5.140316682268739e-16
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            207.9625,
+            34.39362460443658,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "type": "external",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            207.9625,
+            56.07649385556343,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "type": "internal",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            195.26250000000005,
+            63.413312343727405,
+            6.3500000000000005
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "type": "internal",
+          "original_length_mm": 12.707741212595037,
+          "midpoint_mm": [
+            195.26250000000005,
+            27.056806116272607,
+            6.3500000000000005
+          ]
+        }
+      ]
+    }
+  ],
+  "physical_status": "V11 0.15 and 0.10 mm slide back out through thickness. V12 friction-fit retention remains untested",
+  "placement": [
+    {
+      "name": "0.05 mm - tongue",
+      "bounds_mm": [
+        [
+          132.87500000000003,
+          61.425,
+          0.0
+        ],
+        [
+          157.125,
+          118.575,
+          12.7
+        ]
+      ],
+      "volume_mm3": 13086.773389013084,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "0.05 mm - socket",
+      "bounds_mm": [
+        [
+          92.82499999999996,
+          61.425,
+          0.0
+        ],
+        [
+          117.17500000000001,
+          118.575,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 12979.437637239978,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "0.00 mm - tongue",
+      "bounds_mm": [
+        [
+          132.87500000000003,
+          137.425,
+          0.0
+        ],
+        [
+          157.125,
+          194.575,
+          12.7
+        ]
+      ],
+      "volume_mm3": 13086.773389013084,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "0.00 mm - socket",
+      "bounds_mm": [
+        [
+          92.82499999999996,
+          137.425,
+          0.0
+        ],
+        [
+          117.17500000000001,
+          194.575,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 12987.500761615709,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "precision": {
+    "maximum_restored_coordinate_delta_mm": 1.0000000010279564e-06,
+    "watertight_bodies": 4,
+    "gcode_sha256": {
+      "Metadata/plate_1.gcode": "001488ea598392392fa6a70d33ace7aa6bdabb2e633775fec76327cf6280f3d2"
+    },
+    "bambu_final_import": [
+      {
+        "volume_mm3": 13086.324219,
+        "facets": 25348,
+        "dimensions_mm": [
+          24.25,
+          57.150002,
+          12.7
+        ]
+      },
+      {
+        "volume_mm3": 12979.538086,
+        "facets": 12600,
+        "dimensions_mm": [
+          24.35,
+          57.150002,
+          12.7
+        ]
+      },
+      {
+        "volume_mm3": 13086.324219,
+        "facets": 25348,
+        "dimensions_mm": [
+          24.25,
+          57.150002,
+          12.7
+        ]
+      },
+      {
+        "volume_mm3": 12987.592773,
+        "facets": 12812,
+        "dimensions_mm": [
+          24.35,
+          57.150002,
+          12.7
+        ]
+      }
+    ]
+  },
+  "test_slice": {
+    "seconds": 2983,
+    "grams": 35.0,
+    "outside": false,
+    "supports": false
+  },
+  "socket_placement": [
+    {
+      "name": "0.05 mm - socket",
+      "bounds_mm": [
+        [
+          115.82499999999996,
+          61.425,
+          0.0
+        ],
+        [
+          140.175,
+          118.575,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 12979.437637239978,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "0.00 mm - socket",
+      "bounds_mm": [
+        [
+          115.82499999999996,
+          137.425,
+          0.0
+        ],
+        [
+          140.175,
+          194.575,
+          12.700000000000003
+        ]
+      ],
+      "volume_mm3": 12987.500761615709,
+      "watertight": true,
+      "bodies": 1
+    }
+  ],
+  "sockets_slice": {
+    "seconds": 1731,
+    "grams": 18.2,
+    "outside": false,
+    "supports": false
+  },
+  "preserved_artifacts": {
+    "/Users/danny/Documents/3d/projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10-sliced.3mf": "8f4b40b03d2a63a8bdf7e25002f4ee001ab8077c25bf1624844d0bd90fc3a8cc",
+    "/Users/danny/Documents/3d/projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v10/models/stile-template-left-dovetail-v10-sliced.3mf": "3e708e1b7cf08840098ec1173d46502d82e5e04dcd257f97b8da2e80d022b198",
+    "/Users/danny/Documents/3d/projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v10/fit-test/stile-dovetail-v10-fit-test-sliced.3mf": "60695fbd100c8636b5214f44910ee8867312c6e99a12dbaf2332f5bbacac5bca"
+  }
+}

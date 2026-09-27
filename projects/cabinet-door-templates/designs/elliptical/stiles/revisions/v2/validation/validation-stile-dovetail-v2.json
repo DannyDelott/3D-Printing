@@ -1,0 +1,37 @@
+{
+  "revision": "stile-template-left-dovetail-v2",
+  "source": "stile-template-left-v1.step",
+  "split_from_short_end_mm": 233.8503398707204,
+  "midpoint_shift_mm": 9.525000000000006,
+  "head_width_mm": 38.1,
+  "neck_width_mm": 25.4,
+  "engagement_mm": 19.05,
+  "normal_clearance_mm": 0.2,
+  "solid_band_mm": 88.9,
+  "parts": {
+    "tongue": {
+      "size_mm": [
+        252.9003448486328,
+        57.150001525878906,
+        19.049999237060547
+      ],
+      "volume_cm3": 223.8437202198612,
+      "triangles": 208,
+      "watertight": true,
+      "bodies": 1
+    },
+    "socket": {
+      "size_mm": [
+        252.70033264160156,
+        57.15000152587888,
+        19.049999237060547
+      ],
+      "volume_cm3": 207.40466471903085,
+      "triangles": 972,
+      "watertight": true,
+      "bodies": 1
+    }
+  },
+  "removed_clearance_volume_mm3": 419.1416291547939,
+  "status": "Valid CAD, watertight halves, two independent objects; physical fit untested."
+}

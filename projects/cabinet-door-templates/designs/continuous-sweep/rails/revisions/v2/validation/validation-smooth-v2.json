@@ -1,0 +1,37 @@
+{
+  "curve": "single cubic Bezier",
+  "ease": 0.75,
+  "controls_inches": [
+    [
+      0,
+      3.0
+    ],
+    [
+      5.291666666666667,
+      3.0
+    ],
+    [
+      10.583333333333334,
+      3.25
+    ],
+    [
+      15.875,
+      6.0
+    ]
+  ],
+  "midpoint_height_inches": 3.46875,
+  "formula_inches": "y = 3 + 0.75*t^2 + 2.25*t^3; x = 15.875*t; 0 <= t <= 1",
+  "mesh": {
+    "size_mm": [
+      403.2250061035156,
+      152.39999389648438,
+      19.049999237060547
+    ],
+    "volume_cm3": 743.8605889191131,
+    "triangles": 1764,
+    "watertight": true,
+    "bodies": 1
+  },
+  "analytic_volume_cm3": 743.851082859375,
+  "status": "digital validation passed; not physically printed or routed"
+}

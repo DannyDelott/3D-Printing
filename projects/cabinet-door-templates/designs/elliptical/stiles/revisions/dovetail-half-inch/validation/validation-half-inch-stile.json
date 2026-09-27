@@ -1,0 +1,42 @@
+{
+  "thickness_mm": 12.7,
+  "joint": "Existing V2 joint retained; thickness change only. New rail radii and clearance are not applied to this joint.",
+  "parts": [
+    {
+      "name": "Tongue",
+      "bounds_mm": [
+        [
+          1.5498300646400054,
+          61.425,
+          0.0
+        ],
+        [
+          254.45016993536,
+          118.575,
+          12.7
+        ]
+      ],
+      "volume_mm3": 149214.2026709907,
+      "watertight": true,
+      "bodies": 1
+    },
+    {
+      "name": "Socket",
+      "bounds_mm": [
+        [
+          1.649830064639886,
+          137.42499999999998,
+          0.0
+        ],
+        [
+          254.3501699353601,
+          194.57500000000002,
+          12.7
+        ]
+      ],
+      "volume_mm3": 138257.38501020675,
+      "watertight": true,
+      "bodies": 1
+    }
+  ]
+}

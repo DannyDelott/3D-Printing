@@ -1,0 +1,36 @@
+{
+  "revision": "rail-template-dovetail-v4",
+  "split_x_mm": 201.61249999999998,
+  "head_width_mm": 38.1,
+  "neck_width_mm": 25.4,
+  "engagement_mm": 19.05,
+  "normal_clearance_mm": 0.2,
+  "thickness_mm": 19.05,
+  "joint_center_y_mm": 44.748550392093456,
+  "removed_clearance_volume_mm3": 542.4377898919629,
+  "parts": {
+    "left": {
+      "size_mm": [
+        220.66250610351562,
+        89.49710083007812,
+        19.049999237060547
+      ],
+      "volume_cm3": 278.87208965794224,
+      "triangles": 440,
+      "watertight": true,
+      "bodies": 1
+    },
+    "right": {
+      "size_mm": [
+        201.41250610351562,
+        152.39999389648438,
+        19.049999237060547
+      ],
+      "volume_cm3": 337.02522867817135,
+      "triangles": 1656,
+      "watertight": true,
+      "bodies": 1
+    }
+  },
+  "status": "Valid CAD; watertight single-body halves; two-object 3MF; physical fit untested."
+}

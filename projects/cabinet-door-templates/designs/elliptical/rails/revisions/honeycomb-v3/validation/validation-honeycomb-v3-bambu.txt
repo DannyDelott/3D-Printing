@@ -1,0 +1,15 @@
+[2026-09-22 08:17:14.354411] [0x00000001f1aaa180] [trace]   Initializing StaticPrintConfigs
+[rail-template-elliptical-honeycomb-v3.stl]
+size_x = 403.225006
+size_y = 152.399994
+size_z = 19.049999
+min_x = 0.000000
+min_y = 0.000000
+min_z = 0.000000
+max_x = 403.225006
+max_y = 152.399994
+max_z = 19.049999
+number_of_facets = 2124
+manifold = yes
+number_of_parts =  1
+volume = 616439.250000
