@@ -1,6 +1,6 @@
 # Elliptical arc · Stile V12 · 0.05 / 0.00 mm fit coupons
 
-User approved the .05 socket: worked great. Zero-clearance alternative not selected. Applied to full stile V13..
+User approved the .05 socket: worked great. Zero-clearance alternative not selected. Applied to full stile V13. Full V13 subsequently reported too tight with bowed socket arms..
 
 [Interactive datasheet](datasheet.html) · [Design manifest](../../../design.json) · [All designs](../../../../../index.html)
 

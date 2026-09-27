@@ -1,6 +1,6 @@
-# Elliptical arc · Stile V13 · approved 0.05 mm fit
+# Elliptical arc · Stile V13 · 0.05 mm · fit failed
 
-Full stile with the user-approved V12 .05 socket fit. Joint fit approved; full-template strength untested..
+Full stile fit failed: too tight; socket arms bow during assembly. Correction pending..
 
 [Interactive datasheet](datasheet.html) · [Design manifest](../../../design.json) · [All designs](../../../../../index.html)
 

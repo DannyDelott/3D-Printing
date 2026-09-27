@@ -13,7 +13,7 @@ Routing templates for the rails and stiles of an 18″ × 27″ cabinet. The 15�
 ## Current working files
 
 - [V10 rail and datasheet](designs/elliptical/rails/revisions/v10/datasheet.html): five short-side hexagons and eight tall-side hexagons, unchanged approved V9 joint, 12.70 mm thick, 0.20 mm total width clearance (0.10 mm per side). V7 was tight and damaged the pin; V8 at 0.40 mm was too loose. The user confirmed the V9 coupon fits great. Joint fit is approved; full template strength remains untested.
-- [V13 stile · approved 0.05 mm joint](designs/elliptical/stiles/revisions/v13/datasheet.html): applies the successful V12 .05 coupon fit to the full ½″ stile. Total width clearance is 0.05 mm (0.025 mm per side), with the tail preserved, 0.30/0.20 mm external/internal radii and 2° taper. Two halves are arranged and sliced for the P1S: about 2h 40m and 141.3 g. Joint fit is approved; full-template strength remains untested.
+- [V13 stile · full fit failed](designs/elliptical/stiles/revisions/v13/datasheet.html): applies the successful V12 .05 coupon fit to the full ½″ stile. Total width clearance is 0.05 mm (0.025 mm per side), with the tail preserved, 0.30/0.20 mm external/internal radii and 2° taper. Two halves are arranged and sliced for the P1S: about 2h 40m and 141.3 g. The V12 .05 coupon passed, but the full V13 print was subsequently reported too tight with bowed socket arms. Hold further full-stile prints pending correction.
 - [All half-inch templates](designs/comparison/half-inch-templates.html): unsplit outlines and split print projects.
 
 The design manifests record these selections and their compatibility. Earlier templates retain their original thickness and tolerances. Do not combine halves from different joint revisions.

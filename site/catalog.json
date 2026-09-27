@@ -5,7 +5,7 @@
     "category": "Woodworking",
     "description": "Curved rail and stile routing templates for an inset cabinet door.",
     "revision": "Rail V10 \u00b7 Stile V13",
-    "status": "Joint fit approved",
+    "status": "Stile fit failed",
     "model": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
     "datasheet": "projects/cabinet-door-templates/index.html",
     "readme": "projects/cabinet-door-templates/README.md",
@@ -125,8 +125,8 @@
             "0.05 mm total"
           ]
         ],
-        "notes": "Uses the exact mating surfaces of the approved V12 .05 coupon. Full-template strength remains untested. Keep V13 halves together.",
-        "print": "Two halves arranged flat for the P1S. The recorded slice is about 2 h 40 min and 141.3 g.",
+        "notes": "The user reports that the full V13 joint is too tight and bows the socket arms. The earlier V12 .05 coupon passed, but that result did not transfer to the full print. Cause under investigation.",
+        "print": "Hold further V13 full-stile prints while the fit failure is investigated. Existing files are retained for reference.",
         "downloads": [
           [
             "Stile V13 \u00b7 Bambu project",
@@ -140,13 +140,14 @@
             "Stile V13 \u00b7 STEP",
             "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13.step"
           ]
-        ]
+        ],
+        "status": "Fit failed \u00b7 arms bow"
       },
       {
         "id": "stile-coupon",
         "group": "Stile",
         "label": "Fit coupon",
-        "revision": "V13 coupon \u00b7 approved .05 fit",
+        "revision": "V13 coupon \u00b7 0.05 mm",
         "preview": "assets/cabinet-stile-coupon.png",
         "previewModel": "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.stl",
         "previewCaption": "Stile fit coupon \u00b7 assembled",
@@ -168,7 +169,7 @@
             "0.05 mm total"
           ]
         ],
-        "notes": "Cut directly from the full V13 halves. Mating geometry matches the approved V12 .05 coupon. Do not mix with the rail coupon or earlier stile joints.",
+        "notes": "Cut directly from the full V13 halves. Mating geometry matches the previously successful V12 .05 coupon, but the full V13 print was subsequently reported too tight with bowed socket arms. This coupon result does not validate the full print.",
         "print": "Two coupon pieces arranged for the P1S. The recorded slice is about 28 min and 17.5 g.",
         "downloads": [
           [
@@ -183,7 +184,8 @@
             "Stile fit coupon \u00b7 STEP",
             "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.step"
           ]
-        ]
+        ],
+        "status": "V12 coupon passed \u00b7 full print failed"
       }
     ]
   },
