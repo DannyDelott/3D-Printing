@@ -6,56 +6,186 @@
     "description": "Curved rail and stile routing templates for an inset cabinet door.",
     "revision": "Rail V10 \u00b7 Stile V13",
     "status": "Joint fit approved",
-    "dimensions": [
-      [
-        "Door",
-        "15\u215e \u00d7 27 in"
-      ],
-      [
-        "Template thickness",
-        "12.70 mm"
-      ],
-      [
-        "Stile width",
-        "57.15 mm"
-      ],
-      [
-        "Stile joint clearance",
-        "0.05 mm total"
-      ]
-    ],
-    "notes": "Rail and stile coupons have passed physical fit checks. Full-template strength remains untested. Keep each pair of halves on the same joint revision.",
-    "print": "Two stile halves arranged flat for the Bambu P1S. The V13 sliced project estimates 2 h 40 min and 141.3 g.",
     "model": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
-    "downloads": [
-      [
-        "Rail V10 \u00b7 Bambu project",
-        "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10-bambu.3mf"
-      ],
-      [
-        "Stile V13 \u00b7 Bambu project",
-        "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13-bambu.3mf"
-      ],
-      [
-        "Stile V13 \u00b7 fit coupon",
-        "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test-bambu.3mf"
-      ],
-      [
-        "Rail V10 \u00b7 editable STEP",
-        "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.step"
-      ]
-    ],
     "datasheet": "projects/cabinet-door-templates/index.html",
     "readme": "projects/cabinet-door-templates/README.md",
     "preview": "assets/cabinet.png",
-    "previewModel": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
     "slug": "cabinet-door-templates",
     "root": "projects/cabinet-door-templates",
     "source": [
       "projects/cabinet-door-templates/source/README.md"
     ],
     "license": "No license declared; see project provenance.",
-    "previewCaption": "Rail V10 \u00b7 assembled preview"
+    "views": [
+      {
+        "id": "rail-full",
+        "group": "Rail",
+        "label": "Full template",
+        "revision": "Rail V10",
+        "preview": "assets/cabinet.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
+        "previewCaption": "Rail V10",
+        "dimensions": [
+          [
+            "Template thickness",
+            "12.70 mm"
+          ],
+          [
+            "Joint clearance",
+            "0.20 mm total"
+          ],
+          [
+            "Joint revision",
+            "V9 \u00b7 approved"
+          ],
+          [
+            "Hex openings",
+            "13"
+          ]
+        ],
+        "notes": "V10 retains the approved V9 dovetail. Full-template strength remains untested. Use the V9 rail fit coupon for this joint.",
+        "print": "Use the arranged Bambu project. Keep the two halves from this revision together.",
+        "downloads": [
+          [
+            "Rail V10 \u00b7 Bambu project",
+            "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10-bambu.3mf"
+          ],
+          [
+            "Rail V10 \u00b7 STL",
+            "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl"
+          ],
+          [
+            "Rail V10 \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.step"
+          ]
+        ]
+      },
+      {
+        "id": "rail-coupon",
+        "group": "Rail",
+        "label": "Fit coupon",
+        "revision": "V9 joint \u00b7 for Rail V10",
+        "preview": "assets/cabinet-rail-coupon.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v9/fit-test/rail-native-dovetail-v9-fit-test.stl",
+        "previewCaption": "Rail fit coupon \u00b7 print layout",
+        "dimensions": [
+          [
+            "Coupon width",
+            "61.00 mm"
+          ],
+          [
+            "Thickness",
+            "12.70 mm"
+          ],
+          [
+            "Joint clearance",
+            "0.20 mm total"
+          ],
+          [
+            "Compatible full template",
+            "Rail V10"
+          ]
+        ],
+        "notes": "The V9 coupon fit was approved. Rail V10 preserves this joint. This coupon is for the rail; it is not compatible with the V13 stile joint.",
+        "print": "Two pieces, printed flat. The existing slice reports 23 min and 13.59 g, without supports. Check the printer and material before using a sliced project.",
+        "downloads": [
+          [
+            "Rail fit coupon \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v9/fit-test/rail-native-dovetail-v9-fit-test.3mf"
+          ],
+          [
+            "Rail fit coupon \u00b7 STL",
+            "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v9/fit-test/rail-native-dovetail-v9-fit-test.stl"
+          ]
+        ]
+      },
+      {
+        "id": "stile-full",
+        "group": "Stile",
+        "label": "Full template",
+        "revision": "Stile V13",
+        "preview": "assets/cabinet-stile.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13.stl",
+        "previewCaption": "Stile V13",
+        "dimensions": [
+          [
+            "Assembled length",
+            "486.75 mm"
+          ],
+          [
+            "Stile width",
+            "57.15 mm"
+          ],
+          [
+            "Thickness",
+            "12.70 mm"
+          ],
+          [
+            "Joint clearance",
+            "0.05 mm total"
+          ]
+        ],
+        "notes": "Uses the exact mating surfaces of the approved V12 .05 coupon. Full-template strength remains untested. Keep V13 halves together.",
+        "print": "Two halves arranged flat for the P1S. The recorded slice is about 2 h 40 min and 141.3 g.",
+        "downloads": [
+          [
+            "Stile V13 \u00b7 Bambu project",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13-bambu.3mf"
+          ],
+          [
+            "Stile V13 \u00b7 STL",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13.stl"
+          ],
+          [
+            "Stile V13 \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13.step"
+          ]
+        ]
+      },
+      {
+        "id": "stile-coupon",
+        "group": "Stile",
+        "label": "Fit coupon",
+        "revision": "V13 coupon \u00b7 approved .05 fit",
+        "preview": "assets/cabinet-stile-coupon.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.stl",
+        "previewCaption": "Stile fit coupon \u00b7 print layout",
+        "dimensions": [
+          [
+            "Assembled coupon length",
+            "36.00 mm"
+          ],
+          [
+            "Full stile width",
+            "57.15 mm"
+          ],
+          [
+            "Thickness",
+            "12.70 mm"
+          ],
+          [
+            "Joint clearance",
+            "0.05 mm total"
+          ]
+        ],
+        "notes": "Cut directly from the full V13 halves. Mating geometry matches the approved V12 .05 coupon. Do not mix with the rail coupon or earlier stile joints.",
+        "print": "Two coupon pieces arranged for the P1S. The recorded slice is about 28 min and 17.5 g.",
+        "downloads": [
+          [
+            "Stile fit coupon \u00b7 Bambu project",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test-bambu.3mf"
+          ],
+          [
+            "Stile fit coupon \u00b7 STL",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.stl"
+          ],
+          [
+            "Stile fit coupon \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.step"
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": "stencil",
@@ -160,51 +290,100 @@
     "description": "One comfortable grip for a growing family of profile jigs.",
     "revision": "Saddle + fit coupon",
     "status": "Test print next",
-    "dimensions": [
-      [
-        "Overall size",
-        "39 \u00d7 100 \u00d7 99.3 mm"
-      ],
-      [
-        "Mounting width",
-        "31.75 mm"
-      ],
-      [
-        "Saddle clearance",
-        "0.50 mm total"
-      ],
-      [
-        "Hardware",
-        "2 \u00d7 M3 nuts & screws"
-      ]
-    ],
-    "notes": "Print the saddle coupon before the full tote. Two screws lock the grip onto the existing chamfered profile interface.",
-    "print": "Upright with a brim, 5 walls and 25\u201335% gyroid infill. The 45\u00b0 internal roof is designed to avoid supports.",
     "model": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
     "readme": "projects/fingernail-profile-clamping-caul/README.md",
-    "downloads": [
-      [
-        "Printable model",
-        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.3mf"
-      ],
-      [
-        "Portable mesh",
-        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl"
-      ],
-      [
-        "Editable CAD",
-        "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.step"
-      ]
-    ],
     "preview": "assets/tote.png",
-    "previewModel": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
     "slug": "interchangeable-tote-grip",
     "root": "projects/fingernail-profile-clamping-caul",
     "source": [
       "projects/fingernail-profile-clamping-caul/source/generate_tote_grip.py",
       "projects/fingernail-profile-clamping-caul/source/profile_interface.py"
     ],
-    "license": "No license declared; see project provenance."
+    "license": "No license declared; see project provenance.",
+    "views": [
+      {
+        "id": "full",
+        "group": "Tote grip",
+        "label": "Full grip",
+        "revision": "Saddle + fit coupon",
+        "preview": "assets/tote.png",
+        "previewModel": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
+        "dimensions": [
+          [
+            "Overall size",
+            "39 \u00d7 100 \u00d7 99.3 mm"
+          ],
+          [
+            "Mounting width",
+            "31.75 mm"
+          ],
+          [
+            "Saddle clearance",
+            "0.50 mm total"
+          ],
+          [
+            "Hardware",
+            "2 \u00d7 M3 nuts & screws"
+          ]
+        ],
+        "notes": "Print the saddle coupon before the full tote. Two screws lock the grip onto the existing chamfered profile interface.",
+        "print": "Upright with a brim, 5 walls and 25\u201335% gyroid infill. The 45\u00b0 internal roof is designed to avoid supports.",
+        "downloads": [
+          [
+            "Printable model",
+            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.3mf"
+          ],
+          [
+            "Portable mesh",
+            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl"
+          ],
+          [
+            "Editable CAD",
+            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.step"
+          ]
+        ]
+      },
+      {
+        "id": "fit-coupon",
+        "group": "Tote grip",
+        "label": "Saddle fit coupon",
+        "revision": "Saddle fit test",
+        "preview": "assets/tote-coupon.png",
+        "previewModel": "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.stl",
+        "previewCaption": "Saddle fit coupon",
+        "status": "Test print next",
+        "dimensions": [
+          [
+            "Mounting width",
+            "31.75 mm"
+          ],
+          [
+            "Saddle clearance",
+            "0.50 mm total"
+          ],
+          [
+            "Profile",
+            "Chamfered caul interface"
+          ]
+        ],
+        "notes": "Use this coupon to verify the saddle clearance before printing the full tote. Physical fit is not yet documented.",
+        "print": "Print at 100% scale with the intended material and settings for the full grip.",
+        "downloads": [
+          [
+            "Saddle fit coupon \u00b7 3MF",
+            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.3mf"
+          ],
+          [
+            "Saddle fit coupon \u00b7 STL",
+            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.stl"
+          ],
+          [
+            "Saddle fit coupon \u00b7 STEP",
+            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.step"
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": "closet",

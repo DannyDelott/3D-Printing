@@ -24,8 +24,9 @@ The build checks every local HTML link, including original datasheets. Missing f
 1. Keep geometry and source files in the existing project folder.
 2. Update its entry in `site/catalog.json`: selected revision, print instructions, dimensions, fit results, downloads, preview image, and preview mesh.
 3. Keep the image, interactive mesh, specifications, and selected downloads on the same revision. Use exact status labels; coupon approval does not establish full-part strength.
-4. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information.
-5. Build and check the page before pushing to `main`.
+4. Group component models and their test coupons in `views`, with a shared `group` and separate model, preview, dimensions, and downloads for each view. Give compatible older coupons their actual revision; for example, Rail V10 uses the approved V9 joint coupon.
+5. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information.
+6. Build and check the page before pushing to `main`.
 
 The catalog `root` includes model formats, original HTML datasheets, images, source scripts, documentation, and validation files. `archive/`, environments, scratch `work/`, and `.gcode.3mf` files are excluded. Older standalone closet projects publish their output and source folders and top-level source/notes. `_site/publication.json` lists the exact project artifacts in the deployment.
 

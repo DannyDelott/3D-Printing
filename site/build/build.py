@@ -80,12 +80,41 @@ def file_link(page, name, path):
     return f'<a href="{href(page, artifact(path))}" download><span class="format">{escape(original.suffix[1:].upper())}</span><span class="dl-name">{escape(name)}</span><span class="file-size">{units}</span>{icon("download")}</a>'
 
 
+def project_views(project):
+    views = project.get('views', [])
+    if not views:
+        return [project]
+    return [project | view | {'viewPath': '' if index == 0 else view['id'], 'activeView': view['id']} for index, view in enumerate(views)]
+
+
+def project_path(project):
+    suffix = project.get('viewPath', '')
+    return f'projects/{project["slug"]}/' + (suffix + '/' if suffix else '') + 'index.html'
+
+
+def component_navigation(project, page):
+    views = project.get('views', [])
+    if not views:
+        return ''
+    groups = dict.fromkeys(view['group'] for view in views)
+    result = '<div class="component-picker" aria-label="Components and fit coupons">'
+    for group in groups:
+        links = ''
+        for variant in project_views(project):
+            if variant['group'] != group:
+                continue
+            current = ' aria-current="page"' if variant['activeView'] == project['activeView'] else ''
+            links += f'<a href="{href(page, project_path(variant))}"{current}>{escape(variant["label"])}</a>'
+        result += f'<section><h2>{escape(group)}</h2><nav aria-label="{escape(group)} models">{links}</nav></section>'
+    return result + '</div>'
+
+
 def project_page(p, published):
-    page = f'projects/{p["slug"]}/index.html'
+    page = project_path(p)
     downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
     dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
     sources = ''.join(file_link(page, Path(path).name, path) for path in p['source'])
-    selected_paths = {path for _, path in p['downloads']}
+    selected_paths = {path for view in project_views(p) for _, path in view['downloads']}
     extras = [path for path in published if path.startswith(p['root'] + '/') and Path(path).suffix.lower() in FORMATS and path not in selected_paths]
     extra_links = ''.join(file_link(page, str(Path(path).relative_to(p['root'])), path) for path in extras)
     datasheets = [path for path in published if path.startswith(p['root'] + '/') and Path(path).name == 'datasheet.html']
@@ -94,7 +123,7 @@ def project_page(p, published):
     caption = p.get('previewCaption', p['revision'])
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} Back to the collection</a>
 <div class="detail-heading"><div>{badge(p)}<h1>{escape(p['title'])}</h1></div><span class="revision muted">{escape(p['revision'])}</span></div>
-<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
+{component_navigation(p, page)}<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
 <span class="viewer-label">{escape(caption)}</span><img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Use arrow keys to orbit; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status">Model preview</span><div class="viewer-controls"><button id="load-model" hidden>Explore in 3D</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
@@ -109,7 +138,8 @@ def project_page(p, published):
 <section class="file-archive" id="files"><h2>Project files & revisions</h2><p class="muted">Earlier revisions and alternatives.</p>
 {f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
 {f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else '<p class="small muted">All model files for this project are listed above.</p>'}</section>'''
-    return frame(page, p['title'], body, p['description'])
+    title = p['title'] + (f' · {p["group"]} · {p["label"]}' if p.get('activeView') else '')
+    return frame(page, title, body, p['description'])
 
 
 def inventory(projects):
@@ -135,14 +165,19 @@ def validate_catalog(projects):
         if slug in seen or not slug or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in slug):
             raise ValueError(f'Invalid or duplicate project slug: {slug}')
         seen.add(slug)
-        paths = [p['root'], p['readme'], p['preview'], p['previewModel'], *p['source'], *(path for _, path in p['downloads'])]
-        if p.get('datasheet'):
-            paths.append(p['datasheet'])
-        for path in paths:
-            base = SITE if path.startswith('assets/') else ROOT
-            resolved = (base / path).resolve()
-            if not resolved.is_relative_to(base.resolve()) or not resolved.exists():
-                raise ValueError(f'{slug}: missing or unsafe path {path}')
+        view_ids = [view['id'] for view in p.get('views', [])]
+        if len(view_ids) != len(set(view_ids)) or any(not name or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in name) for name in view_ids):
+            raise ValueError(f'{slug}: invalid or duplicate model view id')
+        for item in project_views(p):
+            paths = [p['preview'], item['root'], item['readme'], item['preview'], item['previewModel'], *item['source'], *(path for _, path in item['downloads'])]
+            if item.get('datasheet'):
+                paths.append(item['datasheet'])
+            for path in paths:
+                base = SITE if path.startswith('assets/') else ROOT
+                resolved = (base / path).resolve()
+                if not resolved.is_relative_to(base.resolve()) or not resolved.exists():
+                    raise ValueError(f'{slug}: missing or unsafe path {path}')
+
 
 
 class Links(HTMLParser):
@@ -189,13 +224,14 @@ def build():
         shutil.copy2(ROOT / path, target)
     (OUT / 'index.html').write_text(index(projects))
     for p in projects:
-        target = OUT / 'projects' / p['slug'] / 'index.html'
-        target.parent.mkdir(parents=True)
-        target.write_text(project_page(p, published))
+        for view in project_views(p):
+            target = OUT / project_path(view)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(project_page(view, published))
     (OUT / '.nojekyll').touch()
     (OUT / 'publication.json').write_text(json.dumps({'projects': len(projects), 'files': published}, indent=2) + '\n')
     check_links()
-    print(f'Built {len(projects)} project pages and {len(published)} project artifacts. All local HTML links resolve.')
+    print(f'Built {len(projects)} projects, {sum(len(project_views(p)) for p in projects)} model pages, and {len(published)} project artifacts. All local HTML links resolve.')
 
 
 if __name__ == '__main__':

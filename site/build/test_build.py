@@ -1,4 +1,5 @@
 """Publishing checks that exercise the build's artifact and URL boundaries."""
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +9,28 @@ import build
 
 
 class PublishingTests(unittest.TestCase):
+    def test_coupon_page_uses_matching_model_dimensions_and_downloads(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        cabinet = next(p for p in projects if p['slug'] == 'cabinet-door-templates')
+        views = build.project_views(cabinet)
+        coupon = next(p for p in views if p['activeView'] == 'rail-coupon')
+        html = build.project_page(coupon, [])
+        self.assertIn('rail-native-dovetail-v9-fit-test.stl', html)
+        self.assertIn('0.20 mm total', html)
+        self.assertNotIn('stile-template-left-dovetail-v13-bambu.3mf', html)
+        self.assertNotIn('rail-template-native-dovetail-v10-bambu.3mf', html)
+        self.assertIn('href="../index.html"', html)
+        self.assertIn('href="../stile-coupon/index.html"', html)
+
+    def test_stile_coupon_preserves_its_own_tolerance(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        cabinet = next(p for p in projects if p['slug'] == 'cabinet-door-templates')
+        coupon = next(p for p in build.project_views(cabinet) if p['activeView'] == 'stile-coupon')
+        html = build.project_page(coupon, [])
+        self.assertIn('stile-dovetail-v13-fit-test-bambu.3mf', html)
+        self.assertIn('0.05 mm total', html)
+        self.assertNotIn('0.20 mm total', html)
+
     def test_inventory_excludes_environment_archive_and_gcode(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
