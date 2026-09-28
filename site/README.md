@@ -86,3 +86,11 @@ python3 site/build/previews.py
 ```
 
 Open http://127.0.0.1:8775/_previews and choose **Generate thumbnails**. This local-only tool writes catalog PNGs into `site/assets/`; rebuild afterward. The generator is not published.
+
+### Selectable assembly shoes
+
+Sanding-plane Assembly and Exploded views have a `Preview shoe` selector. The selection is saved in `?shoe=<component-view-id>` and carried between those two views. Switching retains the camera angle and zoom. `Shoe details & downloads` opens the matching component page; the Magnate complete-plate downloads and estimate are explicitly labeled.
+
+To add another shoe, add its normal component view and one entry to the project's `assemblyShoes` list in `site/catalog.json`. Supply its component view `id`, user-facing `label`, STEP `source` in assembly coordinates, and `assembly` / `exploded` pairs of `model` STL and `preview` PNG paths. Only full compatible shoes belong in this list, not coupons. The assembly views opt in with `assemblyMode`.
+
+Run `projects/sanding-plane/source/build_assembly_previews.py` using the CAD Python to derive previews from the approved carrier/knob assembly and the new shoe STEP. It preserves the fixed parts, verifies seating and collisions, and records source/output hashes in `validation-assembly-previews.json`. The existing Magnate previews remain unchanged. Generate the new PNGs with the shared thumbnail renderer; `previews.py` includes assembly variants. The site build validates selector paths, and the publication tests reject stale derived previews. These meshes are for viewing; print downloads remain the original configured projects.

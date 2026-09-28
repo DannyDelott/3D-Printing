@@ -82,7 +82,7 @@ def project_views(project):
     views = project.get('views', [])
     if not views:
         return [project]
-    return [project | view | {'viewPath': '' if index == 0 else view['id'], 'activeView': view['id']} for index, view in enumerate(views)]
+    return [project | view | {'viewPath': '' if index == 0 else view['id'], 'activeView': view['id'], 'assemblyMode': view.get('assemblyMode')} for index, view in enumerate(views)]
 
 
 def project_path(project):
@@ -102,9 +102,24 @@ def component_navigation(project, page):
             if variant['group'] != group:
                 continue
             current = ' aria-current="page"' if variant['activeView'] == project['activeView'] else ''
-            links += f'<a href="{href(page, project_path(variant))}"{current}>{escape(variant["label"])}</a>'
+            assembly_link = ' data-assembly-link' if variant.get('assemblyMode') else ''
+            links += f'<a href="{href(page, project_path(variant))}"{current}{assembly_link}>{escape(variant["label"])}</a>'
         result += f'<section><h2>{escape(group)}</h2><nav aria-label="{escape(group)} models">{links}</nav></section>'
     return result + '</div>'
+
+
+def assembly_selector(project, page):
+    mode = project.get('assemblyMode')
+    if not mode:
+        return ''
+    options = []
+    for shoe in project['assemblyShoes']:
+        view = next(v for v in project_views(project) if v['activeView'] == shoe['id'])
+        preview = shoe[mode]
+        options.append(f'<option value="{escape(shoe["id"], quote=True)}" data-model="{href(page, artifact(preview["model"]))}" data-poster="{href(page, preview["preview"])}" data-details="{href(page, project_path(view))}">{escape(shoe["label"])}</option>')
+    return f'''<div class="assembly-controls" hidden><label for="assembly-shoe">Preview shoe</label>
+<select id="assembly-shoe" aria-controls="model-viewer">{''.join(options)}</select>
+<a id="shoe-details">Shoe details &amp; downloads {icon('arrow')}</a></div>'''
 
 
 def project_page(p, published):
@@ -127,7 +142,7 @@ def project_page(p, published):
     legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
-{component_navigation(p, page)}<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
+{component_navigation(p, page)}<div class="detail-layout"><div>{assembly_selector(p, page)}<div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
@@ -170,6 +185,14 @@ def validate_catalog(projects):
             raise ValueError(f'{slug}: invalid or duplicate model view id')
         for item in project_views(p):
             paths = [p['preview'], item['root'], item['readme'], item['preview'], item['previewModel'], *item['source'], *(path for _, path in item['downloads'])]
+            if item.get('assemblyMode'):
+                shoes = p.get('assemblyShoes', [])
+                ids = [shoe['id'] for shoe in shoes]
+                if not ids or len(ids) != len(set(ids)) or not set(ids).issubset(view_ids):
+                    raise ValueError(f'{slug}: assembly shoes must reference distinct component views')
+                for shoe in shoes:
+                    preview = shoe[item['assemblyMode']]
+                    paths.extend([shoe['source'], preview['model'], preview['preview']])
             if item.get('datasheet'):
                 paths.append(item['datasheet'])
             for path in paths:
@@ -187,7 +210,7 @@ class Links(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        for key in ('href', 'src', 'data-model'):
+        for key in ('href', 'src', 'data-model', 'data-poster', 'data-details'):
             if key in attrs:
                 self.paths.append(attrs[key])
 

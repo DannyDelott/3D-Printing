@@ -126,6 +126,47 @@ class PublishingTests(unittest.TestCase):
         plate = next(path for label, path in views[0]['downloads'] if 'Bambu project' in label)
         self.assertEqual(hashlib.sha256((build.ROOT / plate).read_bytes()).hexdigest(), evidence['configured_sha256'])
 
+    def test_assembly_selector_links_to_shoes_and_preserves_component_navigation(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        plane = next(p for p in projects if p['slug'] == 'sanding-plane')
+        for view in build.project_views(plane):
+            html = build.project_page(view, [])
+            self.assertEqual(html.count(' data-assembly-link'), 2)
+            if view['activeView'] in ('assembly', 'exploded'):
+                self.assertIn('id="assembly-shoe"', html)
+                self.assertIn('value="roundover-1-8"', html)
+                self.assertIn('data-details="' + build.href(build.project_path(view), 'projects/sanding-plane/roundover-1-8/index.html') + '"', html)
+                self.assertIn('Magnate plate estimate', html)
+                for shoe in plane['assemblyShoes']:
+                    self.assertIn(shoe[view['assemblyMode']]['model'].split('/')[-1], html)
+            else:
+                self.assertNotIn('id="assembly-shoe"', html)
+
+    def test_assembly_shoes_require_real_component_views_and_previews(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        plane = next(p for p in projects if p['slug'] == 'sanding-plane')
+        plane['assemblyShoes'][0]['id'] = 'missing-shoe'
+        with self.assertRaisesRegex(ValueError, 'distinct component views'):
+            build.validate_catalog([plane])
+        plane['assemblyShoes'][0]['id'] = 'shoe'
+        plane['assemblyShoes'][0]['assembly']['model'] = 'assets/missing.stl'
+        with self.assertRaisesRegex(ValueError, 'missing or unsafe path'):
+            build.validate_catalog([plane])
+
+    def test_assembly_previews_match_current_shoe_and_carrier_sources(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        plane = next(p for p in projects if p['slug'] == 'sanding-plane')
+        evidence = json.loads((build.ROOT / plane['root'] / 'validation-assembly-previews.json').read_text())
+        for shoe in plane['assemblyShoes'][1:]:
+            for mode in ('assembly', 'exploded'):
+                entry = evidence[f'{shoe["id"]}/{mode}']
+                suffix = '-exploded' if mode == 'exploded' else ''
+                paths = {'source_step_sha256': build.ROOT / shoe['source'],
+                         'preview_sha256': build.SITE / shoe[mode]['model'],
+                         'source_assembly_sha256': build.ROOT / plane['root'] / f'models/profile-jig-profile-up-full{suffix}-preview.3mf'}
+                for key, path in paths.items():
+                    self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), entry[key])
+
     def test_inventory_excludes_environment_archive_and_gcode(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

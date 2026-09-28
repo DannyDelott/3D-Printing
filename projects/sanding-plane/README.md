@@ -103,3 +103,9 @@ Rebuild geometry, validation, and the dimensioned datasheet with:
 ```
 
 The generator reuses `generate_profile_up.parts` with the new profile blank. `roundover_datasheet.py` reads the generated dimensions for its drawing and HTML. `validation-roundover-1-8-r1.json` records the geometry checks and exported file hashes. `print-checks/p1s-pla-settings.json` restores the shared slicer settings from the existing configured full shoe. Refresh recorded estimates and catalog thumbnails after changing geometry, following `site/README.md`; keep sliced projects and G-code in excluded `work/`.
+
+## Assembly shoe selector
+
+Use **Preview shoe** on the Assembly or Exploded page to view the full plane with the Magnate fingernail shoe or the 1/8-inch roundover shoe. Switching preserves your viewing angle and zoom. The selection stays in the URL and carries between Assembly and Exploded. **Shoe details & downloads** opens the selected shoe's own files; the complete plate remains the Magnate setup and is labeled accordingly.
+
+`source/build_assembly_previews.py` derives each added shoe's viewing meshes from its STEP in assembly coordinates and the approved assembly's unchanged carrier/knob. It checks rail-cap alignment, assembled clearance and three closed bodies, and records source/output hashes in `validation-assembly-previews.json`. New shoes are registered in `site/catalog.json`; see `site/README.md` for the fields and thumbnail workflow. The selector does not change print geometry or establish physical fit.

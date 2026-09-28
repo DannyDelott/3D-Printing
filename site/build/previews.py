@@ -34,6 +34,11 @@ def main():
     projects = json.loads((build.SITE / 'catalog.json').read_text())
     items = {view['preview']: '/' + quote(build.artifact(view['previewModel']))
              for project in projects for view in build.project_views(project)}
+    for project in projects:
+        for shoe in project.get('assemblyShoes', []):
+            for mode in ('assembly', 'exploded'):
+                preview = shoe[mode]
+                items[preview['preview']] = '/' + quote(build.artifact(preview['model']))
 
     class Handler(SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):

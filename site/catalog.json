@@ -238,17 +238,25 @@
         ],
         "downloads": [
           [
-            "Complete plate \u00b7 Bambu project",
+            "Magnate complete plate \u00b7 Bambu project",
             "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf"
           ],
           [
-            "Complete plate \u00b7 STL",
+            "Magnate complete plate \u00b7 STL",
             "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
-        "description": "A hand sanding plane for the curved face of a board shaped with the Magnate 5869 fingernail router bit. The rear handle gives you a grip while the shaped shoe supports the sandpaper against the curve. Slide the shoe into the body and hand-tighten the front knob to hold it in place; loosen the knob to swap shoes."
+        "description": "A hand sanding plane with interchangeable profile shoes. The rear handle gives you a grip while the shoe supports the sandpaper against the routed surface. Slide the selected shoe into the body and hand-tighten the front knob; loosen the knob to swap shoes.",
+        "assemblyMode": "assembly",
+        "related": [
+          [
+            "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+            "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+          ]
+        ],
+        "filamentLabel": "Magnate plate estimate"
       },
       {
         "id": "exploded",
@@ -278,17 +286,25 @@
         ],
         "downloads": [
           [
-            "Complete plate \u00b7 Bambu project",
+            "Magnate complete plate \u00b7 Bambu project",
             "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf"
           ],
           [
-            "Complete plate \u00b7 STL",
+            "Magnate complete plate \u00b7 STL",
             "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
           ]
         ],
         "print": "The exploded view shows the three parts separately for reference. Slide the shoe along the carrier rails and hand-tighten the knob to secure it. Print from the configured build-plate download, which retains the saved orientations and support settings.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
-        "description": "The carrier, profile shoe, and locking knob separated to show how the sanding plane fits together. The gaps are for illustration; slide the shoe along the carrier rails and tighten the knob to assemble it."
+        "description": "The carrier, profile shoe, and locking knob separated to show how the sanding plane fits together. The gaps are for illustration; slide the shoe along the carrier rails and tighten the knob to assemble it.",
+        "assemblyMode": "exploded",
+        "related": [
+          [
+            "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+            "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+          ]
+        ],
+        "filamentLabel": "Magnate plate estimate"
       },
       {
         "id": "build-plate",
@@ -662,6 +678,34 @@
         "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
         "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
       ]
+    ],
+    "assemblyShoes": [
+      {
+        "id": "shoe",
+        "label": "Fingernail \u00b7 1\u00bd in radius",
+        "source": "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.step",
+        "assembly": {
+          "model": "assets/sanding-plane.stl",
+          "preview": "assets/sanding-plane.png"
+        },
+        "exploded": {
+          "model": "assets/sanding-plane-exploded.stl",
+          "preview": "assets/sanding-plane-exploded.png"
+        }
+      },
+      {
+        "id": "roundover-1-8",
+        "label": "Roundover \u00b7 1/8 in radius",
+        "source": "projects/sanding-plane/models/roundover-1-8-r1-shoe.step",
+        "assembly": {
+          "model": "assets/sanding-plane-roundover-assembly.stl",
+          "preview": "assets/sanding-plane-roundover-assembly.png"
+        },
+        "exploded": {
+          "model": "assets/sanding-plane-roundover-exploded.stl",
+          "preview": "assets/sanding-plane-roundover-exploded.png"
+        }
+      }
     ]
   },
   {

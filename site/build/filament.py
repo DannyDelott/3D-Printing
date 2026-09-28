@@ -21,7 +21,7 @@ def render(project, records, root):
         for plate in plates:
             if any(not math.isfinite(plate[key]) or plate[key] <= 0 for key in ('grams', 'cost')):
                 raise ValueError(f'{path}: invalid filament estimate')
-            name = label if len(sources) > 1 else 'Print estimate'
+            name = label if len(sources) > 1 else project.get('filamentLabel', 'Print estimate')
             if len(plates) > 1 or selected is not None:
                 name += f' · Plate {plate["plate"]}'
             values = [f'≈{plate["grams"]:.1f} g']
