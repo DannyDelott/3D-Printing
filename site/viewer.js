@@ -60,9 +60,11 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
     const vertex = new THREE.Vector3();
     const positions = geometry.attributes.position;
     for (let i = 0; i < positions.count; i++) bounds.expandByPoint(vertex.fromBufferAttribute(positions, i).applyMatrix4(camera.matrixWorldInverse));
-    const size = bounds.getSize(new THREE.Vector3());
+    // Projected bounds can be asymmetric around the orbit target.
+    const halfWidth = Math.max(Math.abs(bounds.min.x), Math.abs(bounds.max.x));
+    const halfHeight = Math.max(Math.abs(bounds.min.y), Math.abs(bounds.max.y));
     const aspect = (width || canvas.clientWidth) / (height || canvas.clientHeight);
-    viewHeight = Math.max(size.y, size.x / aspect) * 1.22;
+    viewHeight = Math.max(halfHeight, halfWidth / aspect) * 2 * 1.22;
     camera.zoom = 1;
     if (controls) {
       controls.target.set(0, 0, 0);

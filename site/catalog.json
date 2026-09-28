@@ -245,14 +245,57 @@
           [
             "Complete plate \u00b7 STL",
             "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
-          ],
-          [
-            "Assembled preview \u00b7 3MF",
-            "projects/sanding-plane/models/profile-jig-profile-up-full-preview.3mf"
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+      },
+      {
+        "id": "build-plate",
+        "group": "Sanding plane",
+        "label": "Build plate",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-build-plate.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-final-print-plate.stl",
+        "previewCaption": "Build plate",
+        "dimensions": [
+          [
+            "Parts",
+            "Carrier, shoe, knob"
+          ],
+          [
+            "Layout footprint",
+            "211.82 \u00d7 186 mm"
+          ],
+          [
+            "Layout height",
+            "55.50 mm"
+          ],
+          [
+            "Build plate",
+            "256 \u00d7 256 mm"
+          ],
+          [
+            "Minimum part gap",
+            "8 mm"
+          ],
+          [
+            "Print estimate",
+            "161.74 g \u00b7 3 h 44 min"
+          ]
+        ],
+        "downloads": [
+          [
+            "Complete plate \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf"
+          ],
+          [
+            "Complete plate \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
+          ]
+        ],
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
+        "notes": "Three separate print objects with saved orientations. Slicer check passed with supports on the carrier only. Full-size loading and long-term wear remain untested."
       },
       {
         "id": "fit-coupon",
