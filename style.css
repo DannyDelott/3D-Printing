@@ -364,3 +364,22 @@ button:disabled { cursor: progress; opacity: .6; }
   .shoe-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }
 .viewer[aria-busy=true] canvas { visibility: hidden; }
+
+.plane-navigation { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.plane-navigation nav { display: flex; flex-wrap: wrap; gap: 6px; }
+.plane-navigation a { padding: 10px 15px; border-radius: 4px; font-size: 14px; }
+.plane-navigation a[aria-current=page] { background: var(--ink); color: white; }
+.plane-navigation a:hover { box-shadow: inset 0 0 0 1px var(--line); }
+.assembly-toggle { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; min-height: 36px; cursor: pointer; }
+.assembly-toggle input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent); }
+.assembly-downloads > p { margin: 10px 0 18px; line-height: 1.6; }
+.assembly-part { margin: 0 0 20px; }
+.assembly-part h3 { margin: 0 0 4px; font-size: 15px; }
+.part-details, .coupon-link { display: inline-flex; gap: 6px; align-items: center; color: var(--accent); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.part-details { margin-top: 7px; }
+.part-details .icon, .coupon-link .icon, .assembly-downloads .icon { width: 16px; height: 16px; }
+.selected-shoe-specs { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 26px; }
+.selected-shoe-specs > p { line-height: 1.6; }
+@media(max-width: 760px) { .plane-navigation a { padding: 10px 12px; font-size: 13px; } }
+
+.part-context { margin: 0 0 18px; font-size: 15px; font-weight: 600; }

@@ -39,6 +39,8 @@ if (viewer) {
   const canvas = document.querySelector('#model-viewer');
   const poster = document.querySelector('#model-poster');
   const shoes = document.querySelector('#assembly-shoes');
+  const navigation = document.querySelector('.plane-navigation');
+  const exploded = document.querySelector('#exploded-view');
   const status = document.querySelector('#viewer-status');
   let viewPromise;
   let request = 0;
@@ -78,28 +80,54 @@ if (viewer) {
     }
   }
 
-  if (shoes) {
+  if (navigation) {
+    const params = new URLSearchParams(location.search);
+    const kind = navigation.dataset.part;
+    const defaultShoe = navigation.dataset.defaultShoe;
+    const ids = [...navigation.querySelectorAll('[data-shoe-panel]')].map(panel => panel.dataset.shoePanel);
+    // Component URLs identify their own profile; shared parts retain the query's selection.
+    let selected = ['shoe', 'coupon', 'plate'].includes(kind) ? defaultShoe : params.get('shoe');
+    if (!ids.includes(selected)) selected = defaultShoe;
+    if (exploded && params.has('view')) exploded.checked = params.get('view') === 'exploded';
+
     function selectShoe() {
-      const option = shoes.querySelector('input:checked');
-      viewer.dataset.model = option.dataset.model;
-      poster.src = option.dataset.poster;
-      poster.alt = `${option.dataset.label} on the sanding plane`;
-      document.querySelector('#shoe-details').href = option.dataset.details;
+      const option = shoes?.querySelector(`input[value="${selected}"]`);
+      if (option) option.checked = true;
+      for (const panel of document.querySelectorAll('[data-shoe-panel]')) {
+        panel.hidden = panel.dataset.shoePanel !== selected;
+      }
+      if (kind === 'assembly') {
+        const mode = exploded.checked ? 'exploded' : 'assembled';
+        viewer.dataset.model = option.dataset[mode + 'Model'];
+        poster.src = option.dataset[mode + 'Poster'];
+        poster.alt = `${option.dataset.label} on the sanding plane, ${mode}`;
+      }
       const url = new URL(location.href);
-      url.searchParams.set('shoe', option.value);
+      url.searchParams.set('shoe', selected);
+      if (exploded) url.searchParams.set('view', exploded.checked ? 'exploded' : 'assembled');
       history.replaceState(null, '', url);
-      for (const link of document.querySelectorAll('[data-assembly-link]')) {
+      for (const link of navigation.querySelectorAll('[data-part="assembly"]')) {
         const target = new URL(link.href);
-        target.searchParams.set('shoe', option.value);
+        if (exploded?.checked) target.searchParams.set('view', 'exploded');
+        else target.searchParams.delete('view');
         link.href = target;
       }
     }
-    const selected = new URLSearchParams(location.search).get('shoe');
-    const option = [...shoes.querySelectorAll('input')].find(option => option.value === selected);
-    if (option) option.checked = true;
     selectShoe();
-    shoes.closest('.assembly-controls').hidden = false;
-    shoes.addEventListener('change', () => { selectShoe(); loadModel(); });
+    if (shoes) {
+      shoes.closest('.assembly-controls').hidden = false;
+      shoes.addEventListener('change', () => {
+        const option = shoes.querySelector('input:checked');
+        if (kind !== 'assembly') {
+          location.assign(option.dataset.destination);
+          return;
+        }
+        selected = option.value;
+        selectShoe();
+        loadModel();
+      });
+    }
+    exploded?.addEventListener('change', () => { selectShoe(); loadModel(); });
   }
   retryButton.addEventListener('click', loadModel);
   loadModel();

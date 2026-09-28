@@ -110,6 +110,8 @@ Rebuild geometry, validation, and the dimensioned datasheet with:
 
 ## Assembly shoe selector
 
-Use **Preview shoe** on the Assembly or Exploded page to view the full plane with the Magnate fingernail shoe or the 1/8-inch roundover shoe. Switching preserves your viewing angle and zoom. The selection stays in the URL and carries between Assembly and Exploded. **Shoe details & downloads** opens the selected shoe's own files; the complete plate remains the Magnate setup and is labeled accordingly.
+Use the **Shoe profile** cards to choose the Magnate fingernail or 1/8-inch roundover shoe. Assembly selection updates its preview, shoe specifications, instructions, three part downloads, and matching coupon link. **Exploded view** is a checkbox on Assembly and preserves the selected shoe. Switching previews preserves your viewing angle and zoom.
+
+The main navigation is **Assembly, Shoe, Fit coupon, Carrier, and Locking knob**. Shoe and Fit coupon follow the selected profile; Carrier and Locking knob are shared full-size parts. The selection stays in the URL through those pages. Print just the selected shoe when reusing an existing plane, or download all three configured part projects. The combined build plate is available only for the fingernail setup. The roundover coupon downloads separately identify its shoe, 70 mm carrier, and tapered coupon knob.
 
 `source/build_assembly_previews.py` derives each added shoe's viewing meshes from its STEP in assembly coordinates and the approved assembly's unchanged carrier/knob. It checks rail-cap alignment, assembled clearance and three closed bodies, and records source/output hashes in `validation-assembly-previews.json`. New shoes are registered in `site/catalog.json`; see `site/README.md` for the fields and thumbnail workflow. The selector does not change print geometry or establish physical fit.
