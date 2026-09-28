@@ -18,14 +18,8 @@ Ready for a test print. The CAD and meshes are dimensionally and structurally ve
 | `models/magnate-5869-caul-250mm-2x4-backed.3mf` | Lightweight 250 mm caul used beneath a 2x4 |
 | `models/magnate-5869-caul-250mm-2x4-backed.stl` | Portable mesh of the lightweight 250 mm caul |
 | `models/magnate-5869-caul-250mm-2x4-backed.step` | Editable CAD solid for the lightweight 250 mm caul |
-| `models/interchangeable-profile-jig-tote-grip.3mf` | Print-ready tote grip and clamping saddle |
-| `models/interchangeable-profile-jig-tote-grip.stl` | Portable tote-grip mesh |
-| `models/interchangeable-profile-jig-tote-grip.step` | Editable tote-grip CAD solid in its use orientation |
-| `models/profile-jig-tote-saddle-fit-test.3mf` | Small saddle coupon to verify printer clearance first |
-| `models/profile-jig-tote-saddle-fit-test.stl` | Portable fit-coupon mesh |
 | `source/generate_caul.py` | Parametric source and verification |
-| `source/generate_tote_grip.py` | Tote, saddle, fit coupon, preview, and verification source |
-| `source/profile_interface.py` | Shared attachment interface for future profile jigs |
+| `source/profile_interface.py` | Caul width and top-edge chamfer dimensions |
 
 ## Fit and dimensions
 
@@ -48,24 +42,6 @@ Ready for a test print. The CAD and meshes are dimensionally and structurally ve
 
 The 2x4 supplies the longitudinal stiffness, allowing the printed caul to act as a thin profile adapter instead of a standalone beam.
 
-## Interchangeable tote grip
-
-The tote grip drops over the existing 250 mm caul and locks with two screws. Future sanding profiles can attach to the same grip by preserving one small interface:
-
-- 31.75 mm overall mounting width
-- 1.5 mm chamfers on both top edges
-- At least 7.4 mm of side depth through the mounting area
-- A straight mounting section at least 100 mm long
-
-The saddle has 0.50 mm total width clearance. Its 45-degree interior roof seats against the matching caul chamfers, so those chamfers locate the tote laterally and vertically. When seated, the saddle remains at least 1.55 mm above the sanding surface.
-
-### Tote hardware
-
-- 2 × M3 hex nuts; ordinary 5.5 mm across-flats nuts fit the 5.7 mm pockets
-- 2 × M3 × 8-10 mm thumb screws or knurled screws
-
-Both nuts press into pockets on the same side of the saddle. Set the tote over the jig, tighten the two screws evenly against the jig's side, and loosen them a turn or two to swap profiles. Nylon-tip screws are optional if avoiding small witness marks on the jig matters.
-
 The profile uses the router bit manufacturer's nominal radius. Cutter sharpening, runout, feed technique, and the actual centering of the cut can introduce small differences, so print one caul before committing to the four-pack.
 
 ## Print notes
@@ -78,7 +54,6 @@ The profile uses the router bit manufacturer's nominal radius. Cutter sharpening
 
 The thin 250 mm version can be printed solid or with 4 walls and 15-20% infill because the 2x4 is the structural backer. Its exact 250 mm length leaves no spare bed length, so disable brims or skirts that would extend beyond the model.
 
-Print the saddle fit coupon before the full tote. The tote mesh is already upright, measures about 39 × 100 × 99.3 mm, and uses a 45-degree internal roof so it needs no support. Use a brim for the tall print, 5 walls, and roughly 25-35% gyroid infill. If the coupon is too tight or loose, change `SADDLE_WIDTH_CLEARANCE` in `source/profile_interface.py` and regenerate before printing the tote.
 
 For glue-up, cover the contact face with packing tape so the caul cannot become part of the project. A thin cork or firm rubber layer can even out print texture; ordinary veneer thickness changes the effective 1-1/2 inch radius by less than a tenth of a millimeter over this face width.
 
