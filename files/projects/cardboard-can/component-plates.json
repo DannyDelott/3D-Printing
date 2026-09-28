@@ -1,0 +1,102 @@
+{
+  "source": "models/cardboard-can.3mf",
+  "sourceSha256": "269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710",
+  "components": {
+    "lid": {
+      "sourceObjectId": "5",
+      "triangles": 113664,
+      "dimensionsMm": [
+        92.9875,
+        92.9875,
+        10.0
+      ],
+      "watertight": true,
+      "connectedBodies": 1,
+      "originalGeometryPreserved": true,
+      "originalSettingsPreserved": true,
+      "stlSha256": "30817bfca549be56bbe5fac7e45f0f020f407dc4990f2635dbea1642b52a2134",
+      "projectSha256": "9c43678d8f5ca806b299ec3566a7b6afc47bb7aae1f11ebb2f40aec37557cfe6",
+      "slice": {
+        "slicer": "BambuStudio-02.08.02.60",
+        "plateCount": 1,
+        "objectCount": 1,
+        "seconds": 2504.1298828125,
+        "grams": 21.910478591918945,
+        "warning": "",
+        "supports": false
+      }
+    },
+    "ring": {
+      "sourceObjectId": "8",
+      "triangles": 10480,
+      "dimensionsMm": [
+        92.9792,
+        92.9896,
+        5.0
+      ],
+      "watertight": true,
+      "connectedBodies": 1,
+      "originalGeometryPreserved": true,
+      "originalSettingsPreserved": true,
+      "stlSha256": "39a2729404ea73aafd64cbc408d2ce1d8095d30069da3933b3cbee1700a8c437",
+      "projectSha256": "0a20452ef5b36cc95641f81c026e526a613e9be1d3bc40280f8730e3bae9f9ab",
+      "slice": {
+        "slicer": "BambuStudio-02.08.02.60",
+        "plateCount": 1,
+        "objectCount": 1,
+        "seconds": 1145.742919921875,
+        "grams": 7.926556587219238,
+        "warning": "",
+        "supports": false
+      }
+    },
+    "bottom": {
+      "sourceObjectId": "11",
+      "triangles": 10358,
+      "dimensionsMm": [
+        92.9792,
+        92.9896,
+        7.9
+      ],
+      "watertight": true,
+      "connectedBodies": 1,
+      "originalGeometryPreserved": true,
+      "originalSettingsPreserved": true,
+      "stlSha256": "68b4067a43653c0aff079be0d224aaa16f5db122bc4afdd9e3919e8cc9caa370",
+      "projectSha256": "6bcabed932be59cc574a169965a2ab4e556b73f949af0037ceab5883a4f19c98",
+      "slice": {
+        "slicer": "BambuStudio-02.08.02.60",
+        "plateCount": 1,
+        "objectCount": 1,
+        "seconds": 2105.101806640625,
+        "grams": 21.72184944152832,
+        "warning": "",
+        "supports": false
+      }
+    },
+    "divider": {
+      "sourceObjectId": "2",
+      "triangles": 956,
+      "dimensionsMm": [
+        83.0,
+        83.0,
+        53.2
+      ],
+      "watertight": true,
+      "connectedBodies": 1,
+      "originalGeometryPreserved": true,
+      "originalSettingsPreserved": true,
+      "stlSha256": "28bd26091c21c9efde314fe8b8865688a2ea11a69d211e3617b7b1f92390c74f",
+      "projectSha256": "f5ea309d53571bb102d1d3d33495821ef1caa4b2a55576f577962bb758d29b78",
+      "slice": {
+        "slicer": "BambuStudio-02.08.02.60",
+        "plateCount": 1,
+        "objectCount": 1,
+        "seconds": 2829.939208984375,
+        "grams": 31.091203689575195,
+        "warning": "",
+        "supports": false
+      }
+    }
+  }
+}
