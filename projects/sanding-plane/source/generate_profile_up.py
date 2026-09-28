@@ -49,10 +49,10 @@ def round_interface(shape,socket=False):
     return out.wrapped,selected
 
 
-def parts(coupon=False, tapered=False):
+def parts(coupon=False, tapered=False, profile_blank=None):
     length,plate_length,y=(70,70,-10) if coupon else (FULL_LENGTH,FULL_LENGTH,-65)
     # The shoulder expands 1 mm horizontally per 1 mm of print height.
-    base=g.profile_blank(length,PROFILE_THICKNESS)
+    base=(profile_blank or g.profile_blank)(length,PROFILE_THICKNESS)
     envelope=g.xz_prism([(-16,-30),(16,-30),(16,-7),(9,0),(-9,0),(-16,-7)],length+2)
     base=g.boolean(g.BRepAlgoAPI_Common,base,envelope,'slope profile shoe shoulders')
     shoe,rail_edges=round_interface(fuse(base,g.dovetail(length)))

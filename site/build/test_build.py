@@ -108,7 +108,7 @@ class PublishingTests(unittest.TestCase):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         plane = next(p for p in projects if p['slug'] == 'sanding-plane')
         views = build.project_views(plane)
-        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob'])
+        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob', 'roundover-1-8', 'roundover-1-8-coupon'])
         plate_html = build.project_page(next(p for p in views if p['activeView'] == 'build-plate'), [])
         self.assertIn('data-model="../../../files/projects/sanding-plane/models/profile-jig-final-print-plate.stl"', plate_html)
         self.assertIn('profile-jig-final-print-plate-configured.3mf', plate_html)

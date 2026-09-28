@@ -198,8 +198,8 @@
     "slug": "sanding-plane",
     "title": "Sanding plane",
     "category": "Woodworking",
-    "description": "A hand sanding plane for the curved face of a board shaped with the Magnate 5869 fingernail router bit. The rear handle gives you a grip while the shaped shoe supports the sandpaper against the curve. Slide the shoe into the body and hand-tighten the front knob to hold it in place; loosen the knob to swap shoes.",
-    "revision": "Tapered lock",
+    "description": "A sanding plane with interchangeable profile shoes for the Magnate fingernail curve and a 1/8-inch outside roundover. Slide in a shoe and hand-tighten the tapered locking knob.",
+    "revision": "Tapered lock \u00b7 Roundover R1",
     "status": "Coupon fit approved",
     "root": "projects/sanding-plane",
     "readme": "projects/sanding-plane/README.md",
@@ -509,6 +509,148 @@
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
         "description": "The front grip also acts as the sanding plane\u2019s locking screw. Turn it by hand to seat its tapered tip in the shoe and hold the shoe in place. Loosen it about one turn to slide the shoe out without removing the knob from the body."
+      },
+      {
+        "id": "roundover-1-8",
+        "group": "1/8-inch roundover",
+        "label": "Profile shoe",
+        "revision": "R1",
+        "status": "Routed-workpiece fit untested",
+        "preview": "assets/sanding-plane-roundover-shoe.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r1-shoe.stl",
+        "dimensions": [
+          [
+            "Revision",
+            "R1"
+          ],
+          [
+            "Overall size",
+            "186 \u00d7 31.75 \u00d7 28.44 mm \u00b7 7.32 \u00d7 1.25 \u00d7 1.12 in"
+          ],
+          [
+            "Workpiece radius",
+            "3.175 mm \u00b7 1/8 in"
+          ],
+          [
+            "Printed groove radius",
+            "3.475 mm"
+          ],
+          [
+            "Assumed sandpaper + adhesive",
+            "0.30 mm"
+          ],
+          [
+            "Contact profile",
+            "90\u00b0 arc with tangent 45\u00b0 guides"
+          ],
+          [
+            "Fit status",
+            "Routed-workpiece fit untested"
+          ]
+        ],
+        "downloads": [
+          [
+            "Bambu project",
+            "projects/sanding-plane/print-checks/roundover-1-8-r1-shoe/roundover-1-8-r1-shoe-configured.3mf"
+          ],
+          [
+            "Geometry 3MF",
+            "projects/sanding-plane/models/roundover-1-8-r1-shoe.3mf"
+          ],
+          [
+            "STL",
+            "projects/sanding-plane/models/roundover-1-8-r1-shoe.stl"
+          ],
+          [
+            "Editable STEP",
+            "projects/sanding-plane/models/roundover-1-8-r1-shoe.step"
+          ],
+          [
+            "Dimensioned drawing",
+            "projects/sanding-plane/roundover-1-8/section.svg"
+          ]
+        ],
+        "datasheet": "projects/sanding-plane/roundover-1-8/datasheet.html",
+        "related": [
+          [
+            "Matching router bit: TOTOWOOD 1/8-inch roundover",
+            "https://www.amazon.com/dp/B0C5DVBNLS"
+          ]
+        ],
+        "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
+        "notes": "The attachment retains the coupon-proven tapered lock. The new sanding profile needs a physical fit check.",
+        "description": "A 186 mm interchangeable shoe for a 1/8-inch outside roundover. Reuse the existing full carrier and tapered knob. Line the groove and both guide faces with thin sandpaper, including the assumed 0.30 mm thickness allowance. Hold the plane at 45\u00b0 to the adjoining board faces and sand along the edge. Print rail-cap-down, groove-up, without supports."
+      },
+      {
+        "id": "roundover-1-8-coupon",
+        "group": "1/8-inch roundover",
+        "label": "Fit coupon",
+        "revision": "R1",
+        "status": "Routed-workpiece fit untested",
+        "preview": "assets/sanding-plane-roundover-coupon.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r1-coupon.stl",
+        "dimensions": [
+          [
+            "Revision",
+            "R1"
+          ],
+          [
+            "Overall size",
+            "70 \u00d7 31.75 \u00d7 28.44 mm \u00b7 2.76 \u00d7 1.25 \u00d7 1.12 in"
+          ],
+          [
+            "Workpiece radius",
+            "3.175 mm \u00b7 1/8 in"
+          ],
+          [
+            "Printed groove radius",
+            "3.475 mm"
+          ],
+          [
+            "Assumed sandpaper + adhesive",
+            "0.30 mm"
+          ],
+          [
+            "Contact profile",
+            "90\u00b0 arc with tangent 45\u00b0 guides"
+          ],
+          [
+            "Fit status",
+            "Routed-workpiece fit untested"
+          ]
+        ],
+        "downloads": [
+          [
+            "Bambu project",
+            "projects/sanding-plane/print-checks/roundover-1-8-r1-coupon/roundover-1-8-r1-coupon-configured.3mf"
+          ],
+          [
+            "Geometry 3MF",
+            "projects/sanding-plane/models/roundover-1-8-r1-coupon.3mf"
+          ],
+          [
+            "STL",
+            "projects/sanding-plane/models/roundover-1-8-r1-coupon.stl"
+          ],
+          [
+            "Editable STEP",
+            "projects/sanding-plane/models/roundover-1-8-r1-coupon.step"
+          ],
+          [
+            "Dimensioned drawing",
+            "projects/sanding-plane/roundover-1-8/section.svg"
+          ]
+        ],
+        "datasheet": "projects/sanding-plane/roundover-1-8/datasheet.html",
+        "related": [
+          [
+            "Matching router bit: TOTOWOOD 1/8-inch roundover",
+            "https://www.amazon.com/dp/B0C5DVBNLS"
+          ]
+        ],
+        "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
+        "notes": "The attachment retains the coupon-proven tapered lock. The new sanding profile needs a physical fit check.",
+        "description": "A 70 mm test shoe for the 1/8-inch roundover profile. Try it on a routed scrap with your sandpaper before printing the full shoe. It fits the existing 70 mm coupon carrier and tapered knob. Line the groove and both guide faces with thin sandpaper, including the assumed 0.30 mm thickness allowance. Hold the plane at 45\u00b0 to the adjoining board faces and sand along the edge. Print rail-cap-down, groove-up, without supports."
       }
     ],
     "related": [
