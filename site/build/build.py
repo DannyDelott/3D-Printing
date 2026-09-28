@@ -15,7 +15,6 @@ FORMATS = {'.3mf', '.stl', '.step', '.brep', '.fcstd'}
 PUBLISHED = FORMATS | {'.html', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.json', '.md', '.py', '.txt', '.css', '.js', '.in'}
 EXCLUDED = {'archive', '.venv', '__pycache__', 'work', 'node_modules'}
 ICONS = {
-    'cube': 'M12 3 3 8v9l9 5 9-5V8L12 3Zm0 10v9M3 8l9 5 9-5M7.5 5.5l9 5v5',
     'arrow': 'M5 12h14m-6-6 6 6-6 6',
     'left': 'M19 12H5m6-6-6 6 6 6',
     'search': 'M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',
@@ -42,16 +41,12 @@ def versioned_asset(page, path):
 
 
 def frame(page, title, body, description):
-    home = href(page, 'index.html')
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{escape(title)} · 3D Library</title><meta name="description" content="{escape(description, quote=True)}">
-<link rel="stylesheet" href="{versioned_asset(page, 'style.css')}"><link rel="icon" href="{href(page, 'favicon.svg')}" type="image/svg+xml">
+<title>{escape(title)}</title><meta name="description" content="{escape(description, quote=True)}">
+<link rel="stylesheet" href="{versioned_asset(page, 'style.css')}">
 <script type="module" src="{versioned_asset(page, 'client.js')}"></script></head><body>
 <a class="skip" href="#main">Skip to content</a><div class="shell">
-<header class="header"><a href="{home}" class="brand">{icon('cube')}<span>3D Library.</span></a>
-<nav aria-label="Main"><a href="{home}">Collection</a>
-<a href="https://github.com/DannyDelott/3D-Printing" target="_blank" rel="noreferrer">GitHub {icon('external')}</a></nav></header>
 <main id="main">{body}</main>
 </div></body></html>'''
 
@@ -63,15 +58,15 @@ def index(projects):
     for p in projects:
         text = escape(' '.join([p['title'], p['description'], p['category'], p['revision']]).lower(), quote=True)
         rows += f'''<a href="{href(page, 'projects/' + p['slug'] + '/index.html')}" class="project-row" data-category="{escape(p['category'])}" data-search="{text}">
-<img src="{href(page, p['preview'])}" alt="" loading="lazy" width="90" height="70"><div><h2>{escape(p['title'])}</h2><p>{escape(p['revision'])}</p></div>
+<img src="{href(page, p['preview'])}" alt="" loading="lazy" width="90" height="70"><h2>{escape(p['title'])}</h2>
 <span class="row-category">{escape(p['category'])}</span>{icon('arrow')}</a>'''
-    body = f'''<section class="index-intro"><h1>Models</h1><p>{len(projects)} projects</p></section>
+    body = f'''<section class="index-intro"><h1>Projects</h1><div class="directory-meta"><p>{len(projects)} projects</p><a href="https://github.com/DannyDelott/3D-Printing" target="_blank" rel="noreferrer">GitHub {icon('external')}</a></div></section>
 <div class="toolbar" id="filters" hidden><div class="filters" aria-label="Project categories">{filters}</div><label class="search">{icon('search')}<input id="search" type="search" aria-label="Search projects" placeholder="Find a project…"></label></div>
-<div class="table-head" aria-hidden="true"><span>Model</span><span>Project / revision</span><span class="row-category">Category</span><span></span></div>
+<div class="table-head" aria-hidden="true"><span>Model</span><span>Project</span><span class="row-category">Category</span><span></span></div>
 <div id="results">{rows}</div><p id="empty" class="empty" hidden>No projects match. Try another name or category. <button id="clear-search" class="secondary">Clear filters</button></p>
 
 '''
-    return frame(page, 'Collection', body, 'A growing collection of 3D models, dimensions, print notes, and downloadable project files.')
+    return frame(page, '3D printing projects', body, '3D printing projects, dimensions, print notes, and downloadable files.')
 
 
 def file_link(page, name, path):
@@ -121,7 +116,7 @@ def project_page(p, published):
     datasheets = [path for path in published if path.startswith(p['root'] + '/') and Path(path).name == 'datasheet.html']
     sheet_links = ''.join(f'<li><a href="{href(page, artifact(path))}">{escape(str(Path(path).parent.relative_to(p["root"])))}</a></li>' for path in datasheets)
     legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
-    body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} Back to the collection</a>
+    body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
 {component_navigation(p, page)}<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">

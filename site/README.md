@@ -48,10 +48,11 @@ The repository is public. Pages uses **Deploy from a branch → gh-pages → / (
 
 The accepted direction is the compact index (prototype C).
 
-- Lead with project names, revisions, categories, and search. Omit the design status column; keep fit evidence on model pages.
+- Use a plain project directory without an app name, logo, or branded header.
+- Lead with project names, categories, and search; omit revision subtitles from the index. Omit the design status column; keep fit evidence on model pages.
 - Use factual labels and instructions. No promotional headline, introductory copy, narrative footer, or project-page description.
 - Project pages group preview, specifications, print instructions, validation, downloads, source attribution, and earlier files. Omit status badges, repeated revision labels, and preview captions; keep fit evidence in Validation.
-- Keep the index readable on phones; hide secondary columns and retain names and revisions.
+- Keep the index readable on phones; hide secondary columns and retain project names.
 - Use white backgrounds, subdued green model previews, dark text, and thin separators.
 
 The discarded variants remain local in `site-prototype/` and are not part of the build or deployment.
