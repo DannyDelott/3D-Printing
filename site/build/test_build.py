@@ -5,6 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from xml.etree import ElementTree
+from zipfile import ZipFile
 
 import build
 import filament
@@ -28,7 +30,7 @@ class PublishingTests(unittest.TestCase):
     def test_cardboard_estimates_follow_selected_plate(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         project = next(p for p in projects if p['slug'] == 'cardboard-can')
-        first, second = [build.project_page(p, []) for p in build.project_views(project)]
+        first, second = [build.project_page(p, []) for p in build.project_views(project)[:2]]
         self.assertIn('≈82.4 g', first)
         self.assertIn('≈$1.65', first)
         self.assertNotIn('≈83.7 g', first)
@@ -44,6 +46,27 @@ class PublishingTests(unittest.TestCase):
             records = {'model.3mf': {'sha256': hashlib.sha256(b'old model').hexdigest()}}
             with self.assertRaisesRegex(ValueError, 'Stale filament estimate'):
                 filament.render(project, records, root)
+
+    def test_cardboard_component_plates_preserve_source_geometry_and_settings(self):
+        models = build.ROOT / 'projects/cardboard-can/models'
+        with ZipFile(models / 'cardboard-can.3mf') as original:
+            for name, source_id in {'lid': '5', 'ring': '8', 'bottom': '11', 'divider': '2'}.items():
+                with self.subTest(component=name), ZipFile(models / f'cardboard-can-{name}.3mf') as archive:
+                    self.assertIsNone(archive.testzip())
+                    model = ElementTree.fromstring(archive.read('3D/3dmodel.model'))
+                    items = model.findall('{*}build/{*}item')
+                    self.assertEqual([item.get('objectid') for item in items], [source_id])
+                    objects = model.findall('{*}resources/{*}object')
+                    self.assertEqual([obj.get('id') for obj in objects], [source_id])
+                    component = objects[0].find('{*}components/{*}component')
+                    path = component.get('{http://schemas.microsoft.com/3dmanufacturing/production/2015/06}path').lstrip('/')
+                    self.assertEqual(archive.read(path), original.read(path))
+                    self.assertEqual(archive.read('Metadata/project_settings.config'), original.read('Metadata/project_settings.config'))
+                    settings = ElementTree.fromstring(archive.read('Metadata/model_settings.config'))
+                    plates = settings.findall('plate')
+                    self.assertEqual(len(plates), 1)
+                    self.assertEqual(len(plates[0].findall('model_instance')), 1)
+                    self.assertEqual(plates[0].find('model_instance/metadata[@key="object_id"]').get('value'), source_id)
 
     def test_estimate_costs_match_saved_material_rates(self):
         records = json.loads((build.SITE / 'filament-estimates.json').read_text())

@@ -28,6 +28,9 @@ def record(source, folder, assumed=False, note=None):
         plates.append(dict(plate=plate['id'], grams=sum(f['grams'] for f in filaments),
                            cost=sum(f['grams'] * f['pricePerKg'] / 1000 for f in filaments),
                            filaments=filaments, warning=plate['warning_message']))
+        if plate.get('total_predication'):
+            hours, minutes = divmod(round(plate['total_predication'] / 60), 60)
+            plates[-1]['printTime'] = f'{hours} h {minutes} min' if hours else f'{minutes} min'
     entry = dict(sha256=hashlib.sha256((ROOT / source).read_bytes()).hexdigest(),
                  slicer=application, basis='assumed' if assumed else 'saved',
                  settings={key: settings.get(key) for key in SETTINGS}, plates=plates)

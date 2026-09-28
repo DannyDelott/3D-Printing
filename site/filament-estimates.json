@@ -1287,5 +1287,177 @@
       }
     ],
     "note": "Placed clear of the P1S front-left exclusion area; geometry unchanged."
+  },
+  "projects/cardboard-can/models/cardboard-can-lid.3mf": {
+    "sha256": "9c43678d8f5ca806b299ec3566a7b6afc47bb7aae1f11ebb2f40aec37557cfe6",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.55"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 21.910478591918945,
+        "cost": 0.4382095718383789,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 21.910478591918945,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": "",
+        "printTime": "42 min"
+      }
+    ]
+  },
+  "projects/cardboard-can/models/cardboard-can-ring.3mf": {
+    "sha256": "0a20452ef5b36cc95641f81c026e526a613e9be1d3bc40280f8730e3bae9f9ab",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.55"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 7.926556587219238,
+        "cost": 0.15853113174438477,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 7.926556587219238,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": "",
+        "printTime": "19 min"
+      }
+    ]
+  },
+  "projects/cardboard-can/models/cardboard-can-bottom.3mf": {
+    "sha256": "6bcabed932be59cc574a169965a2ab4e556b73f949af0037ceab5883a4f19c98",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.55"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 21.72184944152832,
+        "cost": 0.4344369888305664,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 21.72184944152832,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": "",
+        "printTime": "35 min"
+      }
+    ]
+  },
+  "projects/cardboard-can/models/cardboard-can-divider.3mf": {
+    "sha256": "f5ea309d53571bb102d1d3d33495821ef1caa4b2a55576f577962bb758d29b78",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.55"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 31.091203689575195,
+        "cost": 0.621824073791504,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 31.091203689575195,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": "",
+        "printTime": "47 min"
+      }
+    ]
   }
 }

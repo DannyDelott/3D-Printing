@@ -1,6 +1,6 @@
 # Cardboard can
 
-Saved two-plate Bambu Studio project for a stackable box made with a cardboard filament-spool core.
+A stackable storage can made with a cardboard filament-spool core, a printed lid, ring, bottom, and optional four-compartment divider.
 
 ## Files
 
@@ -8,6 +8,19 @@ Saved two-plate Bambu Studio project for a stackable box made with a cardboard f
 - [Validation record](validation.json) — source SHA-256, archive integrity, plate contents, and transformed mesh bounds.
 
 Imported into the collection on September 27, 2026. The archive's embedded creation/modification date is September 28, 2026.
+
+## Individual component plates
+
+Each download contains one component, centered on a single P1S plate in its original print orientation. The Bambu projects retain the complete project’s printer, filament, process, and object settings. STL files contain the same geometry in millimeters.
+
+| Component | Bambu project | STL |
+| --- | --- | --- |
+| Lid | [3MF](models/cardboard-can-lid.3mf) | [STL](models/cardboard-can-lid.stl) |
+| Ring | [3MF](models/cardboard-can-ring.3mf) | [STL](models/cardboard-can-ring.stl) |
+| Bottom | [3MF](models/cardboard-can-bottom.3mf) | [STL](models/cardboard-can-bottom.stl) |
+| Divider | [3MF](models/cardboard-can-divider.3mf) | [STL](models/cardboard-can-divider.stl) |
+
+The original two-plate project remains available above. Print individual components when you need a replacement or a different quantity.
 
 ## Plates and dimensions
 
@@ -27,11 +40,15 @@ Dimensions come from the saved meshes in millimeters. The cardboard core is supp
 
 ## Print and assembly
 
-The saved configuration uses a Bambu Lab P1S with a 0.4 mm nozzle, Generic PLA, 0.20 mm layers, three walls, 15% infill, and supports disabled. Preserve the two saved plate layouts. The embedded box instructions say to match the cardboard core's notch to the nub in the ring.
+The saved configuration uses a Bambu Lab P1S with a 0.4 mm nozzle, Generic PLA, 0.20 mm layers, three walls, 15% infill, and supports disabled. Use the complete two-plate project or choose an individual component plate. The embedded box instructions say to match the cardboard core's notch to the nub in the ring.
 
 ## Validation
 
 The 3MF ZIP integrity check passed. Both site preview meshes were extracted from the saved project using its component transforms, build transforms, and plate membership. The download retains all original settings, geometry, thumbnails, and metadata. Physical fit and print results are undocumented.
+
+## Rebuild component plates
+
+Run `closet-space-saver-hex/.venv/bin/python3 projects/cardboard-can/source/split_components.py` from the repository root. The script copies the original component meshes and settings, preserves their rotations, and changes only placement to center each part on its own plate. It also exports matching STL files and records dimensions and hashes in `component-plates.json`. Existing component previews are embedded in the 3MF files when available. Re-slice the resulting 3MFs before refreshing site estimates.
 
 ## Related projects and attribution
 

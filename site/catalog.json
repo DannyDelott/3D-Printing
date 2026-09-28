@@ -999,7 +999,9 @@
     "slug": "cardboard-can",
     "root": "projects/cardboard-can",
     "readme": "projects/cardboard-can/README.md",
-    "source": [],
+    "source": [
+      "projects/cardboard-can/source/split_components.py"
+    ],
     "license": "Embedded box attribution: sdaendi; print profile: JSBG. Embedded license: Standard Digital File License. The original MakerWorld terms apply.",
     "related": [
       [
@@ -1095,6 +1097,138 @@
           2
         ],
         "description": "Extra parts for the cardboard-spool storage container: a bottom and two dividers. Use them with the cardboard core from a Bambu filament spool and the lid and ring on Plate 1."
+      },
+      {
+        "id": "lid",
+        "group": "Individual components",
+        "label": "Lid",
+        "revision": "Saved project \u00b7 2026-09-27",
+        "preview": "assets/cardboard-can-lid.png",
+        "previewModel": "projects/cardboard-can/models/cardboard-can-lid.stl",
+        "dimensions": [
+          [
+            "Length",
+            "92.99 mm \u00b7 3.66 in"
+          ],
+          [
+            "Width",
+            "92.99 mm \u00b7 3.66 in"
+          ],
+          [
+            "Height",
+            "10 mm \u00b7 0.39 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Lid \u00b7 Bambu project",
+            "projects/cardboard-can/models/cardboard-can-lid.3mf"
+          ],
+          [
+            "Lid \u00b7 STL",
+            "projects/cardboard-can/models/cardboard-can-lid.stl"
+          ]
+        ],
+        "description": "The lid for the cardboard-spool storage can. Print one on its own when you need a replacement or are building another container; it pairs with the ring, bottom, and cardboard core from a Bambu filament spool."
+      },
+      {
+        "id": "ring",
+        "group": "Individual components",
+        "label": "Ring",
+        "revision": "Saved project \u00b7 2026-09-27",
+        "preview": "assets/cardboard-can-ring.png",
+        "previewModel": "projects/cardboard-can/models/cardboard-can-ring.stl",
+        "dimensions": [
+          [
+            "Length",
+            "92.98 mm \u00b7 3.66 in"
+          ],
+          [
+            "Width",
+            "92.99 mm \u00b7 3.66 in"
+          ],
+          [
+            "Height",
+            "5 mm \u00b7 0.2 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Ring \u00b7 Bambu project",
+            "projects/cardboard-can/models/cardboard-can-ring.3mf"
+          ],
+          [
+            "Ring \u00b7 STL",
+            "projects/cardboard-can/models/cardboard-can-ring.stl"
+          ]
+        ],
+        "description": "The ring that locates the cardboard core in the storage can. Line up its small nub with the notch in the cardboard when assembling the container."
+      },
+      {
+        "id": "bottom",
+        "group": "Individual components",
+        "label": "Bottom",
+        "revision": "Saved project \u00b7 2026-09-27",
+        "preview": "assets/cardboard-can-bottom.png",
+        "previewModel": "projects/cardboard-can/models/cardboard-can-bottom.stl",
+        "dimensions": [
+          [
+            "Length",
+            "92.98 mm \u00b7 3.66 in"
+          ],
+          [
+            "Width",
+            "92.99 mm \u00b7 3.66 in"
+          ],
+          [
+            "Height",
+            "7.9 mm \u00b7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Bottom \u00b7 Bambu project",
+            "projects/cardboard-can/models/cardboard-can-bottom.3mf"
+          ],
+          [
+            "Bottom \u00b7 STL",
+            "projects/cardboard-can/models/cardboard-can-bottom.stl"
+          ]
+        ],
+        "description": "The base of the cardboard-spool storage can. Use it with the printed ring and lid and a cardboard core from a Bambu filament spool."
+      },
+      {
+        "id": "divider",
+        "group": "Individual components",
+        "label": "Divider",
+        "revision": "Saved project \u00b7 2026-09-27",
+        "preview": "assets/cardboard-can-divider.png",
+        "previewModel": "projects/cardboard-can/models/cardboard-can-divider.stl",
+        "dimensions": [
+          [
+            "Length",
+            "83 mm \u00b7 3.27 in"
+          ],
+          [
+            "Width",
+            "83 mm \u00b7 3.27 in"
+          ],
+          [
+            "Height",
+            "53.2 mm \u00b7 2.09 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Divider \u00b7 Bambu project",
+            "projects/cardboard-can/models/cardboard-can-divider.3mf"
+          ],
+          [
+            "Divider \u00b7 STL",
+            "projects/cardboard-can/models/cardboard-can-divider.stl"
+          ]
+        ],
+        "description": "A four-compartment insert for the cardboard-spool storage can. Drop it inside the container to separate small items; print another whenever you need more divided storage."
       }
     ]
   }
