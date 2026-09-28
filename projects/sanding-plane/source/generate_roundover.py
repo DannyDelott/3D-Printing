@@ -1,9 +1,9 @@
-"""R2: 1/8-inch outside-roundover shoe; reuse the proven profile-up lock.
+"""R3: 1/8-inch outside-roundover shoe; reuse the proven profile-up lock.
 
 Run with the repository CAD Python. Only the two new shoes are exported.
 Assembly +Z faces the handles; print orientation places the rail cap down.
 The 90-degree concave arc has short, outward-flared shoulders. Radius
-includes the assumed total sandpaper/adhesive thickness, measured normally.
+includes the nominal cushion plus assumed paper/adhesive thickness, measured normally.
 """
 import hashlib
 import json
@@ -18,9 +18,10 @@ import generate_profile_up as d
 
 RADIUS = 25.4 / 8
 PAPER = 0.30
-TOOL_RADIUS = RADIUS + PAPER
+CUSHION = 25.4 / 8  # User-confirmed POWERTEC 71014 nominal thickness; compression unmeasured.
+TOOL_RADIUS = RADIUS + CUSHION + PAPER
 WIDTH = 31.75
-PREFIX = 'roundover-1-8-r2'
+PREFIX = 'roundover-1-8-r3'
 SHOULDER_LENGTH = 2.5
 FLARE_DEGREES = 3.0
 BACK_THICKNESS = 10.0
@@ -52,7 +53,7 @@ def contact_checks():
     a = TOOL_RADIUS/math.sqrt(2)
     z = -d.PROFILE_THICKNESS-TOOL_RADIUS+a
     b,end_z = shoulder_end(d.PROFILE_THICKNESS)
-    # Nominal wood tangent shifted inward by the assumed paper thickness.
+    # Nominal wood tangent shifted inward by the nominal cushion plus assumed paper thickness.
     # Rotate each adjoining flat toward the shoulder by up to 3 degrees about
     # its nominal tangency point. This bounds shoulder clearance, not wood fit.
     wood_a = RADIUS/math.sqrt(2)
@@ -63,21 +64,27 @@ def contact_checks():
         normal = np.array([math.sin(angle), math.cos(angle)])
         samples = [(a,z),(b,end_z),(WIDTH/2,-BACK_THICKNESS)]
         gaps = [float(np.dot(np.array([x-wood_a,zz-wood_z]),normal)) for x,zz in samples]
-        assert min(gaps) > .29,(deviation,gaps)
+        assert min(gaps) > (CUSHION+PAPER)*math.cos(math.radians(3))-.001,(deviation,gaps)
         clearances[str(deviation)] = round(min(gaps),4)
     return dict(shoulder_length_mm=SHOULDER_LENGTH,flare_per_side_degrees=FLARE_DEGREES,
                 shoulder_opening_degrees=90+2*FLARE_DEGREES,
                 minimum_bare_shoulder_clearance_mm_by_flat_deviation_degrees=clearances,
-                abrasive_backing_arc_length_mm=TOOL_RADIUS*math.pi/2,
-                instruction='Apply approximately 5 mm wide PSA abrasive to the curved seat only; leave shoulders bare.')
+                abrasive_backing_arc_length_mm=(TOOL_RADIUS-CUSHION)*math.pi/2,
+                nominal_lined_radius_mm=TOOL_RADIUS-CUSHION-PAPER,
+                cushion_backing_arc_length_mm=TOOL_RADIUS*math.pi/2,
+                cushion_midplane_arc_length_mm=(TOOL_RADIUS-CUSHION/2)*math.pi/2,
+                instruction='Fit the cushion only in the curved seat; trim its installed edges at the arc ends. Apply approximately 5 mm wide abrasive over the cushion; leave shoulders bare.')
 
 
 def main():
-    originals = list((ROOT/'models').glob('profile-jig-*')) + list((ROOT/'models').glob('roundover-1-8-r1-*'))
+    originals = list((ROOT/'models').glob('profile-jig-*')) + list((ROOT/'models').glob('roundover-1-8-r[12]-*'))
     original_hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                        for p in originals if p.is_file()}
-    report = dict(revision='R2', bit_url='https://www.amazon.com/dp/B0C5DVBNLS',
+    report = dict(revision='R3', bit_url='https://www.amazon.com/dp/B0C5DVBNLS',
                   nominal_radius_mm=RADIUS, assumed_paper_thickness_mm=PAPER,
+                  nominal_cushion_thickness_mm=CUSHION,
+                  cushion_url='https://www.amazon.com/dp/B00NFB81ZC',
+                  cushion_compression='Unmeasured; radius uses full nominal thickness. Verify using the coupon under light sanding pressure.',
                   printed_radius_mm=TOOL_RADIUS, arc_degrees=90,
                   contact=contact_checks(),
                   status='CAD and slicer validation only; routed-workpiece fit untested.', parts={})
@@ -126,7 +133,7 @@ def main():
         print(label, mesh.extents, flush=True)
     assert all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==h for p,h in original_hashes.items())
     report['existing_model_files_unchanged'] = True
-    (ROOT/'validation-roundover-1-8-r2.json').write_text(json.dumps(report,indent=2)+'\n')
+    (ROOT/'validation-roundover-1-8-r3.json').write_text(json.dumps(report,indent=2)+'\n')
     from roundover_datasheet import write
     write(report)
 

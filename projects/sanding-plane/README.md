@@ -77,36 +77,36 @@ Regenerate the full-size parts from the project directory:
 
 Imported from the completed profile-up sander worktree. The original full carrier, tapered shoe, tapered knob, coupon and configured plate are preserved byte-for-byte; the library assembly STL is derived from the assembled 3MF. The earlier caul and detachable tote remain separate library entries.
 
-## 1/8-inch roundover shoe · R2
+## 1/8-inch roundover shoe · R3
 
 [Full shoe and downloads](https://dannydelott.github.io/3D-Printing/projects/sanding-plane/roundover-1-8/) · [Fit coupon](https://dannydelott.github.io/3D-Printing/projects/sanding-plane/roundover-1-8-coupon/) · [Dimensioned datasheet](roundover-1-8/datasheet.html)
 
-R2 keeps the centered 1/8-inch roundover and 45° sanding position. The long R1 contact faces are replaced by **2.5 mm shoulders flared outward 3° per side** (96° opening). The body beyond the shoulders retreats toward the carrier so it clears the adjoining board faces. The dovetail, tapered lock, shoe length and carrier/knob compatibility are unchanged.
+R3 adds a cushion allowance while keeping the centered 1/8-inch roundover and 45° sanding position. It retains the **2.5 mm shoulders flared outward 3° per side** (96° opening). The body beyond the shoulders retreats toward the carrier so it clears the adjoining board faces. The dovetail, tapered lock, shoe length and carrier/knob compatibility are unchanged.
 
-The matching bit is the 1/8-inch roundover in the [TOTOWOOD set, ASIN B0C5DVBNLS](https://www.amazon.com/dp/B0C5DVBNLS). The nominal routed radius is 3.175 mm. The printed concave seat stays at **3.475 mm radius**, allowing an assumed **0.30 mm total sandpaper and adhesive thickness**. This assumes a plain quarter-round without a bead or routing shoulder.
+The matching bit is the 1/8-inch roundover in the [TOTOWOOD set, ASIN B0C5DVBNLS](https://www.amazon.com/dp/B0C5DVBNLS). The nominal routed radius is 3.175 mm. The printed concave seat is **6.650 mm radius**: 3.175 mm for the wood, **3.175 mm for one layer of [POWERTEC 71014 cushion](https://www.amazon.com/dp/B00NFB81ZC)**, and an assumed **0.30 mm for paper and all adhesive layers**. The cushion thickness is the user-confirmed nominal 1/8 inch; compression under sanding pressure is unmeasured. This assumes a plain quarter-round without a bead or routing shoulder.
 
-**Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat. Leave both shoulders bare.** Press the strip into the curve and trim it before it reaches the relieved shoulders. The backing arc is 5.46 mm long across the seat; a 5 mm strip stays within it. Do not wrap abrasive across the broad body. Hold the plane at 45° to the board faces and sand along the edge.
+**Fit the cushion only inside the curved seat, then apply approximately 5 mm wide sandpaper over it. Leave both shoulders bare.** Start with an approximately 8 mm wide cushion strip, press it into the seat, and trim its installed edges at the arc ends. The cushion's outer arc is 10.45 mm, its nominal mid-thickness arc is 7.95 mm, and the paper backing arc is 5.46 mm; the soft mat must conform between those surfaces. The 8 mm strip is a starting cut, not a verified fit. Keep the paper seated against the cushion and off the adjoining flats. Hold the plane at 45° and sand along the edge.
 
 | Part | Overall size, length × width × height | Bambu estimate |
 |---|---|---|
-| Full shoe R2 | 186 × 31.75 × 16.69 mm / 7.32 × 1.25 × 0.66 in | 41.59 g / 1 h 3 min |
-| Fit coupon R2 | 70 × 31.75 × 16.69 mm / 2.76 × 1.25 × 0.66 in | 16.52 g / 30 min |
+| Full shoe R3 | 186 × 31.75 × 17.62 mm / 7.32 × 1.25 × 0.69 in | 42.80 g / 1 h 5 min |
+| Fit coupon R3 | 70 × 31.75 × 17.62 mm / 2.76 × 1.25 × 0.69 in | 16.99 g / 31 min |
 
 Print rail-cap-down with the working profile upward, supports off. Both configured projects use P1S / PLA / 0.4 mm nozzle / 0.20 mm layers / five walls / 15% infill and slice without warnings. Reuse the full carrier and tapered knob for the full shoe; reuse the 70 mm coupon carrier and tapered coupon knob for the coupon.
 
-**R2 has not been physically tested. Print the coupon first and check it on a routed scrap with the intended abrasive.** Analytic clearance checks keep the bare shoulders and relieved outer body clear of nominal board flats rotated inward by up to 3° about their tangency points. This is a geometric check, not proof of fit on uneven wood. Paper thickness, print accuracy and actual routing still need a physical check. The full 90° abrasive-seat arc retains its exact CAD radius; the rail and pocket match the approved attachment. R1 files remain as earlier revisions and are no longer the selected downloads.
+**R3 has not been physically tested. Print the coupon first and check it on a routed scrap with the intended cushion, adhesive and abrasive under light sanding pressure.** Analytic clearance checks keep the bare shoulders and relieved outer body clear of nominal board flats rotated inward by up to 3° about their tangency points. This is a geometric check, not proof of fit on uneven wood. Pad compression, paper thickness, print accuracy and actual routing still need a physical check. The full 90° abrasive-seat arc retains its exact CAD radius; the rail and pocket match the approved attachment. R1 and R2 files remain as earlier revisions and are no longer the selected downloads.
 
 Rebuild geometry, validation, and the dimensioned datasheet with:
 
 ```sh
 /Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/generate_roundover.py
-/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r2-shoe
-/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r2-coupon
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r3-shoe
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r3-coupon
 /Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/build_assembly_previews.py
 /Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/verify_roundover.py
 ```
 
-`generate_roundover.py` reuses `generate_profile_up.parts` for the attachment. `roundover_datasheet.py` writes the drawing and HTML. `validation-roundover-1-8-r2.json` records geometry checks and file hashes. `verify_roundover.py` independently reads the exported STEP faces, verifies the 90° arc and 2.5 mm / 42° shoulder surfaces, compares configured print geometry, and records slice provenance in `validation-roundover-1-8-r2-exports.json`. Refresh filament estimates and all four roundover thumbnails following `site/README.md`; keep sliced projects and G-code in excluded `work/`.
+`generate_roundover.py` reuses `generate_profile_up.parts` for the attachment. `roundover_datasheet.py` writes the drawing and HTML. `validation-roundover-1-8-r3.json` records geometry checks and file hashes. `verify_roundover.py` independently reads the exported STEP faces, verifies the 90° arc and 2.5 mm / 42° shoulder surfaces, compares configured print geometry, and records slice provenance in `validation-roundover-1-8-r3-exports.json`. Refresh filament estimates and all four roundover thumbnails following `site/README.md`; keep sliced projects and G-code in excluded `work/`.
 
 ## Assembly shoe selector
 

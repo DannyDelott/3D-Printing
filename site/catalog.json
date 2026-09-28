@@ -199,7 +199,7 @@
     "title": "Sanding plane",
     "category": "Woodworking",
     "description": "A sanding plane with interchangeable profile shoes for the Magnate fingernail curve and a 1/8-inch outside roundover. Slide in a shoe and hand-tighten the tapered locking knob.",
-    "revision": "Tapered lock \u00b7 Roundover R2",
+    "revision": "Tapered lock \u00b7 Roundover R3",
     "status": "Coupon fit approved",
     "root": "projects/sanding-plane",
     "readme": "projects/sanding-plane/README.md",
@@ -530,18 +530,18 @@
         "id": "roundover-1-8",
         "group": "1/8-inch roundover",
         "label": "Profile shoe",
-        "revision": "R2",
+        "revision": "R3",
         "status": "Routed-workpiece fit untested",
-        "preview": "assets/sanding-plane-roundover-r2-shoe.png",
-        "previewModel": "projects/sanding-plane/models/roundover-1-8-r2-shoe.stl",
+        "preview": "assets/sanding-plane-roundover-r3-shoe.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r3-shoe.stl",
         "dimensions": [
           [
             "Revision",
-            "R2"
+            "R3"
           ],
           [
             "Overall size",
-            "186 \u00d7 31.75 \u00d7 16.69 mm \u00b7 7.32 \u00d7 1.25 \u00d7 0.66 in"
+            "186 \u00d7 31.75 \u00d7 17.62 mm \u00b7 7.32 \u00d7 1.25 \u00d7 0.69 in"
           ],
           [
             "Workpiece radius",
@@ -549,7 +549,15 @@
           ],
           [
             "Printed groove radius",
-            "3.475 mm"
+            "6.650 mm"
+          ],
+          [
+            "Cushion allowance",
+            "3.175 mm \u00b7 1/8 in nominal"
+          ],
+          [
+            "Cushion material",
+            "POWERTEC 71014"
           ],
           [
             "Assumed sandpaper + adhesive",
@@ -569,25 +577,25 @@
           ],
           [
             "Fit status",
-            "R2 routed-workpiece fit untested"
+            "R3 routed-workpiece fit untested"
           ]
         ],
         "downloads": [
           [
             "Bambu project",
-            "projects/sanding-plane/print-checks/roundover-1-8-r2-shoe/roundover-1-8-r2-shoe-configured.3mf"
+            "projects/sanding-plane/print-checks/roundover-1-8-r3-shoe/roundover-1-8-r3-shoe-configured.3mf"
           ],
           [
             "Geometry 3MF",
-            "projects/sanding-plane/models/roundover-1-8-r2-shoe.3mf"
+            "projects/sanding-plane/models/roundover-1-8-r3-shoe.3mf"
           ],
           [
             "STL",
-            "projects/sanding-plane/models/roundover-1-8-r2-shoe.stl"
+            "projects/sanding-plane/models/roundover-1-8-r3-shoe.stl"
           ],
           [
             "Editable STEP",
-            "projects/sanding-plane/models/roundover-1-8-r2-shoe.step"
+            "projects/sanding-plane/models/roundover-1-8-r3-shoe.step"
           ],
           [
             "Dimensioned drawing",
@@ -599,28 +607,32 @@
           [
             "Matching router bit: TOTOWOOD 1/8-inch roundover",
             "https://www.amazon.com/dp/B0C5DVBNLS"
+          ],
+          [
+            "Cushion: POWERTEC 71014 \u00b7 1/8 in mat",
+            "https://www.amazon.com/dp/B00NFB81ZC"
           ]
         ],
         "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
-        "notes": "The tapered attachment is unchanged. Shoulder clearance is checked against nominal flat faces tilted inward by up to 3\u00b0; actual wood contact and abrasive thickness still need a physical coupon test.",
-        "description": "A 186 mm interchangeable shoe for a 1/8-inch outside roundover. Reuse the existing full carrier and tapered knob. R2 replaces the broad guides with 2.5 mm shoulders flared outward 3\u00b0 per side, with the surrounding body cut back for clearance. Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat; leave the shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
+        "notes": "Radius uses the full nominal cushion thickness; compression under sanding pressure is unmeasured. Paper and all adhesive layers share the assumed 0.30 mm allowance. Start with an approximately 8 mm cushion strip and trim to fit the curved seat. The tapered attachment is unchanged. Physical fit remains untested.",
+        "description": "A 186 mm interchangeable shoe for a 1/8-inch outside roundover. Reuse the existing full carrier and tapered knob. R3 allows one layer of 1/8-inch POWERTEC 71014 cushion plus 0.30 mm for paper and adhesive. Fit the cushion inside the curved seat and trim its installed edges at the ends of the curve. Apply approximately 5 mm wide sandpaper over it; leave the 2.5 mm flared shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
       },
       {
         "id": "roundover-1-8-coupon",
         "group": "1/8-inch roundover",
         "label": "Fit coupon",
-        "revision": "R2",
+        "revision": "R3",
         "status": "Routed-workpiece fit untested",
-        "preview": "assets/sanding-plane-roundover-r2-coupon.png",
-        "previewModel": "projects/sanding-plane/models/roundover-1-8-r2-coupon.stl",
+        "preview": "assets/sanding-plane-roundover-r3-coupon.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r3-coupon.stl",
         "dimensions": [
           [
             "Revision",
-            "R2"
+            "R3"
           ],
           [
             "Overall size",
-            "70 \u00d7 31.75 \u00d7 16.69 mm \u00b7 2.76 \u00d7 1.25 \u00d7 0.66 in"
+            "70 \u00d7 31.75 \u00d7 17.62 mm \u00b7 2.76 \u00d7 1.25 \u00d7 0.69 in"
           ],
           [
             "Workpiece radius",
@@ -628,7 +640,15 @@
           ],
           [
             "Printed groove radius",
-            "3.475 mm"
+            "6.650 mm"
+          ],
+          [
+            "Cushion allowance",
+            "3.175 mm \u00b7 1/8 in nominal"
+          ],
+          [
+            "Cushion material",
+            "POWERTEC 71014"
           ],
           [
             "Assumed sandpaper + adhesive",
@@ -648,25 +668,25 @@
           ],
           [
             "Fit status",
-            "R2 routed-workpiece fit untested"
+            "R3 routed-workpiece fit untested"
           ]
         ],
         "downloads": [
           [
             "Bambu project",
-            "projects/sanding-plane/print-checks/roundover-1-8-r2-coupon/roundover-1-8-r2-coupon-configured.3mf"
+            "projects/sanding-plane/print-checks/roundover-1-8-r3-coupon/roundover-1-8-r3-coupon-configured.3mf"
           ],
           [
             "Geometry 3MF",
-            "projects/sanding-plane/models/roundover-1-8-r2-coupon.3mf"
+            "projects/sanding-plane/models/roundover-1-8-r3-coupon.3mf"
           ],
           [
             "STL",
-            "projects/sanding-plane/models/roundover-1-8-r2-coupon.stl"
+            "projects/sanding-plane/models/roundover-1-8-r3-coupon.stl"
           ],
           [
             "Editable STEP",
-            "projects/sanding-plane/models/roundover-1-8-r2-coupon.step"
+            "projects/sanding-plane/models/roundover-1-8-r3-coupon.step"
           ],
           [
             "Dimensioned drawing",
@@ -678,11 +698,15 @@
           [
             "Matching router bit: TOTOWOOD 1/8-inch roundover",
             "https://www.amazon.com/dp/B0C5DVBNLS"
+          ],
+          [
+            "Cushion: POWERTEC 71014 \u00b7 1/8 in mat",
+            "https://www.amazon.com/dp/B00NFB81ZC"
           ]
         ],
         "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
-        "notes": "The tapered attachment is unchanged. Shoulder clearance is checked against nominal flat faces tilted inward by up to 3\u00b0; actual wood contact and abrasive thickness still need a physical coupon test.",
-        "description": "A 70 mm fit coupon for the revised roundover shoe. Reuse the existing coupon carrier and tapered coupon knob. Try it on a routed scrap before printing the full shoe. R2 replaces the broad guides with 2.5 mm shoulders flared outward 3\u00b0 per side, with the surrounding body cut back for clearance. Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat; leave the shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
+        "notes": "Radius uses the full nominal cushion thickness; compression under sanding pressure is unmeasured. Paper and all adhesive layers share the assumed 0.30 mm allowance. Start with an approximately 8 mm cushion strip and trim to fit the curved seat. The tapered attachment is unchanged. Physical fit remains untested.",
+        "description": "A 70 mm fit coupon for the cushioned roundover shoe. Reuse the existing coupon carrier and tapered knob. Check the lined profile on routed scrap under light sanding pressure before printing the full shoe. R3 allows one layer of 1/8-inch POWERTEC 71014 cushion plus 0.30 mm for paper and adhesive. Fit the cushion inside the curved seat and trim its installed edges at the ends of the curve. Apply approximately 5 mm wide sandpaper over it; leave the 2.5 mm flared shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
       }
     ],
     "related": [
@@ -711,15 +735,15 @@
       },
       {
         "id": "roundover-1-8",
-        "label": "Roundover \u00b7 1/8 in radius \u00b7 R2",
-        "source": "projects/sanding-plane/models/roundover-1-8-r2-shoe.step",
+        "label": "Roundover \u00b7 1/8 in radius \u00b7 R3 \u00b7 1/8 in cushion",
+        "source": "projects/sanding-plane/models/roundover-1-8-r3-shoe.step",
         "assembly": {
-          "model": "assets/sanding-plane-roundover-r2-assembly.stl",
-          "preview": "assets/sanding-plane-roundover-r2-assembly.png"
+          "model": "assets/sanding-plane-roundover-r3-assembly.stl",
+          "preview": "assets/sanding-plane-roundover-r3-assembly.png"
         },
         "exploded": {
-          "model": "assets/sanding-plane-roundover-r2-exploded.stl",
-          "preview": "assets/sanding-plane-roundover-r2-exploded.png"
+          "model": "assets/sanding-plane-roundover-r3-exploded.stl",
+          "preview": "assets/sanding-plane-roundover-r3-exploded.png"
         }
       }
     ]

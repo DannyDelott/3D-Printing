@@ -1,0 +1,44 @@
+{
+  "shoe": {
+    "step_valid": true,
+    "arc_radius_mm": 6.65,
+    "arc_degrees": 90,
+    "shoulder_length_mm": 2.5,
+    "shoulder_angles_degrees": [
+      42.000000000021146,
+      42.000000000021146
+    ],
+    "dimensions_mm": [
+      31.75,
+      186.0,
+      17.62056541442871
+    ],
+    "watertight": true,
+    "bed_bounds_valid": true,
+    "configured_sha256": "5cd2c1a1b53acab774df842b2c43309208ceb3387b23d58ca9429f4f9ed950a0",
+    "slice_matches_geometry": true,
+    "supports": false,
+    "warnings": []
+  },
+  "coupon": {
+    "step_valid": true,
+    "arc_radius_mm": 6.65,
+    "arc_degrees": 90,
+    "shoulder_length_mm": 2.5,
+    "shoulder_angles_degrees": [
+      42.000000000021146,
+      42.000000000021146
+    ],
+    "dimensions_mm": [
+      31.75,
+      70.0,
+      17.62056541442871
+    ],
+    "watertight": true,
+    "bed_bounds_valid": true,
+    "configured_sha256": "6886ad68c4b4e58900bb4ac97378d1c8e670030ca1ffceccb58b74c18a9bb748",
+    "slice_matches_geometry": true,
+    "supports": false,
+    "warnings": []
+  }
+}

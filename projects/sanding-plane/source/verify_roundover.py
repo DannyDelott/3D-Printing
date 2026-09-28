@@ -1,4 +1,4 @@
-"""Verify the R2 exported working faces, print geometry and slice provenance."""
+"""Verify the R3 exported working faces, print geometry and slice provenance."""
 import hashlib
 import json
 import math
@@ -10,7 +10,7 @@ import numpy as np
 import trimesh
 
 ROOT = Path(__file__).resolve().parents[1]
-PREFIX = 'roundover-1-8-r2'
+PREFIX = 'roundover-1-8-r3'
 
 
 def main():
@@ -24,9 +24,9 @@ def main():
         solid=cq.importers.importStep(str(ROOT/'models'/f'{stem}.step')).val()
         assert solid.isValid() and len(solid.Solids())==1
         working=[f for f in solid.Faces() if f.geomType()=='CYLINDER'
-                 and abs(f._geomAdaptor().Cylinder().Radius()-3.475)<1e-6]
+                 and abs(f._geomAdaptor().Cylinder().Radius()-6.65)<1e-6]
         assert len(working)==1
-        assert abs(working[0].Area()-3.475*math.pi/2*length)<1e-4
+        assert abs(working[0].Area()-6.65*math.pi/2*length)<1e-4
         shoulders=[f for f in solid.Faces() if f.geomType()=='PLANE'
                    and abs(f.Area()-2.5*length)<1e-4]
         assert len(shoulders)==2
@@ -45,13 +45,13 @@ def main():
         evidence=json.loads((folder/'verification.json').read_text())
         assert evidence['supports_disabled'] and not evidence['support_toolpaths'] and not evidence['warnings']
         assert evidence['model_sha256']==hashlib.sha256((ROOT/'models'/f'{stem}.3mf').read_bytes()).hexdigest()
-        report[kind]=dict(step_valid=True,arc_radius_mm=3.475,arc_degrees=90,
+        report[kind]=dict(step_valid=True,arc_radius_mm=6.65,arc_degrees=90,
                          shoulder_length_mm=2.5,shoulder_angles_degrees=angles,
                          dimensions_mm=mesh.extents.tolist(),watertight=True,bed_bounds_valid=True,
                          configured_sha256=hashlib.sha256(configured.read_bytes()).hexdigest(),
                          slice_matches_geometry=True,supports=False,warnings=[])
     (ROOT/f'validation-{PREFIX}-exports.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('R2 STEP contact faces, STL/3MF geometry, plate bounds and slice provenance passed.')
+    print('R3 STEP contact faces, STL/3MF geometry, plate bounds and slice provenance passed.')
 
 
 if __name__=='__main__':main()
