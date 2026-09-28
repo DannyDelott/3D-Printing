@@ -35,11 +35,6 @@ def artifact(path):
     return path if path.startswith('assets/') else 'files/' + path
 
 
-def badge(p):
-    kind = 'test' if p['status'] == 'Test print next' else 'unknown' if p['status'] == 'Fit undocumented' else ''
-    return f'<span class="pill {kind}">{escape(p["status"])}</span>'
-
-
 def frame(page, title, body, description):
     home = href(page, 'index.html')
     return f'''<!doctype html>
@@ -120,19 +115,18 @@ def project_page(p, published):
     datasheets = [path for path in published if path.startswith(p['root'] + '/') and Path(path).name == 'datasheet.html']
     sheet_links = ''.join(f'<li><a href="{href(page, artifact(path))}">{escape(str(Path(path).parent.relative_to(p["root"])))}</a></li>' for path in datasheets)
     legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
-    caption = p.get('previewCaption', p['revision'])
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} Back to the collection</a>
-<div class="detail-heading"><div>{badge(p)}<h1>{escape(p['title'])}</h1></div><span class="revision muted">{escape(p['revision'])}</span></div>
+<div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
 {component_navigation(p, page)}<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
-<span class="viewer-label">{escape(caption)}</span><img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
+<img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
-<div class="viewer-caption"><span id="viewer-status" role="status">Model preview</span><div class="viewer-controls"><button id="load-model" hidden>Explore in 3D</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
+<div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
 <nav class="tabline" aria-label="Datasheet sections"><a href="#dimensions">Specifications</a><a href="#print-notes">Print notes</a><a href="#fit-status">Fit & validation</a><a href="#files">All files</a></nav>
 <section class="notes" id="print-notes"><h2>Print & assembly notes</h2><p>{escape(p['print'])}</p></section>
 <section class="notes" id="fit-status"><h2>Validation</h2><p>{escape(p['notes'])}</p></section>
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
 </div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
-<section id="downloads"><h2>Downloads</h2><p class="small muted" style="margin-top:10px">Selected files · {escape(p['revision'])}</p><div class="download-list">{downloads}</div>
+<section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div>
 </section>
 <div class="notes"><p>{escape(p['license'])}</p>{f'<ul>{related}</ul>' if related else ''}</div></aside></div>
 <section class="file-archive" id="files"><h2>Project files & revisions</h2><p class="muted">Earlier revisions and alternatives.</p>

@@ -50,7 +50,7 @@ The accepted direction is the compact index (prototype C).
 
 - Lead with project names, revisions, categories, and search. Omit the design status column; keep fit evidence on model pages.
 - Use factual labels and instructions. No promotional headline, introductory copy, narrative footer, or project-page description.
-- Project pages group preview, specifications, print instructions, validation, downloads, source attribution, and earlier files.
+- Project pages group preview, specifications, print instructions, validation, downloads, source attribution, and earlier files. Omit status badges, repeated revision labels, and preview captions; keep fit evidence in Validation.
 - Keep the index readable on phones; hide secondary columns and retain names and revisions.
 - Use white backgrounds, subdued green model previews, dark text, and thin separators.
 
