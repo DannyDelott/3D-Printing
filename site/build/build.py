@@ -111,7 +111,8 @@ def project_page(p, published):
     page = project_path(p)
     downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
     dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
-    estimate = filament.render(p, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
+    estimate_rows, estimate_notes = filament.render(p, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
+    attribution = f'<div class="notes"><p>{escape(p["license"])}</p></div>' if p.get('license') else ''
     related = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in p.get('related', []))
     selected_paths = {path for view in project_views(p) for _, path in view['downloads']}
     extras = [path for path in published if path.startswith(p['root'] + '/') and Path(path).suffix.lower() in FORMATS and path not in selected_paths]
@@ -132,11 +133,10 @@ def project_page(p, published):
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
 <section class="notes" id="description"><h2>About this print</h2><p>{escape(p['description'])}</p>{f'<ul>{related}</ul>' if related else ''}</section>
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
-</div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
-{estimate}
+</div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}{estimate_rows}</tbody></table>{estimate_notes}</section>
 <section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div>
 </section>
-<div class="notes"><p>{escape(p['license'])}</p></div></aside></div>
+{attribution}</aside></div>
 {archive}'''
     title = p['title'] + (f' · {p["group"]} · {p["label"]}' if p.get('activeView') else '')
     return frame(page, title, body, p['description'])

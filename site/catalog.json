@@ -72,7 +72,7 @@
         "dimensions": [
           [
             "Coupon width",
-            "61.00 mm"
+            "61.00 mm \u00b7 2.4 in"
           ],
           [
             "Thickness",
@@ -112,11 +112,11 @@
         "dimensions": [
           [
             "Assembled length",
-            "486.75 mm"
+            "486.75 mm \u00b7 19.16 in"
           ],
           [
             "Stile width",
-            "57.15 mm"
+            "57.15 mm \u00b7 2.25 in"
           ],
           [
             "Thickness",
@@ -157,11 +157,11 @@
         "dimensions": [
           [
             "Assembled coupon length",
-            "36.00 mm"
+            "36.00 mm \u00b7 1.42 in"
           ],
           [
             "Full stile width",
-            "57.15 mm"
+            "57.15 mm \u00b7 2.25 in"
           ],
           [
             "Thickness",
@@ -208,7 +208,6 @@
       "projects/sanding-plane/source/generate_taper_lock.py",
       "projects/sanding-plane/source/build_full_plate.py"
     ],
-    "license": "Tote adapted from vikingth0r\u2019s Stanley No. 5 handle. Original source and license information are retained in the project notes.",
     "preview": "assets/sanding-plane.png",
     "views": [
       {
@@ -222,23 +221,19 @@
         "dimensions": [
           [
             "Length",
-            "186 mm"
+            "186 mm \u00b7 7.32 in"
           ],
           [
             "Working width",
-            "31.75 mm"
+            "31.75 mm \u00b7 1.25 in"
           ],
           [
             "Carrier width",
-            "40 mm"
+            "40 mm \u00b7 1.57 in"
           ],
           [
             "Taper included angle",
             "90\u00b0"
-          ],
-          [
-            "Print estimate",
-            "161.74 g \u00b7 3 h 44 min"
           ]
         ],
         "downloads": [
@@ -266,15 +261,15 @@
         "dimensions": [
           [
             "Assembled length",
-            "186 mm"
+            "186 mm \u00b7 7.32 in"
           ],
           [
             "Working width",
-            "31.75 mm"
+            "31.75 mm \u00b7 1.25 in"
           ],
           [
             "Carrier width",
-            "40 mm"
+            "40 mm \u00b7 1.57 in"
           ],
           [
             "Taper included angle",
@@ -310,7 +305,7 @@
           ],
           [
             "Layout footprint",
-            "211.82 \u00d7 186 mm"
+            "211.82 \u00d7 186 mm \u00b7 8.34 \u00d7 7.32 in"
           ],
           [
             "Layout height",
@@ -318,15 +313,11 @@
           ],
           [
             "Build plate",
-            "256 \u00d7 256 mm"
+            "256 \u00d7 256 mm \u00b7 10.08 \u00d7 10.08 in"
           ],
           [
             "Minimum part gap",
             "8 mm"
-          ],
-          [
-            "Print estimate",
-            "161.74 g \u00b7 3 h 44 min"
           ]
         ],
         "downloads": [
@@ -354,7 +345,7 @@
         "dimensions": [
           [
             "Coupon length",
-            "70 mm"
+            "70 mm \u00b7 2.76 in"
           ],
           [
             "Taper included angle",
@@ -406,11 +397,11 @@
         "dimensions": [
           [
             "Length",
-            "186 mm"
+            "186 mm \u00b7 7.32 in"
           ],
           [
             "Width",
-            "40 mm"
+            "40 mm \u00b7 1.57 in"
           ]
         ],
         "downloads": [
@@ -442,11 +433,11 @@
         "dimensions": [
           [
             "Length",
-            "186 mm"
+            "186 mm \u00b7 7.32 in"
           ],
           [
             "Working width",
-            "31.75 mm"
+            "31.75 mm \u00b7 1.25 in"
           ],
           [
             "Profile radius",
@@ -541,7 +532,7 @@
     "dimensions": [
       [
         "Footprint",
-        "232.9 \u00d7 232.9 mm"
+        "232.9 \u00d7 232.9 mm \u00b7 9.17 \u00d7 9.17 in"
       ],
       [
         "Body thickness",
@@ -585,11 +576,11 @@
     "dimensions": [
       [
         "Length",
-        "250 mm"
+        "250 mm \u00b7 9.84 in"
       ],
       [
         "Width",
-        "31.75 mm"
+        "31.75 mm \u00b7 1.25 in"
       ],
       [
         "Profile radius",
@@ -643,7 +634,7 @@
     "dimensions": [
       [
         "Design envelope",
-        "220 \u00d7 220 \u00d7 250 mm"
+        "220 \u00d7 220 \u00d7 250 mm \u00b7 8.66 \u00d7 8.66 \u00d7 9.84 in"
       ],
       [
         "Basket angle",
@@ -698,7 +689,7 @@
     "dimensions": [
       [
         "Design envelope",
-        "220 \u00d7 220 \u00d7 250 mm"
+        "220 \u00d7 220 \u00d7 250 mm \u00b7 8.66 \u00d7 8.66 \u00d7 9.84 in"
       ],
       [
         "Basket angle",
@@ -785,7 +776,7 @@
     "dimensions": [
       [
         "Configuration",
-        "319 \u00d7 423 mm"
+        "319 \u00d7 423 mm \u00b7 12.56 \u00d7 16.65 in"
       ],
       [
         "Print format",
@@ -823,7 +814,7 @@
     "dimensions": [
       [
         "Configuration",
-        "342 \u00d7 472 mm"
+        "342 \u00d7 472 mm \u00b7 13.46 \u00d7 18.58 in"
       ],
       [
         "Print format",
@@ -857,7 +848,7 @@
     "dimensions": [
       [
         "Configuration",
-        "235 \u00d7 375 mm candidate"
+        "235 \u00d7 375 mm \u00b7 9.25 \u00d7 14.76 in candidate"
       ],
       [
         "Print format",
@@ -1043,7 +1034,7 @@
           ],
           [
             "Divider",
-            "83 \u00d7 83 \u00d7 53.2 mm"
+            "83 \u00d7 83 \u00d7 53.2 mm \u00b7 3.27 \u00d7 3.27 \u00d7 2.09 in"
           ],
           [
             "Bottom",
@@ -1085,7 +1076,7 @@
           ],
           [
             "Divider",
-            "83 \u00d7 83 \u00d7 53.2 mm"
+            "83 \u00d7 83 \u00d7 53.2 mm \u00b7 3.27 \u00d7 3.27 \u00d7 2.09 in"
           ],
           [
             "Bottom",

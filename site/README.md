@@ -23,9 +23,9 @@ The build checks every local HTML link, including original datasheets. Missing f
 
 1. Keep geometry and source files in the existing project folder.
 2. Update its entry in `site/catalog.json`: selected revision, human-readable description, dimensions, fit results, downloads, preview image, and preview mesh. The description explains what the print is for and how to use it; give individual parts and coupons their own descriptions in `views`. Keep slicer settings and build records in the project notes.
-3. Keep the image, interactive mesh, specifications, and selected downloads on the same revision. Use exact status labels; coupon approval does not establish full-part strength.
+3. Keep the image, interactive mesh, specifications, and selected downloads on the same revision. Show length, width, and overall dimensions in both millimeters and inches (25.4 mm per inch; round inches to two decimal places). Use exact status labels; coupon approval does not establish full-part strength.
 4. Group component models and their test coupons in `views`, with a shared `group` and separate model, preview, dimensions, and downloads for each view. Give compatible older coupons their actual revision; for example, Rail V10 uses the approved V9 joint coupon.
-5. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information. Show the attribution sentence below downloads, without a heading or source-code download links. Add useful product and original-design links as `related` entries (`[label, URL]` pairs); these appear beside the description. Label each link so readers know how it relates to the print.
+5. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information. Show any additional attribution below downloads, without a heading or source-code download links; omit it when the description and source links already credit the original designer. Add useful product and original-design links as `related` entries (`[label, URL]` pairs); these appear beside the description. Label each link so readers know how it relates to the print.
 6. Build and check the page before pushing to `main`.
 
 The catalog `root` includes model formats, original HTML datasheets, images, source scripts, documentation, and validation files. `archive/`, environments, scratch `work/`, and `.gcode.3mf` files are excluded. Older standalone closet projects publish their output and source folders and top-level source/notes. `_site/publication.json` lists the exact project artifacts in the deployment.
@@ -59,7 +59,7 @@ The discarded variants remain local in `site-prototype/` and are not part of the
 
 ## Filament estimates
 
-Every model page shows recorded Bambu Studio slice estimates below its specifications. `site/filament-estimates.json` stores source SHA-256 hashes, settings, per-plate grams, material prices, costs, and slicer warnings. The build rejects changed model files until their estimates are refreshed. Empty file/revision sections and their navigation links are omitted.
+Every model page includes recorded Bambu Studio slice estimates as rows in its Specifications table. Each row combines weight, print time when recorded, and filament cost; there is no separate estimate section. `site/filament-estimates.json` stores source SHA-256 hashes, settings, per-plate grams, optional `printTime`, material prices, costs, and slicer warnings. The build rejects changed model files until their estimates are refreshed. Empty file/revision sections and their navigation links are omitted.
 
 Estimates use each configured 3MF's saved settings and material cost per kilogram, interpreted as USD. Each plate and each alternative file has its own row; alternative prints are not added together. `filamentPlates` selects the relevant plates for a catalog view, as on Cardboard can. Costs cover filament only.
 

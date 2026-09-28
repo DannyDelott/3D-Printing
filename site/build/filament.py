@@ -8,7 +8,8 @@ def render(project, records, root):
     sources = [(label, path) for label, path in project['downloads'] if path in records]
     if not sources:
         raise ValueError(f'{project["slug"]}: record a filament estimate for a selected download')
-    groups = []
+    rows = []
+    notes = []
     for label, path in sources:
         record = records[path]
         if hashlib.sha256((root / path).read_bytes()).hexdigest() != record['sha256']:
@@ -17,11 +18,18 @@ def render(project, records, root):
         plates = [plate for plate in record['plates'] if selected is None or plate['plate'] in selected]
         if not plates or (selected is not None and set(selected) != {p['plate'] for p in plates}):
             raise ValueError(f'{path}: missing selected plate estimate')
-        rows = ''
         for plate in plates:
             if any(not math.isfinite(plate[key]) or plate[key] <= 0 for key in ('grams', 'cost')):
                 raise ValueError(f'{path}: invalid filament estimate')
-            rows += f'<tr><th scope="row">Plate {plate["plate"]}</th><td>≈{plate["grams"]:.1f} g</td><td>≈${plate["cost"]:.2f}</td></tr>'
+            name = label if len(sources) > 1 else 'Print estimate'
+            if len(plates) > 1 or selected is not None:
+                name += f' · Plate {plate["plate"]}'
+            values = [f'≈{plate["grams"]:.1f} g']
+            if plate.get('printTime'):
+                values.append(plate['printTime'])
+            values.append(f'≈${plate["cost"]:.2f}')
+            estimate = ' · '.join(f'<span>{escape(value)}</span>' for value in values)
+            rows.append(f'<tr><th scope="row">{escape(name)}</th><td class="print-estimate">{estimate}</td></tr>')
         rates = sorted({f['pricePerKg'] for plate in plates for f in plate['filaments']})
         price = ', '.join(f'${rate:.2f}/kg' for rate in rates)
         settings = record['settings']
@@ -41,7 +49,7 @@ def render(project, records, root):
             note += (' Slicer flagged floating regions; review orientation or supports before printing.'
                      if all('floating regions' in warning for warning in warnings)
                      else ' Slicer warnings: ' + ' '.join(sorted(warnings)))
-        heading = f'<h3>{escape(label)}</h3>' if len(sources) > 1 else ''
-        groups.append(f'''{heading}<table class="specs filament-specs"><thead><tr><th scope="col">Print</th><th scope="col">Filament</th><th scope="col">Cost</th></tr></thead><tbody>{rows}</tbody></table>
-<p class="small muted">{escape(note)}</p>''')
-    return '<section class="filament-estimate"><h2>Filament estimate</h2>' + ''.join(groups) + '</section>'
+        if len(sources) > 1:
+            note = label + ': ' + note
+        notes.append(f'<p class="small muted">{escape(note)}</p>')
+    return ''.join(rows), ''.join(notes)
