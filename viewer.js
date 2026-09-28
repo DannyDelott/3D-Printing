@@ -7,7 +7,7 @@ import { toCreasedNormals } from './assets/three/BufferGeometryUtils.js';
 export async function createModelView(canvas, url, { width, height, thumbnail = false } = {}) {
   const source = await new STLLoader().loadAsync(url);
   source.computeBoundingBox();
-  const origin = source.boundingBox.getCenter(new THREE.Vector3());
+  let origin = source.boundingBox.getCenter(new THREE.Vector3());
   source.translate(-origin.x, -origin.y, -origin.z);
   let geometry = toCreasedNormals(source, Math.PI / 6);
   source.dispose();
@@ -90,12 +90,16 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   return {
     fit, zoomBy,
     get loadedUrl() { return url; },
-    async setModel(nextUrl) {
+    async setModel(nextUrl, { refit = false } = {}) {
       const current = ++request;
       const source = await new STLLoader().loadAsync(nextUrl);
       if (current !== request) { source.dispose(); return; }
-      // All selectable assemblies share coordinates; keep the body, camera and
-      // orbit target fixed while replacing the shoe's complete preview mesh.
+      if (refit) {
+        source.computeBoundingBox();
+        origin = source.boundingBox.getCenter(new THREE.Vector3());
+      }
+      // Assembly variants share coordinates and keep their camera. Individual
+      // print selections request a fresh center and fit for their own geometry.
       source.translate(-origin.x, -origin.y, -origin.z);
       const next = toCreasedNormals(source, Math.PI / 6);
       source.dispose();
@@ -112,7 +116,8 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
       camera.far = radius * 12;
       camera.updateProjectionMatrix();
       url = nextUrl;
-      render();
+      if (refit) fit();
+      else render();
     },
     dispose() {
       request++;
