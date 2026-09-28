@@ -199,7 +199,7 @@
     "title": "Sanding plane",
     "category": "Woodworking",
     "description": "A sanding plane with interchangeable profile shoes for the Magnate fingernail curve and a 1/8-inch outside roundover. Slide in a shoe and hand-tighten the tapered locking knob.",
-    "revision": "Tapered lock \u00b7 Roundover R1",
+    "revision": "Tapered lock \u00b7 Roundover R2",
     "status": "Coupon fit approved",
     "root": "projects/sanding-plane",
     "readme": "projects/sanding-plane/README.md",
@@ -530,18 +530,18 @@
         "id": "roundover-1-8",
         "group": "1/8-inch roundover",
         "label": "Profile shoe",
-        "revision": "R1",
+        "revision": "R2",
         "status": "Routed-workpiece fit untested",
-        "preview": "assets/sanding-plane-roundover-shoe.png",
-        "previewModel": "projects/sanding-plane/models/roundover-1-8-r1-shoe.stl",
+        "preview": "assets/sanding-plane-roundover-r2-shoe.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r2-shoe.stl",
         "dimensions": [
           [
             "Revision",
-            "R1"
+            "R2"
           ],
           [
             "Overall size",
-            "186 \u00d7 31.75 \u00d7 28.44 mm \u00b7 7.32 \u00d7 1.25 \u00d7 1.12 in"
+            "186 \u00d7 31.75 \u00d7 16.69 mm \u00b7 7.32 \u00d7 1.25 \u00d7 0.66 in"
           ],
           [
             "Workpiece radius",
@@ -556,30 +556,38 @@
             "0.30 mm"
           ],
           [
-            "Contact profile",
-            "90\u00b0 arc with tangent 45\u00b0 guides"
+            "Shoulder length",
+            "2.5 mm per side"
+          ],
+          [
+            "Outward flare",
+            "3\u00b0 per side \u00b7 96\u00b0 opening"
+          ],
+          [
+            "Abrasive placement",
+            "Approximately 5 mm wide \u00b7 curved seat only"
           ],
           [
             "Fit status",
-            "Routed-workpiece fit untested"
+            "R2 routed-workpiece fit untested"
           ]
         ],
         "downloads": [
           [
             "Bambu project",
-            "projects/sanding-plane/print-checks/roundover-1-8-r1-shoe/roundover-1-8-r1-shoe-configured.3mf"
+            "projects/sanding-plane/print-checks/roundover-1-8-r2-shoe/roundover-1-8-r2-shoe-configured.3mf"
           ],
           [
             "Geometry 3MF",
-            "projects/sanding-plane/models/roundover-1-8-r1-shoe.3mf"
+            "projects/sanding-plane/models/roundover-1-8-r2-shoe.3mf"
           ],
           [
             "STL",
-            "projects/sanding-plane/models/roundover-1-8-r1-shoe.stl"
+            "projects/sanding-plane/models/roundover-1-8-r2-shoe.stl"
           ],
           [
             "Editable STEP",
-            "projects/sanding-plane/models/roundover-1-8-r1-shoe.step"
+            "projects/sanding-plane/models/roundover-1-8-r2-shoe.step"
           ],
           [
             "Dimensioned drawing",
@@ -594,25 +602,25 @@
           ]
         ],
         "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
-        "notes": "The attachment retains the coupon-proven tapered lock. The new sanding profile needs a physical fit check.",
-        "description": "A 186 mm interchangeable shoe for a 1/8-inch outside roundover. Reuse the existing full carrier and tapered knob. Line the groove and both guide faces with thin sandpaper, including the assumed 0.30 mm thickness allowance. Hold the plane at 45\u00b0 to the adjoining board faces and sand along the edge. Print rail-cap-down, groove-up, without supports."
+        "notes": "The tapered attachment is unchanged. Shoulder clearance is checked against nominal flat faces tilted inward by up to 3\u00b0; actual wood contact and abrasive thickness still need a physical coupon test.",
+        "description": "A 186 mm interchangeable shoe for a 1/8-inch outside roundover. Reuse the existing full carrier and tapered knob. R2 replaces the broad guides with 2.5 mm shoulders flared outward 3\u00b0 per side, with the surrounding body cut back for clearance. Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat; leave the shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
       },
       {
         "id": "roundover-1-8-coupon",
         "group": "1/8-inch roundover",
         "label": "Fit coupon",
-        "revision": "R1",
+        "revision": "R2",
         "status": "Routed-workpiece fit untested",
-        "preview": "assets/sanding-plane-roundover-coupon.png",
-        "previewModel": "projects/sanding-plane/models/roundover-1-8-r1-coupon.stl",
+        "preview": "assets/sanding-plane-roundover-r2-coupon.png",
+        "previewModel": "projects/sanding-plane/models/roundover-1-8-r2-coupon.stl",
         "dimensions": [
           [
             "Revision",
-            "R1"
+            "R2"
           ],
           [
             "Overall size",
-            "70 \u00d7 31.75 \u00d7 28.44 mm \u00b7 2.76 \u00d7 1.25 \u00d7 1.12 in"
+            "70 \u00d7 31.75 \u00d7 16.69 mm \u00b7 2.76 \u00d7 1.25 \u00d7 0.66 in"
           ],
           [
             "Workpiece radius",
@@ -627,30 +635,38 @@
             "0.30 mm"
           ],
           [
-            "Contact profile",
-            "90\u00b0 arc with tangent 45\u00b0 guides"
+            "Shoulder length",
+            "2.5 mm per side"
+          ],
+          [
+            "Outward flare",
+            "3\u00b0 per side \u00b7 96\u00b0 opening"
+          ],
+          [
+            "Abrasive placement",
+            "Approximately 5 mm wide \u00b7 curved seat only"
           ],
           [
             "Fit status",
-            "Routed-workpiece fit untested"
+            "R2 routed-workpiece fit untested"
           ]
         ],
         "downloads": [
           [
             "Bambu project",
-            "projects/sanding-plane/print-checks/roundover-1-8-r1-coupon/roundover-1-8-r1-coupon-configured.3mf"
+            "projects/sanding-plane/print-checks/roundover-1-8-r2-coupon/roundover-1-8-r2-coupon-configured.3mf"
           ],
           [
             "Geometry 3MF",
-            "projects/sanding-plane/models/roundover-1-8-r1-coupon.3mf"
+            "projects/sanding-plane/models/roundover-1-8-r2-coupon.3mf"
           ],
           [
             "STL",
-            "projects/sanding-plane/models/roundover-1-8-r1-coupon.stl"
+            "projects/sanding-plane/models/roundover-1-8-r2-coupon.stl"
           ],
           [
             "Editable STEP",
-            "projects/sanding-plane/models/roundover-1-8-r1-coupon.step"
+            "projects/sanding-plane/models/roundover-1-8-r2-coupon.step"
           ],
           [
             "Dimensioned drawing",
@@ -665,8 +681,8 @@
           ]
         ],
         "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
-        "notes": "The attachment retains the coupon-proven tapered lock. The new sanding profile needs a physical fit check.",
-        "description": "A 70 mm test shoe for the 1/8-inch roundover profile. Try it on a routed scrap with your sandpaper before printing the full shoe. It fits the existing 70 mm coupon carrier and tapered knob. Line the groove and both guide faces with thin sandpaper, including the assumed 0.30 mm thickness allowance. Hold the plane at 45\u00b0 to the adjoining board faces and sand along the edge. Print rail-cap-down, groove-up, without supports."
+        "notes": "The tapered attachment is unchanged. Shoulder clearance is checked against nominal flat faces tilted inward by up to 3\u00b0; actual wood contact and abrasive thickness still need a physical coupon test.",
+        "description": "A 70 mm fit coupon for the revised roundover shoe. Reuse the existing coupon carrier and tapered coupon knob. Try it on a routed scrap before printing the full shoe. R2 replaces the broad guides with 2.5 mm shoulders flared outward 3\u00b0 per side, with the surrounding body cut back for clearance. Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat; leave the shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports."
       }
     ],
     "related": [
@@ -695,15 +711,15 @@
       },
       {
         "id": "roundover-1-8",
-        "label": "Roundover \u00b7 1/8 in radius",
-        "source": "projects/sanding-plane/models/roundover-1-8-r1-shoe.step",
+        "label": "Roundover \u00b7 1/8 in radius \u00b7 R2",
+        "source": "projects/sanding-plane/models/roundover-1-8-r2-shoe.step",
         "assembly": {
-          "model": "assets/sanding-plane-roundover-assembly.stl",
-          "preview": "assets/sanding-plane-roundover-assembly.png"
+          "model": "assets/sanding-plane-roundover-r2-assembly.stl",
+          "preview": "assets/sanding-plane-roundover-r2-assembly.png"
         },
         "exploded": {
-          "model": "assets/sanding-plane-roundover-exploded.stl",
-          "preview": "assets/sanding-plane-roundover-exploded.png"
+          "model": "assets/sanding-plane-roundover-r2-exploded.stl",
+          "preview": "assets/sanding-plane-roundover-r2-exploded.png"
         }
       }
     ]

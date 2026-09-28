@@ -1,13 +1,13 @@
 {
   "roundover-1-8/assembly": {
-    "source_step_sha256": "fab44f017bd743554fc49499bd9f2caba03ab10b5b58133e8277c90eb1b1032e",
+    "source_step_sha256": "72837cc70b9b4d635fbcdec598d75fff6bcda1a26ab28efe8fae9cc42ef73cd9",
     "source_assembly_sha256": "d7abb40afbe33610411b1f6011854f6210fb85e50c71975c19379c55f51f8be7",
-    "preview_sha256": "3ac19d08ff634f6bfd6879572e093c58e215a73735c0db8e081a8ab9ece4003a",
+    "preview_sha256": "fcfb5b79c47040288968fae97c7d9c46c84c31536549f43bfab7b8fb01967a3f",
     "bounds_mm": [
       [
         -22.447465896606445,
         -93.0,
-        -23.835607528686523
+        -12.090630531311035
       ],
       [
         22.44731330871582,
@@ -19,14 +19,14 @@
     "carrier_and_knob": "Unmodified meshes and assembly transforms from source 3MF"
   },
   "roundover-1-8/exploded": {
-    "source_step_sha256": "fab44f017bd743554fc49499bd9f2caba03ab10b5b58133e8277c90eb1b1032e",
+    "source_step_sha256": "72837cc70b9b4d635fbcdec598d75fff6bcda1a26ab28efe8fae9cc42ef73cd9",
     "source_assembly_sha256": "d65d0b05ee63ca8516f91a4cbaf974fbc384a84bc4c578e5507fc95695a5db2a",
-    "preview_sha256": "2d58231c6929ec7b2d01d1bd67d1c1b4b71d984c1c305528804de6ee6116ae69",
+    "preview_sha256": "d01d98965fdaff65b79c1d2ab9ac33f422e614467fc0fe69e26e3dd06b700141",
     "bounds_mm": [
       [
         -22.447465896606445,
         -93.0,
-        -48.83560752868652
+        -37.090630531311035
       ],
       [
         22.44731330871582,

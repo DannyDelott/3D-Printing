@@ -1,8 +1,8 @@
-"""R1: 1/8-inch outside-roundover shoe; reuse the proven profile-up lock.
+"""R2: 1/8-inch outside-roundover shoe; reuse the proven profile-up lock.
 
 Run with the repository CAD Python. Only the two new shoes are exported.
 Assembly +Z faces the handles; print orientation places the rail cap down.
-The 90-degree concave arc is tangent to two 45-degree guide faces. Radius
+The 90-degree concave arc has short, outward-flared shoulders. Radius
 includes the assumed total sandpaper/adhesive thickness, measured normally.
 """
 import hashlib
@@ -20,30 +20,66 @@ RADIUS = 25.4 / 8
 PAPER = 0.30
 TOOL_RADIUS = RADIUS + PAPER
 WIDTH = 31.75
-PREFIX = 'roundover-1-8-r1'
+PREFIX = 'roundover-1-8-r2'
+SHOULDER_LENGTH = 2.5
+FLARE_DEGREES = 3.0
+BACK_THICKNESS = 10.0
 ROOT = d.g.PROJECT
+
+
+def shoulder_end(thickness):
+    a = TOOL_RADIUS / math.sqrt(2)
+    z = -thickness - TOOL_RADIUS + a
+    angle = math.radians(45-FLARE_DEGREES)
+    return a + SHOULDER_LENGTH*math.cos(angle), z-SHOULDER_LENGTH*math.sin(angle)
 
 
 def blank(length, thickness):
     r = TOOL_RADIUS
     a = r / math.sqrt(2)
-    z = -thickness - r + r / math.sqrt(2)
-    edge_z = z - (WIDTH / 2 - a)
-    # Exact circular edge in STEP, with tangent straight guides on both sides.
+    z = -thickness - r + a
+    b, end_z = shoulder_end(thickness)
+    # The broad body returns toward the carrier beyond the short shoulders;
+    # it cannot form the long registration faces of R1.
     return (cq.Workplane('XZ').moveTo(-WIDTH/2, 0).lineTo(WIDTH/2, 0)
-            .lineTo(WIDTH/2, edge_z).lineTo(a, z)
+            .lineTo(WIDTH/2, -BACK_THICKNESS).lineTo(b, end_z).lineTo(a, z)
             .threePointArc((0, -thickness), (-a, z))
-            .lineTo(-WIDTH/2, edge_z).close().extrude(length/2, both=True)
-            .val().wrapped)
+            .lineTo(-b, end_z).lineTo(-WIDTH/2, -BACK_THICKNESS)
+            .close().extrude(length/2, both=True).val().wrapped)
+
+
+def contact_checks():
+    a = TOOL_RADIUS/math.sqrt(2)
+    z = -d.PROFILE_THICKNESS-TOOL_RADIUS+a
+    b,end_z = shoulder_end(d.PROFILE_THICKNESS)
+    # Nominal wood tangent shifted inward by the assumed paper thickness.
+    # Rotate each adjoining flat toward the shoulder by up to 3 degrees about
+    # its nominal tangency point. This bounds shoulder clearance, not wood fit.
+    wood_a = RADIUS/math.sqrt(2)
+    wood_z = -d.PROFILE_THICKNESS-TOOL_RADIUS+wood_a
+    clearances = {}
+    for deviation in (0, 1, 2, 3):
+        angle = math.radians(45-deviation)
+        normal = np.array([math.sin(angle), math.cos(angle)])
+        samples = [(a,z),(b,end_z),(WIDTH/2,-BACK_THICKNESS)]
+        gaps = [float(np.dot(np.array([x-wood_a,zz-wood_z]),normal)) for x,zz in samples]
+        assert min(gaps) > .29,(deviation,gaps)
+        clearances[str(deviation)] = round(min(gaps),4)
+    return dict(shoulder_length_mm=SHOULDER_LENGTH,flare_per_side_degrees=FLARE_DEGREES,
+                shoulder_opening_degrees=90+2*FLARE_DEGREES,
+                minimum_bare_shoulder_clearance_mm_by_flat_deviation_degrees=clearances,
+                abrasive_backing_arc_length_mm=TOOL_RADIUS*math.pi/2,
+                instruction='Apply approximately 5 mm wide PSA abrasive to the curved seat only; leave shoulders bare.')
 
 
 def main():
-    originals = list((ROOT/'models').glob('profile-jig-*'))
+    originals = list((ROOT/'models').glob('profile-jig-*')) + list((ROOT/'models').glob('roundover-1-8-r1-*'))
     original_hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                        for p in originals if p.is_file()}
-    report = dict(revision='R1', bit_url='https://www.amazon.com/dp/B0C5DVBNLS',
+    report = dict(revision='R2', bit_url='https://www.amazon.com/dp/B0C5DVBNLS',
                   nominal_radius_mm=RADIUS, assumed_paper_thickness_mm=PAPER,
                   printed_radius_mm=TOOL_RADIUS, arc_degrees=90,
+                  contact=contact_checks(),
                   status='CAD and slicer validation only; routed-workpiece fit untested.', parts={})
     for coupon in (False, True):
         label = 'coupon' if coupon else 'shoe'
@@ -90,7 +126,7 @@ def main():
         print(label, mesh.extents, flush=True)
     assert all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==h for p,h in original_hashes.items())
     report['existing_model_files_unchanged'] = True
-    (ROOT/'validation-roundover-1-8-r1.json').write_text(json.dumps(report,indent=2)+'\n')
+    (ROOT/'validation-roundover-1-8-r2.json').write_text(json.dumps(report,indent=2)+'\n')
     from roundover_datasheet import write
     write(report)
 

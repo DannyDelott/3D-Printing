@@ -1533,5 +1533,91 @@
         "printTime": "34 min"
       }
     ]
+  },
+  "projects/sanding-plane/print-checks/roundover-1-8-r2-shoe/roundover-1-8-r2-shoe-configured.3mf": {
+    "sha256": "c77c728d8297051de6cb35d7a5f0335f3d4c1c2a9300d7d8dab74364b05d95e6",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 41.58916091918945,
+        "cost": 0.8313673267745971,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 41.58916091918945,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": "",
+        "printTime": "1 h 3 min"
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/roundover-1-8-r2-coupon/roundover-1-8-r2-coupon-configured.3mf": {
+    "sha256": "30adb3168c5058aa08b8b7ca50d4962f5c1a40a91edd3cf11e8966860f961ce0",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 16.52024269104004,
+        "cost": 0.3302396513938904,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 16.52024269104004,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": "",
+        "printTime": "30 min"
+      }
+    ]
   }
 }

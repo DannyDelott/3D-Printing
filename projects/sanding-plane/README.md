@@ -77,32 +77,36 @@ Regenerate the full-size parts from the project directory:
 
 Imported from the completed profile-up sander worktree. The original full carrier, tapered shoe, tapered knob, coupon and configured plate are preserved byte-for-byte; the library assembly STL is derived from the assembled 3MF. The earlier caul and detachable tote remain separate library entries.
 
-## 1/8-inch roundover shoe · R1
+## 1/8-inch roundover shoe · R2
 
 [Full shoe and downloads](https://dannydelott.github.io/3D-Printing/projects/sanding-plane/roundover-1-8/) · [Fit coupon](https://dannydelott.github.io/3D-Printing/projects/sanding-plane/roundover-1-8-coupon/) · [Dimensioned datasheet](roundover-1-8/datasheet.html)
 
-This additional shoe sands a plain outside quarter-round made with the 1/8-inch bit in the [TOTOWOOD set, ASIN B0C5DVBNLS](https://www.amazon.com/dp/B0C5DVBNLS). The listing specifies a 1/8-inch radius (3.175 mm); this is the nominal routed radius, not a measurement of Danny's bit. The existing Magnate shoe remains available.
+R2 keeps the centered 1/8-inch roundover and 45° sanding position. The long R1 contact faces are replaced by **2.5 mm shoulders flared outward 3° per side** (96° opening). The body beyond the shoulders retreats toward the carrier so it clears the adjoining board faces. The dovetail, tapered lock, shoe length and carrier/knob compatibility are unchanged.
 
-The concave 90° working arc has a **3.475 mm printed radius**, allowing an assumed **0.30 mm total sandpaper and adhesive thickness**. Two tangent guide faces straddle the board corner; hold the plane at 45° to the adjoining faces. Line the complete working face with thin PSA sandpaper, press it fully into the groove, and sand along the edge. Foam-backed abrasive needs a different allowance. This profile assumes a smooth quarter-round without a bead or routing shoulder.
+The matching bit is the 1/8-inch roundover in the [TOTOWOOD set, ASIN B0C5DVBNLS](https://www.amazon.com/dp/B0C5DVBNLS). The nominal routed radius is 3.175 mm. The printed concave seat stays at **3.475 mm radius**, allowing an assumed **0.30 mm total sandpaper and adhesive thickness**. This assumes a plain quarter-round without a bead or routing shoulder.
+
+**Apply an approximately 5 mm wide strip of thin PSA sandpaper only inside the curved seat. Leave both shoulders bare.** Press the strip into the curve and trim it before it reaches the relieved shoulders. The backing arc is 5.46 mm long across the seat; a 5 mm strip stays within it. Do not wrap abrasive across the broad body. Hold the plane at 45° to the board faces and sand along the edge.
 
 | Part | Overall size, length × width × height | Bambu estimate |
 |---|---|---|
-| Full shoe R1 | 186 × 31.75 × 28.44 mm / 7.32 × 1.25 × 1.12 in | 61.92 g / 1 h 11 min |
-| Fit coupon R1 | 70 × 31.75 × 28.44 mm / 2.76 × 1.25 × 1.12 in | 24.40 g / 34 min |
+| Full shoe R2 | 186 × 31.75 × 16.69 mm / 7.32 × 1.25 × 0.66 in | 41.59 g / 1 h 3 min |
+| Fit coupon R2 | 70 × 31.75 × 16.69 mm / 2.76 × 1.25 × 0.66 in | 16.52 g / 30 min |
 
-Print rail-cap-down with the groove upward, supports off. The configured projects use P1S / PLA / 0.4 mm nozzle / 0.20 mm layers / five walls / 15% infill. Both slices passed without warnings. The full shoe reuses the existing carrier and tapered knob; the coupon reuses the existing 70 mm coupon carrier and tapered coupon knob. Only the new shoe needs printing.
+Print rail-cap-down with the working profile upward, supports off. Both configured projects use P1S / PLA / 0.4 mm nozzle / 0.20 mm layers / five walls / 15% infill and slice without warnings. Reuse the full carrier and tapered knob for the full shoe; reuse the 70 mm coupon carrier and tapered coupon knob for the coupon.
 
-**Print the coupon and check it against a routed scrap with the intended abrasive before printing the full shoe.** The tapered attachment has prior physical coupon approval; the new roundover contact profile has not been physically tested. CAD checks confirm the unchanged rail and pocket, full seating, 0.6 mm tip-floor gap, and release/withdrawal clearances. STL/3MF exports are single watertight bodies; STEP retains the exact circular working face. Existing model files were preserved.
+**R2 has not been physically tested. Print the coupon first and check it on a routed scrap with the intended abrasive.** Analytic clearance checks keep the bare shoulders and relieved outer body clear of nominal board flats rotated inward by up to 3° about their tangency points. This is a geometric check, not proof of fit on uneven wood. Paper thickness, print accuracy and actual routing still need a physical check. The full 90° abrasive-seat arc retains its exact CAD radius; the rail and pocket match the approved attachment. R1 files remain as earlier revisions and are no longer the selected downloads.
 
 Rebuild geometry, validation, and the dimensioned datasheet with:
 
 ```sh
 /Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/generate_roundover.py
-/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r1-shoe
-/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r1-coupon
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r2-shoe
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/slice_tote.py roundover-1-8-r2-coupon
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/build_assembly_previews.py
+/Users/danny/Documents/3d/closet-space-saver-hex/.venv/bin/python3 projects/sanding-plane/source/verify_roundover.py
 ```
 
-The generator reuses `generate_profile_up.parts` with the new profile blank. `roundover_datasheet.py` reads the generated dimensions for its drawing and HTML. `validation-roundover-1-8-r1.json` records the geometry checks and exported file hashes. `print-checks/p1s-pla-settings.json` restores the shared slicer settings from the existing configured full shoe. Refresh recorded estimates and catalog thumbnails after changing geometry, following `site/README.md`; keep sliced projects and G-code in excluded `work/`.
+`generate_roundover.py` reuses `generate_profile_up.parts` for the attachment. `roundover_datasheet.py` writes the drawing and HTML. `validation-roundover-1-8-r2.json` records geometry checks and file hashes. `verify_roundover.py` independently reads the exported STEP faces, verifies the 90° arc and 2.5 mm / 42° shoulder surfaces, compares configured print geometry, and records slice provenance in `validation-roundover-1-8-r2-exports.json`. Refresh filament estimates and all four roundover thumbnails following `site/README.md`; keep sliced projects and G-code in excluded `work/`.
 
 ## Assembly shoe selector
 
