@@ -127,7 +127,6 @@ def project_page(p, published):
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
-<nav class="tabline" aria-label="Datasheet sections"><a href="#dimensions">Specifications</a><a href="#print-notes">Print notes</a><a href="#fit-status">Fit & validation</a><a href="#files">All files</a></nav>
 <section class="notes" id="print-notes"><h2>Print & assembly notes</h2><p>{escape(p['print'])}</p></section>
 <section class="notes" id="fit-status"><h2>Validation</h2><p>{escape(p['notes'])}</p></section>
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
