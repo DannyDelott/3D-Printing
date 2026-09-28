@@ -1,0 +1,133 @@
+{
+  "revision": "R2",
+  "bit_url": "https://www.amazon.com/dp/B0C5DVBNLS",
+  "nominal_radius_mm": 3.175,
+  "assumed_paper_thickness_mm": 0.3,
+  "printed_radius_mm": 3.4749999999999996,
+  "arc_degrees": 90,
+  "contact": {
+    "shoulder_length_mm": 2.5,
+    "flare_per_side_degrees": 3.0,
+    "shoulder_opening_degrees": 96.0,
+    "minimum_bare_shoulder_clearance_mm_by_flat_deviation_degrees": {
+      "0": 0.3,
+      "1": 0.3,
+      "2": 0.2998,
+      "3": 0.2996
+    },
+    "abrasive_backing_arc_length_mm": 5.458517235612265,
+    "instruction": "Apply approximately 5 mm wide PSA abrasive to the curved seat only; leave shoulders bare."
+  },
+  "status": "CAD and slicer validation only; routed-workpiece fit untested.",
+  "parts": {
+    "shoe": {
+      "dimensions_mm": [
+        31.75,
+        186.0,
+        16.6906
+      ],
+      "volume_mm3": 73308.76786686883,
+      "checks": {
+        "shoe_body": 0.0,
+        "shoe_knob": 0.0,
+        "knob_body": 0.0,
+        "unscrew_90_body": 0.0,
+        "unscrew_90_shoe": 0.0,
+        "unscrew_180_body": 0.0,
+        "unscrew_180_shoe": 0.0,
+        "unscrew_270_body": 0.0,
+        "unscrew_270_shoe": 0.0,
+        "unscrew_360_body": 0.0,
+        "unscrew_360_shoe": 0.0,
+        "withdraw_0_body": 0.0,
+        "withdraw_0_knob": 0.0,
+        "withdraw_1_body": 0.0,
+        "withdraw_1_knob": 0.0,
+        "withdraw_4_body": 0.0,
+        "withdraw_4_knob": 0.0,
+        "withdraw_10_body": 0.0,
+        "withdraw_10_knob": 0.0,
+        "withdraw_25_body": 0.0,
+        "withdraw_25_knob": 0.0,
+        "withdraw_70_body": 0.0,
+        "withdraw_70_knob": 0.0,
+        "withdraw_200_body": 0.0,
+        "withdraw_200_knob": 0.0,
+        "withdraw_300_body": 0.0,
+        "withdraw_300_knob": 0.0,
+        "locked_forward_1mm": 13.362543,
+        "locked_backward_1mm": 13.362543,
+        "rail_vertical_stop": 147.255205,
+        "rail_left_stop": 786.425699,
+        "rail_right_stop": 786.425699,
+        "seat_blocks_slide_-0.1_mm": 1.3433141710365124,
+        "seat_blocks_slide_0.1_mm": 1.343314171035987,
+        "seated_tip_floor_gap_mm": 0.6,
+        "extra_quarter_mm_screw_travel_body": 0.0,
+        "rail_and_pocket_difference_mm3": 0.0,
+        "watertight": true,
+        "single_solid": true
+      },
+      "files": {
+        "roundover-1-8-r2-shoe.stl": "e556bb3c2135a0ed22b24f3625ef016a1b5de67fa6f948aa116f2ca0c3a6043b",
+        "roundover-1-8-r2-shoe.3mf": "bd3b32361f7badebf0e7f87f8263a31aad427b818a0bbe3bf886816519a4a731",
+        "roundover-1-8-r2-shoe.step": "72837cc70b9b4d635fbcdec598d75fff6bcda1a26ab28efe8fae9cc42ef73cd9"
+      }
+    },
+    "coupon": {
+      "dimensions_mm": [
+        31.75,
+        70.0,
+        16.6906
+      ],
+      "volume_mm3": 27548.333085991777,
+      "checks": {
+        "shoe_body": 0.0,
+        "shoe_knob": 0.0,
+        "knob_body": 0.0,
+        "unscrew_90_body": 0.0,
+        "unscrew_90_shoe": 0.0,
+        "unscrew_180_body": 0.0,
+        "unscrew_180_shoe": 0.0,
+        "unscrew_270_body": 0.0,
+        "unscrew_270_shoe": 0.0,
+        "unscrew_360_body": 0.0,
+        "unscrew_360_shoe": 0.0,
+        "withdraw_0_body": 0.0,
+        "withdraw_0_knob": 0.0,
+        "withdraw_1_body": 0.0,
+        "withdraw_1_knob": 0.0,
+        "withdraw_4_body": 0.0,
+        "withdraw_4_knob": 0.0,
+        "withdraw_10_body": 0.0,
+        "withdraw_10_knob": 0.0,
+        "withdraw_25_body": 0.0,
+        "withdraw_25_knob": 0.0,
+        "withdraw_70_body": 0.0,
+        "withdraw_70_knob": 0.0,
+        "withdraw_200_body": 0.0,
+        "withdraw_200_knob": 0.0,
+        "withdraw_300_body": 0.0,
+        "withdraw_300_knob": 0.0,
+        "locked_forward_1mm": 13.362543,
+        "locked_backward_1mm": 13.362543,
+        "rail_vertical_stop": 55.418617,
+        "rail_left_stop": 295.966661,
+        "rail_right_stop": 295.966661,
+        "seat_blocks_slide_-0.1_mm": 1.3433141710380212,
+        "seat_blocks_slide_0.1_mm": 1.3433141710414416,
+        "seated_tip_floor_gap_mm": 0.6,
+        "extra_quarter_mm_screw_travel_body": 0.0,
+        "rail_and_pocket_difference_mm3": 0.0,
+        "watertight": true,
+        "single_solid": true
+      },
+      "files": {
+        "roundover-1-8-r2-coupon.stl": "b743b4bce26030dcca8032cd012cc206a5f261ffea159c9412118918f4ecd218",
+        "roundover-1-8-r2-coupon.3mf": "795f8abf8677a4e9b77a28c1b2ee5ea8890520660665828ed826029c93c589fc",
+        "roundover-1-8-r2-coupon.step": "2a0992ed6fc254182451cd91dab27305326498e10162e9ec4aebd718f8cedb4b"
+      }
+    }
+  },
+  "existing_model_files_unchanged": true
+}
