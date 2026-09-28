@@ -114,6 +114,7 @@ def project_page(p, published):
     downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
     dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
     sources = ''.join(file_link(page, Path(path).name, path) for path in p['source'])
+    related = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in p.get('related', []))
     selected_paths = {path for view in project_views(p) for _, path in view['downloads']}
     extras = [path for path in published if path.startswith(p['root'] + '/') and Path(path).suffix.lower() in FORMATS and path not in selected_paths]
     extra_links = ''.join(file_link(page, str(Path(path).relative_to(p['root'])), path) for path in extras)
@@ -134,7 +135,7 @@ def project_page(p, published):
 </div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
 <section id="downloads"><h2>Downloads</h2><p class="small muted" style="margin-top:10px">Selected files · {escape(p['revision'])}</p><div class="download-list">{downloads}</div>
 </section>
-<section class="notes"><h2>Source & attribution</h2><p>{escape(p['license'])}</p>{f'<div class="download-list">{sources}</div>' if sources else ''}</section></aside></div>
+<section class="notes"><h2>Source & attribution</h2><p>{escape(p['license'])}</p>{f'<ul>{related}</ul>' if related else ''}{f'<div class="download-list">{sources}</div>' if sources else ''}</section></aside></div>
 <section class="file-archive" id="files"><h2>Project files & revisions</h2><p class="muted">Earlier revisions and alternatives.</p>
 {f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
 {f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else '<p class="small muted">All model files for this project are listed above.</p>'}</section>'''

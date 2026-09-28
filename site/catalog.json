@@ -1009,5 +1009,109 @@
     "root": "projects/handle",
     "source": [],
     "license": "No license declared; see project provenance."
+  },
+  {
+    "id": "cardboard-can",
+    "title": "Cardboard can",
+    "category": "Everyday objects",
+    "description": "Stackable storage using a cardboard filament-spool core, with printed lid, ring, bottoms, and dividers.",
+    "revision": "Saved project \u00b7 2026-09-27",
+    "status": "Fit undocumented",
+    "model": "projects/cardboard-can/models/cardboard-can.3mf",
+    "preview": "assets/cardboard-can-plate-1.png",
+    "previewModel": "assets/cardboard-can-plate-1.stl",
+    "slug": "cardboard-can",
+    "root": "projects/cardboard-can",
+    "readme": "projects/cardboard-can/README.md",
+    "source": [],
+    "license": "Embedded box attribution: sdaendi; print profile: JSBG. Embedded license: Standard Digital File License. Related MakerWorld projects are linked below; their original terms apply.",
+    "related": [
+      [
+        "Organizer for recyclable cardboard spool box",
+        "https://makerworld.com/en/models/1964946-organizer-for-recyclable-cardboard-spool-box#profileId-2112438"
+      ],
+      [
+        "Lightweight Recycled Box | Stackable",
+        "https://makerworld.com/en/models/1198037-lightweight-recycled-box-stackable#profileId-1210954"
+      ]
+    ],
+    "downloads": [
+      [
+        "Cardboard can \u00b7 complete Bambu project",
+        "projects/cardboard-can/models/cardboard-can.3mf"
+      ]
+    ],
+    "print": "Open the complete two-plate project in Bambu Studio. Saved settings: Bambu Lab P1S, 0.4 mm nozzle, Generic PLA, 0.20 mm layers, 3 walls, 15% infill, supports disabled. Use the cardboard core from a Bambu filament spool; align its notch with the nub in the printed ring.",
+    "notes": "The saved 3MF archive passed its integrity check. Previews use its plate membership, object geometry, and build transforms. Physical fit and print results are undocumented.",
+    "views": [
+      {
+        "id": "plate-1",
+        "group": "Print plates",
+        "label": "Plate 1",
+        "preview": "assets/cardboard-can-plate-1.png",
+        "previewModel": "assets/cardboard-can-plate-1.stl",
+        "previewCaption": "Plate 1 \u00b7 saved print layout",
+        "dimensions": [
+          [
+            "Plate contents",
+            "Lid, ring, bottom, 1 divider"
+          ],
+          [
+            "Divider",
+            "83 \u00d7 83 \u00d7 53.2 mm"
+          ],
+          [
+            "Bottom",
+            "\u224893 mm diameter \u00d7 7.9 mm"
+          ],
+          [
+            "Lid",
+            "93 mm diameter \u00d7 10 mm"
+          ],
+          [
+            "Ring",
+            "\u224893 mm diameter \u00d7 5 mm"
+          ],
+          [
+            "Layer height",
+            "0.20 mm"
+          ],
+          [
+            "Material",
+            "Generic PLA"
+          ]
+        ]
+      },
+      {
+        "id": "plate-2",
+        "group": "Print plates",
+        "label": "Plate 2",
+        "preview": "assets/cardboard-can-plate-2.png",
+        "previewModel": "assets/cardboard-can-plate-2.stl",
+        "previewCaption": "Plate 2 \u00b7 saved print layout",
+        "dimensions": [
+          [
+            "Plate contents",
+            "Bottom, 2 dividers"
+          ],
+          [
+            "Divider",
+            "83 \u00d7 83 \u00d7 53.2 mm"
+          ],
+          [
+            "Bottom",
+            "\u224893 mm diameter \u00d7 7.9 mm"
+          ],
+          [
+            "Layer height",
+            "0.20 mm"
+          ],
+          [
+            "Material",
+            "Generic PLA"
+          ]
+        ]
+      }
+    ]
   }
 ]
