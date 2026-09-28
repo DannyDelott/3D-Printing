@@ -94,6 +94,8 @@ def component_navigation(project, page):
     views = project.get('views', [])
     if not views:
         return ''
+    if project.get('assemblyShoes'):
+        return plane_navigation(project, page)
     groups = dict.fromkeys(view['group'] for view in views)
     result = '<div class="component-picker" aria-label="Components and fit coupons">'
     for group in groups:
@@ -108,29 +110,102 @@ def component_navigation(project, page):
     return result + '</div>'
 
 
+def plane_context(project):
+    active = project['activeView']
+    for shoe in project['assemblyShoes']:
+        if active == shoe['id']:
+            return shoe['id'], 'shoe'
+        if active == shoe['coupon']:
+            return shoe['id'], 'coupon'
+        if active == shoe.get('plate'):
+            return shoe['id'], 'plate'
+    return project['assemblyShoes'][0]['id'], ('assembly' if project.get('assemblyMode') else active)
+
+
+def plane_navigation(project, page):
+    selected, kind = plane_context(project)
+    views = {v['activeView']: v for v in project_views(project)}
+    menus = []
+    for shoe in project['assemblyShoes']:
+        links = []
+        for key, label, target in [('assembly', 'Assembly', 'assembly'), ('shoe', 'Shoe', shoe['id']),
+                                   ('coupon', 'Fit coupon', shoe['coupon']), ('body', 'Carrier', 'body'),
+                                   ('knob', 'Locking knob', 'knob')]:
+            current = ' aria-current="page"' if key == kind or (key == 'assembly' and kind == 'plate') else ''
+            links.append(f'<a href="{href(page, project_path(views[target]))}?shoe={shoe["id"]}" data-part="{key}"{current}>{label}</a>')
+        hidden = '' if shoe['id'] == selected else ' hidden'
+        menus.append(f'<nav aria-label="Sanding plane parts" data-shoe-panel="{shoe["id"]}"{hidden}>{"".join(links)}</nav>')
+    return f'<div class="plane-navigation" data-default-shoe="{selected}" data-part="{kind}">{"".join(menus)}</div>'
+
+
 def assembly_selector(project, page):
-    mode = project.get('assemblyMode')
-    if not mode:
+    if not project.get('assemblyShoes'):
+        return ''
+    selected, kind = plane_context(project)
+    if kind not in ('assembly', 'shoe', 'coupon'):
         return ''
     options = []
-    for index, shoe in enumerate(project['assemblyShoes']):
-        view = next(v for v in project_views(project) if v['activeView'] == shoe['id'])
-        preview = shoe[mode]
+    views = {v['activeView']: v for v in project_views(project)}
+    for shoe in project['assemblyShoes']:
+        view = views[shoe['id']]
+        destination = views[shoe['coupon']] if kind == 'coupon' else view
+        checked = ' checked' if shoe['id'] == selected else ''
         name, _, detail = shoe['label'].partition(' · ')
-        checked = ' checked' if index == 0 else ''
         options.append(f'''<label class="shoe-option">
-<input type="radio" name="assembly-shoe" value="{escape(shoe["id"], quote=True)}" aria-controls="model-viewer" data-label="{escape(shoe['label'], quote=True)}" data-model="{href(page, artifact(preview["model"]))}" data-poster="{href(page, preview["preview"])}" data-details="{href(page, project_path(view))}"{checked}>
+<input type="radio" name="assembly-shoe" value="{escape(shoe["id"], quote=True)}" aria-controls="model-viewer" data-label="{escape(shoe['label'], quote=True)}" data-assembled-model="{href(page, artifact(shoe['assembly']['model']))}" data-assembled-poster="{href(page, shoe['assembly']['preview'])}" data-exploded-model="{href(page, artifact(shoe['exploded']['model']))}" data-exploded-poster="{href(page, shoe['exploded']['preview'])}" data-destination="{href(page, project_path(destination))}?shoe={shoe['id']}"{checked}>
 <span class="shoe-card"><img src="{href(page, view['preview'])}" alt="" width="220" height="140"><span class="shoe-name">{escape(name)}</span><span class="shoe-detail">{escape(detail)}</span></span></label>''')
-    return f'''<div class="assembly-controls" hidden><fieldset id="assembly-shoes"><legend>Preview shoe</legend>
-<div class="shoe-options">{''.join(options)}</div></fieldset>
-<a id="shoe-details">Shoe details &amp; downloads {icon('arrow')}</a></div>'''
+    exploded = ' checked' if project.get('assemblyMode') == 'exploded' else ''
+    toggle = f'<label class="assembly-toggle"><input id="exploded-view" type="checkbox" aria-controls="model-viewer"{exploded}> Exploded view</label>' if kind == 'assembly' else ''
+    return f'''<div class="assembly-controls" hidden><fieldset id="assembly-shoes"><legend>Shoe profile</legend>
+<div class="shoe-options">{''.join(options)}</div></fieldset>{toggle}</div>'''
+
+
+def specifications(project, title='Specifications'):
+    dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in project['dimensions'])
+    estimates, notes = filament.render(project, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
+    return f'<section id="dimensions"><h2>{escape(title)}</h2><table class="specs"><tbody>{dimensions}{estimates}</tbody></table>{notes}</section>'
+
+
+def assembly_information(project, page):
+    views = {v['activeView']: v for v in project_views(project)}
+    selected, _ = plane_context(project)
+    panels = []
+    for shoe in project['assemblyShoes']:
+        component = views[shoe['id']]
+        name = shoe['label'].partition(' · ')[0]
+        # Every setup uses the same carrier and knob; only the shoe varies.
+        parts = []
+        for title, part in [('Carrier', views['body']), (name + ' shoe', component), ('Locking knob', views['knob'])]:
+            label, path = next((label, path) for label, path in part['downloads'] if 'Bambu project' in label)
+            parts.append(f'''<section class="assembly-part"><h3>{escape(title)}</h3><div class="download-list">{file_link(page, 'Bambu project', path)}</div><a class="part-details" href="{href(page, project_path(part))}?shoe={shoe['id']}">Specifications &amp; other formats {icon('arrow')}</a></section>''')
+        plate = ''
+        if shoe.get('plate'):
+            plate = f'<p class="small"><a href="{href(page, project_path(views[shoe["plate"]]))}?shoe={shoe["id"]}">Fingernail combined build plate {icon("arrow")}</a></p>'
+        hidden = '' if shoe['id'] == selected else ' hidden'
+        specs = specifications(component | {'filamentLabel': 'Shoe print estimate'}, name + ' shoe specifications').replace('id="dimensions"', 'class="selected-shoe-specs"')
+        panels.append(f'''<div data-shoe-panel="{shoe['id']}"{hidden}>
+<section class="assembly-downloads"><h2>Print this assembly</h2><p class="small muted">Three parts: carrier, selected shoe, and locking knob. If you already have the plane, print only the shoe.</p>{''.join(parts)}{plate}<a class="coupon-link" href="{href(page, project_path(views[shoe['coupon']]))}?shoe={shoe['id']}">Try the matching fit coupon {icon('arrow')}</a></section>{specs}</div>''')
+    return ''.join(panels)
+
+
+def assembly_description(project, page):
+    views = {v['activeView']: v for v in project_views(project)}
+    selected, _ = plane_context(project)
+    panels = []
+    for shoe in project['assemblyShoes']:
+        part = views[shoe['id']]
+        hidden = '' if shoe['id'] == selected else ' hidden'
+        links = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in part.get('related', []))
+        panels.append(f'<section class="notes" data-shoe-panel="{shoe["id"]}"{hidden}><h2>{escape(shoe["label"].partition(" · ")[0])} setup</h2><p>{escape(part["description"])}</p><ul>{links}</ul></section>')
+    return ''.join(panels)
 
 
 def project_page(p, published):
     page = project_path(p)
     downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
-    dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
-    estimate_rows, estimate_notes = filament.render(p, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
+    information = specifications(p) + f'<section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div></section>'
+    if p.get('assemblyMode'):
+        information = assembly_information(p, page)
     attribution = f'<div class="notes"><p>{escape(p["license"])}</p></div>' if p.get('license') else ''
     related = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in p.get('related', []))
     selected_paths = {path for view in project_views(p) for _, path in view['downloads']}
@@ -144,17 +219,22 @@ def project_page(p, published):
 {f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
 {f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else ''}</section>'''
     legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
+    description = assembly_description(p, page) if p.get('assemblyMode') else f'<section class="notes" id="description"><h2>About this print</h2><p>{escape(p["description"])}</p><ul>{related}</ul></section>'
+    context = ''
+    if p.get('assemblyShoes'):
+        kind = plane_context(p)[1]
+        label = {'body': 'Carrier · shared by all full-size shoes', 'knob': 'Locking knob · shared by all full-size shoes', 'plate': 'Fingernail combined build plate', 'coupon': '70 mm fit coupon', 'shoe': 'Full-size shoe'}.get(kind)
+        if label:
+            context = f'<p class="part-context">{label}</p>'
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
-{component_navigation(p, page)}<div class="detail-layout"><div>{assembly_selector(p, page)}<div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
+{component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
-<section class="notes" id="description"><h2>About this print</h2><p>{escape(p['description'])}</p>{f'<ul>{related}</ul>' if related else ''}</section>
+{description}
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
-</div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}{estimate_rows}</tbody></table>{estimate_notes}</section>
-<section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div>
-</section>
+</div><aside class="detail-info">{information}
 {attribution}</aside></div>
 {archive}'''
     title = p['title'] + (f' · {p["group"]} · {p["label"]}' if p.get('activeView') else '')
@@ -195,6 +275,8 @@ def validate_catalog(projects):
                 if not ids or len(ids) != len(set(ids)) or not set(ids).issubset(view_ids):
                     raise ValueError(f'{slug}: assembly shoes must reference distinct component views')
                 for shoe in shoes:
+                    if shoe.get('coupon') not in view_ids or (shoe.get('plate') and shoe['plate'] not in view_ids):
+                        raise ValueError(f'{slug}: shoe requires a matching coupon and valid optional plate')
                     preview = shoe[item['assemblyMode']]
                     paths.extend([shoe['source'], preview['model'], preview['preview']])
             if item.get('datasheet'):
@@ -214,7 +296,7 @@ class Links(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        for key in ('href', 'src', 'data-model', 'data-poster', 'data-details'):
+        for key in ('href', 'src', 'data-model', 'data-poster', 'data-details', 'data-destination', 'data-assembled-model', 'data-assembled-poster', 'data-exploded-model', 'data-exploded-poster'):
             if key in attrs:
                 self.paths.append(attrs[key])
 

@@ -126,25 +126,41 @@ class PublishingTests(unittest.TestCase):
         plate = next(path for label, path in views[0]['downloads'] if 'Bambu project' in label)
         self.assertEqual(hashlib.sha256((build.ROOT / plate).read_bytes()).hexdigest(), evidence['configured_sha256'])
 
-    def test_assembly_selector_links_to_shoes_and_preserves_component_navigation(self):
-        projects = json.loads((build.SITE / 'catalog.json').read_text())
-        plane = next(p for p in projects if p['slug'] == 'sanding-plane')
+    def test_plane_navigation_pairs_each_shoe_with_its_coupon(self):
+        plane = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'sanding-plane')
         for view in build.project_views(plane):
+            page = build.project_path(view)
+            nav = build.component_navigation(view, page)
+            self.assertNotIn('>Exploded<', nav)
+            self.assertNotIn('>Build plate<', nav)
+            for shoe in plane['assemblyShoes']:
+                target = f'projects/sanding-plane/{shoe["coupon"]}/index.html'
+                self.assertIn(build.href(page, target) + f'?shoe={shoe["id"]}', nav)
             html = build.project_page(view, [])
-            self.assertEqual(html.count(' data-assembly-link'), 2)
-            if view['activeView'] in ('assembly', 'exploded'):
-                self.assertIn('id="assembly-shoes"', html)
-                self.assertIn('value="roundover-1-8"', html)
-                self.assertIn('data-details="' + build.href(build.project_path(view), 'projects/sanding-plane/roundover-1-8/index.html') + '"', html)
-                self.assertIn('Magnate plate estimate', html)
-                for shoe in plane['assemblyShoes']:
-                    self.assertIn(shoe[view['assemblyMode']]['model'].split('/')[-1], html)
-                    component = next(v for v in plane['views'] if v['id'] == shoe['id'])
-                    self.assertIn('src="' + build.href(build.project_path(view), component['preview']) + '"', html)
-                self.assertEqual(html.count('name="assembly-shoe"'), len(plane['assemblyShoes']))
-                self.assertEqual(html.count(' checked>'), 1)
-            else:
-                self.assertNotIn('id="assembly-shoes"', html)
+            selected, kind = build.plane_context(view)
+            self.assertEqual('id="exploded-view"' in html, kind == 'assembly')
+            self.assertEqual('id="assembly-shoes"' in html, kind in ('assembly', 'shoe', 'coupon'))
+            if kind in ('shoe', 'coupon'):
+                shoe = next(s for s in plane['assemblyShoes'] if s['id'] == selected)
+                self.assertIn(view['activeView'], (shoe['id'], shoe['coupon']))
+
+    def test_assembly_downloads_and_specs_follow_the_selected_shoe(self):
+        plane = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'sanding-plane')
+        views = {v['activeView']: v for v in build.project_views(plane)}
+        html = build.assembly_information(views['assembly'], build.project_path(views['assembly']))
+        panels = html.split('<div data-shoe-panel=')[1:]
+        self.assertEqual(len(panels), len(plane['assemblyShoes']))
+        for shoe, panel in zip(plane['assemblyShoes'], panels):
+            for key in ('body', shoe['id'], 'knob'):
+                path = next(path for label, path in views[key]['downloads'] if 'Bambu project' in label)
+                self.assertIn(Path(path).name, panel)
+            self.assertIn(shoe['coupon'] + '/index.html?shoe=' + shoe['id'], panel)
+            self.assertEqual('Fingernail combined build plate' in panel, shoe['id'] == 'shoe')
+            other = next(s for s in plane['assemblyShoes'] if s['id'] != shoe['id'])
+            other_path = next(path for label, path in views[other['id']]['downloads'] if 'Bambu project' in label)
+            self.assertNotIn(Path(other_path).name, panel)
+            for key, value in views[shoe['id']]['dimensions']:
+                self.assertIn(value, panel)
 
     def test_assembly_shoes_require_real_component_views_and_previews(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
