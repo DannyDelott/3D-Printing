@@ -89,7 +89,7 @@ Open http://127.0.0.1:8775/_previews and choose **Generate thumbnails**. This lo
 
 ### Selectable assembly shoes
 
-Sanding-plane Assembly and Exploded views have a `Preview shoe` selector. The selection is saved in `?shoe=<component-view-id>` and carried between those two views. Switching retains the camera angle and zoom. `Shoe details & downloads` opens the matching component page; the Magnate complete-plate downloads and estimate are explicitly labeled.
+Sanding-plane Assembly and Exploded views have a `Preview shoe` gallery of clickable profile thumbnails and names. Cards use the matching component view’s preview image; the selected radio and border identify the active shoe. Native radio controls support Tab and arrow keys, and the grid wraps as more shoes are added. The selection is saved in `?shoe=<component-view-id>` and carried between those two views. Switching retains the camera angle and zoom. `Shoe details & downloads` opens the matching component page; the Magnate complete-plate downloads and estimate are explicitly labeled.
 
 To add another shoe, add its normal component view and one entry to the project's `assemblyShoes` list in `site/catalog.json`. Supply its component view `id`, user-facing `label`, STEP `source` in assembly coordinates, and `assembly` / `exploded` pairs of `model` STL and `preview` PNG paths. Only full compatible shoes belong in this list, not coupons. The assembly views opt in with `assemblyMode`.
 

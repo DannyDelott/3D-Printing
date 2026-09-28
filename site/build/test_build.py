@@ -133,14 +133,18 @@ class PublishingTests(unittest.TestCase):
             html = build.project_page(view, [])
             self.assertEqual(html.count(' data-assembly-link'), 2)
             if view['activeView'] in ('assembly', 'exploded'):
-                self.assertIn('id="assembly-shoe"', html)
+                self.assertIn('id="assembly-shoes"', html)
                 self.assertIn('value="roundover-1-8"', html)
                 self.assertIn('data-details="' + build.href(build.project_path(view), 'projects/sanding-plane/roundover-1-8/index.html') + '"', html)
                 self.assertIn('Magnate plate estimate', html)
                 for shoe in plane['assemblyShoes']:
                     self.assertIn(shoe[view['assemblyMode']]['model'].split('/')[-1], html)
+                    component = next(v for v in plane['views'] if v['id'] == shoe['id'])
+                    self.assertIn('src="' + build.href(build.project_path(view), component['preview']) + '"', html)
+                self.assertEqual(html.count('name="assembly-shoe"'), len(plane['assemblyShoes']))
+                self.assertEqual(html.count(' checked>'), 1)
             else:
-                self.assertNotIn('id="assembly-shoe"', html)
+                self.assertNotIn('id="assembly-shoes"', html)
 
     def test_assembly_shoes_require_real_component_views_and_previews(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())

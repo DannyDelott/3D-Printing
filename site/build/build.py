@@ -113,12 +113,16 @@ def assembly_selector(project, page):
     if not mode:
         return ''
     options = []
-    for shoe in project['assemblyShoes']:
+    for index, shoe in enumerate(project['assemblyShoes']):
         view = next(v for v in project_views(project) if v['activeView'] == shoe['id'])
         preview = shoe[mode]
-        options.append(f'<option value="{escape(shoe["id"], quote=True)}" data-model="{href(page, artifact(preview["model"]))}" data-poster="{href(page, preview["preview"])}" data-details="{href(page, project_path(view))}">{escape(shoe["label"])}</option>')
-    return f'''<div class="assembly-controls" hidden><label for="assembly-shoe">Preview shoe</label>
-<select id="assembly-shoe" aria-controls="model-viewer">{''.join(options)}</select>
+        name, _, detail = shoe['label'].partition(' · ')
+        checked = ' checked' if index == 0 else ''
+        options.append(f'''<label class="shoe-option">
+<input type="radio" name="assembly-shoe" value="{escape(shoe["id"], quote=True)}" aria-controls="model-viewer" data-label="{escape(shoe['label'], quote=True)}" data-model="{href(page, artifact(preview["model"]))}" data-poster="{href(page, preview["preview"])}" data-details="{href(page, project_path(view))}"{checked}>
+<span class="shoe-card"><img src="{href(page, view['preview'])}" alt="" width="220" height="140"><span class="shoe-name">{escape(name)}</span><span class="shoe-detail">{escape(detail)}</span></span></label>''')
+    return f'''<div class="assembly-controls" hidden><fieldset id="assembly-shoes"><legend>Preview shoe</legend>
+<div class="shoe-options">{''.join(options)}</div></fieldset>
 <a id="shoe-details">Shoe details &amp; downloads {icon('arrow')}</a></div>'''
 
 
