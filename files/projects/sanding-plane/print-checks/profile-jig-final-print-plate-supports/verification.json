@@ -1,0 +1,10 @@
+{
+  "model_sha256": "b5ff99cee8cc9ea8103b965987dcec14f0a67d1ec49225258925039a58298493",
+  "supports_disabled": false,
+  "support_toolpaths": 539,
+  "warnings": [],
+  "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified.",
+  "support_parts": [
+    "Carrier"
+  ]
+}

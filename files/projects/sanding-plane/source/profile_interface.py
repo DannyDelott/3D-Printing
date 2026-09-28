@@ -1,0 +1,36 @@
+"""Hardware-free dovetail interface shared by the carrier and profile shoes.
+
+The shoe's flat top is Z=0 in use orientation. A full-length sliding rail
+carries lift/twist loads; an integral cantilever latch and rear stop resist sliding.
+All dimensions are provisional FDM fit values, to be verified with the coupon.
+"""
+ATTACHMENT_WIDTH = 31.75
+ATTACHMENT_TOP_CHAMFER = 1.5
+SHOE_MINIMUM_THICKNESS = 5.0
+RAIL_LENGTH = 170.0
+RAIL_HEIGHT = 5.0
+RAIL_ROOT_WIDTH = 18.0
+RAIL_CAP_WIDTH = 24.0
+RAIL_SIDE_CLEARANCE = 0.25
+RAIL_TOP_CLEARANCE = 0.30
+CARRIER_WIDTH = 34.0
+CARRIER_LENGTH = 186.0
+CARRIER_BOTTOM = 0.20
+CARRIER_TOP = 8.5
+LATCH_Y = -21.0
+LATCH_BEAM_INNER_X = 14.3
+LATCH_BEAM_THICKNESS = 1.2
+LATCH_ROOT_START = 33.0
+LATCH_ROOT_END = 42.0
+LATCH_RELIEF_END = 40.0
+LATCH_TOOTH_INNER_X = 10.3
+LATCH_TOOTH_BOTTOM = 3.2
+LATCH_TOOTH_TOP = 4.5
+LATCH_PAD_OUTER_X = 16.8
+LATCH_RELEASE_TRAVEL = 2.05
+LATCH_GUARD_INNER_X = 19.2
+LATCH_NOTCH_CLEARANCE = 0.25
+RAIL_END_CLEARANCE = 0.25
+COUPON_LENGTH = 90.0
+COUPON_RAIL_LENGTH = 74.0
+COUPON_LATCH_Y = -12.0

@@ -1,0 +1,53 @@
+{
+  "archives": {
+    "profile-jig-taper-lock-coupon-body.3mf": {
+      "sha256": "7e1efab2283f14320103b451e841c2788b91c13cadc3de83c346c2c5d9100b9c",
+      "bodies": 1
+    },
+    "profile-jig-taper-lock-coupon-exploded-preview.3mf": {
+      "sha256": "3d20fd20a8757dbae66df061b0fdbe17e3b8c4cd139b1c1c451a7e8557362c51",
+      "bodies": 3
+    },
+    "profile-jig-taper-lock-coupon-knob.3mf": {
+      "sha256": "90421294bc3be2543bbcd25972d4fbf438c8342d757b7ca5522ac77b6bf9323f",
+      "bodies": 1
+    },
+    "profile-jig-taper-lock-coupon-preview.3mf": {
+      "sha256": "bb8392f7aa4ddcc6275408c93415c93549e0a3ef859e448c09f89258393ff720",
+      "bodies": 3
+    },
+    "profile-jig-taper-lock-coupon-print-plate.3mf": {
+      "sha256": "ce83eaf7b643abc4a38e56c32a8da3a6b148712408a82015ecf19f7db411748c",
+      "bodies": 2
+    },
+    "profile-jig-taper-lock-coupon-section-preview.3mf": {
+      "sha256": "a021b550401435687221fc2d34697566edd98aa13d7012ea33d871ae7791d472",
+      "bodies": 3
+    },
+    "profile-jig-taper-lock-coupon-shoe.3mf": {
+      "sha256": "162db18efb529afc1cc70302e8f9ebf21ca5cac74ba1a138622bbf3818411c00",
+      "bodies": 1
+    },
+    "profile-jig-taper-lock-coupon-unlocked-preview.3mf": {
+      "sha256": "e3e2a08bbc493a15d2929af9f781f72b4acbc72536c4540258f00ea643f7fc15",
+      "bodies": 3
+    }
+  },
+  "assembled_collisions_mm3": {
+    "Shoe:Body": 0,
+    "Shoe:Knob": 0.09159953788158266,
+    "Body:Knob": 0
+  },
+  "print_check": {
+    "model_sha256": "ce83eaf7b643abc4a38e56c32a8da3a6b148712408a82015ecf19f7db411748c",
+    "supports_disabled": true,
+    "support_toolpaths": 0,
+    "warnings": [],
+    "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+  },
+  "estimate": {
+    "grams": 21.921924591064453,
+    "seconds": 2336.620849609375
+  },
+  "physical_validation": "Tapered coupon physically tested by Danny with no shifting reported. Full-size loading and long-term wear remain untested."
+}

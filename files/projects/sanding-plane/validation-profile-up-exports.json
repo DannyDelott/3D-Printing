@@ -1,0 +1,112 @@
+{
+  "archives": {
+    "profile-jig-profile-up-coupon-body.3mf": {
+      "sha256": "2fdab54ddedd4b7d42b479f9fac280a57592481906e4b70997787ac821110c89",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-coupon-exploded-preview.3mf": {
+      "sha256": "72ee107e67c0b680feae7f396308ebd07048b1286e5177c9cd4e88e2e0a35c83",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-coupon-knob.3mf": {
+      "sha256": "356338a4f9d2976853ae83f34824b6cd783295a884abbfbae469135886b65a46",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-coupon-preview.3mf": {
+      "sha256": "7052d1a10a254eda9a8b28983c5a48e5704e0648e79014ac9638d013b8f25e13",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-coupon-print-plate.3mf": {
+      "sha256": "3c3670c4ad61390c6e5d6dbfb42e262a982f69e68e83138f19ab2878b1adf1b8",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-coupon-section-preview.3mf": {
+      "sha256": "5d57cebf0d49ca83792c68dc4d232a4f5e88c00943f6df41f424719a843cadc3",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-coupon-shoe.3mf": {
+      "sha256": "0ce4e7c3c0db0266a455f309fda61dab208be04babc39bf6bd1a7e6f40aa10c3",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-coupon-unlocked-preview.3mf": {
+      "sha256": "47554093791c71b37babd79cea74504c7d7105bf66af16f8b7b65f82b6f106f3",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-full-body.3mf": {
+      "sha256": "ef06005406bcd84d4c3816eb855dc10a1f1db30313737f74a32df74a18e9d183",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-full-exploded-preview.3mf": {
+      "sha256": "d65d0b05ee63ca8516f91a4cbaf974fbc384a84bc4c578e5507fc95695a5db2a",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-full-knob.3mf": {
+      "sha256": "476e0f4191a2a5025b12369cdae58ec2654927e1ca64e0b4d69f9e1a027c5ee8",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-full-preview.3mf": {
+      "sha256": "d7abb40afbe33610411b1f6011854f6210fb85e50c71975c19379c55f51f8be7",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-full-section-preview.3mf": {
+      "sha256": "0b0f12c39da83c962781f6492b6154daa767beb1ce8d9452a72b61f89711deaa",
+      "bodies": 3
+    },
+    "profile-jig-profile-up-full-shoe.3mf": {
+      "sha256": "594171453b158588175d7ec4717c85db8f6984b53f9378a4f8f5daf03fec7a0c",
+      "bodies": 1
+    },
+    "profile-jig-profile-up-full-unlocked-preview.3mf": {
+      "sha256": "b9b6db7cb11f853c5943844ae8e5004b4bc754a0ad6e061f86e203c472cc12b1",
+      "bodies": 3
+    }
+  },
+  "print_checks": {
+    "coupon-shoe": {
+      "model_sha256": "0ce4e7c3c0db0266a455f309fda61dab208be04babc39bf6bd1a7e6f40aa10c3",
+      "supports_disabled": true,
+      "support_toolpaths": 0,
+      "warnings": [],
+      "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+    },
+    "coupon-print-plate": {
+      "model_sha256": "3c3670c4ad61390c6e5d6dbfb42e262a982f69e68e83138f19ab2878b1adf1b8",
+      "supports_disabled": true,
+      "support_toolpaths": 0,
+      "warnings": [],
+      "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+    },
+    "full-shoe": {
+      "model_sha256": "594171453b158588175d7ec4717c85db8f6984b53f9378a4f8f5daf03fec7a0c",
+      "supports_disabled": true,
+      "support_toolpaths": 0,
+      "warnings": [],
+      "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+    },
+    "full-knob": {
+      "model_sha256": "476e0f4191a2a5025b12369cdae58ec2654927e1ca64e0b4d69f9e1a027c5ee8",
+      "supports_disabled": true,
+      "support_toolpaths": 0,
+      "warnings": [],
+      "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+    },
+    "full-body": {
+      "model_sha256": "ef06005406bcd84d4c3816eb855dc10a1f1db30313737f74a32df74a18e9d183",
+      "supports_disabled": false,
+      "support_toolpaths": 549,
+      "warnings": [],
+      "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified.",
+      "slice_source_model_sha256": "2708830da813b9918bc6b9bf70a4537d3485e8cb73cc7f80ad6a8f7eb447cf65",
+      "reused_slice_evidence": "All exported mesh vertices and triangle indices exactly match the configured project that was sliced; geometry unchanged."
+    }
+  },
+  "assembled_collisions_mm3": {
+    "full:Shoe:Body": 0,
+    "full:Shoe:Knob": 0.09160101601761046,
+    "full:Body:Knob": 0,
+    "coupon:Shoe:Body": 0,
+    "coupon:Shoe:Knob": 0.0,
+    "coupon:Body:Knob": 0
+  },
+  "physical_validation": "Tapered coupon physically tested with no shifting reported. Full sander uses the same seat; full-size loading and long-term wear remain untested."
+}
