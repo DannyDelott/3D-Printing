@@ -22,6 +22,7 @@ ICONS = {
     'left': 'M19 12H5m6-6-6 6 6 6',
     'search': 'M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',
     'download': 'M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4',
+    'chevron': 'm6 9 6 6 6-6',
     'external': 'M14 3h7v7M21 3 10 14M10 3H3v18h18v-7',
 }
 
@@ -173,32 +174,29 @@ def assembly_selector(project, page):
 <div class="shoe-options">{''.join(options)}</div></fieldset>{toggle}</div>'''
 
 
-def specifications(project, title='Specifications'):
+def specifications(project, title='Specifications', section_id='dimensions', heading='h2'):
     dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in project['dimensions'])
     estimates, notes = filament.render(project, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
-    return f'<section id="dimensions"><h2>{escape(title)}</h2><table class="specs"><tbody>{dimensions}{estimates}</tbody></table>{notes}</section>'
+    return f'<section id="{section_id}"><{heading}>{escape(title)}</{heading}><table class="specs"><tbody>{dimensions}{estimates}</tbody></table>{notes}</section>'
 
 
 def assembly_information(project, page):
     views = {v['activeView']: v for v in project_views(project)}
-    selected, _ = plane_context(project)
-    panels = []
-    for shoe in project['assemblyShoes']:
-        component = views[shoe['id']]
-        name = shoe['label'].partition(' · ')[0]
-        # Every setup uses the same carrier and knob; only the shoe varies.
-        parts = []
-        for title, part in [('Carrier', views['body']), (name + ' profile', component), ('Locking knob', views['knob'])]:
-            label, path = next((label, path) for label, path in part['downloads'] if 'Bambu project' in label)
-            parts.append(f'''<section class="assembly-part"><h3>{escape(title)}</h3><div class="download-list">{file_link(page, 'Bambu project', path)}</div><a class="part-details" href="{href(page, project_path(part))}?shoe={shoe['id']}">Specifications &amp; other formats {icon('arrow')}</a></section>''')
-        plate = ''
-        if shoe.get('plate'):
-            plate = f'<p class="small"><a href="{href(page, project_path(views[shoe["plate"]]))}?shoe={shoe["id"]}">Fingernail combined build plate {icon("arrow")}</a></p>'
-        hidden = '' if shoe['id'] == selected else ' hidden'
-        specs = specifications(component | {'filamentLabel': 'Profile print estimate'}, name + ' profile specifications').replace('id="dimensions"', 'class="selected-shoe-specs"')
-        panels.append(f'''<div data-shoe-panel="{shoe['id']}"{hidden}>
-<section class="assembly-downloads"><h2>Print this assembly</h2><p class="small muted">Three parts: carrier, selected profile, and locking knob. If you already have the plane, print only the profile.</p>{''.join(parts)}{plate}<a class="coupon-link" href="{href(page, project_path(views['fit-coupon']))}?shoe={shoe['id']}">Assembly fit coupon {icon('arrow')}</a></section>{specs}</div>''')
-    return ''.join(panels)
+    parts = [('body', 'Carrier', 'carrier-coupon')]
+    parts.extend((shoe['id'], shoe['label'].partition(' · ')[0] + ' profile', shoe['coupon']) for shoe in project['assemblyShoes'])
+    parts.append(('knob', 'Locking knob', None))
+    rows = []
+    for key, title, coupon in parts:
+        part = views[key]
+        downloads = ''.join(file_link(page, label, path) for label, path in part['downloads'])
+        specs = specifications(part | {'filamentLabel': 'Print estimate'}, section_id=f'print-{key}-specs', heading='h3')
+        related = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in part.get('related', []))
+        coupon_link = f'<a class="coupon-link" href="{href(page, project_path(views[coupon]))}">Fit coupon {icon("arrow")}</a>' if coupon else ''
+        rows.append(f'''<details class="print-option" name="prints" data-print="{key}" data-model="{href(page, artifact(part['previewModel']))}" data-poster="{href(page, part['preview'])}" data-label="{escape(title, quote=True)}">
+<summary><img class="file-preview" src="{href(page, part['preview'])}" alt="" width="80" height="64"><span>{escape(title)}</span>{icon('chevron')}</summary>
+<div class="print-content">{specs}<h3>Downloads</h3><div class="download-list">{downloads}</div>{coupon_link}<div class="notes"><h3>About this print</h3><p>{escape(part['description'])}</p><ul>{related}</ul></div></div></details>''')
+    plate_links = ''.join(f'<a class="coupon-link" href="{href(page, project_path(views[shoe["plate"]]))}">{escape(shoe["label"].partition(" · ")[0])} combined build plate {icon("arrow")}</a>' for shoe in project['assemblyShoes'] if shoe.get('plate'))
+    return f'''<section class="prints" id="prints"><h2>Prints</h2>{''.join(rows)}<div class="print-extras">{plate_links}<a class="coupon-link" href="{href(page, project_path(views['fit-coupon']))}">Assembly fit coupon {icon('arrow')}</a></div></section>'''
 
 
 def assembly_description(project, page):
@@ -210,7 +208,7 @@ def assembly_description(project, page):
         hidden = '' if shoe['id'] == selected else ' hidden'
         links = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in part.get('related', []))
         panels.append(f'<section class="notes" data-shoe-panel="{shoe["id"]}"{hidden}><h2>{escape(shoe["label"].partition(" · ")[0])} setup</h2><p>{escape(part["description"])}</p><ul>{links}</ul></section>')
-    return ''.join(panels)
+    return '<div class="assembly-description">' + ''.join(panels) + '</div>'
 
 
 def project_page(p, published):
@@ -245,7 +243,7 @@ def project_page(p, published):
                 context += f'<p class="coupon-companions small" data-shoe-panel="{profile["id"]}"{hidden}>Compatible parts: <a href="{href(page, "projects/"+p["slug"]+"/carrier-coupon/index.html")}?shoe={profile["id"]}">coupon carrier</a> · <a href="{href(page, "projects/"+p["slug"]+"/fit-coupon/index.html")}?shoe={profile["id"]}">assembly fit-test parts</a>.</p>'
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
-{component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
+{component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<p id="active-print-label" class="part-context" hidden></p><div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>

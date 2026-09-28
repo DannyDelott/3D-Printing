@@ -116,11 +116,13 @@ The sanding-plane navigation has four destinations: **Assembly, Profiles, Carrie
 - Carrier: **Full-size carrier** and **Carrier coupon**. The carrier coupon previews and downloads only the shared 70 mm carrier.
 - Locking knob: the shared full-size knob.
 
-The gallery selects the profile on Assembly and Profiles pages. Assembly selection updates the model, profile specifications, setup instructions, and three matching part downloads. `?shoe=<component-view-id>` preserves the profile through navigation; a profile component's own URL takes precedence over a conflicting query. Existing URLs remain available.
+The gallery selects the profile on Assembly and Profiles pages. Assembly selection updates the model and setup instructions; all component specifications and downloads remain available in Prints. `?shoe=<component-view-id>` preserves the profile through navigation; a profile component's own URL takes precedence over a conflicting query. Existing URLs remain available.
 
 **Exploded view** is an assembly checkbox, saved as `view=exploded` or `view=assembled`; it keeps the chosen profile and downloads. The old `/exploded/` URL opens the assembly with this checkbox enabled. Switching models retains the camera angle and zoom.
 
-Assembly downloads list the carrier, selected profile, and locking knob separately. Only the fingernail setup links the existing combined build plate. The assembly fit coupon has the profile-and-knob plate plus the separate carrier project. Individual profile coupons contain no carrier, knob, or combined plate download.
+The assembly page’s **Prints** accordion lists the carrier, every full-size profile, and locking knob together. Open a row to select that print, show its individual preview, and expand its specifications and all download formats. Only one row opens at a time; closing it returns to the assembly. The `print` URL parameter restores the selected row. Choosing a profile print also selects that profile for the assembly; choosing a shared carrier or knob retains the assembly profile. Changing the gallery profile or exploded-view checkbox returns to the assembly. Native accordion controls and downloads work without JavaScript.
+
+Links below Prints retain the existing fingernail combined build plate and assembly fit coupon. The assembly fit coupon has the profile-and-knob plate plus the separate carrier project. Individual profile coupons contain no carrier, knob, or combined plate download.
 
 To add another shoe, add its component and coupon views, then add an entry to `assemblyShoes` in `site/catalog.json`. Supply the shoe view `id`, matching profile-only `coupon` view ID, user-facing `label`, STEP `source` in assembly coordinates, and `assembly` / `exploded` pairs of `model` STL and `preview` PNG paths. Cards use the shoe component's preview image. Set an optional `plate` view only when a matching combined print plate exists. Only full compatible shoes belong in this list.
 

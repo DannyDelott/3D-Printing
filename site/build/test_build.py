@@ -149,23 +149,31 @@ class PublishingTests(unittest.TestCase):
                 shoe = next(s for s in plane['assemblyShoes'] if s['id'] == selected)
                 self.assertIn(view['activeView'], (shoe['id'], shoe['coupon']))
 
-    def test_assembly_downloads_and_specs_follow_the_selected_shoe(self):
+    def test_print_accordions_include_each_part_with_its_own_specs_and_downloads(self):
         plane = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'sanding-plane')
         views = {v['activeView']: v for v in build.project_views(plane)}
         html = build.assembly_information(views['assembly'], build.project_path(views['assembly']))
-        panels = html.split('<div data-shoe-panel=')[1:]
-        self.assertEqual(len(panels), len(plane['assemblyShoes']))
-        for shoe, panel in zip(plane['assemblyShoes'], panels):
-            for key in ('body', shoe['id'], 'knob'):
-                path = next(path for label, path in views[key]['downloads'] if 'Bambu project' in label)
-                self.assertIn(Path(path).name, panel)
-            self.assertIn('fit-coupon/index.html?shoe=' + shoe['id'], panel)
-            self.assertEqual('Fingernail combined build plate' in panel, shoe['id'] == 'shoe')
-            other = next(s for s in plane['assemblyShoes'] if s['id'] != shoe['id'])
-            other_path = next(path for label, path in views[other['id']]['downloads'] if 'Bambu project' in label)
-            self.assertNotIn(Path(other_path).name, panel)
-            for key, value in views[shoe['id']]['dimensions']:
-                self.assertIn(value, panel)
+        self.assertIn('<h2>Prints</h2>', html)
+        self.assertNotIn('Print this assembly', html)
+        self.assertNotIn('Magnate plate estimate', html)
+        self.assertNotIn('data-shoe-panel', html)
+        panels = html.split('<details ')[1:]
+        self.assertEqual(len(panels), 4)
+        for key, panel in zip(('body', 'shoe', 'roundover-1-8', 'knob'), panels):
+            panel = panel.split('</details>')[0]
+            with self.subTest(part=key):
+                self.assertIn(f'data-print="{key}"', panel)
+                self.assertIn('name="prints"', panel)
+                self.assertIn(f'id="print-{key}-specs"', panel)
+                self.assertNotIn('id="dimensions"', panel)
+                self.assertIn(views[key]['preview'], panel)
+                self.assertIn(views[key]['previewModel'], panel)
+                for label, path in views[key]['downloads']:
+                    self.assertIn(Path(path).name, panel)
+                for label, value in views[key]['dimensions']:
+                    self.assertIn(value, panel)
+        self.assertIn('Fingernail combined build plate', html)
+        self.assertIn('Assembly fit coupon', html)
 
     def test_profile_coupons_are_separate_from_assembly_and_carrier_coupons(self):
         plane = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'sanding-plane')

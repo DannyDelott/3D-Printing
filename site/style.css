@@ -18,7 +18,7 @@ button,a,input,select{-webkit-tap-highlight-color:transparent}
 a{color:inherit}
 button{cursor:pointer;
   color:inherit}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,canvas:focus-visible{outline:3px solid #c6853d;
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,canvas:focus-visible,summary:focus-visible{outline:3px solid #c6853d;
   outline-offset:5px}
 button{border:0;
   background:none}
@@ -377,14 +377,25 @@ button:disabled { cursor: progress; opacity: .6; }
 .plane-navigation a:hover { box-shadow: inset 0 0 0 1px var(--line); }
 .assembly-toggle { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; min-height: 36px; cursor: pointer; }
 .assembly-toggle input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent); }
-.assembly-downloads > p { margin: 10px 0 18px; line-height: 1.6; }
-.assembly-part { margin: 0 0 20px; }
-.assembly-part h3 { margin: 0 0 4px; font-size: 15px; }
-.part-details, .coupon-link { display: inline-flex; gap: 6px; align-items: center; color: var(--accent); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
-.part-details { margin-top: 7px; }
-.part-details .icon, .coupon-link .icon, .assembly-downloads .icon { width: 16px; height: 16px; }
-.selected-shoe-specs { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 26px; }
-.selected-shoe-specs > p { line-height: 1.6; }
+.coupon-link { display: inline-flex; gap: 6px; align-items: center; color: var(--accent); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.coupon-link .icon { width: 16px; height: 16px; }
+.prints > h2 { margin-bottom: 16px; }
+.print-option { padding: 0; }
+.print-option > summary { display: flex; align-items: center; gap: 14px; padding: 12px 8px; list-style: none; }
+.print-option > summary::-webkit-details-marker { display: none; }
+.print-option > summary > span { flex: 1; min-width: 0; margin: 0; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+.print-option > summary > .icon { width: 18px; height: 18px; flex: none; }
+.print-option > summary:hover, .print-option[open] > summary { background: var(--surface); }
+.print-option[open] > summary > span { color: var(--accent); }
+.print-option[open] > summary > .icon { transform: rotate(180deg); }
+.print-content { padding: 20px 8px 24px; }
+.print-content h3 { font-size: 16px; letter-spacing: 0; }
+.print-content section { margin-bottom: 28px; }
+.print-content section > p { font-size: 13px; color: var(--muted); }
+.print-content .specs { margin-bottom: 10px; }
+.print-content .download-list { margin-top: 8px; }
+.print-content > .coupon-link { margin-top: 20px; }
+.print-extras { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 24px; }
 @media(max-width: 760px) { .plane-navigation a { padding: 10px 12px; font-size: 13px; } }
 
 .part-context { margin: 0 0 18px; font-size: 15px; font-weight: 600; }
