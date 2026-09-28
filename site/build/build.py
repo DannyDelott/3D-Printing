@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 
 import filament
+import file_previews
 
 ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / 'site'
@@ -75,7 +76,10 @@ def file_link(page, name, path):
     original = SITE / path if path.startswith('assets/') else ROOT / path
     size = original.stat().st_size
     units = f'{size / 1_000_000:.1f} MB' if size >= 1_000_000 else f'{max(1, round(size / 1000))} KB'
-    return f'<a href="{href(page, artifact(path))}" download><span class="format">{escape(original.suffix[1:].upper())}</span><span class="dl-name">{escape(name)}</span><span class="file-size">{units}</span>{icon("download")}</a>'
+    preview = ''
+    if original.suffix.lower() in file_previews.FORMATS:
+        preview = f'<img class="file-preview" src="{href(page, file_previews.thumbnail_path(original))}" alt="" loading="lazy" decoding="async" width="80" height="64">'
+    return f'<a href="{href(page, artifact(path))}" download>{preview}<span class="dl-description"><span class="dl-name">{escape(name)}</span><span class="dl-meta"><span class="format">{escape(original.suffix[1:].upper())}</span><span class="file-size">{units}</span></span></span>{icon("download")}</a>'
 
 
 def project_views(project):

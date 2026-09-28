@@ -87,6 +87,26 @@ python3 site/build/previews.py
 
 Open http://127.0.0.1:8775/_previews and choose **Generate thumbnails**. This local-only tool writes catalog PNGs into `site/assets/`; rebuild afterward. The generator is not published.
 
+### Download thumbnails
+
+Every STL and 3MF download has its own thumbnail, including additional revisions
+and selectable assembly parts. The image is rendered from that exact file's
+geometry; 3MF build items retain their component transforms. Download rows keep
+the filename, format, and size beside the image on desktop and mobile.
+
+After adding or changing print files, generate their thumbnails before building:
+
+```sh
+python3 site/build/previews.py --downloads
+```
+
+Open the same local generator URL and choose **Generate thumbnails**. This mode
+serves the shared viewer directly from `site/` and needs no prior build.
+It writes only missing images at 320×256 into `site/assets/file-previews/`, keyed
+by the source file's SHA-256. Commit these images with the model changes. A changed
+file gets a new image URL, and the build rejects missing thumbnails. The original
+STL/3MF files and catalog previews are unchanged.
+
 ### Selectable assembly shoes
 
 The sanding-plane navigation has four destinations: **Assembly, Profiles, Carrier, and Locking knob**, with tabs scoped to the current destination:

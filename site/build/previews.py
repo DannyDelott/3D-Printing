@@ -1,8 +1,11 @@
 """Local-only thumbnail generator: python3 site/build/previews.py, then open its URL."""
 import json
+import argparse
+from pathlib import Path
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import quote, urlsplit
 import build
+import file_previews
 
 PAGE = '''<!doctype html><html lang="en"><meta charset="utf-8"><title>Generate model thumbnails</title>
 <h1>Model thumbnails</h1><button id="generate">Generate thumbnails</button><p role="status">Ready</p>
@@ -17,7 +20,7 @@ document.querySelector('button').onclick = async event => {
     const items = await (await fetch('/_preview-items')).json();
     for (const [index, item] of items.entries()) {
       status.textContent = `${index + 1}/${items.length}: ${item.preview}`;
-      const view = await createModelView(canvas, item.model, { width:1100, height:770, thumbnail:true });
+      const view = await createModelView(canvas, item.model, { width:item.width || 1100, height:item.height || 770, thumbnail:true });
       const png = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       const response = await fetch('/_preview-image/' + encodeURIComponent(item.preview), {method:'POST',body:png});
       view.dispose();
@@ -31,6 +34,9 @@ document.querySelector('button').onclick = async event => {
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--downloads', action='store_true', help='Generate missing thumbnails for every STL/3MF download')
+    args = parser.parse_args()
     projects = json.loads((build.SITE / 'catalog.json').read_text())
     items = {view['preview']: '/' + quote(build.artifact(view['previewModel']))
              for project in projects for view in build.project_views(project)}
@@ -40,16 +46,35 @@ def main():
                 preview = shoe[mode]
                 items[preview['preview']] = '/' + quote(build.artifact(preview['model']))
 
+    sources = {}
+    if args.downloads:
+        paths = set(build.inventory(projects)) | {path for p in projects for view in build.project_views(p) for _, path in view['downloads']}
+        sources = {file_previews.thumbnail_path(source): source for path in sorted(paths)
+                   if (source := (build.SITE if path.startswith('assets/') else build.ROOT) / path).suffix.lower() in file_previews.FORMATS}
+        items = {preview: '/_download-model/' + Path(preview).stem for preview in sources if not (build.SITE / preview).exists()}
+        sources = {Path(preview).stem: source for preview, source in sources.items()}
+
     class Handler(SimpleHTTPRequestHandler):
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, directory=build.OUT, **kwargs)
+        def __init__(self, *request_args, **kwargs):
+            super().__init__(*request_args, directory=build.SITE if args.downloads else build.OUT, **kwargs)
 
         def do_GET(self):
             route = urlsplit(self.path).path
+            if route.startswith('/_download-model/'):
+                source = sources.get(route.removeprefix('/_download-model/'))
+                if source is None:
+                    return self.send_error(404)
+                data = file_previews.model_stl(source)
+                self.send_response(200)
+                self.send_header('Content-Type', 'model/stl')
+                self.send_header('Content-Length', str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+                return
             if route not in {'/_previews', '/_preview-items'}:
                 return super().do_GET()
             data = PAGE.encode() if route == '/_previews' else json.dumps([
-                dict(preview=preview, model=model) for preview, model in items.items()]).encode()
+                dict(preview=preview, model=model, **({'width': 320, 'height': 256} if args.downloads else {})) for preview, model in items.items()]).encode()
             self.send_response(200)
             self.send_header('Content-Type', 'text/html' if route == '/_previews' else 'application/json')
             self.end_headers()
@@ -65,7 +90,9 @@ def main():
             data = self.rfile.read(size)
             if not data.startswith(b'\x89PNG\r\n\x1a\n'):
                 return self.send_error(400)
-            (build.SITE / name).write_bytes(data)
+            target = build.SITE / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
             self.send_response(204)
             self.end_headers()
 
