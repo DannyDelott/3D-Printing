@@ -979,8 +979,8 @@
       ]
     ],
     "readme": "projects/ping-pong-ball-tail-attachment/README.md",
-    "preview": "assets/tail.png",
-    "previewModel": "assets/tail.stl",
+    "preview": "assets/tail-single.png",
+    "previewModel": "assets/tail-single.stl",
     "slug": "ping-pong-tail-attachment",
     "root": "projects/ping-pong-ball-tail-attachment",
     "source": [],
