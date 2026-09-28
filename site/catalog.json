@@ -1019,16 +1019,16 @@
         "projects/cardboard-can/models/cardboard-can.3mf"
       ]
     ],
-    "print": "Open the complete two-plate project in Bambu Studio. Saved settings: Bambu Lab P1S, 0.4 mm nozzle, Generic PLA, 0.20 mm layers, 3 walls, 15% infill, supports disabled. Use the cardboard core from a Bambu filament spool; align its notch with the nub in the printed ring.",
+    "print": "Open the complete single-plate project in Bambu Studio. Saved settings: Bambu Lab P1S, 0.4 mm nozzle, Generic PLA, 0.20 mm layers, 3 walls, 15% infill, supports disabled. Use the cardboard core from a Bambu filament spool; align its notch with the nub in the printed ring.",
     "notes": "The saved 3MF archive passed its integrity check. Previews use its plate membership, object geometry, and build transforms. Physical fit and print results are undocumented.",
     "views": [
       {
         "id": "plate-1",
         "group": "Print plates",
-        "label": "Plate 1",
+        "label": "Complete set",
         "preview": "assets/cardboard-can-plate-1.png",
         "previewModel": "assets/cardboard-can-plate-1.stl",
-        "previewCaption": "Plate 1 \u00b7 saved print layout",
+        "previewCaption": "Complete set \u00b7 print layout",
         "dimensions": [
           [
             "Plate contents",
@@ -1059,44 +1059,7 @@
             "Generic PLA"
           ]
         ],
-        "filamentPlates": [
-          1
-        ],
         "description": "Turn the cardboard core from a Bambu filament spool into a stackable storage container. The printed lid, ring, and bottom fit around the core, with dividers for smaller items. Line up the notch in the cardboard with the nub inside the ring when assembling it. This plate contains the lid, ring, bottom, and one divider."
-      },
-      {
-        "id": "plate-2",
-        "group": "Print plates",
-        "label": "Plate 2",
-        "preview": "assets/cardboard-can-plate-2.png",
-        "previewModel": "assets/cardboard-can-plate-2.stl",
-        "previewCaption": "Plate 2 \u00b7 saved print layout",
-        "dimensions": [
-          [
-            "Plate contents",
-            "Bottom, 2 dividers"
-          ],
-          [
-            "Divider",
-            "83 \u00d7 83 \u00d7 53.2 mm \u00b7 3.27 \u00d7 3.27 \u00d7 2.09 in"
-          ],
-          [
-            "Bottom",
-            "\u224893 mm diameter \u00d7 7.9 mm"
-          ],
-          [
-            "Layer height",
-            "0.20 mm"
-          ],
-          [
-            "Material",
-            "Generic PLA"
-          ]
-        ],
-        "filamentPlates": [
-          2
-        ],
-        "description": "Extra parts for the cardboard-spool storage container: a bottom and two dividers. Use them with the cardboard core from a Bambu filament spool and the lid and ring on Plate 1."
       },
       {
         "id": "lid",

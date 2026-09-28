@@ -15,7 +15,7 @@ Each idea lives in its own folder under [`projects/`](projects/). A project can 
 | [Closet space saver rebuild](closet-space-saver-rebuilt/) | Parametric hex-panel basket | 3MF, STL, STEP + generator |
 | [Closet space saver remix](closet-space-saver-hex/) | Earlier hex-cutout remix | 3MF, STL, STEP + generator |
 | [Eighth-circle stencil](projects/quarter-circle-stencil/) | Labeled 1–10 inch, 45-degree furniture-layout curve stencil | 1 × STL + editable generator |
-| [Cardboard can](projects/cardboard-can/) | Cardboard spool box: complete plates and individual lid, ring, bottom, and divider | 5 × 3MF, 4 × STL + previews |
+| [Cardboard can](projects/cardboard-can/) | Cardboard spool box: complete set and individual lid, ring, bottom, and divider | 5 × 3MF, 4 × STL + previews |
 | [Deckpass](projects/deckpass/) | Cable grommet for a desktop or cabinet counter | 1 × 3MF |
 | [UHK foot](projects/uhk-foot/) | Replacement/support foot for an Ultimate Hacking Keyboard | 1 × 3MF |
 | [Ping-pong ball tail attachment](projects/ping-pong-ball-tail-attachment/) | Multi-plate side-clip attachment variants | 1 × 3MF |

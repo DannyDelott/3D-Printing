@@ -4,7 +4,7 @@ A stackable storage can made with a cardboard filament-spool core, a printed lid
 
 ## Files
 
-- [Complete Bambu project](models/cardboard-can.3mf) — original saved file, preserved byte for byte from `cardboard can.3mf` in Downloads.
+- [Complete Bambu project](models/cardboard-can.3mf) — one plate with a lid, ring, bottom, and divider; original geometry, placements, and print settings retained.
 - [Validation record](validation.json) — source SHA-256, archive integrity, plate contents, and transformed mesh bounds.
 
 Imported into the collection on September 27, 2026. The archive's embedded creation/modification date is September 28, 2026.
@@ -20,14 +20,13 @@ Each download contains one component, centered on a single P1S plate in its orig
 | Bottom | [3MF](models/cardboard-can-bottom.3mf) | [STL](models/cardboard-can-bottom.stl) |
 | Divider | [3MF](models/cardboard-can-divider.3mf) | [STL](models/cardboard-can-divider.stl) |
 
-The original two-plate project remains available above. Print individual components when you need a replacement or a different quantity.
+The complete single-plate project is available above. Print individual components when you need a replacement or a different quantity.
 
 ## Plates and dimensions
 
 | Plate | Contents |
 | --- | --- |
-| 1 | Lid, ring, bottom, one divider |
-| 2 | Bottom, two dividers |
+| Complete set | Lid, ring, bottom, one divider |
 
 | Part | Dimensions |
 | --- | --- |
@@ -40,11 +39,11 @@ Dimensions come from the saved meshes in millimeters. The cardboard core is supp
 
 ## Print and assembly
 
-The saved configuration uses a Bambu Lab P1S with a 0.4 mm nozzle, Generic PLA, 0.20 mm layers, three walls, 15% infill, and supports disabled. Use the complete two-plate project or choose an individual component plate. The embedded box instructions say to match the cardboard core's notch to the nub in the ring.
+The saved configuration uses a Bambu Lab P1S with a 0.4 mm nozzle, Generic PLA, 0.20 mm layers, three walls, 15% infill, and supports disabled. Use the complete single-plate project or choose an individual component plate. The embedded box instructions say to match the cardboard core's notch to the nub in the ring.
 
 ## Validation
 
-The 3MF ZIP integrity check passed. Both site preview meshes were extracted from the saved project using its component transforms, build transforms, and plate membership. The download retains all original settings, geometry, thumbnails, and metadata. Physical fit and print results are undocumented.
+The 3MF ZIP integrity check passed. The complete-set preview matches the retained first plate. The extra plate has been removed from the download; the four remaining objects retain their original geometry, placements, and print settings. Physical fit and print results are undocumented.
 
 ## Rebuild component plates
 

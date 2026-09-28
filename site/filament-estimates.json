@@ -1107,7 +1107,7 @@
     ]
   },
   "projects/cardboard-can/models/cardboard-can.3mf": {
-    "sha256": "269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710",
+    "sha256": "6a294010b940751973e6dffe9b25356547d86dbde9933f0c3b4ecf7c4540b8ae",
     "slicer": "BambuStudio-02.08.02.60",
     "basis": "saved",
     "settings": {
@@ -1135,29 +1135,17 @@
     "plates": [
       {
         "plate": 1,
-        "grams": 82.36920166015625,
-        "cost": 1.647384033203125,
+        "grams": 82.36959838867188,
+        "cost": 1.6473919677734374,
         "filaments": [
           {
             "id": 1,
-            "grams": 82.36920166015625,
+            "grams": 82.36959838867188,
             "pricePerKg": 20.0
           }
         ],
-        "warning": ""
-      },
-      {
-        "plate": 2,
-        "grams": 83.717041015625,
-        "cost": 1.6743408203125,
-        "filaments": [
-          {
-            "id": 1,
-            "grams": 83.717041015625,
-            "pricePerKg": 20.0
-          }
-        ],
-        "warning": ""
+        "warning": "",
+        "printTime": "2 h 2 min"
       }
     ]
   },

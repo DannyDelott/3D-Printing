@@ -27,16 +27,22 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('Project files & revisions', html)
         self.assertIn('Additional model files', html)
 
-    def test_cardboard_estimates_follow_selected_plate(self):
+    def test_cardboard_complete_set_and_component_estimates_stay_separate(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         project = next(p for p in projects if p['slug'] == 'cardboard-can')
+        self.assertEqual([v['id'] for v in project['views']], ['plate-1', 'lid', 'ring', 'bottom', 'divider'])
         first, second = [build.project_page(p, []) for p in build.project_views(project)[:2]]
         self.assertIn('≈82.4 g', first)
         self.assertIn('≈$1.65', first)
         self.assertNotIn('≈83.7 g', first)
-        self.assertIn('≈83.7 g', second)
-        self.assertIn('≈$1.67', second)
+        self.assertIn('≈21.9 g', second)
+        self.assertIn('≈$0.44', second)
         self.assertNotIn('≈82.4 g', second)
+        with ZipFile(build.ROOT / project['model']) as archive:
+            model = ElementTree.fromstring(archive.read('3D/3dmodel.model'))
+            settings = ElementTree.fromstring(archive.read('Metadata/model_settings.config'))
+            self.assertEqual(len(settings.findall('plate')), 1)
+            self.assertEqual(len(model.findall('{*}build/{*}item')), 4)
 
     def test_model_change_rejects_stale_estimate(self):
         with tempfile.TemporaryDirectory() as directory:

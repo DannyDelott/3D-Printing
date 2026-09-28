@@ -1,6 +1,6 @@
 {
   "file": "models/cardboard-can.3mf",
-  "sha256": "269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710",
+  "sha256": "6a294010b940751973e6dffe9b25356547d86dbde9933f0c3b4ecf7c4540b8ae",
   "archiveIntegrity": "passed",
   "units": "millimeter",
   "plates": [
@@ -40,42 +40,6 @@
         },
         {
           "id": "11",
-          "name": "Bottom",
-          "triangles": 10358,
-          "boundsMm": [
-            92.979,
-            92.99,
-            7.9
-          ]
-        }
-      ]
-    },
-    {
-      "plate": 2,
-      "preview": "site/assets/cardboard-can-plate-2.stl",
-      "objects": [
-        {
-          "id": "3",
-          "name": "Divider_4_Boxes.stl",
-          "triangles": 956,
-          "boundsMm": [
-            83.0,
-            83.0,
-            53.2
-          ]
-        },
-        {
-          "id": "6",
-          "name": "Divider_4_Boxes.stl",
-          "triangles": 956,
-          "boundsMm": [
-            83.0,
-            83.0,
-            53.2
-          ]
-        },
-        {
-          "id": "10",
           "name": "Bottom",
           "triangles": 10358,
           "boundsMm": [

@@ -1,6 +1,6 @@
 {
   "source": "models/cardboard-can.3mf",
-  "sourceSha256": "269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710",
+  "sourceSha256": "6a294010b940751973e6dffe9b25356547d86dbde9933f0c3b4ecf7c4540b8ae",
   "components": {
     "lid": {
       "sourceObjectId": "5",
