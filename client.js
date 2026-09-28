@@ -33,28 +33,26 @@ if (search) {
   filter();
 }
 
-const loadButton = document.querySelector('#load-model');
-if (loadButton) {
+const viewer = document.querySelector('.viewer');
+if (viewer) {
+  const retryButton = document.querySelector('#retry-model');
   async function loadModel() {
     const status = document.querySelector('#viewer-status');
-    loadButton.disabled = true;
+    retryButton.hidden = true;
     status.textContent = 'Loading the model…';
     try {
       const { mountViewer } = await import('./viewer.js');
-      await mountViewer(document.querySelector('#model-viewer'), document.querySelector('.viewer').dataset.model);
+      await mountViewer(document.querySelector('#model-viewer'), viewer.dataset.model);
       document.querySelector('#model-poster').hidden = true;
-      for (const button of document.querySelectorAll('.viewer-controls button')) button.hidden = false;
-      loadButton.hidden = true;
-      status.textContent = 'Drag to orbit · scroll to zoom · right-drag to pan';
+      for (const button of document.querySelectorAll('.viewer-controls button:not(#retry-model)')) button.hidden = false;
+      status.textContent = '';
     } catch (error) {
       document.querySelector('#model-viewer').hidden = true;
       status.textContent = '3D preview unavailable. The image and downloads are still available.';
-      loadButton.hidden = false;
-      loadButton.disabled = false;
-      loadButton.textContent = 'Retry 3D preview';
+      retryButton.hidden = false;
       console.warn(error);
     }
   }
-  loadButton.addEventListener('click', loadModel);
+  retryButton.addEventListener('click', loadModel);
   loadModel();
 }
