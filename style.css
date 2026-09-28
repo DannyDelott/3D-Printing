@@ -344,3 +344,15 @@ button:disabled { cursor: progress; opacity: .6; }
 .directory-meta a:hover { text-decoration: underline; }
 .directory-meta .icon { width: 16px; height: 16px; }
 @media(max-width: 760px) { .directory-meta { flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; } }
+
+.assembly-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 16px; font-size: 13px; }
+.assembly-controls label { font-weight: 600; }
+.assembly-controls select { flex: 1 1 220px; min-width: 180px; max-width: 100%; min-height: 44px; padding: 9px 32px 9px 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--ink); }
+.assembly-controls a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.assembly-controls a .icon { width: 16px; height: 16px; }
+@media(max-width: 760px) {
+  .assembly-controls { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .assembly-controls select { width: 100%; min-width: 0; }
+  .assembly-controls a { grid-column: 1 / -1; justify-self: end; padding: 5px 0; }
+}
+.viewer[aria-busy=true] canvas { visibility: hidden; }

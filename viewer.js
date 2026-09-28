@@ -6,11 +6,13 @@ import { toCreasedNormals } from './assets/three/BufferGeometryUtils.js';
 /** Shared renderer for interactive STL views and the generated PNG thumbnails. */
 export async function createModelView(canvas, url, { width, height, thumbnail = false } = {}) {
   const source = await new STLLoader().loadAsync(url);
-  source.center();
-  const geometry = toCreasedNormals(source, Math.PI / 6);
+  source.computeBoundingBox();
+  const origin = source.boundingBox.getCenter(new THREE.Vector3());
+  source.translate(-origin.x, -origin.y, -origin.z);
+  let geometry = toCreasedNormals(source, Math.PI / 6);
   source.dispose();
   geometry.computeBoundingSphere();
-  const radius = geometry.boundingSphere.radius;
+  let radius = geometry.boundingSphere.radius;
   if (!(radius > 0) || !Number.isFinite(radius)) throw new Error('Empty model bounds');
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: thumbnail });
@@ -19,7 +21,8 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   const scene = new THREE.Scene();
   const material = new THREE.MeshStandardMaterial({ color: 0x8b9c80, roughness: 0.65, metalness: 0 });
-  scene.add(new THREE.Mesh(geometry, material));
+  const model = new THREE.Mesh(geometry, material);
+  scene.add(model);
   scene.add(new THREE.HemisphereLight(0xffffff, 0x747c69, 2.5));
   for (const [position, intensity] of [[[1, -2, 3], 3], [[-2, 1, 1], 1.5]]) {
     const light = new THREE.DirectionalLight(0xffffff, intensity);
@@ -37,6 +40,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   function render() {
     renderer.render(scene, camera);
     canvas.dataset.rendered = 'true';
+    canvas.dataset.model = url;
   }
   function resize() {
     const w = width || canvas.clientWidth;
@@ -80,11 +84,38 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   canvas.hidden = false;
   fit();
   controls?.addEventListener('change', render);
-  const observer = thumbnail ? null : new ResizeObserver(() => fit());
+  const observer = thumbnail ? null : new ResizeObserver(resize);
   observer?.observe(canvas);
+  let request = 0;
   return {
     fit, zoomBy,
+    get loadedUrl() { return url; },
+    async setModel(nextUrl) {
+      const current = ++request;
+      const source = await new STLLoader().loadAsync(nextUrl);
+      if (current !== request) { source.dispose(); return; }
+      // All selectable assemblies share coordinates; keep the body, camera and
+      // orbit target fixed while replacing the shoe's complete preview mesh.
+      source.translate(-origin.x, -origin.y, -origin.z);
+      const next = toCreasedNormals(source, Math.PI / 6);
+      source.dispose();
+      next.computeBoundingSphere();
+      const nextRadius = next.boundingSphere.radius + next.boundingSphere.center.length();
+      if (!(nextRadius > 0) || !Number.isFinite(nextRadius)) {
+        next.dispose();
+        throw new Error('Empty model bounds');
+      }
+      geometry.dispose();
+      geometry = next;
+      model.geometry = geometry;
+      radius = nextRadius;
+      camera.far = radius * 12;
+      camera.updateProjectionMatrix();
+      url = nextUrl;
+      render();
+    },
     dispose() {
+      request++;
       observer?.disconnect();
       controls?.dispose();
       geometry.dispose();
@@ -112,4 +143,5 @@ export async function mountViewer(canvas, url) {
     document.querySelector('#model-poster').hidden = false;
     canvas.hidden = true;
   });
+  return view;
 }
