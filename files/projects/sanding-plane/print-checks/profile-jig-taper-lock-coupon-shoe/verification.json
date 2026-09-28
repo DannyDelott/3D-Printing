@@ -1,0 +1,7 @@
+{
+  "model_sha256": "162db18efb529afc1cc70302e8f9ebf21ca5cac74ba1a138622bbf3818411c00",
+  "supports_disabled": true,
+  "support_toolpaths": 0,
+  "warnings": [],
+  "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified."
+}

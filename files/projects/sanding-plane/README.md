@@ -110,8 +110,14 @@ Rebuild geometry, validation, and the dimensioned datasheet with:
 
 ## Assembly shoe selector
 
-Use the **Shoe profile** cards to choose the Magnate fingernail or 1/8-inch roundover shoe. Assembly selection updates its preview, shoe specifications, instructions, three part downloads, and matching coupon link. **Exploded view** is a checkbox on Assembly and preserves the selected shoe. Switching previews preserves your viewing angle and zoom.
+Use the **Profile** cards to choose the Magnate fingernail or 1/8-inch roundover profile. Assembly selection updates its preview, profile specifications, instructions, and three part downloads. **Exploded view** is a checkbox on Assembly and preserves the selected profile, viewing angle, and zoom.
 
-The main navigation is **Assembly, Shoe, Fit coupon, Carrier, and Locking knob**. Shoe and Fit coupon follow the selected profile; Carrier and Locking knob are shared full-size parts. The selection stays in the URL through those pages. Print just the selected shoe when reusing an existing plane, or download all three configured part projects. The combined build plate is available only for the fingernail setup. The roundover coupon downloads separately identify its shoe, 70 mm carrier, and tapered coupon knob.
+The main navigation is **Assembly, Profiles, Carrier, and Locking knob**. Each part owns its test:
+
+- **Assembly → Assembly fit coupon** tests the complete sliding connection and tapered lock. Its fixed preview shows a carrier, fingernail test profile, and knob. Download the profile-and-knob plate and the separate carrier project.
+- **Profiles → Profile coupon** shows only the selected 70 mm fingernail or roundover profile, with profile-only downloads. The profile picker retains the coupon tab. Compatible carrier and assembly test parts are linked separately.
+- **Carrier → Carrier coupon** provides the shared 70 mm carrier alone.
+
+Print just the selected full-size profile when reusing an existing plane, or download all three configured part projects from Assembly. The combined full-size plate remains specific to the fingernail setup. Existing model geometry and approved attachment dimensions are unchanged.
 
 `source/build_assembly_previews.py` derives each added shoe's viewing meshes from its STEP in assembly coordinates and the approved assembly's unchanged carrier/knob. It checks rail-cap alignment, assembled clearance and three closed bodies, and records source/output hashes in `validation-assembly-previews.json`. New shoes are registered in `site/catalog.json`; see `site/README.md` for the fields and thumbnail workflow. The selector does not change print geometry or establish physical fit.
