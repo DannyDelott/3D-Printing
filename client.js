@@ -38,7 +38,7 @@ if (viewer) {
   const retryButton = document.querySelector('#retry-model');
   const canvas = document.querySelector('#model-viewer');
   const poster = document.querySelector('#model-poster');
-  const select = document.querySelector('#assembly-shoe');
+  const shoes = document.querySelector('#assembly-shoes');
   const status = document.querySelector('#viewer-status');
   let viewPromise;
   let request = 0;
@@ -78,12 +78,12 @@ if (viewer) {
     }
   }
 
-  if (select) {
+  if (shoes) {
     function selectShoe() {
-      const option = select.selectedOptions[0];
+      const option = shoes.querySelector('input:checked');
       viewer.dataset.model = option.dataset.model;
       poster.src = option.dataset.poster;
-      poster.alt = `${option.textContent} on the sanding plane`;
+      poster.alt = `${option.dataset.label} on the sanding plane`;
       document.querySelector('#shoe-details').href = option.dataset.details;
       const url = new URL(location.href);
       url.searchParams.set('shoe', option.value);
@@ -95,10 +95,11 @@ if (viewer) {
       }
     }
     const selected = new URLSearchParams(location.search).get('shoe');
-    if ([...select.options].some(option => option.value === selected)) select.value = selected;
+    const option = [...shoes.querySelectorAll('input')].find(option => option.value === selected);
+    if (option) option.checked = true;
     selectShoe();
-    select.closest('.assembly-controls').hidden = false;
-    select.addEventListener('change', () => { selectShoe(); loadModel(); });
+    shoes.closest('.assembly-controls').hidden = false;
+    shoes.addEventListener('change', () => { selectShoe(); loadModel(); });
   }
   retryButton.addEventListener('click', loadModel);
   loadModel();
