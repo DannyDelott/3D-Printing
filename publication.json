@@ -1,5 +1,5 @@
 {
-  "projects": 15,
+  "projects": 16,
   "files": [
     "NOTICE.md",
     "closet-space-saver-hex/README.md",
@@ -430,6 +430,9 @@
     "projects/cabinet-door-templates/source/stile-dovetail.html.in",
     "projects/cabinet-door-templates/source/tune_native_dovetail.py",
     "projects/cabinet-door-templates/source/widen_native_dovetail.py",
+    "projects/cardboard-can/README.md",
+    "projects/cardboard-can/models/cardboard-can.3mf",
+    "projects/cardboard-can/validation.json",
     "projects/deckpass/README.md",
     "projects/deckpass/models/deckpass-v1.1.3mf",
     "projects/fingernail-profile-clamping-caul/README.md",
