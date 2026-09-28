@@ -1080,6 +1080,9 @@
             "Material",
             "Generic PLA"
           ]
+        ],
+        "filamentPlates": [
+          1
         ]
       },
       {
@@ -1110,6 +1113,9 @@
             "Material",
             "Generic PLA"
           ]
+        ],
+        "filamentPlates": [
+          2
         ]
       }
     ]

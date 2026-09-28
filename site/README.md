@@ -57,6 +57,23 @@ The accepted direction is the compact index (prototype C).
 
 The discarded variants remain local in `site-prototype/` and are not part of the build or deployment.
 
+## Filament estimates
+
+Every model page shows recorded Bambu Studio slice estimates below its specifications. `site/filament-estimates.json` stores source SHA-256 hashes, settings, per-plate grams, material prices, costs, and slicer warnings. The build rejects changed model files until their estimates are refreshed. Empty file/revision sections and their navigation links are omitted.
+
+Estimates use each configured 3MF's saved settings and material cost per kilogram, interpreted as USD. Each plate and each alternative file has its own row; alternative prints are not added together. `filamentPlates` selects the relevant plates for a catalog view, as on Cardboard can. Costs cover filament only.
+
+For geometry-only files, the estimates use P1S / PLA, a 0.4 mm nozzle, 0.20 mm layers, 0.42 mm line width, 1.24 g/cm³ density, $20/kg, and no supports. Wall counts, infill, and brims follow project notes: caul 4 walls / 20%; tote and coupon 5 walls / 30% / outer brim; closet remix 2 walls / 15%; stencil and handle 3 walls / 15%. Assumed infill is gyroid. The handle's STL units are assumed to be millimeters. Only temporary estimation copies were configured and positioned; original downloads are unchanged.
+
+To refresh a configured project, slice it with the installed Bambu Studio CLI, retaining the saved orientation and arrangement:
+
+```sh
+/Applications/BambuStudio.app/Contents/MacOS/BambuStudio --orient 0 --arrange 0 --slice 0 --outputdir /tmp/model-estimate --export-3mf sliced.3mf /absolute/path/to/model.3mf
+python3 site/build/record_filament.py projects/example/models/model.3mf /tmp/model-estimate
+```
+
+For geometry-only files, first configure a temporary Bambu project with the documented assumptions and slice it. Record the original geometry path with `--assumed` and optional `--note`. Review slicer warnings, keep the recorded source and sliced geometry in sync, then rebuild. G-code and sliced projects stay out of the publication.
+
 ## Model previews
 
 `viewer.js` uses the STL loader, antialiased rendering, crease-aware normals and orbit controls. Detail pages open in 3D automatically, with the PNG retained as a no-JavaScript or WebGL-failure fallback. Downloads always retain their original geometry.

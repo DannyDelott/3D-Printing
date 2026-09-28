@@ -7,9 +7,52 @@ from pathlib import Path
 from unittest.mock import patch
 
 import build
+import filament
 
 
 class PublishingTests(unittest.TestCase):
+    def test_empty_archive_has_no_section_or_navigation(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        project = next(p for p in projects if p['slug'] == 'cardboard-can')
+        html = build.project_page(build.project_views(project)[0], build.inventory([project]))
+        self.assertNotIn('Project files & revisions', html)
+        self.assertNotIn('href="#files"', html)
+
+    def test_archive_remains_when_an_alternative_exists(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        project = next(p for p in projects if p['slug'] == 'cabinet-door-templates')
+        html = build.project_page(build.project_views(project)[0], build.inventory([project]))
+        self.assertIn('Project files & revisions', html)
+        self.assertIn('Additional model files', html)
+
+    def test_cardboard_estimates_follow_selected_plate(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        project = next(p for p in projects if p['slug'] == 'cardboard-can')
+        first, second = [build.project_page(p, []) for p in build.project_views(project)]
+        self.assertIn('≈82.4 g', first)
+        self.assertIn('≈$1.65', first)
+        self.assertNotIn('≈83.7 g', first)
+        self.assertIn('≈83.7 g', second)
+        self.assertIn('≈$1.67', second)
+        self.assertNotIn('≈82.4 g', second)
+
+    def test_model_change_rejects_stale_estimate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'model.3mf').write_bytes(b'updated model')
+            project = dict(slug='example', downloads=[['Model', 'model.3mf']])
+            records = {'model.3mf': {'sha256': hashlib.sha256(b'old model').hexdigest()}}
+            with self.assertRaisesRegex(ValueError, 'Stale filament estimate'):
+                filament.render(project, records, root)
+
+    def test_estimate_costs_match_saved_material_rates(self):
+        records = json.loads((build.SITE / 'filament-estimates.json').read_text())
+        for path, record in records.items():
+            for plate in record['plates']:
+                with self.subTest(source=path, plate=plate['plate']):
+                    self.assertAlmostEqual(plate['grams'], sum(f['grams'] for f in plate['filaments']))
+                    self.assertAlmostEqual(plate['cost'], sum(f['grams'] * f['pricePerKg'] / 1000 for f in plate['filaments']))
+
     def test_coupon_page_uses_matching_model_dimensions_and_downloads(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         cabinet = next(p for p in projects if p['slug'] == 'cabinet-door-templates')

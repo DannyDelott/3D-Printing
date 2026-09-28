@@ -1,0 +1,1417 @@
+{
+  "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10-bambu.3mf": {
+    "sha256": "699343e6bdfa9385fac34e4e232394bcf76db90d031a2dad270a83269eb0f495",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 193.1485137939453,
+        "cost": 3.8610387907409662,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 193.1485137939453,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v9/fit-test/rail-native-dovetail-v9-fit-test.3mf": {
+    "sha256": "01749394f517e7e463505c3513ddd962a56a6799e8b9766347998d8f18671be5",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 13.589984893798828,
+        "cost": 0.2716637980270386,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 13.589984893798828,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13-bambu.3mf": {
+    "sha256": "2dc23bf633d61f0bb918f21ba17ce5c9af66dfec3464b52dee568a32847e13fa",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 141.31105041503906,
+        "cost": 2.8248078977966307,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 141.31105041503906,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test-bambu.3mf": {
+    "sha256": "55b227a5b553f04f904fe8e9abb05c1703eeee861a64e216f6b5c44e29960cdb",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 17.517391204833984,
+        "cost": 0.35017265018463134,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 17.517391204833984,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf": {
+    "sha256": "bc6e13b9bd181dabcfd7252bb0ebebc374587d07b33819418976f81d65dcf33d",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 161.7372283935547,
+        "cost": 3.233127195587158,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 161.7372283935547,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/profile-jig-taper-lock-coupon-print-plate/profile-jig-taper-lock-coupon-print-plate-configured.3mf": {
+    "sha256": "9d1b36820ea4c12e611762e15dfa32b542ea28e5fab6009612ddad9d44681baa",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 21.921924591064453,
+        "cost": 0.4382192725753784,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 21.921924591064453,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/profile-jig-profile-up-full-body-supports/profile-jig-profile-up-full-body-configured.3mf": {
+    "sha256": "b8194b88d3811a87c9d74cb8ac66ba0bc4bb1db91005177afed0f733508e27bc",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 100.47693634033203,
+        "cost": 2.008533957443237,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 100.47693634033203,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/profile-jig-profile-up-full-shoe/profile-jig-profile-up-full-shoe-configured.3mf": {
+    "sha256": "a0358e6faa784ae623648cf284d2dbdbb30a14ca8aae68dc854d4afa0063dab2",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 40.954315185546875,
+        "cost": 0.8186767605590819,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 40.954315185546875,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/sanding-plane/print-checks/profile-jig-profile-up-full-knob/profile-jig-profile-up-full-knob-configured.3mf": {
+    "sha256": "e2a3b39ac85f2b0456a5697fc87b7bf39a66d21cad180a7d9c7e18f80b7866ef",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 20.435331344604492,
+        "cost": 0.40850227357864377,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 20.435331344604492,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "closet-space-saver-rebuilt/output/closet-space-saver-simple-small-hex-print-ready.3mf": {
+    "sha256": "2ee897f634e26704320cb013941b33bca64ca98b4d8f907622680b45f08b606d",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "8%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 313.83721923828125,
+        "cost": 6.273606012573242,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 313.83721923828125,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/rebuilt-bin-4x3x8/models/rebuilt-bin-4x3x8-standard.3mf": {
+    "sha256": "0d2a958ca25bf57f64f7899d9d95d6716d9acb6d1c8f5eaec561fa06ef25f1fc",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA",
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26",
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99",
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 277.38726806640625,
+        "cost": 6.931907828979492,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 277.38726806640625,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-drawer/models/jae-drawer-base-spacer.3mf": {
+    "sha256": "2a8b8884d0e5d64939b0c54543d802821f0281d0775f2e503a2826ed7255c98c",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "5%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 66.33723449707031,
+        "cost": 1.657767490081787,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 66.33723449707031,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-drawer/models/jae-drawer-baseplate-319x423.3mf": {
+    "sha256": "74fd2bd7be1629454ad260e631cdbda68efe15e8a92e5f41c31b6a969f3b7fe8",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 34.314449310302734,
+        "cost": 0.8575180882644653,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 34.314449310302734,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 32.654300689697266,
+        "cost": 0.8160309742355346,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 32.654300689697266,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 3,
+        "grams": 26.551469802856445,
+        "cost": 0.6635212303733825,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 26.551469802856445,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 4,
+        "grams": 28.39298439025879,
+        "cost": 0.7095406799125671,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 28.39298439025879,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/tea-drawer/models/tea-drawer-baseplate-342x472.3mf": {
+    "sha256": "822d2bfef55dd08ef732bdd14140e2822f5ea1dc5f2c32d0f6272a1427ce23b6",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 27.34333038330078,
+        "cost": 0.6833098262786865,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 27.34333038330078,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 27.182008743286133,
+        "cost": 0.6792783984947204,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 27.182008743286133,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 3,
+        "grams": 24.48348045349121,
+        "cost": 0.6118421765327453,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 24.48348045349121,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 4,
+        "grams": 24.283283233642578,
+        "cost": 0.606839248008728,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 24.283283233642578,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 5,
+        "grams": 27.58429718017578,
+        "cost": 0.6893315865325927,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 27.58429718017578,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-374x235-v1.3mf": {
+    "sha256": "be93b0c8e74c1eb51f4b95f9e3f8e57d9382b69ae32396b579de230a766ef8f9",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 48.99201202392578,
+        "cost": 1.2243103804779052,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 48.99201202392578,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 48.88018035888672,
+        "cost": 1.221515707168579,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 48.88018035888672,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-374x235-v2.3mf": {
+    "sha256": "77ba1bf0d8efdb50b8026603fb109c230ae87495dd0cec7014799293e26a5114",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 40.0570068359375,
+        "cost": 1.001024600830078,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 40.0570068359375,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 58.00911331176758,
+        "cost": 1.4496477416610716,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 58.00911331176758,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-small-filing-cabinet/models/baseplate-final-235x375.3mf": {
+    "sha256": "3dfbc660869b4b10b05e57eb4222d9da0a297a4bcf45e7e01d5e9706aececaa0",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 46.40555191040039,
+        "cost": 1.1596747422409057,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 46.40555191040039,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 33.217227935791016,
+        "cost": 0.8300985261154175,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 33.217227935791016,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/gridfinity/jae-small-filing-cabinet/models/bins.3mf": {
+    "sha256": "fa4acba40341dddb743ba7ecf87510ab87021e6c648d5d0783bfe3ff68179002",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 267.04547119140625,
+        "cost": 6.673466325073242,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 267.04547119140625,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 12.726503372192383,
+        "cost": 0.31803531927108764,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 12.726503372192383,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 3,
+        "grams": 13.42626667022705,
+        "cost": 0.335522404088974,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 13.42626667022705,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 4,
+        "grams": 46.842079162597656,
+        "cost": 1.1705835582733153,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 46.842079162597656,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/uhk-foot/models/uhk-foot.3mf": {
+    "sha256": "070f07a627d12847d9f697106f0b077efb6b02b1aa43a2457d85c7bf0b499a4d",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 0.862162709236145,
+        "cost": 0.02154544610381126,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 0.862162709236145,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/deckpass/models/deckpass-v1.1.3mf": {
+    "sha256": "4a89c8a028a051567e9c1f243a2d9e604fc82470eba02c5dd10348f239ea090b",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 21.703819274902344,
+        "cost": 0.5423784436798095,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 21.703819274902344,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/ping-pong-ball-tail-attachment/models/ping-pong-ball-tail-attachment.3mf": {
+    "sha256": "5e37376755ed0f37f077323592e8dbbc01e31623113f00faac1b4ade4d3615c1",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 2.240400552749634,
+        "cost": 0.055987609813213345,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.240400552749634,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "It seems object ping-pong-ball-sperm-tail-side-clip_fixed.stl has floating regions. Please re-orient the object or enable support generation."
+      },
+      {
+        "plate": 2,
+        "grams": 2.6778552532196045,
+        "cost": 0.0669196027779579,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.6778552532196045,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "It seems object ping-pong-ball-sperm-tail-side-clip-tight_fixed.stl has floating regions. Please re-orient the object or enable support generation."
+      },
+      {
+        "plate": 3,
+        "grams": 2.7035086154937744,
+        "cost": 0.06756068030118942,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.7035086154937744,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "It seems object Side-Clip Sperm Tail - 40mm Ping Pong Ball.stl has floating regions. Please re-orient the object or enable support generation."
+      },
+      {
+        "plate": 4,
+        "grams": 2.8927085399627686,
+        "cost": 0.07228878641366958,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.8927085399627686,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "It seems object Side-Clip Sperm Tail - 40mm Ping Pong Ball (1).stl has floating regions. Please re-orient the object or enable support generation."
+      },
+      {
+        "plate": 5,
+        "grams": 27.88367462158203,
+        "cost": 0.6968130287933348,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 27.88367462158203,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/cardboard-can/models/cardboard-can.3mf": {
+    "sha256": "269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.55"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 82.36920166015625,
+        "cost": 1.647384033203125,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 82.36920166015625,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      },
+      {
+        "plate": 2,
+        "grams": 83.717041015625,
+        "cost": 1.6743408203125,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 83.717041015625,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/quarter-circle-stencil/models/eighth-circle-stencil-1-to-10-inch.stl": {
+    "sha256": "c484f5fb6f3eb2441af67d1e3a14d7cdac3a134ef05bde8e788e8eb015815cc2",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 40.58717727661133,
+        "cost": 0.8117435455322266,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 40.58717727661133,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/fingernail-profile-clamping-caul/models/magnate-5869-caul-250mm-2x4-backed.3mf": {
+    "sha256": "bb7f7277051372d75c6b6a86018efc313247823632231bb58a9c7b008720f632",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 29.297901153564453,
+        "cost": 0.5859580230712891,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 29.297901153564453,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.3mf": {
+    "sha256": "f890d743b3507e5912d44ec8b951e1e565685c69dfe5941599de58842013f51c",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "30%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "outer_only",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 77.53172302246094,
+        "cost": 1.5506344604492188,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 77.53172302246094,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.3mf": {
+    "sha256": "b264dfa94b22e6c7623d4ff5d040061a8b2278ebcae800fcb76308e7f735409e",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "30%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "outer_only",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 11.534852981567383,
+        "cost": 0.23069705963134765,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 11.534852981567383,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ]
+  },
+  "closet-space-saver-hex/output/closet-space-saver-hex-print-ready.3mf": {
+    "sha256": "733d731d0dec19641a66948f1fd7d6e166b92db667817f6795e48f33d2c4bb70",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 406.58258056640625,
+        "cost": 8.131651611328126,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 406.58258056640625,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": "It seems object Estimate model has floating cantilever. Please re-orient the object or enable support generation."
+      }
+    ],
+    "note": "Placed clear of the P1S front-left exclusion area; geometry unchanged."
+  },
+  "projects/handle/models/handle.stl": {
+    "sha256": "5bcaacec02d219d961a5827fb1610fbdaa36de937f33003e9c050dc40f3f896b",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 16.81407356262207,
+        "cost": 0.3362814712524414,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 16.81407356262207,
+            "pricePerKg": 20.0
+          }
+        ],
+        "warning": ""
+      }
+    ],
+    "note": "STL units assumed to be millimeters."
+  }
+}

@@ -8,6 +8,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 
+import filament
+
 ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / 'site'
 OUT = ROOT / '_site'
@@ -109,12 +111,18 @@ def project_page(p, published):
     page = project_path(p)
     downloads = ''.join(file_link(page, name, path) for name, path in p['downloads'])
     dimensions = ''.join(f'<tr><th scope="row">{escape(key)}</th><td>{escape(value)}</td></tr>' for key, value in p['dimensions'])
+    estimate = filament.render(p, json.loads((SITE / 'filament-estimates.json').read_text()), ROOT)
     related = ''.join(f'<li><a href="{escape(url, quote=True)}" target="_blank" rel="noreferrer">{escape(label)} {icon("external")}</a></li>' for label, url in p.get('related', []))
     selected_paths = {path for view in project_views(p) for _, path in view['downloads']}
     extras = [path for path in published if path.startswith(p['root'] + '/') and Path(path).suffix.lower() in FORMATS and path not in selected_paths]
     extra_links = ''.join(file_link(page, str(Path(path).relative_to(p['root'])), path) for path in extras)
     datasheets = [path for path in published if path.startswith(p['root'] + '/') and Path(path).name == 'datasheet.html']
     sheet_links = ''.join(f'<li><a href="{href(page, artifact(path))}">{escape(str(Path(path).parent.relative_to(p["root"])))}</a></li>' for path in datasheets)
+    archive = ''
+    if extras or datasheets:
+        archive = f'''<section class="file-archive" id="files"><h2>Project files & revisions</h2>
+{f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
+{f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else ''}</section>'''
     legacy = f'<a href="{href(page, artifact(p["datasheet"]))}">Original design library {icon("external")}</a>' if p.get('datasheet') else ''
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
@@ -126,12 +134,11 @@ def project_page(p, published):
 <section class="notes" id="fit-status"><h2>Validation</h2><p>{escape(p['notes'])}</p></section>
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
 </div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
+{estimate}
 <section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div>
 </section>
 <div class="notes"><p>{escape(p['license'])}</p>{f'<ul>{related}</ul>' if related else ''}</div></aside></div>
-<section class="file-archive" id="files"><h2>Project files & revisions</h2><p class="muted">Earlier revisions and alternatives.</p>
-{f'<details><summary>Original datasheets <span>{len(datasheets)}</span></summary><ul class="sheet-list">{sheet_links}</ul></details>' if datasheets else ''}
-{f'<details><summary>Additional model files <span>{len(extras)}</span></summary><div class="download-list">{extra_links}</div></details>' if extras else '<p class="small muted">All model files for this project are listed above.</p>'}</section>'''
+{archive}'''
     title = p['title'] + (f' · {p["group"]} · {p["label"]}' if p.get('activeView') else '')
     return frame(page, title, body, p['description'])
 
