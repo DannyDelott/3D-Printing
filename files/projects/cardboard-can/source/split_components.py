@@ -1,7 +1,7 @@
 """Extract one unchanged component per plate from the saved cardboard-can project.
 
 Run with the repository's CAD Python (numpy and trimesh required). Optional site
-thumbnails are embedded when present; the original two-plate project is untouched.
+thumbnails are embedded when present; the complete single-plate project is untouched.
 """
 import copy
 import hashlib
@@ -16,7 +16,7 @@ import trimesh
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
 SOURCE = PROJECT / 'models/cardboard-can.3mf'
-SOURCE_SHA = '269ce9d92fd778337645e9b897b078caa6fa24f42ae89981ca7bad354ebe4710'
+SOURCE_SHA = '6a294010b940751973e6dffe9b25356547d86dbde9933f0c3b4ecf7c4540b8ae'
 CORE = 'http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
 PROD = 'http://schemas.microsoft.com/3dmanufacturing/production/2015/06'
 REL = 'http://schemas.openxmlformats.org/package/2006/relationships'
