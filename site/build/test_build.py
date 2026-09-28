@@ -108,7 +108,7 @@ class PublishingTests(unittest.TestCase):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         plane = next(p for p in projects if p['slug'] == 'sanding-plane')
         views = build.project_views(plane)
-        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob', 'roundover-1-8', 'roundover-1-8-coupon'])
+        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob', 'roundover-1-8', 'roundover-1-8-coupon', 'fingernail-coupon', 'carrier-coupon'])
         plate_html = build.project_page(next(p for p in views if p['activeView'] == 'build-plate'), [])
         self.assertIn('data-model="../../../files/projects/sanding-plane/models/profile-jig-final-print-plate.stl"', plate_html)
         self.assertIn('profile-jig-final-print-plate-configured.3mf', plate_html)
@@ -117,7 +117,7 @@ class PublishingTests(unittest.TestCase):
         html = build.project_page(coupon, [])
         self.assertIn('sanding-plane-coupon.stl', html)
         self.assertIn('profile-jig-taper-lock-coupon-print-plate-configured.3mf', html)
-        self.assertIn('profile-jig-profile-up-coupon-body.3mf', html)
+        self.assertIn('profile-jig-profile-up-coupon-body-configured.3mf', html)
         self.assertIn('90°', html)
         root = build.ROOT / plane['root']
         evidence = json.loads((root / 'validation-final-plate.json').read_text())
@@ -133,9 +133,14 @@ class PublishingTests(unittest.TestCase):
             nav = build.component_navigation(view, page)
             self.assertNotIn('>Exploded<', nav)
             self.assertNotIn('>Build plate<', nav)
+            selected, kind = build.plane_context(view)
+            self.assertIn('>Profiles<', nav)
+            self.assertNotIn('>Shoe<', nav)
             for shoe in plane['assemblyShoes']:
-                target = f'projects/sanding-plane/{shoe["coupon"]}/index.html'
-                self.assertIn(build.href(page, target) + f'?shoe={shoe["id"]}', nav)
+                coupon = shoe['coupon'] if kind in ('shoe', 'coupon') else 'carrier-coupon' if kind in ('body', 'carrier-coupon') else 'fit-coupon'
+                if kind != 'knob':
+                    target = f'projects/sanding-plane/{coupon}/index.html'
+                    self.assertIn(build.href(page, target) + f'?shoe={shoe["id"]}', nav)
             html = build.project_page(view, [])
             selected, kind = build.plane_context(view)
             self.assertEqual('id="exploded-view"' in html, kind == 'assembly')
@@ -154,13 +159,32 @@ class PublishingTests(unittest.TestCase):
             for key in ('body', shoe['id'], 'knob'):
                 path = next(path for label, path in views[key]['downloads'] if 'Bambu project' in label)
                 self.assertIn(Path(path).name, panel)
-            self.assertIn(shoe['coupon'] + '/index.html?shoe=' + shoe['id'], panel)
+            self.assertIn('fit-coupon/index.html?shoe=' + shoe['id'], panel)
             self.assertEqual('Fingernail combined build plate' in panel, shoe['id'] == 'shoe')
             other = next(s for s in plane['assemblyShoes'] if s['id'] != shoe['id'])
             other_path = next(path for label, path in views[other['id']]['downloads'] if 'Bambu project' in label)
             self.assertNotIn(Path(other_path).name, panel)
             for key, value in views[shoe['id']]['dimensions']:
                 self.assertIn(value, panel)
+
+    def test_profile_coupons_are_separate_from_assembly_and_carrier_coupons(self):
+        plane = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'sanding-plane')
+        views = {v['activeView']: v for v in build.project_views(plane)}
+        for profile in plane['assemblyShoes']:
+            coupon = views[profile['coupon']]
+            self.assertTrue(coupon['previewModel'].endswith('-shoe.stl') or coupon['previewModel'].endswith('-coupon.stl'))
+            self.assertNotIn('assets/sanding-plane-coupon.stl', coupon['previewModel'])
+            for label, path in coupon['downloads']:
+                self.assertNotIn('body', path)
+                self.assertNotIn('knob', path)
+                self.assertNotIn('print-plate', path)
+        for key in ('fit-coupon', 'carrier-coupon'):
+            html = build.project_page(views[key], [])
+            self.assertNotIn('id="assembly-shoes"', html)
+        carrier = views['carrier-coupon']
+        self.assertIn('coupon-body.stl', carrier['previewModel'])
+        self.assertTrue(all('coupon-body' in path for _, path in carrier['downloads']))
+        self.assertEqual(views['fit-coupon']['previewModel'], 'assets/sanding-plane-coupon.stl')
 
     def test_assembly_shoes_require_real_component_views_and_previews(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())

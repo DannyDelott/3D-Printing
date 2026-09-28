@@ -89,14 +89,19 @@ Open http://127.0.0.1:8775/_previews and choose **Generate thumbnails**. This lo
 
 ### Selectable assembly shoes
 
-The sanding-plane navigation has five destinations: **Assembly, Shoe, Fit coupon, Carrier, and Locking knob**. Shoe and coupon destinations follow the selected profile. Carrier and knob pages identify the shared full-size parts. Existing component URLs remain available.
+The sanding-plane navigation has four destinations: **Assembly, Profiles, Carrier, and Locking knob**, with tabs scoped to the current destination:
 
-The thumbnail gallery selects the shoe on Assembly, Shoe, and Fit coupon pages. Assembly selection updates the model, specifications, setup instructions, three matching part downloads, and coupon link. Selecting another profile on a shoe or coupon page navigates to its matching component. Selection is carried through `?shoe=<component-view-id>` links; a component's own URL takes precedence over a conflicting query.
+- Assembly: **Full assembly** and **Assembly fit coupon**. The fit coupon is the fixed carrier / fingernail test profile / tapered knob connection test, independent of the selected full-size profile. It has no profile selector.
+- Profiles: **Full-size profile** and **Profile coupon**. The gallery preserves the full-size/coupon tab while changing profile. Both fingernail and roundover coupons preview and download only the profile, with links to compatible test parts.
+- Carrier: **Full-size carrier** and **Carrier coupon**. The carrier coupon previews and downloads only the shared 70 mm carrier.
+- Locking knob: the shared full-size knob.
 
-**Exploded view** is an assembly checkbox, saved as `view=exploded` or `view=assembled`; it keeps the chosen shoe and the same downloads. The old `/exploded/` URL opens the assembly with this checkbox enabled. Switching models retains the camera angle and zoom.
+The gallery selects the profile on Assembly and Profiles pages. Assembly selection updates the model, profile specifications, setup instructions, and three matching part downloads. `?shoe=<component-view-id>` preserves the profile through navigation; a profile component's own URL takes precedence over a conflicting query. Existing URLs remain available.
 
-Assembly downloads list the carrier, selected shoe, and locking knob separately. Only the fingernail setup links the existing combined build plate. The roundover coupon provides its shoe, 70 mm coupon carrier, and tapered coupon knob; its estimate is labeled for the shoe alone.
+**Exploded view** is an assembly checkbox, saved as `view=exploded` or `view=assembled`; it keeps the chosen profile and downloads. The old `/exploded/` URL opens the assembly with this checkbox enabled. Switching models retains the camera angle and zoom.
 
-To add another shoe, add its component and coupon views, then add an entry to `assemblyShoes` in `site/catalog.json`. Supply the shoe view `id`, matching `coupon` view ID, user-facing `label`, STEP `source` in assembly coordinates, and `assembly` / `exploded` pairs of `model` STL and `preview` PNG paths. Cards use the shoe component's preview image. Set an optional `plate` view only when a matching combined print plate exists. Only full compatible shoes belong in this list.
+Assembly downloads list the carrier, selected profile, and locking knob separately. Only the fingernail setup links the existing combined build plate. The assembly fit coupon has the profile-and-knob plate plus the separate carrier project. Individual profile coupons contain no carrier, knob, or combined plate download.
+
+To add another shoe, add its component and coupon views, then add an entry to `assemblyShoes` in `site/catalog.json`. Supply the shoe view `id`, matching profile-only `coupon` view ID, user-facing `label`, STEP `source` in assembly coordinates, and `assembly` / `exploded` pairs of `model` STL and `preview` PNG paths. Cards use the shoe component's preview image. Set an optional `plate` view only when a matching combined print plate exists. Only full compatible shoes belong in this list.
 
 Run `projects/sanding-plane/source/build_assembly_previews.py` using the CAD Python to derive previews from the approved carrier/knob assembly and the new shoe STEP. It preserves the fixed parts, verifies seating and collisions, and records source/output hashes in `validation-assembly-previews.json`. The existing Magnate previews remain unchanged. Generate the new PNGs with the shared thumbnail renderer; `previews.py` includes assembly variants. The site build validates selector paths, and the publication tests reject stale derived previews. These meshes are for viewing; print downloads remain the original configured projects.

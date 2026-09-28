@@ -352,8 +352,8 @@
       },
       {
         "id": "fit-coupon",
-        "group": "Sanding plane",
-        "label": "Fit coupon",
+        "group": "Assembly",
+        "label": "Assembly fit coupon",
         "revision": "Tapered lock",
         "preview": "assets/sanding-plane-coupon.png",
         "previewModel": "assets/sanding-plane-coupon.stl",
@@ -386,22 +386,18 @@
             "projects/sanding-plane/print-checks/profile-jig-taper-lock-coupon-print-plate/profile-jig-taper-lock-coupon-print-plate-configured.3mf"
           ],
           [
+            "Coupon carrier \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-profile-up-coupon-body/profile-jig-profile-up-coupon-body-configured.3mf"
+          ],
+          [
             "Shoe + knob \u00b7 STL",
             "projects/sanding-plane/models/profile-jig-taper-lock-coupon-print-plate.stl"
-          ],
-          [
-            "Coupon carrier \u00b7 3MF",
-            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.3mf"
-          ],
-          [
-            "Coupon carrier \u00b7 STL",
-            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.stl"
           ]
         ],
         "print": "The configured coupon plate contains the tapered shoe and knob. Reuse the 70 mm coupon carrier, or print the carrier supplied here. Shoe rail-cap-down and knob crown-down; supports off.",
         "notes": "Physically tested: no shifting reported. This coupon uses the same tapered seat as the full sanding plane.",
-        "description": "A short version of the sanding plane\u2019s sliding connection and tapered knob. Use it to try the fit before printing the full plane. The shoe-and-knob download pairs with the separate 70 mm test body linked below.",
-        "filamentLabel": "Shoe + knob print estimate"
+        "description": "A 70 mm assembly test for the sliding connection and tapered lock. The preview shows the carrier, fingernail test profile, and knob together. This checks how the parts fit and lock, independently of the profile selected for your full-size plane. Print the profile-and-knob project plus the separate coupon carrier, or reuse an existing carrier. Individual profile coupons are under Profiles; the carrier alone is under Carrier.",
+        "filamentLabel": "Assembly coupon print estimate"
       },
       {
         "id": "body",
@@ -437,12 +433,18 @@
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
-        "description": "The sanding plane\u2019s body and rear handle, printed as one piece. The handle is adapted from vikingth0r\u2019s Stanley No. 5 tote. Slide the matching profile shoe into the underside and thread the locking knob into the front to hold it in place."
+        "description": "The sanding plane\u2019s body and rear handle, printed as one piece. The handle is adapted from vikingth0r\u2019s Stanley No. 5 tote. Slide the matching profile shoe into the underside and thread the locking knob into the front to hold it in place.",
+        "related": [
+          [
+            "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+            "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+          ]
+        ]
       },
       {
         "id": "shoe",
         "group": "Parts",
-        "label": "Profile shoe",
+        "label": "Fingernail profile",
         "revision": "Tapered lock",
         "preview": "assets/sanding-plane-shoe.png",
         "previewModel": "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.stl",
@@ -525,12 +527,18 @@
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
         "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
-        "description": "The front grip also acts as the sanding plane\u2019s locking screw. Turn it by hand to seat its tapered tip in the shoe and hold the shoe in place. Loosen it about one turn to slide the shoe out without removing the knob from the body."
+        "description": "The front grip also acts as the sanding plane\u2019s locking screw. Turn it by hand to seat its tapered tip in the shoe and hold the shoe in place. Loosen it about one turn to slide the shoe out without removing the knob from the body.",
+        "related": [
+          [
+            "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+            "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+          ]
+        ]
       },
       {
         "id": "roundover-1-8",
         "group": "1/8-inch roundover",
-        "label": "Profile shoe",
+        "label": "Roundover profile",
         "revision": "R3",
         "status": "Routed-workpiece fit untested",
         "preview": "assets/sanding-plane-roundover-r3-shoe.png",
@@ -621,7 +629,7 @@
       {
         "id": "roundover-1-8-coupon",
         "group": "1/8-inch roundover",
-        "label": "Fit coupon",
+        "label": "Roundover profile coupon",
         "revision": "R3",
         "status": "Routed-workpiece fit untested",
         "preview": "assets/sanding-plane-roundover-r3-coupon.png",
@@ -634,6 +642,10 @@
           [
             "Overall size",
             "70 \u00d7 31.75 \u00d7 17.62 mm \u00b7 2.76 \u00d7 1.25 \u00d7 0.69 in"
+          ],
+          [
+            "Includes",
+            "Profile only"
           ],
           [
             "Workpiece radius",
@@ -674,32 +686,24 @@
         ],
         "downloads": [
           [
-            "Coupon shoe \u00b7 Bambu project",
+            "Profile coupon \u00b7 Bambu project",
             "projects/sanding-plane/print-checks/roundover-1-8-r3-coupon/roundover-1-8-r3-coupon-configured.3mf"
           ],
           [
-            "Coupon shoe \u00b7 Geometry 3MF",
+            "Profile coupon \u00b7 Geometry 3MF",
             "projects/sanding-plane/models/roundover-1-8-r3-coupon.3mf"
           ],
           [
-            "Coupon shoe \u00b7 STL",
+            "Profile coupon \u00b7 STL",
             "projects/sanding-plane/models/roundover-1-8-r3-coupon.stl"
           ],
           [
-            "Coupon shoe \u00b7 Editable STEP",
+            "Profile coupon \u00b7 Editable STEP",
             "projects/sanding-plane/models/roundover-1-8-r3-coupon.step"
           ],
           [
             "Dimensioned drawing",
             "projects/sanding-plane/roundover-1-8/section.svg"
-          ],
-          [
-            "Coupon carrier \u00b7 Geometry 3MF",
-            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.3mf"
-          ],
-          [
-            "Coupon knob \u00b7 Geometry 3MF",
-            "projects/sanding-plane/models/profile-jig-taper-lock-coupon-knob.3mf"
           ]
         ],
         "datasheet": "projects/sanding-plane/roundover-1-8/datasheet.html",
@@ -715,8 +719,102 @@
         ],
         "print": "PLA \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Rail-cap-down, groove-up, supports off.",
         "notes": "Radius uses the full nominal cushion thickness; compression under sanding pressure is unmeasured. Paper and all adhesive layers share the assumed 0.30 mm allowance. Start with an approximately 8 mm cushion strip and trim to fit the curved seat. The tapered attachment is unchanged. Physical fit remains untested.",
-        "description": "A 70 mm fit coupon for the cushioned roundover shoe. Reuse the existing coupon carrier and tapered knob. Check the lined profile on routed scrap under light sanding pressure before printing the full shoe. R3 allows one layer of 1/8-inch POWERTEC 71014 cushion plus 0.30 mm for paper and adhesive. Fit the cushion inside the curved seat and trim its installed edges at the ends of the curve. Apply approximately 5 mm wide sandpaper over it; leave the 2.5 mm flared shoulders bare. Hold the plane at 45\u00b0. Print rail-cap-down, groove-up, without supports. The shoe download contains only the shoe. The separate 70 mm coupon carrier and tapered coupon knob are linked below; reuse them if already printed.",
-        "filamentLabel": "Shoe print estimate"
+        "description": "A 70 mm roundover profile coupon for checking the 1/8-inch radius and cushion fit on a routed scrap. The preview and downloads contain only the profile. Reuse the shared 70 mm coupon carrier and tapered coupon knob; use the Assembly fit coupon to test the complete connection. R3 allows one layer of 1/8-inch POWERTEC 71014 cushion plus 0.30 mm for paper and adhesive. Keep the cushion and abrasive in the curved seat and leave the relieved shoulders bare.",
+        "filamentLabel": "Profile coupon print estimate"
+      },
+      {
+        "id": "fingernail-coupon",
+        "group": "Profiles",
+        "label": "Fingernail profile coupon",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-fingernail-coupon.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-taper-lock-coupon-shoe.stl",
+        "previewCaption": "Profile shoe",
+        "dimensions": [
+          [
+            "Overall size",
+            "70 \u00d7 31.75 \u00d7 17.46 mm \u00b7 2.76 \u00d7 1.25 \u00d7 0.69 in"
+          ],
+          [
+            "Profile radius",
+            "38.1 mm \u00b7 1\u00bd in"
+          ],
+          [
+            "Includes",
+            "Profile only"
+          ]
+        ],
+        "downloads": [
+          [
+            "Profile coupon \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-taper-lock-coupon-shoe/profile-jig-taper-lock-coupon-shoe-configured.3mf"
+          ],
+          [
+            "Profile coupon \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-taper-lock-coupon-shoe.stl"
+          ],
+          [
+            "Profile coupon \u00b7 Geometry 3MF",
+            "projects/sanding-plane/models/profile-jig-taper-lock-coupon-shoe.3mf"
+          ],
+          [
+            "Profile coupon \u00b7 STEP",
+            "projects/sanding-plane/models/profile-jig-taper-lock-coupon-shoe.step"
+          ]
+        ],
+        "print": "Print rail-cap-down, working surface up, without supports.",
+        "notes": "The tapered connection passed a physical test. Profile contact with your abrasive and workpiece still needs checking.",
+        "description": "A 70 mm fingernail profile coupon for checking the sanding curve against a routed scrap before printing the full-length profile. The preview and downloads contain only the profile. It fits the shared 70 mm coupon carrier and tapered coupon knob; use the Assembly fit coupon to test the complete connection."
+      },
+      {
+        "id": "carrier-coupon",
+        "group": "Carrier",
+        "label": "Carrier coupon",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-carrier-coupon.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.stl",
+        "previewCaption": "Carrier",
+        "dimensions": [
+          [
+            "Overall size",
+            "70 \u00d7 40 \u00d7 16.8 mm \u00b7 2.76 \u00d7 1.57 \u00d7 0.66 in"
+          ],
+          [
+            "Includes",
+            "Carrier only"
+          ],
+          [
+            "Compatibility",
+            "All 70 mm profile coupons and the tapered coupon knob"
+          ]
+        ],
+        "downloads": [
+          [
+            "Carrier coupon \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-profile-up-coupon-body/profile-jig-profile-up-coupon-body-configured.3mf"
+          ],
+          [
+            "Carrier coupon \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.stl"
+          ],
+          [
+            "Carrier coupon \u00b7 Geometry 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.3mf"
+          ],
+          [
+            "Carrier coupon \u00b7 STEP",
+            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.step"
+          ]
+        ],
+        "print": "Print in the saved orientation, supports off.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "The 70 mm carrier from the assembly fit test, available on its own. Reuse it with either the fingernail or roundover profile coupon and the tapered coupon knob. These downloads contain only the carrier; the Assembly fit coupon page provides the other test parts.",
+        "related": [
+          [
+            "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+            "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+          ]
+        ]
       }
     ],
     "related": [
@@ -742,7 +840,7 @@
           "model": "assets/sanding-plane-exploded.stl",
           "preview": "assets/sanding-plane-exploded.png"
         },
-        "coupon": "fit-coupon",
+        "coupon": "fingernail-coupon",
         "plate": "build-plate"
       },
       {
