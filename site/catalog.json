@@ -3,7 +3,7 @@
     "id": "cabinet",
     "title": "Cabinet door templates",
     "category": "Woodworking",
-    "description": "Curved rail and stile routing templates for an inset cabinet door.",
+    "description": "Routing templates for the curved rails and stiles of an inset cabinet door. The split templates join together so you can print a full-length routing guide on a smaller printer.",
     "revision": "Rail V10 \u00b7 Stile V13",
     "status": "Stile fit failed",
     "model": "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.stl",
@@ -58,7 +58,8 @@
             "Rail V10 \u00b7 STEP",
             "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v10/models/rail-template-native-dovetail-v10.step"
           ]
-        ]
+        ],
+        "description": "A routing guide for the curved horizontal rails of an inset cabinet door. Join the two printed halves with their matching dovetail to make the full template. Use both halves from this revision together."
       },
       {
         "id": "rail-coupon",
@@ -97,7 +98,8 @@
             "Rail fit coupon \u00b7 STL",
             "projects/cabinet-door-templates/designs/elliptical/rails/revisions/v9/fit-test/rail-native-dovetail-v9-fit-test.stl"
           ]
-        ]
+        ],
+        "description": "A small two-piece sample of the rail template\u2019s dovetail joint. Print it to check how the halves slide together before making the full rail template. This joint matches Rail V10."
       },
       {
         "id": "stile-full",
@@ -141,7 +143,8 @@
             "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/models/stile-template-left-dovetail-v13.step"
           ]
         ],
-        "status": "Fit failed \u00b7 arms bow"
+        "status": "Fit failed \u00b7 arms bow",
+        "description": "A routing guide for the vertical side of the inset cabinet door, printed in two halves that join with a dovetail. The current V13 joint is too tight and bends the socket arms, so wait for a corrected version before printing the full template."
       },
       {
         "id": "stile-coupon",
@@ -185,7 +188,8 @@
             "projects/cabinet-door-templates/designs/elliptical/stiles/revisions/v13/fit-test/stile-dovetail-v13-fit-test.step"
           ]
         ],
-        "status": "V12 coupon passed \u00b7 full print failed"
+        "status": "V12 coupon passed \u00b7 full print failed",
+        "description": "A short sample of the V13 stile template\u2019s dovetail joint. Use it to check the connection with less material than a full template. The full V13 template has a reported tight-fit problem, even though an earlier small sample fit well."
       }
     ]
   },
@@ -194,7 +198,7 @@
     "slug": "sanding-plane",
     "title": "Sanding plane",
     "category": "Woodworking",
-    "description": "Profile-up sanding plane with an integral tote, interchangeable profile shoe and tapered screw lock.",
+    "description": "A hand sanding plane for the curved face of a board shaped with the Magnate 5869 fingernail router bit. The rear handle gives you a grip while the shaped shoe supports the sandpaper against the curve. Slide the shoe into the body and hand-tighten the front knob to hold it in place; loosen the knob to swap shoes.",
     "revision": "Tapered lock",
     "status": "Coupon fit approved",
     "root": "projects/sanding-plane",
@@ -248,7 +252,48 @@
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
-        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "A hand sanding plane for the curved face of a board shaped with the Magnate 5869 fingernail router bit. The rear handle gives you a grip while the shaped shoe supports the sandpaper against the curve. Slide the shoe into the body and hand-tighten the front knob to hold it in place; loosen the knob to swap shoes."
+      },
+      {
+        "id": "exploded",
+        "group": "Sanding plane",
+        "label": "Exploded",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-exploded.png",
+        "previewModel": "assets/sanding-plane-exploded.stl",
+        "previewCaption": "Exploded assembly",
+        "dimensions": [
+          [
+            "Assembled length",
+            "186 mm"
+          ],
+          [
+            "Working width",
+            "31.75 mm"
+          ],
+          [
+            "Carrier width",
+            "40 mm"
+          ],
+          [
+            "Taper included angle",
+            "90\u00b0"
+          ]
+        ],
+        "downloads": [
+          [
+            "Complete plate \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf"
+          ],
+          [
+            "Complete plate \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
+          ]
+        ],
+        "print": "The exploded view shows the three parts separately for reference. Slide the shoe along the carrier rails and hand-tighten the knob to secure it. Print from the configured build-plate download, which retains the saved orientations and support settings.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "The carrier, profile shoe, and locking knob separated to show how the sanding plane fits together. The gaps are for illustration; slide the shoe along the carrier rails and tighten the knob to assemble it."
       },
       {
         "id": "build-plate",
@@ -295,7 +340,8 @@
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
-        "notes": "Three separate print objects with saved orientations. Slicer check passed with supports on the carrier only. Full-size loading and long-term wear remain untested."
+        "notes": "Three separate print objects with saved orientations. Slicer check passed with supports on the carrier only. Full-size loading and long-term wear remain untested.",
+        "description": "All three parts of the sanding plane\u2014body with rear handle, shaped shoe, and locking knob\u2014arranged on one P1S build plate. The shoe follows the curve cut by the Magnate 5869 router bit. After printing, slide the shoe into the body and tighten the knob by hand."
       },
       {
         "id": "fit-coupon",
@@ -346,7 +392,8 @@
           ]
         ],
         "print": "The configured coupon plate contains the tapered shoe and knob. Reuse the 70 mm coupon carrier, or print the carrier supplied here. Shoe rail-cap-down and knob crown-down; supports off.",
-        "notes": "Physically tested: no shifting reported. This coupon uses the same tapered seat as the full sanding plane."
+        "notes": "Physically tested: no shifting reported. This coupon uses the same tapered seat as the full sanding plane.",
+        "description": "A short version of the sanding plane\u2019s sliding connection and tapered knob. Use it to try the fit before printing the full plane. The shoe-and-knob download pairs with the separate 70 mm test body linked below."
       },
       {
         "id": "body",
@@ -381,7 +428,8 @@
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
-        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "The sanding plane\u2019s body and rear handle, printed as one piece. The handle is adapted from vikingth0r\u2019s Stanley No. 5 tote. Slide the matching profile shoe into the underside and thread the locking knob into the front to hold it in place."
       },
       {
         "id": "shoe",
@@ -424,7 +472,8 @@
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
-        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "The removable sanding surface for the plane. Its curve follows the 1\u00bd-inch radius of the Magnate 5869 router bit across a 1\u00bc-inch-wide board face. Add sandpaper to the shaped face, slide the shoe into the body, and tighten the matching tapered knob."
       },
       {
         "id": "knob",
@@ -467,15 +516,26 @@
           ]
         ],
         "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
-        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested.",
+        "description": "The front grip also acts as the sanding plane\u2019s locking screw. Turn it by hand to seat its tapered tip in the shoe and hold the shoe in place. Loosen it about one turn to slide the shoe out without removing the knob from the body."
       }
+    ],
+    "related": [
+      [
+        "Matching router bit: Magnate 5869",
+        "https://www.magnate.net/ProductDetails.asp?ProductCode=5869"
+      ],
+      [
+        "Original tote: Stanley No. 5 handle by vikingth0r on MakerWorld",
+        "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
+      ]
     ]
   },
   {
     "id": "stencil",
     "title": "Eighth-circle stencil",
     "category": "Woodworking",
-    "description": "Nineteen labeled radii. One small tool for finding the right curve.",
+    "description": "A drawing stencil for laying out curved furniture parts on paper. Set the rounded corner at the center of your circle, then trace the edge beside the radius you want. The labeled edges cover 1 to 10 inches in half-inch steps.",
     "revision": "1\u201310 inch radii",
     "status": "Test print next",
     "dimensions": [
@@ -519,7 +579,7 @@
     "id": "caul",
     "title": "Fingernail-profile caul",
     "category": "Woodworking",
-    "description": "A light, continuous contact face for a 2\u00d74-backed veneer glue-up.",
+    "description": "A shaped clamping block for gluing veneer onto the curved face of a board cut with the Magnate 5869 fingernail router bit. Place a 2\u00d74 along its flat back to spread clamp pressure over the veneer. Cover the contact face with packing tape to keep glue from sticking to it.",
     "revision": "250 mm \u00b7 2\u00d74 backed",
     "status": "Test print next",
     "dimensions": [
@@ -565,115 +625,19 @@
     "source": [
       "projects/fingernail-profile-clamping-caul/source/generate_caul.py"
     ],
-    "license": "No license declared; see project provenance."
-  },
-  {
-    "id": "tote",
-    "title": "Interchangeable tote grip",
-    "category": "Woodworking",
-    "description": "One comfortable grip for a growing family of profile jigs.",
-    "revision": "Saddle + fit coupon",
-    "status": "Test print next",
-    "model": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
-    "readme": "projects/fingernail-profile-clamping-caul/README.md",
-    "preview": "assets/tote.png",
-    "slug": "interchangeable-tote-grip",
-    "root": "projects/fingernail-profile-clamping-caul",
-    "source": [
-      "projects/fingernail-profile-clamping-caul/source/generate_tote_grip.py",
-      "projects/fingernail-profile-clamping-caul/source/profile_interface.py"
-    ],
     "license": "No license declared; see project provenance.",
-    "views": [
-      {
-        "id": "full",
-        "group": "Tote grip",
-        "label": "Full grip",
-        "revision": "Saddle + fit coupon",
-        "preview": "assets/tote.png",
-        "previewModel": "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl",
-        "dimensions": [
-          [
-            "Overall size",
-            "39 \u00d7 100 \u00d7 99.3 mm"
-          ],
-          [
-            "Mounting width",
-            "31.75 mm"
-          ],
-          [
-            "Saddle clearance",
-            "0.50 mm total"
-          ],
-          [
-            "Hardware",
-            "2 \u00d7 M3 nuts & screws"
-          ]
-        ],
-        "notes": "Print the saddle coupon before the full tote. Two screws lock the grip onto the existing chamfered profile interface.",
-        "print": "Upright with a brim, 5 walls and 25\u201335% gyroid infill. The 45\u00b0 internal roof is designed to avoid supports.",
-        "downloads": [
-          [
-            "Printable model",
-            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.3mf"
-          ],
-          [
-            "Portable mesh",
-            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.stl"
-          ],
-          [
-            "Editable CAD",
-            "projects/fingernail-profile-clamping-caul/models/interchangeable-profile-jig-tote-grip.step"
-          ]
-        ]
-      },
-      {
-        "id": "fit-coupon",
-        "group": "Tote grip",
-        "label": "Saddle fit coupon",
-        "revision": "Saddle fit test",
-        "preview": "assets/tote-coupon.png",
-        "previewModel": "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.stl",
-        "previewCaption": "Saddle fit coupon",
-        "status": "Test print next",
-        "dimensions": [
-          [
-            "Mounting width",
-            "31.75 mm"
-          ],
-          [
-            "Saddle clearance",
-            "0.50 mm total"
-          ],
-          [
-            "Profile",
-            "Chamfered caul interface"
-          ]
-        ],
-        "notes": "Use this coupon to verify the saddle clearance before printing the full tote. Physical fit is not yet documented.",
-        "print": "Print at 100% scale with the intended material and settings for the full grip.",
-        "downloads": [
-          [
-            "Saddle fit coupon \u00b7 3MF",
-            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.3mf"
-          ],
-          [
-            "Saddle fit coupon \u00b7 STL",
-            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.stl"
-          ],
-          [
-            "Saddle fit coupon \u00b7 STEP",
-            "projects/fingernail-profile-clamping-caul/models/profile-jig-tote-saddle-fit-test.step"
-          ]
-        ]
-      }
+    "related": [
+      [
+        "Matching router bit: Magnate 5869",
+        "https://www.magnate.net/ProductDetails.asp?ProductCode=5869"
+      ]
     ]
   },
   {
     "id": "closet",
     "title": "Closet space saver",
     "category": "Home & storage",
-    "description": "A lighter basket with regular hex panels and reinforced mounting holes.",
+    "description": "A closet storage basket with open hexagonal sides and reinforced mounting holes. This version rebuilds the original Closet Space Saver with thinner panels and a regular hexagonal pattern to reduce material use.",
     "revision": "Parametric rebuild",
     "status": "Test print next",
     "dimensions": [
@@ -715,14 +679,20 @@
     "source": [
       "closet-space-saver-rebuilt/build_rebuilt_model.py"
     ],
-    "license": "CC BY-NC-SA 4.0 \u00b7 inspired by EmrakulVs15Squirtles"
+    "license": "CC BY-NC-SA 4.0 \u00b7 inspired by EmrakulVs15Squirtles",
+    "related": [
+      [
+        "Original Closet Space Saver by EmrakulVs15Squirtles on MakerWorld",
+        "https://makerworld.com/en/models/2953785-closet-space-saver#profileId-3309905"
+      ]
+    ]
   },
   {
     "id": "closet-remix",
     "slug": "closet-space-saver-remix",
     "title": "Closet space saver \u00b7 remix",
     "category": "Home & storage",
-    "description": "The earlier hex-cutout remix, preserving the original basket and hook geometry.",
+    "description": "A closet storage basket adapted from the original Closet Space Saver. It keeps the original basket shape, hooks, and mounting holes, with hexagonal openings replacing the square grids.",
     "revision": "Hex-cutout remix",
     "status": "Fit undocumented",
     "dimensions": [
@@ -763,13 +733,19 @@
         "Editable CAD",
         "closet-space-saver-hex/output/closet-space-saver-hex-design.step"
       ]
+    ],
+    "related": [
+      [
+        "Original Closet Space Saver by EmrakulVs15Squirtles on MakerWorld",
+        "https://makerworld.com/en/models/2953785-closet-space-saver#profileId-3309905"
+      ]
     ]
   },
   {
     "id": "bin",
     "title": "Gridfinity rebuilt bin",
     "category": "Home & storage",
-    "description": "A standard bin for a modular drawer system.",
+    "description": "A Gridfinity storage bin for organizing small items in a drawer. Its 4 \u00d7 3 footprint fits a matching Gridfinity baseplate, so you can rearrange it alongside other bins.",
     "revision": "4 \u00d7 3 \u00d7 8",
     "status": "Fit undocumented",
     "dimensions": [
@@ -803,7 +779,7 @@
     "id": "jae",
     "title": "Jae drawer",
     "category": "Home & storage",
-    "description": "Baseplates and spacers, fitted to a specific drawer.",
+    "description": "Gridfinity baseplates and edge spacers sized for a 319 \u00d7 423 mm drawer. Lay the baseplate sections in the drawer and use the spacers to fill the remaining space around them, then add bins to suit what you store.",
     "revision": "319 \u00d7 423 mm",
     "status": "Fit undocumented",
     "dimensions": [
@@ -841,7 +817,7 @@
     "id": "tea",
     "title": "Tea drawer",
     "category": "Home & storage",
-    "description": "A five-plate base for keeping the tea drawer organized.",
+    "description": "A Gridfinity baseplate sized for a 342 \u00d7 472 mm tea drawer. The sections fit together across the drawer to hold a changeable arrangement of tea-storage bins.",
     "revision": "342 \u00d7 472 mm",
     "status": "Fit undocumented",
     "dimensions": [
@@ -875,7 +851,7 @@
     "id": "filing",
     "title": "Small filing cabinet",
     "category": "Home & storage",
-    "description": "Baseplate iterations and compartment bins.",
+    "description": "Gridfinity baseplates and compartment bins for a small filing-cabinet drawer, roughly 374 \u00d7 235 mm. Use the baseplate to keep the bins in place and arrange the compartments around the items you want to store.",
     "revision": "235 \u00d7 375 mm candidate",
     "status": "Fit undocumented",
     "dimensions": [
@@ -921,7 +897,7 @@
     "id": "uhk",
     "title": "UHK foot",
     "category": "Everyday objects",
-    "description": "A replacement support foot for an Ultimate Hacking Keyboard.",
+    "description": "A replacement support foot for an Ultimate Hacking Keyboard. Compare its shape and dimensions with the foot on your keyboard before printing; the saved model does not identify which UHK version it fits.",
     "revision": "Fit to be documented",
     "status": "Fit undocumented",
     "dimensions": [
@@ -955,7 +931,7 @@
     "id": "deckpass",
     "title": "Deckpass",
     "category": "Everyday objects",
-    "description": "The original Deckpass Bambu Studio project.",
+    "description": "A cable grommet for passing cords through a desktop or cabinet counter. I use it to run the extension cord for my 3D printer up through the cabinet counter.",
     "revision": "V1.1",
     "status": "Fit undocumented",
     "dimensions": [
@@ -989,7 +965,7 @@
     "id": "tail",
     "title": "Ping-pong tail attachment",
     "category": "Everyday objects",
-    "description": "Loose and tight side-clip variants for a 40 mm ball.",
+    "description": "A clip-on tail attachment for a 40 mm ping-pong ball. The project includes loose and tight clips so you can choose the fit that grips your ball.",
     "revision": "Five build plates",
     "status": "Fit undocumented",
     "dimensions": [
@@ -1020,44 +996,10 @@
     "license": "Imported 3DBenchy / Creative Tools material is embedded. Review archive attribution before redistribution."
   },
   {
-    "id": "handle",
-    "title": "Long handle",
-    "category": "Everyday objects",
-    "description": "A long handle mesh, ready for its next iteration.",
-    "revision": "Original mesh",
-    "status": "Fit undocumented",
-    "dimensions": [
-      [
-        "Mesh bounds",
-        "30.5 \u00d7 262.0 \u00d7 15.0 units"
-      ],
-      [
-        "Units",
-        "Not encoded in STL"
-      ]
-    ],
-    "notes": "This project is preserved in the collection. Record material, fit, and print results after the next print. See the original notes for known provenance.",
-    "print": "Confirm units in the slicer before printing; millimeters are assumed but unverified. Record mounting dimensions, orientation, material, and strength requirements.",
-    "model": "projects/handle/models/handle.stl",
-    "downloads": [
-      [
-        "handle",
-        "projects/handle/models/handle.stl"
-      ]
-    ],
-    "readme": "projects/handle/README.md",
-    "preview": "assets/handle.png",
-    "previewModel": "projects/handle/models/handle.stl",
-    "slug": "long-handle",
-    "root": "projects/handle",
-    "source": [],
-    "license": "No license declared; see project provenance."
-  },
-  {
     "id": "cardboard-can",
     "title": "Cardboard can",
     "category": "Everyday objects",
-    "description": "Stackable storage using a cardboard filament-spool core, with printed lid, ring, bottoms, and dividers.",
+    "description": "Turn the cardboard core from a Bambu filament spool into a stackable storage container. The printed lid, ring, and bottom fit around the core, with dividers for smaller items. Line up the notch in the cardboard with the nub inside the ring when assembling it.",
     "revision": "Saved project \u00b7 2026-09-27",
     "status": "Fit undocumented",
     "model": "projects/cardboard-can/models/cardboard-can.3mf",
@@ -1067,7 +1009,7 @@
     "root": "projects/cardboard-can",
     "readme": "projects/cardboard-can/README.md",
     "source": [],
-    "license": "Embedded box attribution: sdaendi; print profile: JSBG. Embedded license: Standard Digital File License. Related MakerWorld projects are linked below; their original terms apply.",
+    "license": "Embedded box attribution: sdaendi; print profile: JSBG. Embedded license: Standard Digital File License. The original MakerWorld terms apply.",
     "related": [
       [
         "Organizer for recyclable cardboard spool box",
@@ -1126,7 +1068,8 @@
         ],
         "filamentPlates": [
           1
-        ]
+        ],
+        "description": "Turn the cardboard core from a Bambu filament spool into a stackable storage container. The printed lid, ring, and bottom fit around the core, with dividers for smaller items. Line up the notch in the cardboard with the nub inside the ring when assembling it. This plate contains the lid, ring, bottom, and one divider."
       },
       {
         "id": "plate-2",
@@ -1159,7 +1102,8 @@
         ],
         "filamentPlates": [
           2
-        ]
+        ],
+        "description": "Extra parts for the cardboard-spool storage container: a bottom and two dividers. Use them with the cardboard core from a Bambu filament spool and the lid and ring on Plate 1."
       }
     ]
   }

@@ -22,10 +22,10 @@ The build checks every local HTML link, including original datasheets. Missing f
 ## Update a project
 
 1. Keep geometry and source files in the existing project folder.
-2. Update its entry in `site/catalog.json`: selected revision, print instructions, dimensions, fit results, downloads, preview image, and preview mesh.
+2. Update its entry in `site/catalog.json`: selected revision, human-readable description, dimensions, fit results, downloads, preview image, and preview mesh. The description explains what the print is for and how to use it; give individual parts and coupons their own descriptions in `views`. Keep slicer settings and build records in the project notes.
 3. Keep the image, interactive mesh, specifications, and selected downloads on the same revision. Use exact status labels; coupon approval does not establish full-part strength.
 4. Group component models and their test coupons in `views`, with a shared `group` and separate model, preview, dimensions, and downloads for each view. Give compatible older coupons their actual revision; for example, Rail V10 uses the approved V9 joint coupon.
-5. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information. Show the attribution sentence and optional inspiration links below downloads, without a heading or source-code download links. Optional `related` entries are `[label, URL]` pairs.
+5. Add a dimensioned drawing or original datasheet link when available. Preserve source and license information. Show the attribution sentence below downloads, without a heading or source-code download links. Add useful product and original-design links as `related` entries (`[label, URL]` pairs); these appear beside the description. Label each link so readers know how it relates to the print.
 6. Build and check the page before pushing to `main`.
 
 The catalog `root` includes model formats, original HTML datasheets, images, source scripts, documentation, and validation files. `archive/`, environments, scratch `work/`, and `.gcode.3mf` files are excluded. Older standalone closet projects publish their output and source folders and top-level source/notes. `_site/publication.json` lists the exact project artifacts in the deployment.
@@ -50,8 +50,8 @@ The accepted direction is the compact index (prototype C).
 
 - Use a plain project directory without an app name, logo, or branded header.
 - Lead with project names, categories, and search; omit revision subtitles from the index and the design status column.
-- Use factual labels and instructions. No promotional headline, introductory copy, narrative footer, or project-page description.
-- Project pages group preview, specifications, print instructions, downloads, source attribution, and earlier files. Omit the Validation section, status badges, repeated revision labels, and preview captions.
+- Use factual labels and plain language for people using the prints. No promotional headline, generic slicer reminders, build-log prose, or narrative footer.
+- Project pages group preview, a useful description with product and source links, specifications, downloads, source attribution, and earlier files. Omit the Validation section, status badges, repeated revision labels, and preview captions.
 - Keep the index readable on phones; hide secondary columns and retain project names.
 - Use white backgrounds, subdued green model previews, dark text, and thin separators.
 
@@ -63,7 +63,7 @@ Every model page shows recorded Bambu Studio slice estimates below its specifica
 
 Estimates use each configured 3MF's saved settings and material cost per kilogram, interpreted as USD. Each plate and each alternative file has its own row; alternative prints are not added together. `filamentPlates` selects the relevant plates for a catalog view, as on Cardboard can. Costs cover filament only.
 
-For geometry-only files, the estimates use P1S / PLA, a 0.4 mm nozzle, 0.20 mm layers, 0.42 mm line width, 1.24 g/cm³ density, $20/kg, and no supports. Wall counts, infill, and brims follow project notes: caul 4 walls / 20%; tote and coupon 5 walls / 30% / outer brim; closet remix 2 walls / 15%; stencil and handle 3 walls / 15%. Assumed infill is gyroid. The handle's STL units are assumed to be millimeters. Only temporary estimation copies were configured and positioned; original downloads are unchanged.
+For geometry-only files, the estimates use P1S / PLA, a 0.4 mm nozzle, 0.20 mm layers, 0.42 mm line width, 1.24 g/cm³ density, $20/kg, and no supports. Wall counts, infill, and brims follow project notes: caul 4 walls / 20%; closet remix 2 walls / 15%; stencil 3 walls / 15%. Assumed infill is gyroid. Only temporary estimation copies were configured and positioned; original downloads are unchanged.
 
 To refresh a configured project, slice it with the installed Bambu Studio CLI, retaining the saved orientation and arrangement:
 

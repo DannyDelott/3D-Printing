@@ -1,6 +1,6 @@
 # Deckpass
 
-Deckpass v1.1 slicer project.
+A cable grommet for passing cords through a desktop or cabinet counter. Danny uses it to run the 3D printer’s extension cord up through the cabinet counter.
 
 ## Files
 
@@ -10,4 +10,4 @@ Deckpass v1.1 slicer project.
 
 ## Next print
 
-Record the intended use, fit dimensions, material, print result, and the source of the parametric model embedded in the 3MF.
+Record the cutout dimensions, material, print result, and source of the parametric model embedded in the 3MF.

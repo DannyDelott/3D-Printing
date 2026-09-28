@@ -11,14 +11,13 @@ Each idea lives in its own folder under [`projects/`](projects/). A project can 
 | Project | What is here | Files |
 | --- | --- | --- |
 | [Cabinet door templates](projects/cabinet-door-templates/) | Curved rail and stile routing templates, with dovetail print variants | 3MF, STL, STEP + interactive datasheets |
-| [Fingernail-profile caul and tote](projects/fingernail-profile-clamping-caul/) | Cauls, interchangeable tote grip, and fit coupon | 3MF, STL, STEP + generators |
+| [Fingernail-profile caul](projects/fingernail-profile-clamping-caul/) | Shaped veneer-clamping cauls | 3MF, STL, STEP + generators |
 | [Closet space saver rebuild](closet-space-saver-rebuilt/) | Parametric hex-panel basket | 3MF, STL, STEP + generator |
 | [Closet space saver remix](closet-space-saver-hex/) | Earlier hex-cutout remix | 3MF, STL, STEP + generator |
 | [Eighth-circle stencil](projects/quarter-circle-stencil/) | Labeled 1–10 inch, 45-degree furniture-layout curve stencil | 1 × STL + editable generator |
 | [Cardboard can](projects/cardboard-can/) | Two-plate cardboard spool box with lid, ring, bottoms, and dividers | 1 × 3MF + plate previews |
-| [Deckpass](projects/deckpass/) | Deckpass v1.1 Bambu Studio project | 1 × 3MF |
+| [Deckpass](projects/deckpass/) | Cable grommet for a desktop or cabinet counter | 1 × 3MF |
 | [UHK foot](projects/uhk-foot/) | Replacement/support foot for an Ultimate Hacking Keyboard | 1 × 3MF |
-| [Handle](projects/handle/) | Long handle mesh | 1 × STL |
 | [Ping-pong ball tail attachment](projects/ping-pong-ball-tail-attachment/) | Multi-plate side-clip attachment variants | 1 × 3MF |
 | [Gridfinity rebuilt bin](projects/gridfinity/rebuilt-bin-4x3x8/) | 4 × 3 × 8 standard bin project | 1 × 3MF |
 | [Gridfinity Jae drawer](projects/gridfinity/jae-drawer/) | Baseplate and spacer for a 319 × 423 mm drawer | 2 × 3MF |

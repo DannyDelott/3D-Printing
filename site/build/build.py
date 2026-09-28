@@ -130,13 +130,13 @@ def project_page(p, published):
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
-<section class="notes" id="print-notes"><h2>Print & assembly notes</h2><p>{escape(p['print'])}</p></section>
+<section class="notes" id="description"><h2>About this print</h2><p>{escape(p['description'])}</p>{f'<ul>{related}</ul>' if related else ''}</section>
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
 </div><aside class="detail-info"><section id="dimensions"><h2>Specifications</h2><table class="specs"><tbody>{dimensions}</tbody></table></section>
 {estimate}
 <section id="downloads"><h2>Downloads</h2><div class="download-list">{downloads}</div>
 </section>
-<div class="notes"><p>{escape(p['license'])}</p>{f'<ul>{related}</ul>' if related else ''}</div></aside></div>
+<div class="notes"><p>{escape(p['license'])}</p></div></aside></div>
 {archive}'''
     title = p['title'] + (f' · {p["group"]} · {p["label"]}' if p.get('activeView') else '')
     return frame(page, title, body, p['description'])
