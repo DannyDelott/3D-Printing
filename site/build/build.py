@@ -1,4 +1,5 @@
 """Build the static library from the catalog and existing project artifacts."""
+import hashlib
 import json
 import posixpath
 import shutil
@@ -35,13 +36,18 @@ def artifact(path):
     return path if path.startswith('assets/') else 'files/' + path
 
 
+def versioned_asset(page, path):
+    version = hashlib.sha256((SITE / path).read_bytes()).hexdigest()[:12]
+    return href(page, path) + "?v=" + version
+
+
 def frame(page, title, body, description):
     home = href(page, 'index.html')
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} · 3D Library</title><meta name="description" content="{escape(description, quote=True)}">
-<link rel="stylesheet" href="{href(page, 'style.css')}"><link rel="icon" href="{href(page, 'favicon.svg')}" type="image/svg+xml">
-<script type="module" src="{href(page, 'client.js')}"></script></head><body>
+<link rel="stylesheet" href="{versioned_asset(page, 'style.css')}"><link rel="icon" href="{href(page, 'favicon.svg')}" type="image/svg+xml">
+<script type="module" src="{versioned_asset(page, 'client.js')}"></script></head><body>
 <a class="skip" href="#main">Skip to content</a><div class="shell">
 <header class="header"><a href="{home}" class="brand">{icon('cube')}<span>3D Library.</span></a>
 <nav aria-label="Main"><a href="{home}">Collection</a>
