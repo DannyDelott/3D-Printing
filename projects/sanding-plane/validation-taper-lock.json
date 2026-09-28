@@ -1,0 +1,169 @@
+{
+  "status": "Tapered coupon physically tested by Danny: worked without shifting. Full-size loading and wear remain untested.",
+  "interface": {
+    "included_angle_degrees": 90,
+    "seat_mouth_diameter_mm": 8.0,
+    "pocket_floor_diameter_mm": 2.0,
+    "pocket_depth_mm": 3,
+    "blunt_tip_diameter_mm": 3.2,
+    "seated_tip_floor_gap_mm": 0.6,
+    "nominal_flank_gap_when_seated_mm": 0,
+    "release_turns": 1,
+    "release_lift_mm": 4.0,
+    "coupon_length_mm": 70
+  },
+  "reused_carrier": "Exact vertex and triangle match to profile-jig-profile-up-coupon-body.3mf",
+  "print_plate_parts": [
+    "shoe",
+    "knob"
+  ],
+  "geometry": {
+    "shoe_body": 0.0,
+    "shoe_knob": 0.0,
+    "knob_body": 0.0,
+    "unscrew_90_body": 0.0,
+    "unscrew_90_shoe": 0.0,
+    "unscrew_180_body": 0.0,
+    "unscrew_180_shoe": 0.0,
+    "unscrew_270_body": 0.0,
+    "unscrew_270_shoe": 0.0,
+    "unscrew_360_body": 0.0,
+    "unscrew_360_shoe": 0.0,
+    "withdraw_0_body": 0.0,
+    "withdraw_0_knob": 0.0,
+    "withdraw_1_body": 0.0,
+    "withdraw_1_knob": 0.0,
+    "withdraw_4_body": 0.0,
+    "withdraw_4_knob": 0.0,
+    "withdraw_10_body": 0.0,
+    "withdraw_10_knob": 0.0,
+    "withdraw_25_body": 0.0,
+    "withdraw_25_knob": 0.0,
+    "withdraw_70_body": 0.0,
+    "withdraw_70_knob": 0.0,
+    "withdraw_200_body": 0.0,
+    "withdraw_200_knob": 0.0,
+    "withdraw_300_body": 0.0,
+    "withdraw_300_knob": 0.0,
+    "locked_forward_1mm": 13.362543,
+    "locked_backward_1mm": 13.362543,
+    "rail_vertical_stop": 55.418617,
+    "rail_left_stop": 295.966661,
+    "rail_right_stop": 295.966661,
+    "seat_blocks_slide_-0.1_mm": 1.3433141710380212,
+    "seat_blocks_slide_0.1_mm": 1.3433141710414416,
+    "extra_quarter_mm_screw_travel_body": 0.0
+  },
+  "rounded_edges": {
+    "rail": [
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          9.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          -9.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "midpoint_mm": [
+          -12.0,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "midpoint_mm": [
+          12.0,
+          0.0,
+          5.0
+        ]
+      }
+    ],
+    "socket": [
+      {
+        "radius_mm": 0.3,
+        "midpoint_mm": [
+          -9.370000000000001,
+          -1.7763568394002505e-15,
+          0.19999999999999962
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          -12.25,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          -12.25,
+          0.0,
+          5.3
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          12.25,
+          0.0,
+          5.3
+        ]
+      },
+      {
+        "radius_mm": 0.2,
+        "midpoint_mm": [
+          12.25,
+          0.0,
+          5.0
+        ]
+      },
+      {
+        "radius_mm": 0.3,
+        "midpoint_mm": [
+          9.370000000000001,
+          -1.7763568394002505e-15,
+          0.19999999999999996
+        ]
+      }
+    ]
+  },
+  "meshes": {
+    "shoe": {
+      "dimensions_mm": [
+        31.75,
+        70.0,
+        17.465
+      ],
+      "watertight": true
+    },
+    "body": {
+      "dimensions_mm": [
+        40.0,
+        70.0,
+        16.8
+      ],
+      "watertight": true
+    },
+    "knob": {
+      "dimensions_mm": [
+        32.0,
+        31.968,
+        21.5
+      ],
+      "watertight": true
+    }
+  }
+}

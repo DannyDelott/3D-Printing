@@ -1,0 +1,9 @@
+{
+  "model_sha256": "ef06005406bcd84d4c3816eb855dc10a1f1db30313737f74a32df74a18e9d183",
+  "supports_disabled": false,
+  "support_toolpaths": 549,
+  "warnings": [],
+  "physical_print": "Not performed. PLA fit, bridge finish, retention and durability remain unverified.",
+  "slice_source_model_sha256": "2708830da813b9918bc6b9bf70a4537d3485e8cb73cc7f80ad6a8f7eb447cf65",
+  "reused_slice_evidence": "All exported mesh vertices and triangle indices exactly match the configured project that was sliced; geometry unchanged."
+}

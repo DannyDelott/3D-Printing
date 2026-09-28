@@ -1,5 +1,6 @@
 """Publishing checks that exercise the build's artifact and URL boundaries."""
 import json
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -30,6 +31,24 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('stile-dovetail-v13-fit-test-bambu.3mf', html)
         self.assertIn('0.05 mm total', html)
         self.assertNotIn('0.20 mm total', html)
+
+    def test_sanding_plane_contains_approved_coupon_and_configured_plate(self):
+        projects = json.loads((build.SITE / 'catalog.json').read_text())
+        plane = next(p for p in projects if p['slug'] == 'sanding-plane')
+        views = build.project_views(plane)
+        self.assertEqual({p['activeView'] for p in views}, {'assembly', 'fit-coupon', 'body', 'shoe', 'knob'})
+        coupon = next(p for p in views if p['activeView'] == 'fit-coupon')
+        html = build.project_page(coupon, [])
+        self.assertIn('sanding-plane-coupon.stl', html)
+        self.assertIn('profile-jig-taper-lock-coupon-print-plate-configured.3mf', html)
+        self.assertIn('profile-jig-profile-up-coupon-body.3mf', html)
+        self.assertIn('90°', html)
+        root = build.ROOT / plane['root']
+        evidence = json.loads((root / 'validation-final-plate.json').read_text())
+        for part in evidence['source_models'].values():
+            self.assertEqual(hashlib.sha256((root / 'models' / part['file']).read_bytes()).hexdigest(), part['sha256'])
+        plate = next(path for label, path in views[0]['downloads'] if 'Bambu project' in label)
+        self.assertEqual(hashlib.sha256((build.ROOT / plate).read_bytes()).hexdigest(), evidence['configured_sha256'])
 
     def test_inventory_excludes_environment_archive_and_gcode(self):
         with tempfile.TemporaryDirectory() as directory:

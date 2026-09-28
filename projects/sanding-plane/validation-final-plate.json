@@ -1,0 +1,54 @@
+{
+  "source_models": {
+    "Carrier": {
+      "file": "profile-jig-profile-up-full-body.3mf",
+      "sha256": "ef06005406bcd84d4c3816eb855dc10a1f1db30313737f74a32df74a18e9d183"
+    },
+    "Shoe": {
+      "file": "profile-jig-profile-up-full-shoe.3mf",
+      "sha256": "594171453b158588175d7ec4717c85db8f6984b53f9378a4f8f5daf03fec7a0c"
+    },
+    "Knob": {
+      "file": "profile-jig-profile-up-full-knob.3mf",
+      "sha256": "476e0f4191a2a5025b12369cdae58ec2654927e1ca64e0b4d69f9e1a027c5ee8"
+    }
+  },
+  "layout_dimensions_mm": [
+    211.82277755439281,
+    186.0,
+    55.50000071525574
+  ],
+  "bed_mm": [
+    256,
+    256
+  ],
+  "minimum_object_gap_mm": 8,
+  "support_parts": [
+    "Carrier"
+  ],
+  "orientation": {
+    "Carrier": "Side down",
+    "Shoe": "Rail cap down, profile up",
+    "Knob": "Crown down, tip up"
+  },
+  "grams": 161.73719787597656,
+  "seconds": 13443.060546875,
+  "configured_sha256": "bc6e13b9bd181dabcfd7252bb0ebebc374587d07b33819418976f81d65dcf33d",
+  "warnings": [],
+  "verified_support_overrides": {
+    "Carrier": "1",
+    "Shoe": "0",
+    "Knob": "0"
+  },
+  "support_extrusion_bounds_mm": [
+    [
+      19.321,
+      107.211
+    ],
+    [
+      127.517,
+      182.603
+    ]
+  ],
+  "separate_print_objects": 3
+}

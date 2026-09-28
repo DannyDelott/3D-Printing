@@ -35,8 +35,7 @@ if (search) {
 
 const loadButton = document.querySelector('#load-model');
 if (loadButton) {
-  loadButton.hidden = false;
-  loadButton.addEventListener('click', async () => {
+  async function loadModel() {
     const status = document.querySelector('#viewer-status');
     loadButton.disabled = true;
     status.textContent = 'Loading the model…';
@@ -46,13 +45,16 @@ if (loadButton) {
       document.querySelector('#model-poster').hidden = true;
       for (const button of document.querySelectorAll('.viewer-controls button')) button.hidden = false;
       loadButton.hidden = true;
-      status.textContent = 'Drag or use arrow keys to orbit · scroll to zoom';
+      status.textContent = 'Drag to orbit · scroll to zoom · right-drag to pan';
     } catch (error) {
       document.querySelector('#model-viewer').hidden = true;
       status.textContent = '3D preview unavailable. The image and downloads are still available.';
+      loadButton.hidden = false;
       loadButton.disabled = false;
       loadButton.textContent = 'Retry 3D preview';
       console.warn(error);
     }
-  });
+  }
+  loadButton.addEventListener('click', loadModel);
+  loadModel();
 }

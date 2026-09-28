@@ -1,6 +1,6 @@
 # Model library
 
-A static GitHub Pages site. Python's standard library builds HTML and copies the selected project artifacts. No package installation is needed. Search runs in the browser; model previews load only when requested. The directory, specifications, and downloads work without JavaScript.
+A static GitHub Pages site. Python's standard library builds HTML and copies the selected project artifacts. No package installation is needed. Search runs in the browser; interactive model previews load automatically on model pages. Three.js 0.186.1, STLLoader and OrbitControls are vendored under `assets/three/`, with their MIT license; no external viewer CDN is needed. The directory, specifications, and downloads work without JavaScript.
 
 ## Run locally
 
@@ -48,10 +48,23 @@ The repository is public. Pages uses **Deploy from a branch → gh-pages → / (
 
 The accepted direction is the compact index (prototype C).
 
-- Lead with project names, revisions, status, categories, and search.
+- Lead with project names, revisions, categories, and search. Omit the design status column; keep fit evidence on model pages.
 - Use factual labels and instructions. No promotional headline, introductory copy, narrative footer, or project-page description.
 - Project pages group preview, specifications, print instructions, validation, downloads, source attribution, and earlier files.
 - Keep the index readable on phones; hide secondary columns and retain names and revisions.
 - Use white backgrounds, subdued green model previews, dark text, and thin separators.
 
 The discarded variants remain local in `site-prototype/` and are not part of the build or deployment.
+
+## Model previews
+
+`viewer.js` uses the STL loader, antialiased rendering, crease-aware normals and orbit controls. Detail pages open in 3D automatically, with the PNG retained as a no-JavaScript or WebGL-failure fallback. Downloads always retain their original geometry.
+
+Regenerate the PNG thumbnails with the same renderer after changing a mesh:
+
+```sh
+python3 site/build/build.py
+python3 site/build/previews.py
+```
+
+Open http://127.0.0.1:8775/_previews and choose **Generate thumbnails**. This local-only tool writes catalog PNGs into `site/assets/`; rebuild afterward. The generator is not published.

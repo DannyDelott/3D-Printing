@@ -63,10 +63,10 @@ def index(projects):
         text = escape(' '.join([p['title'], p['description'], p['category'], p['revision']]).lower(), quote=True)
         rows += f'''<a href="{href(page, 'projects/' + p['slug'] + '/index.html')}" class="project-row" data-category="{escape(p['category'])}" data-search="{text}">
 <img src="{href(page, p['preview'])}" alt="" loading="lazy" width="90" height="70"><div><h2>{escape(p['title'])}</h2><p>{escape(p['revision'])}</p></div>
-<span class="row-category">{escape(p['category'])}</span><span class="row-status">{badge(p)}</span>{icon('arrow')}</a>'''
+<span class="row-category">{escape(p['category'])}</span>{icon('arrow')}</a>'''
     body = f'''<section class="index-intro"><h1>Models</h1><p>{len(projects)} projects</p></section>
 <div class="toolbar" id="filters" hidden><div class="filters" aria-label="Project categories">{filters}</div><label class="search">{icon('search')}<input id="search" type="search" aria-label="Search projects" placeholder="Find a project…"></label></div>
-<div class="table-head" aria-hidden="true"><span>Model</span><span>Project / revision</span><span class="row-category">Category</span><span class="row-status">Design status</span><span></span></div>
+<div class="table-head" aria-hidden="true"><span>Model</span><span>Project / revision</span><span class="row-category">Category</span><span></span></div>
 <div id="results">{rows}</div><p id="empty" class="empty" hidden>No projects match. Try another name or category. <button id="clear-search" class="secondary">Clear filters</button></p>
 
 '''
@@ -125,7 +125,7 @@ def project_page(p, published):
 <div class="detail-heading"><div>{badge(p)}<h1>{escape(p['title'])}</h1></div><span class="revision muted">{escape(p['revision'])}</span></div>
 {component_navigation(p, page)}<div class="detail-layout"><div><div class="viewer" data-model="{href(page, artifact(p['previewModel']))}">
 <span class="viewer-label">{escape(caption)}</span><img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
-<canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Use arrow keys to orbit; plus and minus to zoom."></canvas></div>
+<canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status">Model preview</span><div class="viewer-controls"><button id="load-model" hidden>Explore in 3D</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
 <nav class="tabline" aria-label="Datasheet sections"><a href="#dimensions">Specifications</a><a href="#print-notes">Print notes</a><a href="#fit-status">Fit & validation</a><a href="#files">All files</a></nav>
 <section class="notes" id="print-notes"><h2>Print & assembly notes</h2><p>{escape(p['print'])}</p></section>

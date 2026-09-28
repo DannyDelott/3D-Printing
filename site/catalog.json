@@ -190,6 +190,245 @@
     ]
   },
   {
+    "id": "sanding-plane",
+    "slug": "sanding-plane",
+    "title": "Sanding plane",
+    "category": "Woodworking",
+    "description": "Profile-up sanding plane with an integral tote, interchangeable profile shoe and tapered screw lock.",
+    "revision": "Tapered lock",
+    "status": "Coupon fit approved",
+    "root": "projects/sanding-plane",
+    "readme": "projects/sanding-plane/README.md",
+    "source": [
+      "projects/sanding-plane/source/generate_profile_up.py",
+      "projects/sanding-plane/source/generate_taper_lock.py",
+      "projects/sanding-plane/source/build_full_plate.py"
+    ],
+    "license": "Tote adapted from vikingth0r\u2019s Stanley No. 5 handle. Original source and license information are retained in the project notes.",
+    "preview": "assets/sanding-plane.png",
+    "views": [
+      {
+        "id": "assembly",
+        "group": "Sanding plane",
+        "label": "Assembly",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane.png",
+        "previewModel": "assets/sanding-plane.stl",
+        "previewCaption": "Assembly",
+        "dimensions": [
+          [
+            "Length",
+            "186 mm"
+          ],
+          [
+            "Working width",
+            "31.75 mm"
+          ],
+          [
+            "Carrier width",
+            "40 mm"
+          ],
+          [
+            "Taper included angle",
+            "90\u00b0"
+          ],
+          [
+            "Print estimate",
+            "161.74 g \u00b7 3 h 44 min"
+          ]
+        ],
+        "downloads": [
+          [
+            "Complete plate \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-final-print-plate-supports/profile-jig-final-print-plate-configured.3mf"
+          ],
+          [
+            "Complete plate \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-final-print-plate.stl"
+          ],
+          [
+            "Assembled preview \u00b7 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-preview.3mf"
+          ]
+        ],
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+      },
+      {
+        "id": "fit-coupon",
+        "group": "Sanding plane",
+        "label": "Fit coupon",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-coupon.png",
+        "previewModel": "assets/sanding-plane-coupon.stl",
+        "previewCaption": "Fit coupon",
+        "dimensions": [
+          [
+            "Coupon length",
+            "70 mm"
+          ],
+          [
+            "Taper included angle",
+            "90\u00b0"
+          ],
+          [
+            "Pocket mouth / floor",
+            "8 mm / 2 mm"
+          ],
+          [
+            "Pocket depth",
+            "3 mm"
+          ],
+          [
+            "Seated tip-to-floor gap",
+            "0.6 mm"
+          ]
+        ],
+        "downloads": [
+          [
+            "Shoe + knob \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-taper-lock-coupon-print-plate/profile-jig-taper-lock-coupon-print-plate-configured.3mf"
+          ],
+          [
+            "Shoe + knob \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-taper-lock-coupon-print-plate.stl"
+          ],
+          [
+            "Coupon carrier \u00b7 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.3mf"
+          ],
+          [
+            "Coupon carrier \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-profile-up-coupon-body.stl"
+          ]
+        ],
+        "print": "The configured coupon plate contains the tapered shoe and knob. Reuse the 70 mm coupon carrier, or print the carrier supplied here. Shoe rail-cap-down and knob crown-down; supports off.",
+        "notes": "Physically tested: no shifting reported. This coupon uses the same tapered seat as the full sanding plane."
+      },
+      {
+        "id": "body",
+        "group": "Parts",
+        "label": "Carrier",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-body.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-profile-up-full-body.stl",
+        "previewCaption": "Carrier",
+        "dimensions": [
+          [
+            "Length",
+            "186 mm"
+          ],
+          [
+            "Width",
+            "40 mm"
+          ]
+        ],
+        "downloads": [
+          [
+            "Carrier \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-profile-up-full-body-supports/profile-jig-profile-up-full-body-configured.3mf"
+          ],
+          [
+            "Carrier \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-body.stl"
+          ],
+          [
+            "Carrier \u00b7 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-body.3mf"
+          ]
+        ],
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+      },
+      {
+        "id": "shoe",
+        "group": "Parts",
+        "label": "Profile shoe",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-shoe.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.stl",
+        "previewCaption": "Profile shoe",
+        "dimensions": [
+          [
+            "Length",
+            "186 mm"
+          ],
+          [
+            "Working width",
+            "31.75 mm"
+          ],
+          [
+            "Profile radius",
+            "38.1 mm"
+          ]
+        ],
+        "downloads": [
+          [
+            "Profile shoe \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-profile-up-full-shoe/profile-jig-profile-up-full-shoe-configured.3mf"
+          ],
+          [
+            "Profile shoe \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.stl"
+          ],
+          [
+            "Profile shoe \u00b7 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.3mf"
+          ],
+          [
+            "Profile shoe \u00b7 STEP",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-shoe.step"
+          ]
+        ],
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+      },
+      {
+        "id": "knob",
+        "group": "Parts",
+        "label": "Locking knob",
+        "revision": "Tapered lock",
+        "preview": "assets/sanding-plane-knob.png",
+        "previewModel": "projects/sanding-plane/models/profile-jig-profile-up-full-knob.stl",
+        "previewCaption": "Locking knob",
+        "dimensions": [
+          [
+            "Nominal thread diameter",
+            "21.2 mm"
+          ],
+          [
+            "Thread pitch",
+            "4 mm"
+          ],
+          [
+            "Blunt tip diameter",
+            "3.2 mm"
+          ]
+        ],
+        "downloads": [
+          [
+            "Locking knob \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/profile-jig-profile-up-full-knob/profile-jig-profile-up-full-knob-configured.3mf"
+          ],
+          [
+            "Locking knob \u00b7 STL",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-knob.stl"
+          ],
+          [
+            "Locking knob \u00b7 3MF",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-knob.3mf"
+          ],
+          [
+            "Locking knob \u00b7 STEP",
+            "projects/sanding-plane/models/profile-jig-profile-up-full-knob.step"
+          ]
+        ],
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Carrier side-down with supports; shoe rail-cap-down/profile-up and knob crown-down without supports. Use the configured Bambu project.",
+        "notes": "Tapered coupon passed a physical test without shifting. Full-size loading and long-term wear remain untested."
+      }
+    ]
+  },
+  {
     "id": "stencil",
     "title": "Eighth-circle stencil",
     "category": "Woodworking",

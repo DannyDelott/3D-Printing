@@ -1,0 +1,345 @@
+{
+  "status": "Tapered coupon physically tested with no shifting reported. The full sander now uses that same tapered seat; full-size loading and long-term wear are untested.",
+  "interface": {
+    "type": "Matching conical seat on full sander",
+    "included_angle_degrees": 90,
+    "seat_mouth_diameter_mm": 8.0,
+    "pocket_floor_diameter_mm": 2.0,
+    "blunt_tip_diameter_mm": 3.2,
+    "seated_tip_floor_gap_mm": 0.6,
+    "pocket_depth_mm": 3,
+    "pitch_mm": 4,
+    "nominal_thread_diameter_mm": 21.2,
+    "preload_travel_mm": 0.4,
+    "release_lift_mm": 4,
+    "profile_minimum_blank_thickness_mm": 9,
+    "shoulder_slope_degrees": 45,
+    "rail_length": "Full shoe length",
+    "thread_location": "Carrier female, knob male; shoe unthreaded",
+    "retention": "Conical seat blocks both longitudinal directions; no separate rear wall stop"
+  },
+  "geometry": {
+    "coupon": {
+      "shoe_body": 0.0,
+      "shoe_knob": 0.0,
+      "knob_body": 0.0,
+      "unscrew_90_body": 0.0,
+      "unscrew_90_shoe": 0.0,
+      "unscrew_180_body": 0.0,
+      "unscrew_180_shoe": 0.0,
+      "unscrew_270_body": 0.0,
+      "unscrew_270_shoe": 0.0,
+      "unscrew_360_body": 0.0,
+      "unscrew_360_shoe": 0.0,
+      "withdraw_0_body": 0.0,
+      "withdraw_0_knob": 0.0,
+      "withdraw_1_body": 0.0,
+      "withdraw_1_knob": 0.0,
+      "withdraw_4_body": 0.0,
+      "withdraw_4_knob": 0.0,
+      "withdraw_10_body": 0.0,
+      "withdraw_10_knob": 0.0,
+      "withdraw_25_body": 0.0,
+      "withdraw_25_knob": 0.0,
+      "withdraw_70_body": 0.0,
+      "withdraw_70_knob": 0.0,
+      "withdraw_200_body": 0.0,
+      "withdraw_200_knob": 0.0,
+      "withdraw_300_body": 0.0,
+      "withdraw_300_knob": 0.0,
+      "locked_forward_1mm": 18.905259,
+      "locked_backward_1mm": 18.905259,
+      "rail_vertical_stop": 55.418617,
+      "rail_left_stop": 295.966661,
+      "rail_right_stop": 295.966661
+    },
+    "full": {
+      "shoe_body": 0.0,
+      "shoe_knob": 0.0,
+      "knob_body": 0.0,
+      "unscrew_90_body": 0.0,
+      "unscrew_90_shoe": 0.0,
+      "unscrew_180_body": 0.0,
+      "unscrew_180_shoe": 0.0,
+      "unscrew_270_body": 0.0,
+      "unscrew_270_shoe": 0.0,
+      "unscrew_360_body": 0.0,
+      "unscrew_360_shoe": 0.0,
+      "withdraw_0_body": 0.0,
+      "withdraw_0_knob": 0.0,
+      "withdraw_1_body": 0.0,
+      "withdraw_1_knob": 0.0,
+      "withdraw_4_body": 0.0,
+      "withdraw_4_knob": 0.0,
+      "withdraw_10_body": 0.0,
+      "withdraw_10_knob": 0.0,
+      "withdraw_25_body": 0.0,
+      "withdraw_25_knob": 0.0,
+      "withdraw_70_body": 0.0,
+      "withdraw_70_knob": 0.0,
+      "withdraw_200_body": 0.0,
+      "withdraw_200_knob": 0.0,
+      "withdraw_300_body": 0.0,
+      "withdraw_300_knob": 0.0,
+      "locked_forward_1mm": 13.362543,
+      "locked_backward_1mm": 13.362543,
+      "rail_vertical_stop": 147.255205,
+      "rail_left_stop": 786.425699,
+      "rail_right_stop": 786.425699,
+      "seat_blocks_slide_-0.1_mm": 1.3433141710365124,
+      "seat_blocks_slide_0.1_mm": 1.343314171035987,
+      "seated_tip_floor_gap_mm": 0.6,
+      "extra_quarter_mm_screw_travel_body": 0.0
+    }
+  },
+  "meshes": {
+    "coupon": {
+      "shoe": {
+        "dimensions_mm": [
+          31.75,
+          70.0,
+          17.465
+        ],
+        "watertight": true
+      },
+      "body": {
+        "dimensions_mm": [
+          40.0,
+          70.0,
+          16.8
+        ],
+        "watertight": true
+      },
+      "knob": {
+        "dimensions_mm": [
+          32.0,
+          31.968,
+          22.1
+        ],
+        "watertight": true
+      }
+    },
+    "full": {
+      "shoe": {
+        "dimensions_mm": [
+          31.75,
+          186.0,
+          17.465
+        ],
+        "watertight": true
+      },
+      "body": {
+        "dimensions_mm": [
+          119.178,
+          186.0,
+          40.0
+        ],
+        "watertight": true
+      },
+      "knob": {
+        "dimensions_mm": [
+          44.895,
+          44.875,
+          55.5
+        ],
+        "watertight": true
+      }
+    }
+  },
+  "rounded_edges": {
+    "coupon": {
+      "rail": [
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            9.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -9.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            -12.0,
+            0.0,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            12.0,
+            0.0,
+            5.0
+          ]
+        }
+      ],
+      "socket": [
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            -9.370000000000001,
+            -1.7763568394002505e-15,
+            0.19999999999999962
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -12.25,
+            0.0,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -12.25,
+            0.0,
+            5.3
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            12.25,
+            0.0,
+            5.3
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            12.25,
+            0.0,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            9.370000000000001,
+            -1.7763568394002505e-15,
+            0.19999999999999996
+          ]
+        }
+      ]
+    },
+    "full": {
+      "rail": [
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            9.0,
+            -3.552713678800501e-15,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -9.0,
+            -3.552713678800501e-15,
+            0.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            -12.0,
+            -3.552713678800501e-15,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            12.0,
+            -3.552713678800501e-15,
+            5.0
+          ]
+        }
+      ],
+      "socket": [
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            -9.370000000000001,
+            -3.552713678800501e-15,
+            0.19999999999999962
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -12.25,
+            -3.552713678800501e-15,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            -12.25,
+            -3.552713678800501e-15,
+            5.3
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            12.25,
+            -3.552713678800501e-15,
+            5.3
+          ]
+        },
+        {
+          "radius_mm": 0.2,
+          "midpoint_mm": [
+            12.25,
+            -3.552713678800501e-15,
+            5.0
+          ]
+        },
+        {
+          "radius_mm": 0.3,
+          "midpoint_mm": [
+            9.370000000000001,
+            -3.552713678800501e-15,
+            0.19999999999999993
+          ]
+        }
+      ]
+    }
+  },
+  "imported_tote": {
+    "source_sha256": "69e2eef574a898bff9e968464bfc092b0bbe0cad18a33d2770a4b4ffc2274707",
+    "source_width_mm": 23.919569038954393,
+    "flat_back_extension_mm": 0,
+    "screw_recess": {
+      "filled_volume_mm3": 591.9503521359293,
+      "original_material_removed_mm3": 6.353830788915123e-06,
+      "top_surface_fit_max_error_mm": 0.0013923520023553237,
+      "finish": "Follows the original top curvature; no raised plug."
+    },
+    "tote_core_overlap_mm3": 14167.73676590614,
+    "scale": 1,
+    "source": "vikingth0r / MakerWorld 2873652, supplied by Danny"
+  },
+  "full_length_mm": 186.0,
+  "full_shoe_revision": "Shortened from 250 to 186 mm, flush with carrier; interface and coupon unchanged.",
+  "straight_coupon_interface": {
+    "pin_diameter_mm": 8,
+    "pocket_diameter_mm": 8.3,
+    "status": "Historical: slipped when tightened"
+  },
+  "carrier_reuse": "Full carrier regenerated with identical vertices and triangles; original STL and 3MF bytes retained with matching existing slice evidence."
+}
