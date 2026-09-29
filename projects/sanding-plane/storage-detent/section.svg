@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 280" role="img" aria-label="64 by 32 mm coupon, 1.6 mm leaf and R3.5 rounded detent">
+ <style>text{font:14px system-ui;fill:#304431}.dim{fill:none;stroke:#5f775e}.small{font-size:12px}</style>
+ <text x="55" y="25">Back face · this side on the print bed</text>
+ <rect x="55" y="50" width="256" height="128" fill="#a2b99a" stroke="#4e6c4a"/>
+ <rect x="71" y="84" width="236" height="60" fill="white" stroke="#4e6c4a"/>
+ <rect x="63" y="90" width="160" height="48" rx="3" fill="#a2b99a" stroke="#4e6c4a"/>
+ <circle cx="207" cy="114" r="14" class="dim" stroke-dasharray="3 3"/>
+ <path d="M55 202H311 M55 196v12 M311 196v12 M30 50V178 M24 50h12 M24 178h12" class="dim"/>
+ <text x="153" y="222">64 mm / 2.52 in</text><text transform="translate(20 161) rotate(-90)">32 mm / 1.26 in</text>
+ <path d="M71 155H207 M71 150v10 M207 150v10" class="dim"/><text x="108" y="172" class="small">34 mm root to ball</text>
+ <text x="425" y="25">Side section · detent seated in the shoe</text>
+ <path d="M425 55H465V96H729V80H465V55" fill="#a2b99a" stroke="#4e6c4a"/>
+ <circle cx="701" cy="125" r="35" fill="#a2b99a" stroke="#4e6c4a"/>
+ <path d="M600 134H661L691 164H711L741 134H865V194H600Z" fill="#ddcda8" stroke="#8e7e5a"/>
+ <path d="M756 80h20 M756 96h20 M766 80V96" class="dim"/><text x="788" y="92">1.6 mm leaf</text>
+ <path d="M697 160V164" class="dim"/><text x="617" y="222">Rounded R3.5 mm · 90° pocket</text>
+ <text x="425" y="253" class="small">2.6 mm nominal lift over the rail · spring force requires a physical test</text>
+ </svg>

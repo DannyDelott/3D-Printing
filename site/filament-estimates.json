@@ -1791,5 +1791,48 @@
         "printTime": "35 min"
       }
     ]
+  },
+  "projects/sanding-plane/print-checks/storage-detent-r1-coupon/storage-detent-r1-coupon-configured.3mf": {
+    "sha256": "1ed99f63d91fd0a11442ce5ea473b60ca86202e001c5aa359bd6202ba1d6a0d4",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "19.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "5",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 10.50250244140625,
+        "cost": 0.2099450238037109,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 10.50250244140625,
+            "pricePerKg": 19.99
+          }
+        ],
+        "warning": "",
+        "printTime": "20 min"
+      }
+    ]
   }
 }

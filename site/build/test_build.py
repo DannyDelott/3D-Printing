@@ -108,7 +108,7 @@ class PublishingTests(unittest.TestCase):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         plane = next(p for p in projects if p['slug'] == 'sanding-plane')
         views = build.project_views(plane)
-        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob', 'roundover-1-8', 'roundover-1-8-coupon', 'fingernail-coupon', 'carrier-coupon'])
+        self.assertEqual([p['activeView'] for p in views], ['assembly', 'exploded', 'build-plate', 'fit-coupon', 'body', 'shoe', 'knob', 'roundover-1-8', 'roundover-1-8-coupon', 'fingernail-coupon', 'carrier-coupon', 'storage-detent-coupon'])
         plate_html = build.project_page(next(p for p in views if p['activeView'] == 'build-plate'), [])
         self.assertIn('data-model="../../../files/projects/sanding-plane/models/profile-jig-final-print-plate.stl"', plate_html)
         self.assertIn('profile-jig-final-print-plate-configured.3mf', plate_html)
@@ -135,10 +135,12 @@ class PublishingTests(unittest.TestCase):
             self.assertNotIn('>Build plate<', nav)
             selected, kind = build.plane_context(view)
             self.assertIn('>Profiles<', nav)
+            self.assertIn('>Shoe storage<', nav)
+            self.assertIn(build.href(page, 'projects/sanding-plane/storage-detent-coupon/index.html'), nav)
             self.assertNotIn('>Shoe<', nav)
             for shoe in plane['assemblyShoes']:
                 coupon = shoe['coupon'] if kind in ('shoe', 'coupon') else 'carrier-coupon' if kind in ('body', 'carrier-coupon') else 'fit-coupon'
-                if kind != 'knob':
+                if kind not in ('knob', 'storage-detent-coupon'):
                     target = f'projects/sanding-plane/{coupon}/index.html'
                     self.assertIn(build.href(page, target) + f'?shoe={shoe["id"]}', nav)
             html = build.project_page(view, [])

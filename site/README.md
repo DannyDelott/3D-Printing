@@ -109,12 +109,13 @@ STL/3MF files and catalog previews are unchanged.
 
 ### Selectable assembly shoes
 
-The sanding-plane navigation has four destinations: **Assembly, Profiles, Carrier, and Locking knob**, with tabs scoped to the current destination:
+The sanding-plane navigation has five destinations: **Assembly, Profiles, Carrier, Locking knob, and Shoe storage**, with tabs scoped to the current destination:
 
 - Assembly: **Full assembly** and **Assembly fit coupon**. The fit coupon is the fixed carrier / fingernail test profile / tapered knob connection test, independent of the selected full-size profile. It has no profile selector.
 - Profiles: **Full-size profile** and **Profile coupon**. The gallery preserves the full-size/coupon tab while changing profile. Both fingernail and roundover coupons preview and download only the profile, with links to compatible test parts.
 - Carrier: **Full-size carrier** and **Carrier coupon**. The carrier coupon previews and downloads only the shared 70 mm carrier.
 - Locking knob: the shared full-size knob.
+- Shoe storage: the rounded-detent fit coupon, with its own print, specifications and datasheet. It is separate from the sanding assembly and profile coupons.
 
 The gallery selects the profile on Assembly and Profiles pages. Assembly selection updates the model and setup instructions; all component specifications and downloads remain available in Prints. `?shoe=<component-view-id>` preserves the profile through navigation; a profile component's own URL takes precedence over a conflicting query. Existing URLs remain available.
 

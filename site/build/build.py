@@ -137,7 +137,9 @@ def plane_navigation(project, page):
         links = []
         section = {'assembly-coupon': 'assembly', 'plate': 'assembly', 'coupon': 'shoe', 'carrier-coupon': 'body'}.get(kind, kind)
         for key, label, target in [('assembly', 'Assembly', 'assembly'), ('shoe', 'Profiles', shoe['id']),
-                                   ('body', 'Carrier', 'body'), ('knob', 'Locking knob', 'knob')]:
+                                   ('body', 'Carrier', 'body'), ('knob', 'Locking knob', 'knob'),
+                                   *([('storage-detent-coupon', 'Shoe storage', 'storage-detent-coupon')]
+                                     if 'storage-detent-coupon' in views else [])]:
             current = ' aria-current="page"' if key == section else ''
             links.append(f'<a href="{href(page, project_path(views[target]))}?shoe={shoe["id"]}" data-part="{key}"{current}>{label}</a>')
         tabs = {'assembly': [('assembly', 'Full assembly', 'assembly'), ('assembly-coupon', 'Assembly fit coupon', 'fit-coupon')],

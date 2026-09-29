@@ -815,6 +815,65 @@
             "https://makerworld.com/en/models/2873652-woodworking-jig-handle-hand-plane-tote-w-mount"
           ]
         ]
+      },
+      {
+        "id": "storage-detent-coupon",
+        "group": "Shoe storage",
+        "label": "Storage detent coupon",
+        "revision": "R1",
+        "status": "Fit untested",
+        "preview": "assets/sanding-plane-storage-detent-r1.png",
+        "previewModel": "projects/sanding-plane/models/storage-detent-r1-coupon.stl",
+        "previewCaption": "One-piece storage detent coupon",
+        "dimensions": [
+          [
+            "Overall size",
+            "64 \u00d7 32 \u00d7 10.10 mm \u00b7 2.52 \u00d7 1.26 \u00d7 0.40 in"
+          ],
+          [
+            "Print orientation",
+            "64 \u00d7 32 mm footprint \u00b7 10.10 mm high"
+          ],
+          [
+            "Leaf",
+            "34 mm root-to-ball \u00b7 12 mm wide \u00b7 1.60 mm thick"
+          ],
+          [
+            "Rounded detent",
+            "R3.50 mm \u00b7 2.60 mm nominal rail-clearance travel"
+          ],
+          [
+            "Compatible pocket",
+            "8 mm mouth \u00b7 2 mm floor \u00b7 3 mm deep \u00b7 90\u00b0 included angle"
+          ],
+          [
+            "Rail clearance",
+            "0.35 mm per side \u00b7 0.40 mm above cap"
+          ]
+        ],
+        "description": "A one-piece test of snap-in shoe storage. Slide it onto the rear end of an existing full-size fingernail or roundover shoe until the rounded detent seats in the tapered locking pocket. Hold the coupon and pull the shoe along the rail to release it. Print only this coupon; reuse your existing shoe.",
+        "downloads": [
+          [
+            "Coupon \u00b7 Bambu project",
+            "projects/sanding-plane/print-checks/storage-detent-r1-coupon/storage-detent-r1-coupon-configured.3mf"
+          ],
+          [
+            "Coupon \u00b7 Geometry 3MF",
+            "projects/sanding-plane/models/storage-detent-r1-coupon.3mf"
+          ],
+          [
+            "Coupon \u00b7 STL",
+            "projects/sanding-plane/models/storage-detent-r1-coupon.stl"
+          ],
+          [
+            "Coupon \u00b7 STEP",
+            "projects/sanding-plane/models/storage-detent-r1-coupon.step"
+          ]
+        ],
+        "datasheet": "projects/sanding-plane/storage-detent/datasheet.html",
+        "print": "P1S \u00b7 PLA \u00b7 0.4 mm nozzle \u00b7 0.20 mm layers \u00b7 5 walls \u00b7 15% infill. Print flat back and leaf down, channel up, supports off. Keep the spring window clear.",
+        "notes": "Retention force, repeated flexing and resistance to falling out require physical testing. The detent requires the current tapered pocket as well as the rail. Full-size storage holder remains a separate concept.",
+        "related": []
       }
     ],
     "related": [
