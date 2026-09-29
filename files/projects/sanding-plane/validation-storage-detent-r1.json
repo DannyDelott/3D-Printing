@@ -1,0 +1,66 @@
+{
+  "revision": "R1",
+  "purpose": "One-slot snap-in storage retention test using an existing full-size shoe.",
+  "dimensions_mm": [
+    64,
+    32,
+    10.1
+  ],
+  "material": "PLA",
+  "interface": {
+    "rail_cap_width_mm": 24,
+    "rail_root_width_mm": 18,
+    "rail_height_mm": 5,
+    "side_clearance_mm": 0.35,
+    "cap_clearance_mm": 0.4,
+    "pocket_mouth_diameter_mm": 8,
+    "pocket_floor_diameter_mm": 2,
+    "pocket_depth_mm": 3,
+    "pocket_included_angle_deg": 90,
+    "compatibility": "Common dovetail plus the current 8 mm tapered pocket; rail-only shoes do not snap into this detent."
+  },
+  "spring": {
+    "leaf_width_mm": 12,
+    "leaf_thickness_mm": 1.6,
+    "root_to_ball_mm": 34,
+    "ball_radius_mm": 3.5,
+    "ball_side_flat_x_mm": 3,
+    "nominal_seated_preload_mm": 0.0497,
+    "rail_travel_mm": 2.5999999999999996,
+    "floor_gap_seated_mm": 0.4497
+  },
+  "checks": {
+    "fingernail": {
+      "fixed_parts_clear_during_sliding": true,
+      "translated_spring_clears_rail": true,
+      "translated_seated_ball_clears_pocket": true
+    },
+    "roundover": {
+      "fixed_parts_clear_during_sliding": true,
+      "translated_spring_clears_rail": true,
+      "translated_seated_ball_clears_pocket": true
+    },
+    "watertight_single_body": true
+  },
+  "sources": {
+    "fingernail": {
+      "path": "models/profile-jig-profile-up-full-shoe.step",
+      "sha256": "bb34912aab1d50fd97882b6b6e1f5328c89982da8a47d478660aa19dc259fc67"
+    },
+    "roundover": {
+      "path": "models/roundover-1-8-r3-shoe.step",
+      "sha256": "990c505ef3debdb5b943890d845965110bcf59df4e41484ec4b1fcb40261c5b5"
+    }
+  },
+  "print_dimensions_mm": [
+    32.0,
+    64.0,
+    10.1
+  ],
+  "physical_status": "Unprinted. Retention, release force, flex fatigue and bridge finish unverified.",
+  "files": {
+    "storage-detent-r1-coupon.step": "10197742cc7d7a0ef42d2f3ee097828f801be0c87298aa4f423b48128c6d8224",
+    "storage-detent-r1-coupon.stl": "cd53653a9920ca0eb150236e743003fe99138e6a6367771eeb5ae5182ab012f0",
+    "storage-detent-r1-coupon.3mf": "6654c875cd60d4473fe18914e592b6cc380e510430bce4fdeeb99c8b9fca8322"
+  }
+}

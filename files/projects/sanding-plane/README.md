@@ -121,3 +121,17 @@ The main navigation is **Assembly, Profiles, Carrier, and Locking knob**. Each p
 Print just the selected full-size profile when reusing an existing plane, or download all three configured part projects from Assembly. The combined full-size plate remains specific to the fingernail setup. Existing model geometry and approved attachment dimensions are unchanged.
 
 `source/build_assembly_previews.py` derives each added shoe's viewing meshes from its STEP in assembly coordinates and the approved assembly's unchanged carrier/knob. It checks rail-cap alignment, assembled clearance and three closed bodies, and records source/output hashes in `validation-assembly-previews.json`. New shoes are registered in `site/catalog.json`; see `site/README.md` for the fields and thumbnail workflow. The selector does not change print geometry or establish physical fit.
+
+## Shoe-storage detent coupon · R1
+
+[Coupon and downloads](https://dannydelott.github.io/3D-Printing/projects/sanding-plane/storage-detent-coupon/) · [Dimensioned datasheet](storage-detent/datasheet.html)
+
+A single-piece PLA coupon tests a rounded detent against the existing full-size shoe's tapered locking pocket. Slide it onto the rear end of a fingernail or R3 roundover shoe until it seats; hold the coupon and pull the shoe along the rail to release it. Reuse an existing shoe. This connection requires the current 8 mm mouth / 2 mm floor / 3 mm deep / 90° pocket as well as the dovetail. It does not provide rail-only compatibility.
+
+The coupon is 64 × 32 × 10.10 mm. Its leaf is 12 mm wide and 1.60 mm thick, with 34 mm from root to ball centre. The rounded detent has a 3.50 mm spherical radius, with side flats outside the cone-contact circle. Nominal rail-clearance travel is 2.60 mm; nominal seated preload is 0.05 mm and the tip stays about 0.45 mm above the pocket floor. These are geometric values, not force or fatigue predictions.
+
+Print the configured 3MF with its flat back and leaf on the bed and channel upward. P1S / PLA / 0.4 mm nozzle / 0.20 mm layers / five walls / 15% infill / supports off: **10.50 g, about 20 min, no slicer warnings**. The whole leaf starts on the bed. The small channel bridges still need physical inspection after printing.
+
+After cooling, clear strings from the spring window and rail. Check sliding fit before evaluating the detent. Cycle it about ten times, then test retention over a padded surface with the opening downward. Stop if the leaf whitens, cracks, or remains bent. Report sliding fit, snap force, release force, and whether it holds the shoe's weight. Physical retention and durability are untested; the five-shoe holder has not been promoted from the local concept.
+
+`source/generate_storage_detent.py` builds the coupon and checks fixed-part clearance against both shoe STEP files, the translated-spring clearance proxy, one-solid CAD validity, watertight meshes, and matching STL/3MF bounds. It does not simulate bending stresses or force. `source/storage_detent_datasheet.py` generates the drawing and datasheet from the geometry report and slice results. Evidence: `validation-storage-detent-r1.json` and `print-checks/storage-detent-r1-coupon/verification.json`. Rebuild with the existing CAD Python, slice using `source/slice_tote.py storage-detent-r1-coupon`, then regenerate the datasheet before moving raw slice outputs into `work/`.
