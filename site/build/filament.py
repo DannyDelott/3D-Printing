@@ -5,6 +5,9 @@ import math
 
 
 def render(project, records, root):
+    # Woodworking assembly downloads are dimensional references, not print jobs.
+    if project.get('fabrication') == 'woodworking':
+        return '', ''
     sources = [(label, path) for label, path in project['downloads'] if path in records]
     if not sources:
         raise ValueError(f'{project["slug"]}: record a filament estimate for a selected download')

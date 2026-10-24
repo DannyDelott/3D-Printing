@@ -584,5 +584,23 @@
       "full_model_fit": "failed: too tight; socket arms bow",
       "full_model_feedback_date": "2026-09-27"
     }
+  },
+  "assembly": {
+    "selected_revision": "r2",
+    "path": "assembly/revisions/r2",
+    "dimensions_mm": {
+      "overall": [
+        457.2,
+        685.8,
+        152.4
+      ],
+      "rail_thickness": 19.05,
+      "stile_thickness": 15.875,
+      "groove_width": 6.35,
+      "groove_depth": 6.35
+    },
+    "material": "European quartersawn beech with walnut panel",
+    "status": "Geometry checked; hardware provisional",
+    "template_compatibility": "Separate wider overlay assembly. Existing rail/stile template selections unchanged."
   }
 }

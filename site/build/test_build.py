@@ -13,6 +13,12 @@ import filament
 
 
 class PublishingTests(unittest.TestCase):
+    def test_woodworking_assembly_has_no_filament_estimate(self):
+        project = dict(slug='cabinet-assembly', fabrication='woodworking', downloads=[['Assembly', 'assembly.3mf']])
+        self.assertEqual(filament.render(project, {}, Path('.')), ('', ''))
+        with self.assertRaisesRegex(ValueError, 'record a filament estimate'):
+            filament.render(project | {'fabrication': 'printed'}, {}, Path('.'))
+
     def test_empty_archive_has_no_section_or_navigation(self):
         projects = json.loads((build.SITE / 'catalog.json').read_text())
         project = next(p for p in projects if p['slug'] == 'cardboard-can')

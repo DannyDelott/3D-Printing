@@ -74,6 +74,8 @@ python3 site/build/record_filament.py projects/example/models/model.3mf /tmp/mod
 
 For geometry-only files, first configure a temporary Bambu project with the documented assumptions and slice it. Record the original geometry path with `--assumed` and optional `--note`. Review slicer warnings, keep the recorded source and sliced geometry in sync, then rebuild. G-code and sliced projects stay out of the publication.
 
+Woodworking assembly views use `fabrication: "woodworking"`. Their 3MF/STEP downloads are full-size dimensional references, so those views omit filament estimates. Print-template and coupon views retain their recorded estimates.
+
 ## Model previews
 
 `viewer.js` uses the STL loader, antialiased rendering, crease-aware normals and orbit controls. Detail pages open in 3D automatically, with the PNG retained as a no-JavaScript or WebGL-failure fallback. Downloads always retain their original geometry.
