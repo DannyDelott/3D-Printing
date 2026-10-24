@@ -21,15 +21,15 @@
   "panel_thickness": 6.1,
   "panel_edge_clearance": 2.0,
   "tails_per_corner": 3,
-  "dovetail_slope": 8,
+  "dovetail_slope": 6,
   "knife_leaf_width": 12.7,
   "knife_leaf_thickness": 3.2,
   "knife_bearing_gap": 0.8,
   "hinge_open_limit": 110,
   "provenance": {
-    "user_confirmed": "18 \u00d7 27 \u00d7 6 inch overall; 3/4 inch case and rails; 5/8 inch stiles; mortised knife hinges; quarter-inch panel grooves; three dovetails per corner; vertical sides carry tails, top/bottom carry pins",
+    "user_confirmed": "18 \u00d7 27 \u00d7 6 inch overall; 3/4 inch case and rails; 5/8 inch stiles; mortised knife hinges; quarter-inch panel grooves; three dovetails per corner; vertical sides carry tails, top/bottom carry pins; 1:6 dovetail slope",
     "retained_from_source": "2 1/4 inch stile width; 3/6 inch asymmetric rail ends; ellipse q=0.95; right-hand hinges",
-    "assumptions": "Walnut panel; 1/4 inch groove depth as well as width; 6.1 mm panel for fit; 2 mm panel edge clearance; backs of stiles and rails aligned; 3 mm door gap; 1/16 inch side reveals; 3/4 inch back; 1:8 dovetails; round knob with 18 mm projection from stile (outside 6-inch case-and-door depth)",
+    "assumptions": "Walnut panel; 1/4 inch groove depth as well as width; 6.1 mm panel for fit; 2 mm panel edge clearance; backs of stiles and rails aligned; 3 mm door gap; 1/16 inch side reveals; 3/4 inch back; round knob with 18 mm projection from stile (outside 6-inch case-and-door depth)",
     "hardware": "Custom mortised knife geometry, not a manufacturer-specified hinge; load, screws and bearing retention unverified"
   }
 }

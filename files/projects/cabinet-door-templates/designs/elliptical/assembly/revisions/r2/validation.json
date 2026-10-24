@@ -18,6 +18,7 @@
   "panel_edge_clearance": 2.0,
   "panel_engagement": 4.35,
   "dovetails_per_corner": 3,
+  "dovetail_slope": "1:6",
   "total_tails": 12,
   "part_count": 17,
   "step_reimport_valid": true,
@@ -63,5 +64,5 @@
     }
   ],
   "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
-  "assumptions": "Walnut panel; 1/4 inch groove depth as well as width; 6.1 mm panel for fit; 2 mm panel edge clearance; backs of stiles and rails aligned; 3 mm door gap; 1/16 inch side reveals; 3/4 inch back; 1:8 dovetails; round knob with 18 mm projection from stile (outside 6-inch case-and-door depth)"
+  "assumptions": "Walnut panel; 1/4 inch groove depth as well as width; 6.1 mm panel for fit; 2 mm panel edge clearance; backs of stiles and rails aligned; 3 mm door gap; 1/16 inch side reveals; 3/4 inch back; round knob with 18 mm projection from stile (outside 6-inch case-and-door depth)"
 }
