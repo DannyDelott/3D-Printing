@@ -1,0 +1,35 @@
+{
+  "options": [
+    {
+      "option": "a",
+      "boards": 3,
+      "hide_all_boards": true,
+      "download_matches_option": true
+    },
+    {
+      "option": "b",
+      "boards": 5,
+      "hide_all_boards": true,
+      "download_matches_option": true
+    }
+  ],
+  "opening_control_checked_degrees": 110,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "browser_console_errors": 0,
+  "planar_normals_check_passed": true,
+  "quilted_material_check": {
+    "source": "User-supplied quilted maple photograph",
+    "figure_switch": [
+      "curly",
+      "quilted"
+    ],
+    "layouts": [
+      "a",
+      "b"
+    ],
+    "door_open_degrees": 110,
+    "console_errors": 0,
+    "geometry_changed": false
+  }
+}

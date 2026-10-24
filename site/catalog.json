@@ -346,6 +346,82 @@
             "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/index.html"
           ]
         ]
+      },
+      {
+        "id": "vertical-maple-r4",
+        "group": "Cabinet",
+        "label": "Vertical maple",
+        "revision": "R4",
+        "fabrication": "woodworking",
+        "status": "Geometry checked; panel joinery provisional",
+        "description": "Preferred A rail proportions with pale maple, selectable curly or quilted figure and vertical shiplap-style segmentation. Compare three broad boards with five boards around a narrow center, inspired by a dragon\u2019s eye. Open back, recessed French cleat and tiger\u2019s-eye-style knob retained.",
+        "preview": "assets/cabinet-vertical-maple-r4.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/b/cabinet-r4-preview.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/index.html",
+        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/README.md",
+        "source": [
+          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/source/build_model.py"
+        ],
+        "dimensions": [
+          [
+            "Case + door W \u00d7 H \u00d7 D",
+            "457.2 \u00d7 685.8 \u00d7 152.4 mm \u00b7 18 \u00d7 27 \u00d7 6 in"
+          ],
+          [
+            "A rail ends retained",
+            "57.15 / 114.3 mm \u00b7 2.25 / 4.5 in"
+          ],
+          [
+            "Broad verticals",
+            "Three boards; 114.3 mm / 4.5 in center bay"
+          ],
+          [
+            "Narrow center",
+            "Five boards; 38.1 mm / 1.5 in center and 76.2 mm / 3 in adjacent bays"
+          ],
+          [
+            "Panel stock (assumed)",
+            "6.10 mm maple in 6.35 mm / 0.25 in grooves"
+          ],
+          [
+            "Vertical joints (assumed)",
+            "1 mm face seams; 6.35 mm / 0.25 in laps"
+          ],
+          [
+            "Case joinery",
+            "Three 1:6 tails per corner; tails on vertical sides"
+          ]
+        ],
+        "downloads": [
+          [
+            "Broad verticals \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/a/cabinet-r4.3mf"
+          ],
+          [
+            "Broad verticals \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/a/cabinet-r4.step"
+          ],
+          [
+            "Narrow center \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/b/cabinet-r4.3mf"
+          ],
+          [
+            "Narrow center \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/b/cabinet-r4.step"
+          ]
+        ],
+        "notes": "The 3/4-inch module controls seam layout. Outer boards fit the retained opening. Thin laps, seasonal movement, panel retention and machining allowances are unverified. Cleat fixings and final hardware remain unspecified.",
+        "print": "Full-size woodworking reference assemblies, not print layouts.",
+        "related": [
+          [
+            "Compare vertical maple panels",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r4/index.html?option=b"
+          ],
+          [
+            "Curly maple material reference",
+            "https://www.wood-database.com/curly-maple/"
+          ]
+        ]
       }
     ]
   },
