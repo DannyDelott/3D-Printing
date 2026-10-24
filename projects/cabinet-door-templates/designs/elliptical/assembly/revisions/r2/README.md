@@ -21,7 +21,7 @@ The 3 mm face gap is assumed. Case depth is derived, not independently chosen: 1
 
 Walnut is selected for contrast. Grooves are 6.35 mm wide and 6.35 mm deep; groove depth is assumed. They share a common Z position through all four frame members, centered within the thinner stiles. The walnut panel is 6.10 mm thick for 0.25 mm total thickness clearance. Its outline extends 4.35 mm into the grooves, leaving 2 mm at the groove bottoms. The offset follows the curved boundaries and has rounded corners. These are design allowances; actual solid-wood moisture movement and final stock dimensions still need checking. The panel is not glued to the groove walls.
 
-Dovetail slope is assumed 1:8. Joint surfaces are nominal mating geometry without a machining-fit allowance. Frame corner joinery and back fastening remain unspecified.
+Dovetail slope is user-specified 1:6. Joint surfaces are nominal mating geometry without a machining-fit allowance. Frame corner joinery and back fastening remain unspecified.
 
 ## Mortised knife geometry
 
@@ -49,3 +49,7 @@ R1 remains in the prior chat's output package. No existing routing-template geom
 Original curve sources: `projects/cabinet-door-templates/source/generate_ellipse.py`, `generate_stiles.py`, and `front_views.py`. Three.js and OrbitControls are copied from the library's vendored runtime; MIT license retained in `vendor/LICENSE.txt`.
 
 Rendering uses crease-preserving normals. Smoothing across welded CAD corners previously caused false gradients on planar wood faces; the normal check in `source/check_viewer_normals.js` guards against that regression. The pivot guide is off by default.
+
+End grain is shaded from each board’s longitudinal axis, with slightly darker cut ends, fine growth rings and pores. This is procedural material shading, not an image texture. The 1:6 dovetail slope is recorded in the geometry parameters and validation.
+
+Material reference: [European beech, The Wood Database](https://www.wood-database.com/european-beech/), including the user-supplied face-grain sample and 1× endgrain photograph. Warm straw/pink-brown color, lengthwise grain, small ray flecks and endgrain bands are represented procedurally; reference photographs are not redistributed. Grain contrast is increased throughout the model at the user’s request.

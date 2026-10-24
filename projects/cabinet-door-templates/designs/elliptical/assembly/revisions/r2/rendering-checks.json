@@ -25,5 +25,11 @@
   "reset_hides_pivot_and_disables_xray": true,
   "mobile_viewport_width": 390,
   "mobile_horizontal_overflow": false,
-  "browser_console_errors": 0
+  "browser_console_errors": 0,
+  "material_reference": "https://www.wood-database.com/european-beech/",
+  "grain_review_views": [
+    "overall",
+    "hinge corner"
+  ],
+  "dovetail_slope": "1:6"
 }

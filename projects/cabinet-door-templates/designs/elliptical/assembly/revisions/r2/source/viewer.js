@@ -8,31 +8,61 @@ const scene=new THREE.Scene();scene.background=new THREE.Color('#f2f0e9');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setClearColor('#f2f0e9');renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;
 const camera=new THREE.PerspectiveCamera(34,1,.1,10000),controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.minDistance=45;controls.maxDistance=3500;
 scene.add(new THREE.HemisphereLight(0xffffff,0xa9a49b,1.8));const key=new THREE.DirectionalLight(0xfff9f1,2.5);key.position.set(-500,1100,900);key.castShadow=true;key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-800,right:800,top:800,bottom:-800,near:1,far:3000});key.shadow.bias=-.0001;key.shadow.normalBias=.25;key.target.position.set(W/2,H/2,0);scene.add(key.target);scene.add(key);const fill=new THREE.DirectionalLight(0xffffff,1.4);fill.position.set(600,350,-400);scene.add(fill);
-function wood(axis,index=0){
- const mat=new THREE.MeshStandardMaterial({color:0xd0ae90,roughness:.7,metalness:0,side:THREE.DoubleSide});
- mat.onBeforeCompile=s=>{s.uniforms.grainAxis={value:axis==='x'?0:1};s.uniforms.grainSeed={value:index*13.8};
+function wood(axis,index=0,species='wood'){
+ const mat=new THREE.MeshStandardMaterial({color:0xc99c78,roughness:.65,metalness:0,side:THREE.DoubleSide});
+ mat.onBeforeCompile=s=>{s.uniforms.grainAxis={value:axis==='x'?0:1};s.uniforms.grainSeed={value:index*13.8};s.uniforms.isBeech={value:species==='wood'?1:0};
  s.vertexShader='varying vec3 vTimberPos; varying vec3 vTimberNormal;\n'+s.vertexShader;
  s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvTimberPos=position; vTimberNormal=normal;');
- s.fragmentShader='varying vec3 vTimberPos; varying vec3 vTimberNormal; uniform float grainAxis; uniform float grainSeed;\n'+s.fragmentShader;
+ s.fragmentShader=`varying vec3 vTimberPos; varying vec3 vTimberNormal;
+ uniform float grainAxis; uniform float grainSeed; uniform float isBeech;
+ float timberHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+ float timberNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
+ return mix(mix(timberHash(i),timberHash(i+vec2(1,0)),f.x),mix(timberHash(i+vec2(0,1)),timberHash(i+vec2(1,1)),f.x),f.y);}
+ `+s.fragmentShader;
  s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
  vec3 a=abs(vTimberNormal); float across=grainAxis<0.5?vTimberPos.y:vTimberPos.x;
  float along=grainAxis<0.5?vTimberPos.x:vTimberPos.y;
  if(a.x>0.7 && grainAxis>0.5) across=vTimberPos.z;
  if(a.y>0.7 && grainAxis<0.5) across=vTimberPos.z;
- float drift=0.33*sin(along*.022+grainSeed)+.10*sin(along*.11+across*.12);
- float lines=sin((across+drift)*1.8+grainSeed)*.022+sin((across+drift)*.73+grainSeed)*.018;
- vec2 f=vec2(across*.26+grainSeed,along*.19); vec2 cell=floor(f);
- float hash=fract(sin(dot(cell,vec2(127.1,311.7)))*43758.5453);
- vec2 v=fract(f)-.5; float fleck=(1.0-smoothstep(.34,.5,abs(v.x)))*(1.0-smoothstep(.025,.09,abs(v.y+.15*sin(cell.x))))*step(.68,hash);
- diffuseColor.rgb*=1.0+lines-.075*fleck;
- `);};mat.customProgramCacheKey=()=>`beech-${axis}-${index}`;return mat;
+ // Multiscale, stretched noise avoids the previous regular woven pattern.
+ float slow=timberNoise(vec2(across*.07+grainSeed,along*.008));
+ float drift=(slow-.5)*2.8+.16*sin(along*.025+grainSeed);
+ float broad=timberNoise(vec2((across+drift)*.18+grainSeed,along*.016));
+ float fiber=timberNoise(vec2((across+drift)*2.3+grainSeed,along*.22));
+ float lines=(broad-.5)*.23+(fiber-.5)*.12;
+ float ringPhase=(across+drift)*2.0+grainSeed;
+ lines+=sin(ringPhase)*.035*(1.0-smoothstep(.5,2.0,fwidth(ringPhase)));
+ vec2 rayUV=vec2(across*.38+grainSeed,along*1.2);
+ float fleck=smoothstep(.65,.86,timberNoise(rayUV))*isBeech;
+ fleck*=1.0-smoothstep(.7,2.0,max(fwidth(rayUV.x),fwidth(rayUV.y)));
+ // Cut ends are perpendicular to the board's longitudinal grain. Keep the
+ // pattern in board coordinates so it follows each member when exploded/opened.
+ float endness=smoothstep(.75,.96,grainAxis<.5?a.x:a.y);
+ vec2 crossSection=vec2(grainAxis<.5?vTimberPos.y:vTimberPos.x,vTimberPos.z);
+ vec2 ringCenter=vec2(-90.0-grainSeed*.7,-170.0-grainSeed*.3);
+ vec2 radial=crossSection-ringCenter;
+ float radius=length(radial);
+ float rings=radius*2.65+.18*sin(atan(radial.y,radial.x)*12.0+grainSeed);
+ float ringAA=1.0-smoothstep(.45,1.8,fwidth(rings));
+ float latewood=pow(.5+.5*sin(rings),8.0)*ringAA;
+ vec2 poreCell=crossSection*2.5;
+ float poreHash=fract(sin(dot(floor(poreCell),vec2(127.1,311.7)))*43758.5453);
+ vec2 poreUV=fract(poreCell)-.5;
+ poreUV-=vec2(poreHash-.5,timberHash(floor(poreCell)+12.8)-.5)*.5;
+ float pores=(1.0-smoothstep(.07,.19,length(poreUV)))*step(.32,poreHash);
+ pores*=1.0-smoothstep(.3,1.0,max(fwidth(poreCell.x),fwidth(poreCell.y)));
+ float rayPhase=atan(radial.y,radial.x)*radius*.95;
+ float rays=pow(.5+.5*sin(rayPhase),18.0)*(1.0-smoothstep(.4,1.6,fwidth(rayPhase)));
+ float endTone=.88-.12*latewood-.06*pores+.045*rays;
+ diffuseColor.rgb*=mix(1.0+lines-.18*fleck,endTone,endness);
+ `);};mat.customProgramCacheKey=()=>`timber-${species}-${axis}-${index}`;return mat;
 }
 const mats={brass:new THREE.MeshStandardMaterial({color:0xb99551,metalness:.67,roughness:.32}),bronze:new THREE.MeshStandardMaterial({color:0x69543a,metalness:.32,roughness:.5}),steel:new THREE.MeshStandardMaterial({color:0x939da0,metalness:.7,roughness:.37}),cup:new THREE.MeshStandardMaterial({color:0x447c90,transparent:true,opacity:.65,metalness:.15,roughness:.5})};
 const groups={case:new THREE.Group(),door:new THREE.Group(),knifeDoor:new THREE.Group(),knifeFixed:new THREE.Group(),buttDoor:new THREE.Group(),buttFixed:new THREE.Group(),cup:new THREE.Group()};Object.values(groups).forEach(g=>scene.add(g));
 const meshes=[];
 for(const [i,part] of MODEL.parts.entries()){
  let geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(part.vertices.flat(),3));geo.setIndex(part.triangles.flat());const indexed=geo;geo=toCreasedNormals(indexed,Math.PI/6);indexed.dispose();
- const mat=['wood','walnut'].includes(part.material)?wood(part.grain,i):mats[part.material];if(part.material==='walnut')mat.color.setHex(0x624129);const mesh=new THREE.Mesh(geo,mat);mesh.castShadow=true;mesh.receiveShadow=true;mesh.name=part.name;mesh.userData=part;groups[part.group].add(mesh);meshes.push(mesh);
+ const mat=['wood','walnut'].includes(part.material)?wood(part.grain,i,part.material):mats[part.material];if(part.material==='walnut')mat.color.setHex(0x624129);const mesh=new THREE.Mesh(geo,mat);mesh.castShadow=true;mesh.receiveShadow=true;mesh.name=part.name;mesh.userData=part;groups[part.group].add(mesh);meshes.push(mesh);
  const edge=new THREE.LineSegments(new THREE.EdgesGeometry(geo,25),new THREE.LineBasicMaterial({color:part.material==='wood'?0x887354:0x695735,transparent:true,opacity:.43}));mesh.add(edge);
 }
 function block(group,name,x,y,z,w,h,dep,material){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,dep),material);m.position.set(x+w/2,y+h/2,z+dep/2);m.name=name;group.add(m);return m;}

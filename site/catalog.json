@@ -198,7 +198,7 @@
         "revision": "R2",
         "fabrication": "woodworking",
         "status": "Geometry checked; hardware provisional",
-        "description": "Beech cabinet with a walnut panel, recessed stiles, quarter-inch panel grooves and three through-dovetails at each corner. Six-inch depth includes the overlay door and excludes the projecting knob. Vertical sides carry the tails; top and bottom carry the pins.",
+        "description": "Beech cabinet with a walnut panel, recessed stiles, quarter-inch panel grooves and three 1:6 through-dovetails at each corner. Six-inch depth includes the overlay door and excludes the projecting knob. Vertical sides carry the tails; top and bottom carry the pins.",
         "preview": "assets/cabinet-assembly-r2.png",
         "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r2/cabinet-r2-preview.stl",
         "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r2/index.html",
@@ -233,7 +233,7 @@
           ],
           [
             "Case dovetails",
-            "3 per corner; 12 total"
+            "3 per corner; 12 total; 1:6 slope"
           ],
           [
             "Hardware",

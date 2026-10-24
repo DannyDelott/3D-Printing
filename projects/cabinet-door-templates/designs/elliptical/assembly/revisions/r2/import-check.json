@@ -66,7 +66,7 @@
       ]
     },
     {
-      "volume_mm3": 1660838.0,
+      "volume_mm3": 1662566.0,
       "facets": 108,
       "dimensions_mm": [
         19.049999,
@@ -75,8 +75,8 @@
       ]
     },
     {
-      "volume_mm3": 1659064.375,
-      "facets": 2720,
+      "volume_mm3": 1660734.625,
+      "facets": 3188,
       "dimensions_mm": [
         19.050018,
         685.799988,
@@ -84,8 +84,8 @@
       ]
     },
     {
-      "volume_mm3": 1082464.5,
-      "facets": 312,
+      "volume_mm3": 1080762.75,
+      "facets": 246,
       "dimensions_mm": [
         457.200012,
         19.049999,
@@ -93,8 +93,8 @@
       ]
     },
     {
-      "volume_mm3": 1082463.75,
-      "facets": 312,
+      "volume_mm3": 1080762.375,
+      "facets": 246,
       "dimensions_mm": [
         457.200012,
         19.049988,
