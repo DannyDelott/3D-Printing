@@ -1,0 +1,35 @@
+{
+  "options": [
+    {
+      "id": "a",
+      "panel_count": 1,
+      "back_absent": true,
+      "cleat_parts": 2,
+      "opening_checked_degrees": 110,
+      "panel_visibility_toggle": true,
+      "download_matches_option": true
+    },
+    {
+      "id": "b",
+      "panel_count": 1,
+      "back_absent": true,
+      "cleat_parts": 2,
+      "opening_checked_degrees": 110,
+      "panel_visibility_toggle": true,
+      "download_matches_option": true
+    },
+    {
+      "id": "c",
+      "panel_count": 2,
+      "back_absent": true,
+      "cleat_parts": 2,
+      "opening_checked_degrees": 110,
+      "panel_visibility_toggle": true,
+      "download_matches_option": true
+    }
+  ],
+  "mobile_width": 390,
+  "mobile_horizontal_overflow": false,
+  "browser_console_errors": 0,
+  "reference_images": "Equal-scale front screenshots of the actual CAD viewer"
+}

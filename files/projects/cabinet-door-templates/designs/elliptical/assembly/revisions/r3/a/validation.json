@@ -1,0 +1,76 @@
+{
+  "revision": "R3",
+  "option": "a",
+  "units": "mm",
+  "case_and_door_size": [
+    457.2,
+    685.8000000000001,
+    152.4000001
+  ],
+  "depth_including_knob": 168.275,
+  "knob_projection_from_stile": 19.05,
+  "tail_boards": "vertical sides",
+  "pin_boards": "top and bottom",
+  "case_depth": 130.35,
+  "open_back": true,
+  "interior_depth_gain_below_cleat": 19.05,
+  "cleat_thickness": 19.05,
+  "cleat_height": 57.15,
+  "cleat_bevel_degrees": 45,
+  "cleat_overlap_mm3": 0,
+  "panel_count": 1,
+  "stile_shadow_line": 3.1750000000000007,
+  "groove_width": 6.35,
+  "groove_depth": 6.35,
+  "panel_thickness": 6.1,
+  "panel_edge_clearance": 2.0,
+  "panel_engagement": 4.35,
+  "dovetails_per_corner": 3,
+  "dovetail_slope": "1:6",
+  "total_tails": 12,
+  "part_count": 19,
+  "step_reimport_valid": true,
+  "all_meshes_watertight": true,
+  "panel_frame_overlap_mm3": 0,
+  "dovetail_overlap_mm3": 0,
+  "hinge_sweep_samples": [
+    {
+      "angle": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 15,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 30,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 45,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 60,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 75,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 100,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 110,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
+  "assumptions": "Door proportions are alternatives, not a selected replacement. Walnut; 1/4 inch groove depth; 6.1 mm panel; 2 mm panel edge clearance; 3 mm face gap; 1/16 inch side reveals; top cleat height 2 1/4 inches, 3/4 inch thick, 45 degree bevel; 1 1/2 inch stone knob diameter and 3/4 inch projection. Cleat fasteners, anti-lift retention and frame corner/divider joinery unspecified."
+}
