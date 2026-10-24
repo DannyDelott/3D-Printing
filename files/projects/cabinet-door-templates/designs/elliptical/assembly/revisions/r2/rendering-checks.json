@@ -1,0 +1,29 @@
+{
+  "planar_normals": [
+    {
+      "part": "Case left",
+      "checked": 52,
+      "incorrect": 0
+    },
+    {
+      "part": "Case right",
+      "checked": 52,
+      "incorrect": 0
+    },
+    {
+      "part": "Walnut panel",
+      "checked": 48,
+      "incorrect": 0
+    }
+  ],
+  "wood_opaque": true,
+  "door_controls_checked_degrees": [
+    0,
+    90,
+    110
+  ],
+  "reset_hides_pivot_and_disables_xray": true,
+  "mobile_viewport_width": 390,
+  "mobile_horizontal_overflow": false,
+  "browser_console_errors": 0
+}

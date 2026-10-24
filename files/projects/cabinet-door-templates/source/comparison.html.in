@@ -50,6 +50,7 @@
   @media(max-width:600px) { body { padding: 24px 16px; } #component-list { grid-template-columns:1fr; } .component svg { height:45px; } .history { grid-template-columns:1fr; } button { padding: 10px; } }
 </style>
 <h1>Cabinet door templates.</h1>
+<p class="small"><a href="designs/elliptical/assembly/revisions/r2/index.html">Cabinet assembly R2 · 18″ × 27″ × 6″ · beech and walnut</a></p>
 <p><b>18″ × 27″ cabinet</b> · <b>15⅞″ × 27″ door</b> · <b>2¼″ stiles</b>. Flush at the top and bottom; inset at the sides.</p>
 <p class="small"><a href="#design-library">Browse all designs and revisions</a></p>
 <nav aria-label="Design selection">
