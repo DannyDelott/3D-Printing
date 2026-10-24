@@ -1,0 +1,12 @@
+[
+  {
+    "option": "a",
+    "non_panel_parts_match_r3_a": true,
+    "boards": 3
+  },
+  {
+    "option": "b",
+    "non_panel_parts_match_r3_a": true,
+    "boards": 5
+  }
+]

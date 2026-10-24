@@ -1,0 +1,87 @@
+{
+  "revision": "R4",
+  "option": "b",
+  "units": "mm",
+  "case_and_door_size": [
+    457.2,
+    685.8000000000001,
+    152.4000001
+  ],
+  "depth_including_knob": 168.275,
+  "knob_projection_from_stile": 19.05,
+  "tail_boards": "vertical sides",
+  "pin_boards": "top and bottom",
+  "case_depth": 130.35,
+  "open_back": true,
+  "interior_depth_gain_below_cleat": 19.05,
+  "cleat_thickness": 19.05,
+  "cleat_height": 57.15,
+  "cleat_bevel_degrees": 45,
+  "cleat_overlap_mm3": 0,
+  "panel_count": 5,
+  "vertical_seams": [
+    133.35,
+    209.54999999999998,
+    247.65,
+    323.85
+  ],
+  "face_gap": 1.0,
+  "lap_length": 6.35,
+  "lap_remaining_overlap": 5.699999999999999,
+  "lap_face_clearance": 0.1,
+  "board_overlap_mm3": 0,
+  "stile_shadow_line": 3.1750000000000007,
+  "groove_width": 6.35,
+  "groove_depth": 6.35,
+  "panel_thickness": 6.1,
+  "panel_edge_clearance": 2.0,
+  "panel_engagement": 4.35,
+  "dovetails_per_corner": 3,
+  "dovetail_slope": "1:6",
+  "total_tails": 12,
+  "part_count": 23,
+  "step_reimport_valid": true,
+  "all_meshes_watertight": true,
+  "panel_frame_overlap_mm3": 0,
+  "dovetail_overlap_mm3": 0,
+  "hinge_sweep_samples": [
+    {
+      "angle": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 15,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 30,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 45,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 60,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 75,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 100,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 110,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
+  "assumptions": "Curly maple figure and finish illustrative. Panel stock remains assumed 6.10 mm in 1/4-inch grooves. Vertical board layout is an alternative; 1 mm face seams, 6.35 mm half-lap length, 0.10 mm lap face clearance and 0.15 mm shoulder clearance are design allowances, not verified seasonal movement or machining tolerances. Thin lap durability, board retention, rail/stile joinery, cleat fixings and final hardware remain unverified."
+}

@@ -606,13 +606,24 @@
     "design_options": {
       "revision": "r3",
       "path": "assembly/revisions/r3",
-      "selected_option": null,
+      "selected_option": "a",
       "options": [
         "a",
         "b",
         "c"
       ],
       "approved_assembly_remains": "r2"
+    },
+    "preferred_rail_profile": "r3/a",
+    "panel_options": {
+      "revision": "r4",
+      "path": "assembly/revisions/r4",
+      "material": "Maple; curly and quilted figure options",
+      "selected_option": null,
+      "options": [
+        "a",
+        "b"
+      ]
     }
   }
 }
