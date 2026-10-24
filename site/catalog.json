@@ -262,6 +262,90 @@
             "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r2/index.html"
           ]
         ]
+      },
+      {
+        "id": "door-options-r3",
+        "group": "Cabinet",
+        "label": "Door options",
+        "revision": "R3",
+        "fabrication": "woodworking",
+        "status": "Three alternatives; geometry checked",
+        "description": "Three open-back beech cabinet alternatives with lighter asymmetric rails, one or two walnut panels, a recessed French cleat and a tiger\u2019s-eye-style knob. New rail heights, cleat and divider proportions use a 3/4-inch module. Approved R2 remains unchanged.",
+        "preview": "assets/cabinet-door-options-r3.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/a/cabinet-r3-preview.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/index.html",
+        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/README.md",
+        "source": [
+          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/source/build_model.py"
+        ],
+        "dimensions": [
+          [
+            "Case + door W \u00d7 H \u00d7 D",
+            "457.2 \u00d7 685.8 \u00d7 152.4 mm \u00b7 18 \u00d7 27 \u00d7 6 in"
+          ],
+          [
+            "A \u00b7 Lighter curves",
+            "Rail ends 57.15 / 114.3 mm \u00b7 2.25 / 4.5 in; one panel"
+          ],
+          [
+            "B \u00b7 Slim curves",
+            "Rail ends 38.1 / 95.25 mm \u00b7 1.5 / 3.75 in; one panel"
+          ],
+          [
+            "C \u00b7 Divided panel",
+            "A rails; 19.05 mm / 0.75 in crossbar at 228.6 mm / 9 in"
+          ],
+          [
+            "Stock",
+            "Case / rails 19.05 mm / 0.75 in; stiles 15.875 mm / 0.625 in"
+          ],
+          [
+            "Open-back depth gain",
+            "19.05 mm \u00b7 0.75 in below the top cleat"
+          ],
+          [
+            "Case joinery",
+            "Three 1:6 tails per corner; tails on vertical sides"
+          ],
+          [
+            "Knob (assumed)",
+            "38.1 mm / 1.5 in diameter; 19.05 mm / 0.75 in projection"
+          ]
+        ],
+        "downloads": [
+          [
+            "Option A \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/a/cabinet-r3.3mf"
+          ],
+          [
+            "Option A \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/a/cabinet-r3.step"
+          ],
+          [
+            "Option B \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/b/cabinet-r3.3mf"
+          ],
+          [
+            "Option B \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/b/cabinet-r3.step"
+          ],
+          [
+            "Option C \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/c/cabinet-r3.3mf"
+          ],
+          [
+            "Option C \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/c/cabinet-r3.step"
+          ]
+        ],
+        "notes": "Cleat attachment, wall fasteners, anti-lift retention, door joinery and final hardware remain unspecified. Stone dimensions and panel fit are assumptions. Each option has independent CAD and geometry checks.",
+        "print": "Full-size woodworking reference assemblies, not printer layouts.",
+        "related": [
+          [
+            "Compare the three interactive door options",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r3/index.html"
+          ]
+        ]
       }
     ]
   },

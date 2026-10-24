@@ -602,6 +602,17 @@
     "material": "European quartersawn beech with walnut panel",
     "status": "Geometry checked; hardware provisional",
     "template_compatibility": "Separate wider overlay assembly. Existing rail/stile template selections unchanged.",
-    "dovetail_slope": "1:6"
+    "dovetail_slope": "1:6",
+    "design_options": {
+      "revision": "r3",
+      "path": "assembly/revisions/r3",
+      "selected_option": null,
+      "options": [
+        "a",
+        "b",
+        "c"
+      ],
+      "approved_assembly_remains": "r2"
+    }
   }
 }
