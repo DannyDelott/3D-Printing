@@ -1,0 +1,51 @@
+{
+  "revision": "R1",
+  "units": "mm",
+  "door_revision": "R7 f",
+  "crown": 19.05,
+  "target_radius": 1362.1411458333334,
+  "guide_radius": 1349.110499522642,
+  "roller_radius": 11.0,
+  "roller_spacing": 100.0,
+  "bridge_floor_thickness": 6.35,
+  "truck_top_above_axles": 22.0,
+  "bit_projection_below_factory_base": 25.4,
+  "rail_back_height": 50.8,
+  "stile_back_height": 53.974999999999994,
+  "panel_finished_back_height": 63.75,
+  "rail_length": 600,
+  "segment_length": 150,
+  "rail_thickness": 18,
+  "rail_centers_y": [
+    -400,
+    400
+  ],
+  "bridge_floor": [
+    220,
+    900,
+    6.35
+  ],
+  "bridge_ribs": [
+    18,
+    900,
+    70
+  ],
+  "bridge_slot": [
+    28,
+    740
+  ],
+  "bearing": "608: 22 OD \u00d7 8 ID \u00d7 7 wide; four required",
+  "bearing_spacers": "Eight steel inner-race shims: 8.2 mm ID, 11.5 mm OD, 0.5 mm thick; verify actual bearing inner-race land",
+  "printer_assumption": "Parts fit a 180 \u00d7 180 mm bed individually; printer model unconfirmed",
+  "material": "PLA",
+  "bit": "Proposed Freud 16-104 / 16-10425P: 19.05 mm diameter, 6.35 mm shank, approximately 12.7 mm cutting height",
+  "router": "Ryobi ONE+ brushless; PBLRR01 manual consulted, exact user model unconfirmed",
+  "critical_unverified": [
+    "25.4 mm bit projection with full manufacturer-required collet engagement",
+    "Actual bridge plywood thickness",
+    "Router base and dust-port clearance within 184 mm lane",
+    "Printed fit, bearing retention, assembled stiffness and workholding",
+    "Panel core layup and depth allowance"
+  ],
+  "datum": "Z=0 is the top of the guide backers at the final cut setting"
+}

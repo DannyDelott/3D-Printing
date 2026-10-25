@@ -1,0 +1,250 @@
+{
+  "motion_collision_check": {
+    "angles_degrees": [
+      -9.7,
+      -5,
+      0,
+      5,
+      9.7
+    ],
+    "positive_volume_collisions": [],
+    "scope": "Bridge and tool at centered longitudinal position against modeled fixed parts; excludes unmodeled clamps, bolts and rough stock"
+  },
+  "parts": {
+    "guide-1": {
+      "quantity": 2,
+      "size": [
+        150.0,
+        61.15459438821667,
+        18.000000000000007
+      ],
+      "volume_mm3": 87949.35450193186,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "guide-2": {
+      "quantity": 2,
+      "size": [
+        150.0,
+        69.51935368930859,
+        18.00000000000002
+      ],
+      "volume_mm3": 98870.7782111793,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "guide-3": {
+      "quantity": 2,
+      "size": [
+        150.0,
+        69.51935368930859,
+        18.00000000000001
+      ],
+      "volume_mm3": 98870.7782111793,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "guide-4": {
+      "quantity": 2,
+      "size": [
+        150.0,
+        61.15459438821667,
+        18.000000000000007
+      ],
+      "volume_mm3": 87949.35450193184,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "rail-foot": {
+      "quantity": 16,
+      "size": [
+        35.0,
+        70.0,
+        22.0
+      ],
+      "volume_mm3": 20620.643563945585,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "bridge-truck": {
+      "quantity": 2,
+      "size": [
+        140.0,
+        60.0,
+        42.0
+      ],
+      "volume_mm3": 113555.54312112868,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "roller-fit-coupon": {
+      "quantity": 1,
+      "size": [
+        30.0,
+        30.0,
+        27.000000000000007
+      ],
+      "volume_mm3": 13002.514887329697,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "guide-fit-coupon": {
+      "quantity": 1,
+      "size": [
+        40.0,
+        69.51935368930859,
+        18.000000000000014
+      ],
+      "volume_mm3": 49636.04101244222,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "alignment-pin": {
+      "quantity": 6,
+      "size": [
+        5.9,
+        5.9,
+        22.0
+      ],
+      "volume_mm3": 601.4736214930339,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "projection-gauge": {
+      "quantity": 1,
+      "size": [
+        70.0,
+        30.0,
+        25.4
+      ],
+      "volume_mm3": 38709.6,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "travel-stop": {
+      "quantity": 4,
+      "size": [
+        30.0,
+        70.0,
+        73.0
+      ],
+      "volume_mm3": 23045.530995059227,
+      "watertight": true,
+      "step_reimport": true
+    }
+  },
+  "all_parts_valid": true,
+  "all_meshes_watertight": true,
+  "all_step_reimports_valid": true,
+  "kinematics": [
+    {
+      "angle": -10,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -9,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -8,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -7,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -6,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -5,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -4,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -3,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -2,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": -1,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 0,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 1,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 2,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 3,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 4,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 5,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 6,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 7,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 8,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 9,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    },
+    {
+      "angle": 10,
+      "tip_radius_mm": 1362.1411458333334,
+      "roller_contact_error_mm": 0
+    }
+  ],
+  "physical_validation": "Not performed. Print fit coupon and foot first; check router reach and bridge dimensions before powered use.",
+  "guide_segments_per_rail": 4,
+  "rails": 2,
+  "largest_print_xy": 150.0
+}

@@ -1,0 +1,167 @@
+{
+  "alignment-pin": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 5.899338245391846,
+      "height": 22.0,
+      "width": 5.900000095367432,
+      "x": 40.0,
+      "y": 40.00033187866211,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 0.806809663772583,
+    "seconds": 805.0723266601562,
+    "source_sha256": "9d6387b60941e7070f337e94836b11e0d998e1087f8819b550f2581669621988"
+  },
+  "bridge-truck": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 60.0,
+      "height": 42.0,
+      "width": 140.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 89.81578063964844,
+    "seconds": 8461.7333984375,
+    "source_sha256": "cca6e845519ed7632f1eba5507d127a0e0ba07d8dcbddbee4050b42c393b31e7"
+  },
+  "guide-1": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 61.15459442138672,
+      "height": 18.0,
+      "width": 150.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 69.42250061035156,
+    "seconds": 6653.28369140625,
+    "source_sha256": "7318411d0f7b12b4ba7ab8f85fb9ad049f34a92fdd0c573a5d18850a45188427"
+  },
+  "guide-2": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.51935577392578,
+      "height": 18.0,
+      "width": 150.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 78.1166763305664,
+    "seconds": 7362.35107421875,
+    "source_sha256": "a26345b50242c174c00b4f5be43b0edbb0d750ec427f1bac9acfe6900702ac4c"
+  },
+  "guide-3": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.51935577392578,
+      "height": 18.0,
+      "width": 150.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 78.13247680664062,
+    "seconds": 7328.6572265625,
+    "source_sha256": "4a6c70c96784814b1c377157f74bf79662d0db79a544821d5d4aac06853a1c6a"
+  },
+  "guide-4": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 61.15459442138672,
+      "height": 18.0,
+      "width": 150.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 69.41928100585938,
+    "seconds": 6660.02587890625,
+    "source_sha256": "a05d62ebd5b83f9c64de62d9f971b1fba7ca19de8fa36073c08e30f2a31f47d7"
+  },
+  "guide-fit-coupon": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.51935577392578,
+      "height": 18.0,
+      "width": 40.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 31.672266006469727,
+    "seconds": 3534.6796875,
+    "source_sha256": "bd8bb9b61207b59c5bd24abad6c985ce5cc9b8eaf89e5f451387af6ace106025"
+  },
+  "projection-gauge": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 30.0,
+      "height": 25.399999618530273,
+      "width": 70.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 29.716432571411133,
+    "seconds": 2996.386962890625,
+    "source_sha256": "8efda1db9a89b4191c81a78e77af9fe269434531fcb33e20c352631dbc74ae5c"
+  },
+  "rail-foot": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 70.0,
+      "height": 22.0,
+      "width": 35.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 18.45011329650879,
+    "seconds": 2093.883544921875,
+    "source_sha256": "859aa24d064821e8eb70f680a16ae6a731dc3b6c20064b27325a5f14724524c4"
+  },
+  "roller-fit-coupon": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 30.0,
+      "height": 27.0,
+      "width": 30.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 11.445535659790039,
+    "seconds": 1627.379638671875,
+    "source_sha256": "6dc5edd734ff3ea0cddfdc52a8877bc826af9302cf62157493773ebe26043942"
+  },
+  "travel-stop": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 70.0,
+      "height": 73.0,
+      "width": 30.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 19.442264556884766,
+    "seconds": 3042.7783203125,
+    "source_sha256": "5579f9173942ecdea747ab4ab11da239faade5aaf9fa8d5294c5209c81c7661e"
+  }
+}
