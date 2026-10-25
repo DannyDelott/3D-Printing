@@ -616,14 +616,16 @@
     },
     "preferred_rail_profile": "r3/a",
     "panel_options": {
-      "revision": "r4",
-      "path": "assembly/revisions/r4",
-      "material": "Maple; curly and quilted figure options",
+      "revision": "r5",
+      "path": "assembly/revisions/r5",
+      "material": "3/32-inch quilted-maple veneer over core",
       "selected_option": null,
       "options": [
         "a",
         "b"
-      ]
+      ],
+      "perimeter_channel_width_mm": 1.5875,
+      "perimeter_channel_depth_mm": 0.396875
     }
   }
 }

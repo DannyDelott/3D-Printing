@@ -1,0 +1,21 @@
+{
+  "layouts": [
+    "a",
+    "b"
+  ],
+  "material_options": [
+    "quilted",
+    "curly"
+  ],
+  "panel_count": 3,
+  "rendered_planar_normals": "Case left/right and all three panels: no incorrect normals; opaque",
+  "panel_hide_control": true,
+  "door_open_degrees": 110,
+  "mobile_viewport": 390,
+  "mobile_scroll_width": 375,
+  "console_errors": 0,
+  "plan_section": "Actual mesh sections at case midheight",
+  "veneer_mm": 2.38125,
+  "channel_width_mm": 1.5875,
+  "channel_depth_mm": 0.396875
+}

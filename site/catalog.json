@@ -422,6 +422,86 @@
             "https://www.wood-database.com/curly-maple/"
           ]
         ]
+      },
+      {
+        "id": "layered-maple-r5",
+        "group": "Cabinet",
+        "label": "Layered maple",
+        "revision": "R5",
+        "fabrication": "woodworking",
+        "status": "Geometry checked; panel joinery provisional",
+        "description": "Three veneered panels with a broad raised center and narrower sides. Finished beech follows the supplied board scan; a fine channel outlines the curved panel opening. Compare with the flat three-panel layout.",
+        "preview": "assets/cabinet-layered-maple-r5.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5-preview.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/index.html",
+        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/README.md",
+        "source": [
+          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/source/build_model.py"
+        ],
+        "dimensions": [
+          [
+            "Case + door W \u00d7 H \u00d7 D",
+            "457.2 \u00d7 685.8 \u00d7 152.4 mm \u00b7 18 \u00d7 27 \u00d7 6 in"
+          ],
+          [
+            "Rail ends retained",
+            "57.15 / 114.3 mm \u00b7 2.25 / 4.5 in"
+          ],
+          [
+            "Center bay (proposed)",
+            "152.4 mm / 6 in; side bays approximately 3.75 in before fitting"
+          ],
+          [
+            "Center rise (proposed)",
+            "3.175 mm / 0.125 in"
+          ],
+          [
+            "Perimeter channel",
+            "1.5875 mm / 0.0625 in wide \u00d7 0.396875 mm / 0.015625 in deep"
+          ],
+          [
+            "Face veneer (confirmed)",
+            "2.38125 mm / 0.09375 in; veneer over core"
+          ],
+          [
+            "Veneer below channel",
+            "1.984375 mm / 0.078125 in"
+          ],
+          [
+            "Panel envelope (assumed)",
+            "6.10 mm at grooves/laps; 9.275 mm at raised center"
+          ],
+          [
+            "Case joinery",
+            "Three 1:6 tails per corner; tails on vertical sides"
+          ]
+        ],
+        "downloads": [
+          [
+            "Flat panel \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/a/cabinet-r5.3mf"
+          ],
+          [
+            "Flat panel \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/a/cabinet-r5.step"
+          ],
+          [
+            "Broad raised center \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5.3mf"
+          ],
+          [
+            "Broad raised center \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5.step"
+          ]
+        ],
+        "notes": "Confirmed channel and veneer dimensions. Center proportions and relief are proposed. Finished composite envelopes are modeled; core, backing veneer and step-edge lipping remain unspecified. Panel retention, thin laps and hardware need physical verification.",
+        "print": "Full-size woodworking reference assemblies, not print layouts.",
+        "related": [
+          [
+            "Compare the layered and flat panels",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/index.html?option=b&wood=quilted"
+          ]
+        ]
       }
     ]
   },
