@@ -46,11 +46,26 @@ def cyl_y(x,y,z,r,h):return cq.Solid.makeCylinder(r,h,cq.Vector(x,y,z),cq.Vector
 # Vertical sides carry three through-tails at each end. Top/bottom are pin boards.
 case_left=box(0,S,-D,S,H-2*S,D);case_right=box(W-S,S,-D,S,H-2*S,D)
 case_h=[box(0,0,-D,W,S,D),box(0,H-S,-D,W,S,D)];tails=[]
+count=p['tails_per_corner'];pitch=D/count;neck=D/6;flare=S/p['dovetail_slope']
+old_pin_narrow=pitch-neck-2*flare
+pin_narrow=old_pin_narrow*p['full_pin_narrow_width_scale']
+spread=(old_pin_narrow-pin_narrow)/2
+profiles=[]
+for i in range(count):
+    c=-D+(i+.5)*pitch
+    lo=c-neck/2-(spread if i>0 else 0)
+    hi=c+neck/2+(spread if i<count-1 else 0)
+    profiles.append({'root':[lo,hi],'tip':[lo-flare,hi+flare]})
+full_pins=[profiles[i+1]['tip'][0]-profiles[i]['tip'][1] for i in range(count-1)]
+outer_pins=[profiles[0]['tip'][0]+D,-profiles[-1]['tip'][1]]
+assert all(abs(w-pin_narrow)<1e-8 for w in full_pins)
+assert all(abs(w-old_pin_narrow/2)<1e-8 for w in outer_pins)
+assert all(abs((t['root'][0]-t['tip'][0])-flare)<1e-8 for t in profiles)
 for side,x in [('left',0),('right',W-S)]:
     for j,top in enumerate([False,True]):
         for i in range(p['tails_per_corner']):
-            c=-D+(i+.5)*D/p['tails_per_corner'];neck=D/6;flare=S/p['dovetail_slope']
-            yz=[(S,c-neck/2),(0,c-neck/2-flare),(0,c+neck/2+flare),(S,c+neck/2)]
+            lo,hi=profiles[i]['root']
+            yz=[(S,lo),(0,lo-flare),(0,hi+flare),(S,hi)]
             if top:yz=[(H-y,z) for y,z in yz][::-1]
             wire=cq.Wire.makePolygon([cq.Vector(x,y,z) for y,z in yz],close=True)
             tail=cq.Solid.extrudeLinear(wire,[],cq.Vector(S,0,0));tails.append(tail)
@@ -213,7 +228,7 @@ samples=[]
 for angle in [0,15,30,45,60,75,90,100,110]:
     volume=moving.rotate((PX,0,PZ),(PX,1,PZ),angle).intersect(fixed).Volume();samples.append({'angle':angle,'overlap_mm3':volume});assert volume<1e-4,(angle,volume)
 reimport=cq.importers.importStep(str(OUT/'cabinet-r5.step')).val();assert reimport.isValid() and len(reimport.Solids())==len(parts)
-validation={'revision':'R5','option':p['option'],'units':'mm','case_and_door_size':[bb.xlen,bb.ylen,bb.zlen],'depth_including_knob':D+G+ST+p['knob_projection'],'knob_projection_from_stile':p['knob_projection'],'tail_boards':'vertical sides','pin_boards':'top and bottom','case_depth':D,'open_back':True,'interior_depth_gain_below_cleat':S,'cleat_thickness':CT,'cleat_height':CH,'cleat_bevel_degrees':45,'cleat_overlap_mm3':0,'center_rise':raised_height,'center_max_thickness':p['panel_thickness']+raised_height,'field_bevel_width':0,'perimeter_channel_width':channel_width,'perimeter_channel_depth':channel_depth,'channel_removed_mm3':removed,'veneer_thickness':p['veneer_thickness'],'remaining_veneer_under_channel':p['veneer_thickness']-channel_depth,'panel_construction':p['panel_construction'],'rail_face_z':G+T,'stile_face_z':G+ST,'center_face_z':bounds.zmax+raised_height,'side_panel_face_z':bounds.zmax,'panel_count':len(panels),'vertical_seams':seams,'face_gap':p['seam_gap'],'lap_length':p['lap_width'],'lap_remaining_overlap':p['lap_width']-p['lap_edge_clearance']-p['seam_gap']/2,'lap_face_clearance':p['lap_face_clearance'],'board_overlap_mm3':0,'stile_shadow_line':T-ST,'groove_width':GW,'groove_depth':GD,'panel_thickness':p['panel_thickness'],'panel_edge_clearance':p['panel_edge_clearance'],'panel_engagement':GD-p['panel_edge_clearance'],'dovetails_per_corner':3,'dovetail_slope':'1:'+str(p['dovetail_slope']),'total_tails':len(tails),'part_count':len(parts),'step_reimport_valid':True,'all_meshes_watertight':True,'panel_frame_overlap_mm3':0,'dovetail_overlap_mm3':0,'hinge_sweep_samples':samples,'hardware':'Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated','assumptions':p['provenance']['assumptions']}
+validation={'revision':'R5','option':p['option'],'units':'mm','case_and_door_size':[bb.xlen,bb.ylen,bb.zlen],'depth_including_knob':D+G+ST+p['knob_projection'],'knob_projection_from_stile':p['knob_projection'],'tail_boards':'vertical sides','pin_boards':'top and bottom','case_depth':D,'open_back':True,'interior_depth_gain_below_cleat':S,'cleat_thickness':CT,'cleat_height':CH,'cleat_bevel_degrees':45,'cleat_overlap_mm3':0,'center_rise':raised_height,'center_max_thickness':p['panel_thickness']+raised_height,'field_bevel_width':0,'perimeter_channel_width':channel_width,'perimeter_channel_depth':channel_depth,'channel_removed_mm3':removed,'veneer_thickness':p['veneer_thickness'],'remaining_veneer_under_channel':p['veneer_thickness']-channel_depth,'panel_construction':p['panel_construction'],'rail_face_z':G+T,'stile_face_z':G+ST,'center_face_z':bounds.zmax+raised_height,'side_panel_face_z':bounds.zmax,'panel_count':len(panels),'vertical_seams':seams,'face_gap':p['seam_gap'],'lap_length':p['lap_width'],'lap_remaining_overlap':p['lap_width']-p['lap_edge_clearance']-p['seam_gap']/2,'lap_face_clearance':p['lap_face_clearance'],'board_overlap_mm3':0,'stile_shadow_line':T-ST,'groove_width':GW,'groove_depth':GD,'panel_thickness':p['panel_thickness'],'panel_edge_clearance':p['panel_edge_clearance'],'panel_engagement':GD-p['panel_edge_clearance'],'full_pin_narrow_width_before':old_pin_narrow,'full_pin_narrow_widths':full_pins,'full_pin_wide_width':pin_narrow+2*flare,'outside_half_pin_narrow_widths':outer_pins,'outside_half_pins_unchanged':True,'tail_root_widths':[t['root'][1]-t['root'][0] for t in profiles],'tail_tip_widths':[t['tip'][1]-t['tip'][0] for t in profiles],'dovetails_per_corner':3,'dovetail_slope':'1:'+str(p['dovetail_slope']),'total_tails':len(tails),'part_count':len(parts),'step_reimport_valid':True,'all_meshes_watertight':True,'panel_frame_overlap_mm3':0,'dovetail_overlap_mm3':0,'hinge_sweep_samples':samples,'hardware':'Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated','assumptions':p['provenance']['assumptions']}
 (OUT/'validation.json').write_text(json.dumps(validation,indent=2)+'\n')
 (OUT/'model-data.js').write_text('export const MODEL = '+json.dumps({'parameters':p,'derived':{'midheight_sections':sections,'doorWidth':DW,'axisX':PX,'axisZ':PZ,'grooveZ':G+GZ,'ellipseA':A,'ellipseB':B,'ellipseCy':CY},'parts':meshes,'validation':validation},separators=(',',':'))+';\n')
 print(json.dumps(validation,indent=2))

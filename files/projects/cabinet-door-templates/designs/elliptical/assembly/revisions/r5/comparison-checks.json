@@ -1,10 +1,16 @@
 {
   "a": {
-    "nonpanel_parts_match_r4_a": true,
-    "maximum_volume_difference_mm3": 0.0
+    "door_frame_cleat_hardware_match_r4": true,
+    "case_joint_total_volume_preserved": true,
+    "case_volume_difference_mm3": 0.0,
+    "outside_half_pins_unchanged": true,
+    "full_pin_narrow_width_scale": 0.5
   },
   "b": {
-    "nonpanel_parts_match_r4_a": true,
-    "maximum_volume_difference_mm3": 0.0
+    "door_frame_cleat_hardware_match_r4": true,
+    "case_joint_total_volume_preserved": true,
+    "case_volume_difference_mm3": 0.0,
+    "outside_half_pins_unchanged": true,
+    "full_pin_narrow_width_scale": 0.5
   }
 }

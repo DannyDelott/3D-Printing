@@ -28,6 +28,8 @@
     143.43208571965806,
     477.26991632930003
   ],
+  "veneer_thickness": 2.38125,
+  "remaining_veneer_under_channel": 1.984375,
   "panel_construction": "Quilted-maple veneer over core; CAD represents finished composite envelope",
   "rail_face_z": 22.05,
   "stile_face_z": 18.875,
@@ -49,6 +51,27 @@
   "panel_thickness": 6.1,
   "panel_edge_clearance": 2.0,
   "panel_engagement": 4.35,
+  "full_pin_narrow_width_before": 15.374999999999996,
+  "full_pin_narrow_widths": [
+    7.687500000000014,
+    7.6875
+  ],
+  "full_pin_wide_width": 14.037499999999998,
+  "outside_half_pin_narrow_widths": [
+    7.6875,
+    7.687500000000009
+  ],
+  "outside_half_pins_unchanged": true,
+  "tail_root_widths": [
+    25.568749999999994,
+    29.412499999999994,
+    25.568749999999994
+  ],
+  "tail_tip_widths": [
+    31.91874999999999,
+    35.76249999999999,
+    31.918749999999996
+  ],
   "dovetails_per_corner": 3,
   "dovetail_slope": "1:6",
   "total_tails": 12,
@@ -96,7 +119,5 @@
     }
   ],
   "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
-  "assumptions": "4 1/2-inch center bay, flat reference panel. Confirmed 3/32-inch face veneer over an unspecified core; finished panel body 6.10 mm at grooves and laps. Raised center total 9.275 mm. Finished composite shapes are modeled; separate veneer, balancing back veneer, core and maple edge lippings are not resolved. Groove/lap clearances, movement, retention, joinery, cleat attachment and hardware remain provisional.",
-  "veneer_thickness": 2.38125,
-  "remaining_veneer_under_channel": 1.984375
+  "assumptions": "4 1/2-inch center bay, flat reference panel. Confirmed 3/32-inch face veneer over an unspecified core; finished panel body 6.10 mm at grooves and laps. Finished composite shapes are modeled; separate veneer, balancing back veneer, core and maple edge lippings are not resolved. Groove/lap clearances, movement, retention, joinery, cleat attachment and hardware remain provisional."
 }

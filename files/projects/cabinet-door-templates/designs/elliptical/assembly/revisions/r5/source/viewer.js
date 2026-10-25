@@ -3,6 +3,7 @@ import {OrbitControls} from '../vendor/OrbitControls.js';
 import {toCreasedNormals} from '../vendor/BufferGeometryUtils.js';
 import {MODEL as A} from '../a/model-data.js';
 import {MODEL as B} from '../b/model-data.js';
+const requestedView=new URLSearchParams(location.search).get('view');
 let panelFigure=new URLSearchParams(location.search).get('wood')==='curly'?'curly':'quilted';
 const quiltTexture=new THREE.TextureLoader().load('textures/quilted-maple-reference.png');
 quiltTexture.colorSpace=THREE.SRGBColorSpace;quiltTexture.wrapS=quiltTexture.wrapT=THREE.MirroredRepeatWrapping;
@@ -173,6 +174,7 @@ function view(name){
  if(name==='front'){camera.position.set(W/2,H/2,1600);controls.target.set(W/2,H/2,0);}
  if(name==='back'){$('wall').checked=false;wall.visible=false;camera.position.set(W/2,H/2,-1700);controls.target.set(W/2,H/2,0);}
  if(name==='top'){controls.target.set(W/2,H/2,-50);camera.position.set(W/2,H/2+1700,-49.9);camera.up.set(0,0,-1);}
+ if(name==='joinery'){controls.target.set(W-p.case_side_thickness/2,H-10,-D/2);camera.position.copy(controls.target).add(new THREE.Vector3(180,135,115));}
  if(name==='shadow'){const x=120;const y=d.ellipseCy-d.ellipseB*Math.sqrt(1-((x-p.side_reveal)/d.ellipseA)**2)+.8;controls.target.set(x,y,G+11);camera.position.copy(controls.target).add(new THREE.Vector3(22,35,85));}
  if(name==='panel'){const x=W/2+p.seam_offsets.find(o=>o>0);controls.target.set(x,H*.58,G+10);camera.position.copy(controls.target).add(new THREE.Vector3(60,35,190));}
  if(name==='knob'){const knob=scene.getObjectByName('Tiger eye stone');scene.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(knob);box.getCenter(controls.target);camera.position.copy(controls.target).add(new THREE.Vector3(40,30,140));}
@@ -186,7 +188,7 @@ document.querySelectorAll('[data-angle]').forEach(b=>b.onclick=()=>setAngle(b.da
 $('reset').onclick=()=>{$('hardware').value='knife';$('angle').value=0;$('explode').value=0;$('xray').checked=false;$('pivot-visible').checked=false;for(const id of ['panel','dimensions','hardware-visible','wall'])$(id).checked=true;update();view('perspective');};
 canvas.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();setAngle(angle+(e.key==='ArrowRight'?5:-5));}});
 function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}new ResizeObserver(resize).observe(canvas);
-function animate(){requestAnimationFrame(animate);controls.update();for(const l of labels){const pos=l.pos.clone();if(l.el.textContent==='17⅞″ door')pos.applyMatrix4(groups.door.matrixWorld);const v=pos.project(camera);l.el.style.left=`${(v.x/2+.5)*canvas.clientWidth}px`;l.el.style.top=`${(-v.y/2+.5)*canvas.clientHeight}px`;l.el.style.transform='translate(-50%,-50%)';l.el.style.display=$('dimensions').checked&&!['hinge','knob','panel','shadow'].includes(currentView)&&!(l.el.textContent==='6″ case + door'&&['front','back'].includes(currentView))&&!explosion&&v.z<1&&Math.abs(v.x)<.93&&Math.abs(v.y)<.93?'block':'none';}renderer.render(scene,camera);}
+function animate(){requestAnimationFrame(animate);controls.update();for(const l of labels){const pos=l.pos.clone();if(l.el.textContent==='17⅞″ door')pos.applyMatrix4(groups.door.matrixWorld);const v=pos.project(camera);l.el.style.left=`${(v.x/2+.5)*canvas.clientWidth}px`;l.el.style.top=`${(-v.y/2+.5)*canvas.clientHeight}px`;l.el.style.transform='translate(-50%,-50%)';l.el.style.display=$('dimensions').checked&&!['hinge','knob','panel','shadow','joinery'].includes(currentView)&&!(l.el.textContent==='6″ case + door'&&['front','back'].includes(currentView))&&!explosion&&v.z<1&&Math.abs(v.x)<.93&&Math.abs(v.y)<.93?'block':'none';}renderer.render(scene,camera);}
 window.cabinetStudy={get model(){return MODEL},setAngle,view,scene,renderer,camera,getState:()=>({panelFigure,mode,angle,explosion,axis:pivot(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles})};
 function chooseDesign(id){
  if(!MODELS[id])id='b';choice=id;MODEL=MODELS[id];p=MODEL.parameters;d=MODEL.derived;buildParts();
@@ -204,4 +206,4 @@ function chooseDesign(id){
 }
 for(const b of document.querySelectorAll('[data-design]'))b.onclick=()=>chooseDesign(b.dataset.design);
 $('panel-figure').onchange=()=>{panelFigure=$('panel-figure').value;chooseDesign(choice);};
-resize();chooseDesign(new URLSearchParams(location.search).get('option')||'b');animate();
+resize();chooseDesign(new URLSearchParams(location.search).get('option')||'b');if(requestedView==='joinery')view('joinery');animate();
