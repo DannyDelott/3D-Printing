@@ -430,7 +430,7 @@
         "revision": "R5",
         "fabrication": "woodworking",
         "status": "Geometry checked; panel joinery provisional",
-        "description": "Three veneered panels with a broad raised center and narrower sides. Finished beech follows the supplied board scan; a fine channel outlines the curved panel opening. Compare with the flat three-panel layout.",
+        "description": "Three veneered panels with a broad center and narrower sides. Finished beech follows the supplied board scan; a fine channel outlines the curved panel opening. All three faces are flush; compare two panel-width layouts.",
         "preview": "assets/cabinet-layered-maple-r5.png",
         "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5-preview.stl",
         "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/index.html",
@@ -452,10 +452,6 @@
             "152.4 mm / 6 in; side bays approximately 3.75 in before fitting"
           ],
           [
-            "Center rise (proposed)",
-            "3.175 mm / 0.125 in"
-          ],
-          [
             "Perimeter channel",
             "1.5875 mm / 0.0625 in wide \u00d7 0.396875 mm / 0.015625 in deep"
           ],
@@ -469,7 +465,7 @@
           ],
           [
             "Panel envelope (assumed)",
-            "6.10 mm at grooves/laps; 9.275 mm at raised center"
+            "6.10 mm finished thickness; all three faces flush"
           ],
           [
             "Case joinery",
@@ -486,15 +482,15 @@
             "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/a/cabinet-r5.step"
           ],
           [
-            "Broad raised center \u00b7 3MF",
+            "Broad center \u00b7 3MF",
             "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5.3mf"
           ],
           [
-            "Broad raised center \u00b7 STEP",
+            "Broad center \u00b7 STEP",
             "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/b/cabinet-r5.step"
           ]
         ],
-        "notes": "Confirmed channel and veneer dimensions. Center proportions and relief are proposed. Finished composite envelopes are modeled; core, backing veneer and step-edge lipping remain unspecified. Panel retention, thin laps and hardware need physical verification.",
+        "notes": "Confirmed channel and veneer dimensions. Center width is proposed; all faces are flush. Finished composite envelopes are modeled; core, backing veneer and edge treatment remain unspecified. Panel retention, thin laps and hardware need physical verification.",
         "print": "Full-size woodworking reference assemblies, not print layouts.",
         "related": [
           [

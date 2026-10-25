@@ -193,12 +193,12 @@
       "manifold": true
     },
     {
-      "volume_mm3": 780337.625,
-      "facets": 266,
+      "volume_mm3": 517287.46875,
+      "facets": 206,
       "dimensions_mm": [
         158.099991,
         572.043732,
-        9.275001
+        6.1
       ],
       "manifold": true
     },

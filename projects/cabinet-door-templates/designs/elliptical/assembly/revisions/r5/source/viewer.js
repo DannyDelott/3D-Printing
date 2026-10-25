@@ -195,9 +195,9 @@ function chooseDesign(id){
  $('panel-figure').value=panelFigure;
  document.querySelectorAll('[data-design] img').forEach(img=>{img.src=img.parentElement.dataset.design+'-'+panelFigure+'-front.png';});
  $('rail-profile').textContent='2¼″ / 4½″ · A retained';
- $('depth-values').textContent=id==='a'?'Flat maple field':'Center +⅛″';
- $('panel-count').textContent=id==='a'?'Three flat boards':'Three; raised center';
- $('option-note').textContent=id==='a'?'R4’s three-board layout retained for comparison, with all panel faces in one plane and the new fine perimeter channel.':'A broad 6″ center bay between two narrower sides, each about 3¾″ before fitting. The center rises ⅛″ above the side panels. A 1/16″-wide, 1/64″-deep channel follows the whole opening.';
+ $('depth-values').textContent='All faces flush';
+ $('panel-count').textContent=id==='a'?'Three flat boards':'Three; broad center';
+ $('option-note').textContent=id==='a'?'R4’s three-board layout retained for comparison, with all panel faces in one plane and the new fine perimeter channel.':'A broad 6″ center bay between two narrower sides, each about 3¾″ before fitting. All three panel faces are flush. A 1/16″-wide, 1/64″-deep channel follows the whole opening.';
  document.querySelectorAll('[data-download]').forEach(a=>{a.href=id+'/cabinet-r5.'+a.dataset.download;a.download='cabinet-r5-'+id+'.'+a.dataset.download;});
  $('dimensions-link').href=id+'/parameters.json';$('checks-link').href=id+'/validation.json';
  update();view(currentView);const url=new URL(location.href);url.searchParams.set('option',id);url.searchParams.set('wood',panelFigure);history.replaceState({},'',url);

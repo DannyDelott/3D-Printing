@@ -1,17 +1,17 @@
-# Broad raised maple center R5
+# Broad maple center R5
 
 Three vertical boards, with a broad center and two narrower side boards. R5 retains the preferred R3 A curved rails, the ⅛-inch rail/stile shadow line, the 18 × 27 × 6-inch case-and-door envelope, open back, French cleat, three 1:6 dovetails per corner and mortised knife hinges. R4 remains available separately.
 
 | Option | Layout | Depth |
 | --- | --- | --- |
 | A · Flat panel | R4's three boards; 4½-inch center bay | All maple faces in one plane |
-| B · Broad raised center | 6-inch center bay; side bays approximately 3¾ inches before fitting | Center rises ⅛ inch; flat veneered faces at two depths |
+| B · Broad center | 6-inch center bay; side bays approximately 3¾ inches before fitting | All three panel faces flush |
 
 The 6-inch center is measured between seam centers. The fixed opening is 13⅜ inches wide, so outer bays fit the existing reveal and stile dimensions rather than forcing a 13½-inch opening. The 1 mm seams reduce visible board widths. There are no added horizontal or vertical beech dividers.
 
 ## Depth and construction
 
-The panels are quilted-maple veneer over a core. CAD represents their finished composite envelopes, not separate veneer/core laminations. The center has a flat raised field: 9.275 mm maximum finished thickness versus 6.10 mm at its perimeter and laps. Its curved top/bottom shoulders stop at the inside of the new perimeter channel. The ¼-inch grooves, groove engagement, outside faces and vertical half-laps retain their R4 positions. The visible step edges need maple lipping or equivalent detailing; that construction is not resolved here.
+The panels are quilted-maple veneer over a core. CAD represents their finished composite envelopes, not separate veneer/core laminations. All three faces are flush, with 6.10 mm finished panel thickness. The ¼-inch grooves, groove engagement, outside faces and vertical half-laps retain their R4 positions. The shallow perimeter channel is retained.
 
 Closed-door face positions, measured from the front of the case:
 
@@ -19,14 +19,12 @@ Closed-door face positions, measured from the front of the case:
 | --- | --- |
 | Rail fronts | 22.050 mm |
 | Stile fronts | 18.875 mm |
-| Raised center face | 17.1625 mm |
+| Center face | 13.9875 mm |
 | Side panel faces | 13.9875 mm |
 
-The center therefore remains 1.7125 mm behind the stiles, while its sides sit 3.175 mm farther back. The overall cabinet depth stays 152.4 mm / 6 inches, excluding the knob. The knob adds to the envelope as in R4.
+All three panel faces sit 4.8875 mm behind the stiles. The existing ⅛-inch rail/stile step remains. Overall cabinet depth stays 152.4 mm / 6 inches, excluding the knob. The 6-inch center bay and retained frame dimensions use the ¾-inch design module; fitting clearances remain exceptions.
 
-The 6-inch center and retained frame dimensions use the ¾-inch design module. The proposed ⅛-inch relief echoes the existing rail/stile step; stock fits and machining clearances remain exceptions to that module.
-
-The proposed center rise, board layout, stock thickness and clearances are assumptions. The existing 6.35 mm wide/deep grooves, 2 mm outer clearance, 1 mm face gaps, nominal 6.35 mm laps, 0.10 mm lap-face clearance and 0.15 mm shoulder clearance remain provisional. The nominal ¼-inch tongues and approximately 3 mm half-laps require actual stock and machining checks. Seasonal movement, panel retention, rail/stile joinery, cleat attachment, wall fasteners, anti-lift retention and hardware strength are not validated by this geometry.
+The proposed board layout, stock thickness and clearances are assumptions. The existing 6.35 mm wide/deep grooves, 2 mm outer clearance, 1 mm face gaps, nominal 6.35 mm laps, 0.10 mm lap-face clearance and 0.15 mm shoulder clearance remain provisional. The nominal ¼-inch tongues and approximately 3 mm half-laps require actual stock and machining checks. Seasonal movement, panel retention, rail/stile joinery, cleat attachment, wall fasteners, anti-lift retention and hardware strength are not validated by this geometry.
 
 ## Perimeter channel
 
