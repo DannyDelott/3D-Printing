@@ -1,19 +1,18 @@
-# Broad Center crown comparison · R7
+# Adjustable Broad Center crown · R7
 
-Compare the previous ⅛-inch front crown with a fuller ¼-inch crown. Both use the same approved Broad Center layout, flat backs, flat grooves/laps and unchanged case. The saved flat door remains in R5 B and R6 A; R6 is preserved unchanged.
+The front-crown slider selects flat through ¾ inch in ⅛-inch increments. Each setting loads an exact CAD variant with matching STEP, 3MF, parameters and validation downloads. Camera angle, opening angle, materials and display controls stay in place while changing the curve. The selected setting is retained in the page URL. Flat preserves the approved R5 B design; earlier revisions remain available.
 
-| Dimension | A · Previous crown | B · Fuller crown |
-| --- | --- | --- |
-| Front crown (proposed) | ⅛ inch / 3.175 mm | ¼ inch / 6.35 mm |
-| Case + door W × H × D | 18 × 27 × 6⅛ inches | 18 × 27 × 6¼ inches |
-| Metric envelope | 457.2 × 685.8 × 155.575 mm | 457.2 × 685.8 × 158.75 mm |
-| Case depth | 130.35 mm | 130.35 mm |
-| Rails at crown | ⅞ inch / 22.225 mm | 1 inch / 25.4 mm |
-| Rails at outside edges | ¾ inch / 19.05 mm | ¾ inch / 19.05 mm |
-| Panel at crown* | 9.275 mm | 12.450 mm |
-| Panel base / groove tongue* | 6.10 mm | 6.10 mm |
+| Setting | Crown | Case + door depth | Rail maximum thickness | Panel maximum thickness* |
+| --- | --- | --- | --- | --- |
+| Flat | 0 | 6″ / 152.400 mm | ¾″ / 19.050 mm | 6.100 mm |
+| A | ⅛″ / 3.175 mm | 6⅛″ / 155.575 mm | ⅞″ / 22.225 mm | 9.275 mm |
+| B | ¼″ / 6.350 mm | 6¼″ / 158.750 mm | 1″ / 25.400 mm | 12.450 mm |
+| C | ⅜″ / 9.525 mm | 6⅜″ / 161.925 mm | 1⅛″ / 28.575 mm | 15.625 mm |
+| D | ½″ / 12.700 mm | 6½″ / 165.100 mm | 1¼″ / 31.750 mm | 18.800 mm |
+| E | ⅝″ / 15.875 mm | 6⅝″ / 168.275 mm | 1⅜″ / 34.925 mm | 21.975 mm |
+| F | ¾″ / 19.050 mm | 6¾″ / 171.450 mm | 1½″ / 38.100 mm | 25.150 mm |
 
-Depth excludes the knob. Both crowns are circular across the 17⅞-inch width, with no vertical curvature. The quarter-inch crown and corresponding 6¼-inch depth are proposed in response to the previous curve being too subtle. The user confirmed the flat-back construction and retaining the case; the greater depth is shown for comparison. The profile drawing exaggerates depth 2.5× and is labeled; 3D and downloads are at actual scale. Maximum finished thicknesses exclude machining allowance.
+All depths exclude the knob. Width and height remain 18 × 27 inches (457.2 × 685.8 mm). Case depth stays 130.35 mm, rail outside edges remain ¾ inch thick, and all backs and groove/lap planes remain flat. Crowns are circular across the door width with no vertical curvature. The slider range is exploratory; the user has not selected a final crown. The profile drawing exaggerates depth 2.5× and is labeled; 3D geometry and downloads use actual dimensions. Stock requires machining allowance beyond the listed finished maximums.
 
 ## Construction
 
@@ -41,13 +40,14 @@ European beech uses the straighter, ray-flecked left strip (2–38% of image wid
 
 ## Files and checks
 
-Both options include editable parameters, STEP, 3MF, STL, preview mesh and geometry report. The builder checks valid solids, watertight meshes, STEP reimport, exact body envelope, panel/frame and board overlaps, dovetails, cleats and nine hinge positions between 0 and 110 degrees. Compare the selected dimensions and validation files for exact radii and knob envelopes. A preserves the R6 B geometry. Physical fit, veneer forming and hardware strength remain unverified.
+All seven settings include editable parameters, STEP, 3MF, STL, preview mesh and geometry report. The builder checks valid solids, watertight meshes, STEP reimport, exact body envelope, panel/frame and board overlaps, dovetails, cleats and nine hinge positions between 0 and 110 degrees. Compare the selected dimensions and validation files for exact radii and knob envelopes. A preserves the R6 B geometry; flat preserves R5 B. Physical fit, veneer forming and hardware strength remain unverified.
 
 Rebuild from this directory with CadQuery 2.8, Shapely and trimesh:
 
 ```
 python source/build_model.py a
 python source/build_model.py b
+# Other folders: flat, c, d, e, f
 npx esbuild source/viewer.js --bundle --format=iife --minify --outfile=viewer.js
 ```
 

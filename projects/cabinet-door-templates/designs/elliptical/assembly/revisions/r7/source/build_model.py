@@ -1,4 +1,4 @@
-"""R7 exact CAD: one-eighth and quarter-inch flat-back crown comparison.
+"""R7 exact CAD: adjustable flat-back door crown, 0 through 3/4 inch.
 Run with CadQuery 2.8, Shapely 2 and trimesh. Input/output units: millimetres.
 """
 import json, math, zipfile, sys
@@ -16,7 +16,7 @@ from OCP.Bnd import Bnd_Box
 from OCP.BRepBndLib import BRepBndLib
 from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt, gp_Vec
 OUT=Path(sys.argv[1]).resolve()
-assert OUT.name in ['a','b']
+assert OUT.name in ['flat','a','b','c','d','e','f']
 p=json.loads((OUT/'parameters.json').read_text())
 W,H,S=p['case_width'],p['case_height'],p['case_side_thickness']
 T,ST,G=p['door_thickness'],p['stile_thickness'],p['door_gap']

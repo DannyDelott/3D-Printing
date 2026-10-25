@@ -1,7 +1,6 @@
 import * as THREE from '../vendor/three.module.js';
 import {OrbitControls} from '../vendor/OrbitControls.js';
 import {toCreasedNormals} from '../vendor/BufferGeometryUtils.js';
-import {MODEL as A} from '../a/model-data.js';
 import {MODEL as B} from '../b/model-data.js';
 const requestedView=new URLSearchParams(location.search).get('view');
 let panelFigure=new URLSearchParams(location.search).get('wood')==='curly'?'curly':'quilted';
@@ -9,7 +8,7 @@ const quiltTexture=new THREE.TextureLoader().load('textures/quilted-maple-refere
 quiltTexture.colorSpace=THREE.SRGBColorSpace;quiltTexture.wrapS=quiltTexture.wrapT=THREE.MirroredRepeatWrapping;
 const beechTexture=new THREE.TextureLoader().load('textures/beech-board-scan.png');
 beechTexture.colorSpace=THREE.SRGBColorSpace;beechTexture.wrapS=beechTexture.wrapT=THREE.MirroredRepeatWrapping;
-const MODELS={a:A,b:B};let MODEL=B;let choice='b';
+const MODELS={b:B};const choices=['flat','a','b','c','d','e','f'];const crownLabels=['0','⅛','¼','⅜','½','⅝','¾'];const depths=['6','6⅛','6¼','6⅜','6½','6⅝','6¾'];let selectionRequest=0,viewInitialized=false;let MODEL=B;let choice='b';
 let p=MODEL.parameters,d=MODEL.derived;const W=p.case_width,H=p.case_height,D=p.case_depth,G=p.door_gap,T=p.door_thickness;
 const $=id=>document.getElementById(id), canvas=$('view');
 const scene=new THREE.Scene();scene.background=new THREE.Color('#f2f0e9');
@@ -165,9 +164,9 @@ function renderPlan(){
 function renderProfile(){
  const radius=d.bendRadius,bow=x=>radius?Math.sqrt(radius*radius-(x-W/2)**2)-(radius-p.door_bow):0;
  const sx=x=>35+(x-p.side_reveal)/d.doorWidth*730;
- const sy=z=>165-z*4;
+ const sy=z=>230-z*4;
  const points=Array.from({length:101},(_,i)=>{const x=p.side_reveal+d.doorWidth*i/100;return [sx(x),sy(T+bow(x))].join(',')}).join(' ');
- $('curve-profile').innerHTML=`<polygon points="35,165 ${points} 765,165" fill="#c89961" stroke="#806845"/><path d="M35 ${sy(T)} H765" stroke="#53615b" stroke-dasharray="5 4" fill="none"/><g font-size="12" fill="#53615b"><text x="35" y="188">Flat back · grooves unchanged</text><text x="35" y="50">${p.label+' above the dashed flat front'}</text><text x="35" y="218">Depth exaggerated 2.5× for clarity · 3D view is actual scale</text></g>`;
+ $('curve-profile').innerHTML=`<polygon points="35,230 ${points} 765,230" fill="#c89961" stroke="#806845"/><path d="M35 ${sy(T)} H765" stroke="#53615b" stroke-dasharray="5 4" fill="none"/><g font-size="12" fill="#53615b"><text x="35" y="253">Flat back · grooves unchanged</text><text x="35" y="50">${p.door_bow?p.label+' above the dashed flat front':'Flat front and back'}</text><text x="35" y="283">Depth exaggerated 2.5× for clarity · 3D view is actual scale</text></g>`;
 }
 function view(name){
  currentView=name;controls.target.set(W/2,H/2,-D/3);camera.up.set(0,1,0);camera.fov=34;
@@ -197,26 +196,38 @@ canvas.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRigh
 function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}new ResizeObserver(resize).observe(canvas);
 function animate(){requestAnimationFrame(animate);controls.update();for(const l of labels){const pos=l.pos.clone();if(l.el.textContent==='17⅞″ door')pos.applyMatrix4(groups.door.matrixWorld);const v=pos.project(camera);l.el.style.left=`${(v.x/2+.5)*canvas.clientWidth}px`;l.el.style.top=`${(-v.y/2+.5)*canvas.clientHeight}px`;l.el.style.transform='translate(-50%,-50%)';l.el.style.display=$('dimensions').checked&&!['hinge','knob','panel','shadow','joinery'].includes(currentView)&&!(l===labels[2]&&['front','back'].includes(currentView))&&!explosion&&v.z<1&&Math.abs(v.x)<.93&&Math.abs(v.y)<.93?'block':'none';}renderer.render(scene,camera);}
 window.cabinetStudy={get model(){return MODEL},setAngle,view,scene,renderer,camera,getState:()=>({panelFigure,mode,angle,explosion,axis:pivot(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles})};
-function chooseDesign(id){
- if(!MODELS[id])id='b';choice=id;MODEL=MODELS[id];p=MODEL.parameters;d=MODEL.derived;buildParts();
+async function chooseDesign(id){
+ if(!choices.includes(id))id='b';
+ const request=++selectionRequest,step=choices.indexOf(id);
+ $('crown').value=step;$('crown').setAttribute('aria-valuetext',crownLabels[step]+' inches of crown');$('crown-value').textContent=crownLabels[step]+'″';
+ if(!MODELS[id]){
+  $('crown-loading').textContent='Updating curve…';
+  try{MODELS[id]=(await import(new URL(id+'/model-data.js',document.baseURI).href)).MODEL;}
+  catch(error){if(request!==selectionRequest)return;$('crown-loading').textContent='Could not load this curve. Move the slider to retry.';$('crown').value=choices.indexOf(choice);$('crown-value').textContent=crownLabels[choices.indexOf(choice)]+'″';return;}
+ }
+ if(request!==selectionRequest)return;
+ $('crown-loading').textContent='';
+ choice=id;MODEL=MODELS[id];p=MODEL.parameters;d=MODEL.derived;buildParts();
  document.querySelectorAll('[data-design]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.design===id)));
  $('option-title').textContent=p.label+' · '+(panelFigure==='quilted'?'Quilted maple':'Curly maple');
  $('panel-figure').value=panelFigure;
  document.querySelectorAll('[data-design] img').forEach(img=>{img.src=img.parentElement.dataset.design+'-'+panelFigure+'-front.png';});
  $('rail-profile').textContent='2¼″ / 4½″ · A retained';
  $('depth-values').textContent=p.label+' · flat back';
- labels[2].el.textContent=(choice==='a'?'6⅛':'6¼')+'″ case + door';
- $('overall-size').textContent=`18 × 27 × ${choice==='a'?'6⅛':'6¼'}″ · 457.2 × 685.8 × ${p.overall_depth.toFixed(3)} mm`;
+ labels[2].el.textContent=depths[step]+'″ case + door';
+ $('overall-size').textContent=`18 × 27 × ${depths[step]}″ · 457.2 × 685.8 × ${p.overall_depth.toFixed(3)} mm`;
  $('knob-depth').textContent=MODEL.validation.depth_including_knob.toFixed(3)+' mm · '+(MODEL.validation.depth_including_knob/25.4).toFixed(3)+'″';
  renderProfile();
  $('panel-count').textContent='Three · 6″ center bay';
- $('option-note').textContent=(id==='a'?'The previous ⅛″ curve.':'A fuller ¼″ curve, twice the previous crown.')+' Both keep flat backs, the same case, flat groove joints and the Broad Center layout.';
- $('rail-thickness').textContent='Case: ¾″. Rails: ¾″ at edges; '+(id==='a'?'⅞':'1')+'″ at crown';
+ $('option-note').textContent='Flat backs, original case and flat groove joints at every setting. The curve changes only the visible faces.';
+ $('rail-thickness').textContent='Case: ¾″. Rails: ¾″ at edges; '+((T+p.door_bow)/25.4).toFixed(3)+'″ at crown';
  $('panel-thickness').textContent='Veneer over core; 6.10 mm base*, '+MODEL.validation.center_max_thickness.toFixed(3)+' mm at crown; groove tongues stay flat';
  document.querySelectorAll('[data-download]').forEach(a=>{a.href=id+'/cabinet-r7.'+a.dataset.download;a.download='cabinet-r7-'+id+'.'+a.dataset.download;});
  $('dimensions-link').href=id+'/parameters.json';$('checks-link').href=id+'/validation.json';
- update();view(currentView);const url=new URL(location.href);url.searchParams.set('option',id);url.searchParams.set('wood',panelFigure);history.replaceState({},'',url);
+ update();if(!viewInitialized){view(requestedView==='joinery'?'joinery':'perspective');viewInitialized=true;}const url=new URL(location.href);url.searchParams.set('option',id);url.searchParams.set('wood',panelFigure);history.replaceState({},'',url);
 }
-for(const b of document.querySelectorAll('[data-design]'))b.onclick=()=>chooseDesign(b.dataset.design);
+$('crown').addEventListener('input',()=>chooseDesign(choices[Number($('crown').value)]));
 $('panel-figure').onchange=()=>{panelFigure=$('panel-figure').value;chooseDesign(choice);};
-resize();chooseDesign(new URLSearchParams(location.search).get('option')||'b');if(requestedView==='joinery')view('joinery');animate();
+resize();chooseDesign(new URLSearchParams(location.search).get('option')||'b');animate();
+// Warm the other exact CAD variants without blocking the initial view.
+for(const id of choices)if(id!=='b')import(new URL(id+'/model-data.js',document.baseURI).href).then(m=>{MODELS[id]=m.MODEL;}).catch(()=>{});

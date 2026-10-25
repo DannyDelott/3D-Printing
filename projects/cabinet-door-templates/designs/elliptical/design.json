@@ -639,12 +639,17 @@
       "revision": "r7",
       "option": "b",
       "path": "assembly/revisions/r7",
-      "label": "Quarter-inch crown",
+      "label": "Adjustable crown",
       "door_front_crown": 6.35,
       "door_back": "flat",
       "case_unchanged": true,
       "overall_depth": 158.75,
-      "status": "proposed comparison; one-eighth inch judged too subtle"
+      "status": "exploratory slider; final crown not selected",
+      "crown_range_mm": [
+        0,
+        19.05
+      ],
+      "crown_step_mm": 3.175
     }
   }
 }

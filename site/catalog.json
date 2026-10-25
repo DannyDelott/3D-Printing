@@ -590,11 +590,11 @@
       {
         "id": "curved-door-r7",
         "group": "Cabinet",
-        "label": "Fuller curved face",
+        "label": "Adjustable curved face",
         "revision": "R7",
         "fabrication": "woodworking",
         "status": "Geometry checked; construction details provisional",
-        "description": "Compare \u215b-inch and \u00bc-inch front crowns on the Broad Center door. Both retain flat backs, flat groove joints and the original case.",
+        "description": "Tune the Broad Center front crown from flat to \u00be inch in \u215b-inch steps. Each setting keeps a flat back and the same case, and has matching CAD downloads.",
         "preview": "assets/cabinet-curved-door-r7.png",
         "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/b/cabinet-r7-preview.stl",
         "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/index.html",
@@ -604,16 +604,16 @@
         ],
         "dimensions": [
           [
-            "Case + fuller door W \u00d7 H \u00d7 D",
+            "Default \u00bc-inch setting W \u00d7 H \u00d7 D",
             "457.2 \u00d7 685.8 \u00d7 158.75 mm \u00b7 18 \u00d7 27 \u00d7 6.25 in"
           ],
           [
-            "Previous crown option depth",
-            "155.575 mm / 6.125 in"
+            "Crown slider range",
+            "0\u201319.05 mm / 0\u20130.75 in, in 3.175 mm / 0.125 in steps"
           ],
           [
-            "Front crown comparison",
-            "3.175 / 6.35 mm \u00b7 0.125 / 0.25 in"
+            "Case + door depth range",
+            "152.4\u2013171.45 mm / 6\u20136.75 in; excludes knob"
           ],
           [
             "Rails, fuller option",
@@ -646,6 +646,14 @@
         ],
         "downloads": [
           [
+            "Flat \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/flat/cabinet-r7.3mf"
+          ],
+          [
+            "Flat \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/flat/cabinet-r7.step"
+          ],
+          [
             "\u215b-inch crown \u00b7 3MF",
             "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/a/cabinet-r7.3mf"
           ],
@@ -660,13 +668,45 @@
           [
             "\u00bc-inch crown \u00b7 STEP",
             "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/b/cabinet-r7.step"
+          ],
+          [
+            "\u215c-inch crown \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/c/cabinet-r7.3mf"
+          ],
+          [
+            "\u215c-inch crown \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/c/cabinet-r7.step"
+          ],
+          [
+            "\u00bd-inch crown \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/d/cabinet-r7.3mf"
+          ],
+          [
+            "\u00bd-inch crown \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/d/cabinet-r7.step"
+          ],
+          [
+            "\u215d-inch crown \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/e/cabinet-r7.3mf"
+          ],
+          [
+            "\u215d-inch crown \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/e/cabinet-r7.step"
+          ],
+          [
+            "\u00be-inch crown \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/f/cabinet-r7.3mf"
+          ],
+          [
+            "\u00be-inch crown \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/f/cabinet-r7.step"
           ]
         ],
-        "notes": "Quarter-inch crown and 6\u00bc-inch overall depth proposed for comparison. Shape thicker stock and panel core on the visible face. Veneer forming, bonding, panel joinery and hardware need physical verification.",
+        "notes": "Crown range is exploratory; no final setting selected. All backs and groove joints remain flat. Shape thicker stock and panel core on the visible face. Veneer forming, bonding, panel joinery and hardware need physical verification.",
         "print": "Full-size woodworking reference assemblies, not print layouts.",
         "related": [
           [
-            "Compare crown depths",
+            "Adjust the door crown",
             "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/index.html?option=b&wood=quilted"
           ]
         ]

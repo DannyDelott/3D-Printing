@@ -1,12 +1,69 @@
 {
-  "previous_crown_matches_r6_b": true,
-  "case_and_hinges_unchanged": true,
-  "crowns_mm": [
-    3.175,
-    6.35
-  ],
-  "body_depths_mm": [
-    155.575,
-    158.75
+  "flat_matches_approved_r5_b": true,
+  "case_and_hinges_unchanged_all_settings": true,
+  "settings": [
+    {
+      "option": "flat",
+      "crown_mm": 0.0,
+      "depth_mm": 152.4,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "a",
+      "crown_mm": 3.175,
+      "depth_mm": 155.57500000000002,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "b",
+      "crown_mm": 6.35,
+      "depth_mm": 158.75,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "c",
+      "crown_mm": 9.524999999999999,
+      "depth_mm": 161.925,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "d",
+      "crown_mm": 12.7,
+      "depth_mm": 165.1,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "e",
+      "crown_mm": 15.875,
+      "depth_mm": 168.275,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    },
+    {
+      "option": "f",
+      "crown_mm": 19.049999999999997,
+      "depth_mm": 171.45,
+      "valid_solids_and_meshes": true,
+      "step_reimport_valid": true,
+      "nine_hinge_samples_clear": true,
+      "all_21_3mf_objects_manifold": true
+    }
   ]
 }
