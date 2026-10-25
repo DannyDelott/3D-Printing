@@ -619,13 +619,31 @@
       "revision": "r5",
       "path": "assembly/revisions/r5",
       "material": "3/32-inch quilted-maple veneer over core",
-      "selected_option": null,
+      "selected_option": "b",
       "options": [
         "a",
         "b"
       ],
       "perimeter_channel_width_mm": 1.5875,
       "perimeter_channel_depth_mm": 0.396875
+    },
+    "selected_design": {
+      "revision": "r5",
+      "option": "b",
+      "path": "assembly/revisions/r5",
+      "label": "Broad Center",
+      "panel_faces": "flush",
+      "material": "Quilted-maple veneer over core"
+    },
+    "curved_study": {
+      "revision": "r6",
+      "option": "b",
+      "path": "assembly/revisions/r6",
+      "label": "Subtle bow",
+      "door_front_crown": 3.175,
+      "door_back": "flat",
+      "case_unchanged": true,
+      "overall_depth": 155.575
     }
   }
 }

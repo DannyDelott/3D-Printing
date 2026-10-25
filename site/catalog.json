@@ -498,6 +498,94 @@
             "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r5/index.html?option=b&wood=quilted"
           ]
         ]
+      },
+      {
+        "id": "curved-door-r6",
+        "group": "Cabinet",
+        "label": "Curved face",
+        "revision": "R6",
+        "fabrication": "woodworking",
+        "status": "Geometry checked; construction details provisional",
+        "description": "Saved Broad Center alongside a subtle \u215b-inch front crown. Backs, grooves, case and dovetails remain unchanged. Shape thicker beech stock and the veneered panel core on the visible face.",
+        "preview": "assets/cabinet-curved-door-r6.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/b/cabinet-r6-preview.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/index.html",
+        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/README.md",
+        "source": [
+          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/source/build_model.py"
+        ],
+        "dimensions": [
+          [
+            "Bowed case + door W \u00d7 H \u00d7 D",
+            "457.2 \u00d7 685.8 \u00d7 155.575 mm \u00b7 18 \u00d7 27 \u00d7 6.125 in"
+          ],
+          [
+            "Saved flat case + door",
+            "457.2 \u00d7 685.8 \u00d7 152.4 mm \u00b7 18 \u00d7 27 \u00d7 6 in"
+          ],
+          [
+            "Front crown (proposed)",
+            "3.175 mm / 0.125 in; flat back"
+          ],
+          [
+            "Rails, finished",
+            "19.05\u201322.225 mm / 0.75\u20130.875 in"
+          ],
+          [
+            "Case depth, unchanged",
+            "130.35 mm / 5.132 in"
+          ],
+          [
+            "Center bay (proposed)",
+            "152.4 mm / 6 in; side bays approximately 3.75 in before fitting"
+          ],
+          [
+            "Perimeter channel",
+            "1.5875 mm / 0.0625 in wide \u00d7 0.396875 mm / 0.015625 in deep"
+          ],
+          [
+            "Face veneer (confirmed)",
+            "2.38125 mm / 0.09375 in; veneer over core"
+          ],
+          [
+            "Veneer below channel",
+            "1.984375 mm / 0.078125 in"
+          ],
+          [
+            "Panel envelope (assumed)",
+            "6.10 mm base; up to 9.275 mm at crowned center; flat groove tongues"
+          ],
+          [
+            "Case joinery",
+            "Three 1:6 tails per corner; interior full pins 7.6875 mm / 0.303 in at narrow face; outside half-pins unchanged"
+          ]
+        ],
+        "downloads": [
+          [
+            "Saved Broad Center \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/a/cabinet-r6.3mf"
+          ],
+          [
+            "Saved Broad Center \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/a/cabinet-r6.step"
+          ],
+          [
+            "Subtle bow \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/b/cabinet-r6.3mf"
+          ],
+          [
+            "Subtle bow \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/b/cabinet-r6.step"
+          ]
+        ],
+        "notes": "Flat reference preserves approved R5 Broad Center. Shape thicker stock on the front only; shape the panel core before veneering. Finished composite envelopes are modeled. Veneer forming, bonding, edge treatment, joinery and hardware need physical verification.",
+        "print": "Full-size woodworking reference assemblies, not print layouts.",
+        "related": [
+          [
+            "Compare flat and crowned faces",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r6/index.html?option=b&wood=quilted"
+          ]
+        ]
       }
     ]
   },
