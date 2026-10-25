@@ -1,0 +1,167 @@
+{
+  "parts": {
+    "rail-foot": {
+      "quantity": 16,
+      "size": [
+        35.0,
+        60.0,
+        22.0
+      ],
+      "volume_mm3": 18398.14356394559,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "bridge-truck": {
+      "quantity": 2,
+      "size": [
+        110.0,
+        60.0,
+        42.0
+      ],
+      "volume_mm3": 89155.54312112874,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "roller-fit-coupon": {
+      "quantity": 1,
+      "size": [
+        30.0,
+        30.0,
+        27.000000000000007
+      ],
+      "volume_mm3": 13002.514887329697,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "guide-fit-coupon": {
+      "quantity": 1,
+      "size": [
+        40.0,
+        69.18845796712449,
+        18.000000000000007
+      ],
+      "volume_mm3": 49397.78735210615,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "alignment-pin": {
+      "quantity": 6,
+      "size": [
+        5.9,
+        5.9,
+        22.0
+      ],
+      "volume_mm3": 601.4736214930339,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "projection-gauge": {
+      "quantity": 1,
+      "size": [
+        70.0,
+        30.0,
+        25.4
+      ],
+      "volume_mm3": 38709.6,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "rail-guide-1": {
+      "quantity": 2,
+      "size": [
+        138.50625,
+        62.058002915719406,
+        18.000000000000007
+      ],
+      "volume_mm3": 83885.99592672396,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "rail-guide-2": {
+      "quantity": 2,
+      "size": [
+        138.50625,
+        69.18845796712449,
+        18.00000000000002
+      ],
+      "volume_mm3": 93185.23573670295,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "rail-guide-3": {
+      "quantity": 2,
+      "size": [
+        138.50625,
+        69.18845796712449,
+        18.000000000000007
+      ],
+      "volume_mm3": 93185.23573670303,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "rail-guide-4": {
+      "quantity": 2,
+      "size": [
+        138.50624999999997,
+        62.058002915719406,
+        18.00000000000002
+      ],
+      "volume_mm3": 83885.99592672395,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "end-stop": {
+      "quantity": 4,
+      "size": [
+        15.0,
+        60.0,
+        74.00069906018946
+      ],
+      "volume_mm3": 13545.60090107817,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "stile-guide-1": {
+      "quantity": 2,
+      "size": [
+        157.14999999999998,
+        63.851968229137945,
+        18.000000000000007
+      ],
+      "volume_mm3": 94743.06125765508,
+      "watertight": true,
+      "step_reimport": true
+    },
+    "stile-high-stop": {
+      "quantity": 2,
+      "size": [
+        15.0,
+        60.0,
+        102.82284208284398
+      ],
+      "volume_mm3": 16427.815203343624,
+      "watertight": true,
+      "step_reimport": true
+    }
+  },
+  "all_parts_valid": true,
+  "all_meshes_watertight": true,
+  "all_step_reimports_valid": true,
+  "collision_angles": {
+    "rail": [
+      -9.7,
+      0.0,
+      9.7
+    ],
+    "stile": [
+      7.05,
+      8.375,
+      9.7
+    ]
+  },
+  "positive_volume_collisions": [],
+  "scope": "Bridge and tool at central longitudinal position versus modeled fixtures and component envelopes; clamps, bolts and rough stock excluded",
+  "roller_contact_on_tracks": true,
+  "cutter_radius_error_mm": 0,
+  "physical_validation": "Not performed; check coupons, router envelope and cutter reach before powered use."
+}

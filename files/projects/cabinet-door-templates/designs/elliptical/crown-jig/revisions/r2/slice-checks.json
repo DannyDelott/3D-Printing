@@ -1,0 +1,197 @@
+{
+  "alignment-pin": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 5.899338245391846,
+      "height": 22.0,
+      "width": 5.900000095367432,
+      "x": 40.0,
+      "y": 40.00033187866211,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 0.806809663772583,
+    "seconds": 805.0723266601562,
+    "source_sha256": "ac1bc1333f230ff20372ffc520cfe32806961e477eaa3606cbd766648bd17f81"
+  },
+  "bridge-truck": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 60.0,
+      "height": 42.0,
+      "width": 110.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 71.26797485351562,
+    "seconds": 7019.6337890625,
+    "source_sha256": "fc3ad880ccfb2c4eb294f5756e682896027a6ad9783187337a330b352a5f9cde"
+  },
+  "end-stop": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 60.0,
+      "height": 74.00070190429688,
+      "width": 15.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 13.346891403198242,
+    "seconds": 2468.032958984375,
+    "source_sha256": "aa45c7dfa10f5aa05a687eccca8822d5df3050e3875fbff38dfff85868c5bddb"
+  },
+  "guide-fit-coupon": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.18846130371094,
+      "height": 18.0,
+      "width": 40.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 31.56218719482422,
+    "seconds": 3510.07275390625,
+    "source_sha256": "7dba8455e9cd3e5c1f3f7a21aba152baae2962c7c4ae6bfe05ac0e8d0ad9904e"
+  },
+  "projection-gauge": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 30.0,
+      "height": 25.399999618530273,
+      "width": 70.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 29.716432571411133,
+    "seconds": 2996.386962890625,
+    "source_sha256": "dca6de003ee4e1a49aed6b76f05bc16c3ea7d691ef079dd522d6301323d18b79"
+  },
+  "rail-foot": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 60.0,
+      "height": 22.0,
+      "width": 35.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 16.88277244567871,
+    "seconds": 1940.667236328125,
+    "source_sha256": "19fd07193dde89f364bdac2c4d259a9ded1a26b64c594726e624ee0960c10c93"
+  },
+  "rail-guide-1": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 62.05800247192383,
+      "height": 18.0,
+      "width": 138.50625610351562,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 66.1510238647461,
+    "seconds": 6329.5029296875,
+    "source_sha256": "f4ca3f5d57af76ee05cfbf59f646cebf1ada7e01553f385a04f446adb1af567b"
+  },
+  "rail-guide-2": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.18846130371094,
+      "height": 18.0,
+      "width": 138.50625610351562,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 73.75346374511719,
+    "seconds": 6996.208984375,
+    "source_sha256": "3339de38ec11a864f3bbae29c30fa70bc3e38127705b10973d73686c8a4ab8aa"
+  },
+  "rail-guide-3": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 69.18846130371094,
+      "height": 18.0,
+      "width": 138.50625610351562,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 73.75446319580078,
+    "seconds": 6997.34521484375,
+    "source_sha256": "a996dc68719e85ff31435e32c6c6e799ff155cba686272bd97803a846196a8bd"
+  },
+  "rail-guide-4": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 62.05800247192383,
+      "height": 18.0,
+      "width": 138.50625610351562,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 66.15704345703125,
+    "seconds": 6325.5302734375,
+    "source_sha256": "a30dee4c5fef97251647e77b40defdf80747ab2f1fbf23779b21dcbe8174cb1f"
+  },
+  "roller-fit-coupon": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 30.0,
+      "height": 27.0,
+      "width": 30.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 11.445535659790039,
+    "seconds": 1627.46435546875,
+    "source_sha256": "d3ce65ab408dce9f8972fe2e3c443dadeab5a35ac3a08e2ea656d741d59185cf"
+  },
+  "stile-guide-1": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 63.851966857910156,
+      "height": 18.0,
+      "width": 157.14999389648438,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 73.92517852783203,
+    "seconds": 6990.197265625,
+    "source_sha256": "4fabfdf947684849623b4ad825f2c64990786e7d171dbe93cf148061931ddc6a"
+  },
+  "stile-high-stop": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 60.0,
+      "height": 102.82284545898438,
+      "width": 15.0,
+      "x": 40.0,
+      "y": 40.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 16.30740737915039,
+    "seconds": 3109.143798828125,
+    "source_sha256": "5b18959b65b67f5f552484f5d274d92ff7562528e6af827c0facead3f043a094"
+  }
+}

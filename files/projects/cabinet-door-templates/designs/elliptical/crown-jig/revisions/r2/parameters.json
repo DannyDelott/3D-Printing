@@ -1,0 +1,188 @@
+{
+  "common": {
+    "revision": "R2",
+    "units": "mm",
+    "door_revision": "R7 f",
+    "crown": 19.05,
+    "target_radius": 1362.1411458333334,
+    "guide_radius": 1348.7796038004578,
+    "roller_radius": 11.0,
+    "roller_spacing": 80.0,
+    "bridge_floor_thickness": 6.35,
+    "truck_top_above_axles": 22.0,
+    "bit_projection_below_factory_base": 25.4,
+    "rail_thickness": 18,
+    "bridge_width": 150,
+    "clear_router_lane": 114,
+    "margin": 76.2,
+    "material": "PLA",
+    "datum": "Z=0 is the final guide-backer top plane",
+    "printer_assumption": "All individual parts fit a 180 \u00d7 180 mm bed; printer model unconfirmed",
+    "critical_unverified": [
+      "Exact router base/body fit in 114 mm lane",
+      "25.4 mm cutter projection with proper collet engagement",
+      "Actual plywood thickness, printed fit and assembled stiffness",
+      "Rough blank and joinery allowances before sizing wood bridge",
+      "Workholding outside full cutter sweep"
+    ]
+  },
+  "variants": {
+    "rail": {
+      "revision": "R2",
+      "units": "mm",
+      "door_revision": "R7 f",
+      "crown": 19.05,
+      "target_radius": 1362.1411458333334,
+      "guide_radius": 1348.7796038004578,
+      "roller_radius": 11.0,
+      "roller_spacing": 80.0,
+      "bridge_floor_thickness": 6.35,
+      "truck_top_above_axles": 22.0,
+      "bit_projection_below_factory_base": 25.4,
+      "rail_thickness": 18,
+      "bridge_width": 150,
+      "clear_router_lane": 114,
+      "margin": 76.2,
+      "material": "PLA",
+      "datum": "Z=0 is the final guide-backer top plane",
+      "printer_assumption": "All individual parts fit a 180 \u00d7 180 mm bed; printer model unconfirmed",
+      "critical_unverified": [
+        "Exact router base/body fit in 114 mm lane",
+        "25.4 mm cutter projection with proper collet engagement",
+        "Actual plywood thickness, printed fit and assembled stiffness",
+        "Rough blank and joinery allowances before sizing wood bridge",
+        "Workholding outside full cutter sweep"
+      ],
+      "component": "rail",
+      "component_width": 454.025,
+      "component_length": 114.3,
+      "component_center_x": 0,
+      "flat_back_height": 50.8,
+      "guide_centers_y": [
+        -102.15,
+        102.15
+      ],
+      "guide_range": [
+        -277.0125,
+        277.0125
+      ],
+      "guide_segments_per_rail": 4,
+      "footprint": [
+        606.425,
+        266.7
+      ],
+      "bridge_floor": [
+        150,
+        266.7,
+        6.35
+      ],
+      "bridge_ribs": [
+        18,
+        266.7,
+        50
+      ],
+      "bridge_slot": [
+        28,
+        146.3
+      ],
+      "angle_range": [
+        -9.7,
+        9.7
+      ],
+      "rail_foot_quantity": 16,
+      "source_part": "Bottom rail",
+      "component_envelope_verified": true,
+      "rough_stock_allowance": "Not included in the model envelope; verify blank and tenon lengths before cutting wood bridge",
+      "downloads": [
+        "rail-foot",
+        "bridge-truck",
+        "roller-fit-coupon",
+        "guide-fit-coupon",
+        "projection-gauge",
+        "rail-guide-1",
+        "rail-guide-2",
+        "rail-guide-3",
+        "rail-guide-4",
+        "alignment-pin",
+        "end-stop"
+      ]
+    },
+    "stile": {
+      "revision": "R2",
+      "units": "mm",
+      "door_revision": "R7 f",
+      "crown": 19.05,
+      "target_radius": 1362.1411458333334,
+      "guide_radius": 1348.7796038004578,
+      "roller_radius": 11.0,
+      "roller_spacing": 80.0,
+      "bridge_floor_thickness": 6.35,
+      "truck_top_above_axles": 22.0,
+      "bit_projection_below_factory_base": 25.4,
+      "rail_thickness": 18,
+      "bridge_width": 150,
+      "clear_router_lane": 114,
+      "margin": 76.2,
+      "material": "PLA",
+      "datum": "Z=0 is the final guide-backer top plane",
+      "printer_assumption": "All individual parts fit a 180 \u00d7 180 mm bed; printer model unconfirmed",
+      "critical_unverified": [
+        "Exact router base/body fit in 114 mm lane",
+        "25.4 mm cutter projection with proper collet engagement",
+        "Actual plywood thickness, printed fit and assembled stiffness",
+        "Rough blank and joinery allowances before sizing wood bridge",
+        "Workholding outside full cutter sweep"
+      ],
+      "component": "stile",
+      "component_width": 57.15,
+      "component_length": 534.6995195746853,
+      "component_center_x": 198.4375,
+      "flat_back_height": 53.974999999999994,
+      "guide_centers_y": [
+        -312.34975978734263,
+        312.34975978734263
+      ],
+      "guide_range": [
+        119.86250000000001,
+        277.0125
+      ],
+      "guide_segments_per_rail": 1,
+      "footprint": [
+        209.55,
+        687.0995195746852
+      ],
+      "bridge_floor": [
+        150,
+        687.0995195746852,
+        6.35
+      ],
+      "bridge_ribs": [
+        18,
+        687.0995195746852,
+        50
+      ],
+      "bridge_slot": [
+        28,
+        566.6995195746853
+      ],
+      "angle_range": [
+        7.05,
+        9.7
+      ],
+      "rail_foot_quantity": 4,
+      "source_part": "Right stile",
+      "component_envelope_verified": true,
+      "rough_stock_allowance": "Not included in the model envelope; verify blank and tenon lengths before cutting wood bridge",
+      "downloads": [
+        "rail-foot",
+        "bridge-truck",
+        "roller-fit-coupon",
+        "guide-fit-coupon",
+        "projection-gauge",
+        "stile-guide-1",
+        "stile-high-stop",
+        "end-stop"
+      ]
+    }
+  }
+}
