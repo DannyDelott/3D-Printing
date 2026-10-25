@@ -1,0 +1,272 @@
+"""R6 exact CAD: saved Broad Center and shallow cylindrical door study.
+Run with CadQuery 2.8, Shapely 2 and trimesh. Input/output units: millimetres.
+"""
+import json, math, zipfile, sys
+from pathlib import Path
+from xml.etree import ElementTree as ET
+import cadquery as cq
+import trimesh
+from shapely.geometry import Polygon, Point
+from shapely.affinity import rotate
+from shapely.ops import unary_union
+from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeEdge, BRepBuilderAPI_MakeWire, BRepBuilderAPI_MakeFace
+from OCP.BRepPrimAPI import BRepPrimAPI_MakePrism
+from OCP.Geom import Geom_Ellipse
+from OCP.Bnd import Bnd_Box
+from OCP.BRepBndLib import BRepBndLib
+from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt, gp_Vec
+OUT=Path(sys.argv[1]).resolve()
+assert OUT.name in ['a','b']
+p=json.loads((OUT/'parameters.json').read_text())
+W,H,S=p['case_width'],p['case_height'],p['case_side_thickness']
+T,ST,G=p['door_thickness'],p['stile_thickness'],p['door_gap']
+D=p['straight_overall_depth']-T-G;p['case_depth']=D
+R=p['side_reveal'];DW=W-2*R;DH=p['door_height'];SW=p['stile_width'];Q=p['ellipse_q']
+A=DW/Q;B=(p['rail_deep']-p['rail_shallow'])/(1-math.sqrt(1-Q*Q));CY=p['rail_shallow']+B
+GW,GD=p['groove_width'],p['groove_depth'];GZ=(ST-GW)/2
+LW,LT,BG=p['knife_leaf_width'],p['knife_leaf_thickness'],p['knife_bearing_gap']
+PX=W-R-LW/2;PZ=G+T/2
+parts=[]
+def box(x,y,z,w,h,d):return cq.Solid.makeBox(w,h,d,cq.Vector(x,y,z))
+def bottom(x):return CY-B*math.sqrt(1-(x/A)**2)
+def add(name,shape,group='case',grain='y',material='wood'):
+    assert shape.isValid() and shape.Volume()>0,name
+    parts.append(dict(name=name,shape=shape,group=group,grain=grain,material=material))
+def rail():
+    curve=Geom_Ellipse(gp_Ax2(gp_Pnt(0,CY,0),gp_Dir(0,0,-1),gp_Dir(1,0,0)),A,B)
+    wire=BRepBuilderAPI_MakeWire()
+    for a,b in [((0,0),(DW,0)),((DW,0),(DW,p['rail_deep']))]:wire.Add(BRepBuilderAPI_MakeEdge(gp_Pnt(*a,0),gp_Pnt(*b,0)).Edge())
+    wire.Add(BRepBuilderAPI_MakeEdge(curve,math.acos(Q),math.pi/2).Edge())
+    wire.Add(BRepBuilderAPI_MakeEdge(gp_Pnt(0,p['rail_shallow'],0),gp_Pnt(0,0,0)).Edge())
+    return cq.Shape.cast(BRepPrimAPI_MakePrism(BRepBuilderAPI_MakeFace(wire.Wire()).Face(),gp_Vec(0,0,T)).Shape())
+def prism_xz(points,y,height):
+    wire=cq.Wire.makePolygon([cq.Vector(x,y,z) for x,z in points],close=True)
+    return cq.Solid.extrudeLinear(wire,[],cq.Vector(0,height,0))
+def cyl_y(x,y,z,r,h):return cq.Solid.makeCylinder(r,h,cq.Vector(x,y,z),cq.Vector(0,1,0))
+# Vertical sides carry three through-tails at each end. Top/bottom are pin boards.
+case_left=box(0,S,-D,S,H-2*S,D);case_right=box(W-S,S,-D,S,H-2*S,D)
+case_h=[box(0,0,-D,W,S,D),box(0,H-S,-D,W,S,D)];tails=[]
+count=p['tails_per_corner'];pitch=D/count;neck=D/6;flare=S/p['dovetail_slope']
+old_pin_narrow=pitch-neck-2*flare
+pin_narrow=old_pin_narrow*p['full_pin_narrow_width_scale']
+spread=(old_pin_narrow-pin_narrow)/2
+profiles=[]
+for i in range(count):
+    c=-D+(i+.5)*pitch
+    lo=c-neck/2-(spread if i>0 else 0)
+    hi=c+neck/2+(spread if i<count-1 else 0)
+    profiles.append({'root':[lo,hi],'tip':[lo-flare,hi+flare]})
+full_pins=[profiles[i+1]['tip'][0]-profiles[i]['tip'][1] for i in range(count-1)]
+outer_pins=[profiles[0]['tip'][0]+D,-profiles[-1]['tip'][1]]
+assert all(abs(w-pin_narrow)<1e-8 for w in full_pins)
+assert all(abs(w-old_pin_narrow/2)<1e-8 for w in outer_pins)
+assert all(abs((t['root'][0]-t['tip'][0])-flare)<1e-8 for t in profiles)
+for side,x in [('left',0),('right',W-S)]:
+    for j,top in enumerate([False,True]):
+        for i in range(p['tails_per_corner']):
+            lo,hi=profiles[i]['root']
+            yz=[(S,lo),(0,lo-flare),(0,hi+flare),(S,hi)]
+            if top:yz=[(H-y,z) for y,z in yz][::-1]
+            wire=cq.Wire.makePolygon([cq.Vector(x,y,z) for y,z in yz],close=True)
+            tail=cq.Solid.extrudeLinear(wire,[],cq.Vector(S,0,0));tails.append(tail)
+            if side=='left':case_left=case_left.fuse(tail)
+            else:case_right=case_right.fuse(tail)
+            case_h[j]=case_h[j].cut(tail)
+case_shapes=[case_left,case_right,case_h[0],case_h[1]]
+# Recessed mating 45-degree cleats. Lower face of cabinet member slopes up
+# toward the front; the supporting reaction seats the cabinet toward the wall.
+C=H-S-p['cleat_height'];CT=p['cleat_thickness'];CH=p['cleat_height']
+def prism_yz(points,x,width):
+    w=cq.Wire.makePolygon([cq.Vector(x,y,z) for y,z in points],close=True)
+    return cq.Solid.extrudeLinear(w,[],cq.Vector(width,0,0))
+cabinet_cleat=prism_yz([(C,-D),(H-S,-D),(H-S,-D+CT),(C+CT,-D+CT)],S,W-2*S)
+wall_cleat=prism_yz([(C+CT-CH,-D),(C,-D),(C+CT,-D+CT),(C+CT-CH,-D+CT)],2*S,W-4*S)
+assert cabinet_cleat.intersect(wall_cleat).Volume()<1e-5
+add('Cabinet cleat',cabinet_cleat,grain='x')
+add('Wall cleat',wall_cleat,'wallCleat',grain='x')
+# Exact asymmetric frame. Stiles have flush backs and 1/8-inch front setback.
+low=rail();high=low.rotate((DW/2,DH/2,0),(DW/2,DH/2,1),180)
+left=box(0,0,0,SW,DH,ST).cut(low).cut(high)
+right=box(DW-SW,0,0,SW,DH,ST).cut(low).cut(high)
+opening=box(SW,0,0,DW-2*SW,DH,T).cut(low).cut(high)
+# Separate openings produce independent four-sided floating-panel grooves.
+frame_local=[low,high,left,right]
+if p['divider']:
+    divider=box(SW,p['divider_bottom'],0,DW-2*SW,p['divider_width'],T)
+    opening=opening.cut(divider)
+    frame_local.append(divider)
+openings=sorted(opening.Solids(),key=lambda s:s.Center().y)
+panels=[]
+for op in openings:
+    wire=cq.Workplane(obj=op).faces('<Z').val().outerWire()
+    def offset_prism(distance,z,depth):
+        expanded=wire.offset2D(distance,'arc');assert len(expanded)==1
+        exchange_wire=expanded[0].toSplines(degree=8,tolerance=1e-5)
+        return cq.Solid.extrudeLinear(exchange_wire,[],cq.Vector(0,0,depth)).translate((0,0,z))
+    groove=offset_prism(GD,GZ,GW)
+    frame_local=[f.cut(groove) for f in frame_local]
+    panels.append(offset_prism(GD-p['panel_edge_clearance'],GZ+(GW-p['panel_thickness'])/2,p['panel_thickness']).translate((R,0,G)))
+frame=[s.translate((R,0,G)) for s in frame_local]
+# Split the single curved field into actual overlapping boards. Front seams
+# and rear shoulders are staggered; no straight through-gap opens to the wall.
+assert len(panels)==1
+whole=panels[0];bounds=whole.BoundingBox();mid=(bounds.zmin+bounds.zmax)/2
+seams=[W/2+o for o in p['seam_offsets']];panels=[]
+for i in range(len(seams)+1):
+    lo=bounds.xmin-1 if i==0 else seams[i-1]-p['lap_width']+p['lap_edge_clearance']
+    hi=bounds.xmax+1 if i==len(seams) else seams[i]-p['seam_gap']/2
+    board=whole.intersect(box(lo,-1,bounds.zmin-1,hi-lo,H+2,p['panel_thickness']+2))
+    if i>0:
+        stop=seams[i-1]+p['seam_gap']/2
+        board=board.cut(box(lo-1,-1,mid-p['lap_face_clearance']/2,stop-lo+1,H+2,p['panel_thickness']))
+    if i<len(seams):
+        start=seams[i]-p['lap_width']
+        board=board.cut(box(start,-1,bounds.zmin-1,hi-start+1,H+2,mid-bounds.zmin+1+p['lap_face_clearance']/2))
+    assert len(board.Solids())==1 and board.isValid()
+    panels.append(board)
+for i,board in enumerate(panels):
+    for other in panels[i+1:]:assert board.intersect(other).Volume()<1e-5
+# Finished composite envelopes: quilted-maple veneer over a core.
+# A flat raised center creates a second face plane. Its top/bottom shoulders
+# stop at the inner edge of the shallow perimeter channel, preserving the
+# existing full-thickness groove tongues. Edge lipping is a construction detail.
+panel_front=G+GZ+(GW-p['panel_thickness'])/2+p['panel_thickness']
+channel_width=p['perimeter_channel_width'];channel_depth=p['perimeter_channel_depth']
+visible=openings[0].translate((R,0,0))
+outer=cq.Workplane(obj=visible).faces('<Z').val().outerWire()
+inner=outer.offset2D(-channel_width,'arc')[0].toSplines(degree=8,tolerance=1e-5)
+inner_field=cq.Solid.extrudeLinear(inner,[],cq.Vector(0,0,T))
+raised_height=p['center_rise']
+if raised_height:
+    assert len(panels)==3
+    front_lo=seams[0]+p['seam_gap']/2
+    front_hi=seams[1]-p['seam_gap']/2
+    field=inner_field.intersect(box(front_lo,-1,-1,front_hi-front_lo,H+2,T+2))
+    wire=cq.Workplane(obj=field).faces('<Z').val().outerWire()
+    raised=cq.Solid.extrudeLinear(wire,[],cq.Vector(0,0,raised_height+.05)).translate((0,0,panel_front-.05))
+    panels[1]=panels[1].fuse(raised).clean()
+    assert panels[1].isValid() and len(panels[1].Solids())==1
+# Route a narrow, shallow perimeter channel into the face veneer. It follows
+# the whole opening; it does not add grooves down the two internal board seams.
+ring=visible.cut(inner_field)
+channel=ring.intersect(box(-1,-1,0,W+2,H+2,channel_depth)).translate((0,0,panel_front-channel_depth))
+removed=[]
+for i,board in enumerate(panels):
+    before=board.Volume();panels[i]=board.cut(channel).clean();removed.append(before-panels[i].Volume())
+    assert panels[i].isValid() and len(panels[i].Solids())==1 and removed[-1]>0
+for i,board in enumerate(panels):
+    for other in panels[i+1:]:assert board.intersect(other).Volume()<1e-5
+panel=cq.Compound.makeCompound(panels)
+
+# Add material only to exposed front faces; all backs, grooves and laps stay flat.
+# The outer profile is a circular arc across X, constant along Y. Panels retain
+# their original flat groove tongues and receive the crown only in the opening.
+BOW=p['door_bow'];bend_radius=(DW*DW/(8*BOW)+BOW/2) if BOW else None
+circle_drop=(bend_radius-BOW) if BOW else None
+def bow_at(x):return math.sqrt(bend_radius*bend_radius-(x-W/2)**2)-circle_drop if BOW else 0
+
+def crowned_front(shape,face_levels,clip=None):
+    result=shape
+    for f in shape.Faces():
+        if f.geomType()!='PLANE' or f.normalAt().z<.999999:continue
+        z=f.Center().z
+        if not any(abs(z-level)<1e-5 for level in face_levels):continue
+        # Small overlap ensures reliable unions without altering the back.
+        outer=f.outerWire().translate((0,0,-.01))
+        inners=[w.translate((0,0,-.01)) for w in f.innerWires()]
+        column=cq.Solid.extrudeLinear(outer,inners,cq.Vector(0,0,BOW+.02))
+        upper=cq.Solid.makeCylinder(bend_radius,H+4,cq.Vector(W/2,-2,z-circle_drop),cq.Vector(0,1,0))
+        cap=column.intersect(upper)
+        if clip is not None:cap=cap.intersect(clip)
+        if cap.Volume()>1e-5:result=result.fuse(cap)
+    result=result.clean()
+    assert result.isValid() and len(result.Solids())==1
+    assert abs(result.BoundingBox().zmin-shape.BoundingBox().zmin)<1e-5
+    return result
+if BOW:
+    frame=[crowned_front(s,[G+T if i<2 else G+ST]) for i,s in enumerate(frame)]
+    face_clip=cq.Solid.extrudeLinear(outer,[],cq.Vector(0,0,T+BOW+G))
+    panels=[crowned_front(s,[panel_front,panel_front-channel_depth],face_clip) for s in panels]
+    panel=cq.Compound.makeCompound(panels)
+    for i,board in enumerate(panels):
+        for other in panels[i+1:]:assert board.intersect(other).Volume()<1e-5
+
+# Both knife leaves are recessed. The stationary leaf is flush with the case's
+# top/bottom; the moving leaf is one bearing gap and one leaf thickness deeper.
+# Door clearance mortises follow the stationary-leaf swept envelope (0–110°),
+# buffered 0.3 mm. No external mounting pad remains.
+fixed_outline=unary_union([Polygon([(PX-LW/2,-32),(PX+LW/2,-32),(PX+LW/2,PZ),(PX-LW/2,PZ)]),Point(PX,PZ).buffer(LW/2,quad_segs=32)])
+swept=unary_union([rotate(fixed_outline,a,origin=(PX,PZ),use_radians=False) for a in range(0,p['hinge_open_limit']+1)]).buffer(.3,quad_segs=16)
+sweep_pts=list(swept.exterior.coords)[:-1]
+for top in [False,True]:
+    label='Upper' if top else 'Lower'
+    fy=H-LT if top else 0
+    my=H-2*LT-BG if top else LT+BG
+    fixed=prism_xz(list(fixed_outline.exterior.coords)[:-1],fy,LT)
+    for z in [-22,-10]:fixed=fixed.cut(cyl_y(PX,fy,z,1.8,LT))
+    moving=box(PX-44,my,PZ-LW/2,44,LT,LW).fuse(cyl_y(PX,my,PZ,LW/2,LT))
+    moving=moving.cut(cyl_y(PX,my,PZ,2.15,LT))
+    for x in [PX-32,PX-18]:moving=moving.cut(cyl_y(x,my,PZ,1.8,LT))
+    # Mortise open from the outside edge for access to the recessed moving leaf.
+    access_y=my if top else 0
+    access=box(PX-44-.15,access_y,PZ-LW/2-.15,44+.15,2*LT+BG,LW+.3).fuse(cyl_y(PX,access_y,PZ,LW/2+.15,2*LT+BG))
+    clearance=prism_xz(sweep_pts,fy-.1 if top else 0,LT+.1)
+    case_shapes=[s.cut(fixed) for s in case_shapes]
+    frame=[s.cut(access).cut(clearance) for s in frame]
+    add(label+' mortised fixed leaf',fixed,'knifeFixed',material='brass')
+    add(label+' mortised door leaf',moving,'knifeDoor',material='brass')
+    add(label+' pivot pin',cyl_y(PX,H-2*LT-BG if top else 0,PZ,2,2*LT+BG),'knifeFixed',material='brass')
+for name,shape,grain in zip(['Case left','Case right','Case bottom','Case top'],case_shapes,['y','y','x','x']):add(name,shape,grain=grain)
+# Reference-inspired polished cabochon; physical hardware dimensions assumed.
+KX=R+SW/2;KY=H/2
+names=['Bottom rail','Top rail','Left stile','Right stile']+(['Panel divider'] if p['divider'] else [])
+for name,shape,grain in zip(names,frame,['x','x','y','y','x']):add(name,shape,'door',grain)
+for i,pan in enumerate(panels):add('Maple board '+str(i+1),pan,'door','y','maple')
+cap_h=9.525;kr=p['knob_diameter']/2;zend=G+ST+p['knob_projection'];basez=zend-cap_h
+stone=cq.Workplane(obj=cq.Solid.makeCylinder(kr,cap_h,cq.Vector(KX,KY,basez),cq.Vector(0,0,1))).edges().fillet(4.5).val()
+mount=cq.Solid.makeCylinder(5,basez-G-ST,cq.Vector(KX,KY,G+ST),cq.Vector(0,0,1))
+if BOW:
+    tilt=math.degrees(math.atan((KX-W/2)/math.sqrt(bend_radius*bend_radius-(KX-W/2)**2)))
+    stone=stone.rotate((KX,KY,G+ST),(KX,KY+1,G+ST),tilt).translate((0,0,bow_at(KX)))
+    mount=mount.rotate((KX,KY,G+ST),(KX,KY+1,G+ST),tilt).translate((0,0,bow_at(KX)))
+add('Knob mount',mount,'door',material='bronze');add('Tiger eye stone',stone,'door',material='stone')
+# CAD and mesh exports derive from the same solids.
+assembly=cq.Assembly(name='Cabinet_R6_'+p['option']);meshes=[];sections=[]
+colors={'wood':cq.Color(.78,.65,.52),'maple':cq.Color(.87,.77,.61),'brass':cq.Color(.67,.48,.22),'bronze':cq.Color(.28,.22,.15),'stone':cq.Color(.55,.29,.07)}
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02';ET.register_namespace('',ns)
+root=ET.Element('{'+ns+'}model',unit='millimeter',attrib={'xml:lang':'en-US'});resources=ET.SubElement(root,'{'+ns+'}resources');build=ET.SubElement(root,'{'+ns+'}build')
+for i,part in enumerate(parts,1):
+    s=part['shape'];assembly.add(s,name=part['name'].replace(' ','_'),color=colors[part['material']])
+    vertices,faces=s.tessellate(.045,.07);mesh=trimesh.Trimesh([[v.x,v.y,v.z] for v in vertices],faces,process=True);mesh.fix_normals()
+    assert mesh.is_watertight and mesh.volume>0,part['name']
+    if part['group'] in ['case','door'] and part['material'] in ['wood','maple']:
+        section=mesh.section(plane_origin=[0,H/2,0],plane_normal=[0,1,0])
+        if section is not None:
+            for loop in section.discrete:sections.append({'group':part['group'],'material':part['material'],'points':[[float(v[0]),float(v[2])] for v in loop]})
+    bb=s.BoundingBox();meshes.append({k:v for k,v in part.items() if k!='shape'}|{'vertices':mesh.vertices.tolist(),'triangles':mesh.faces.tolist(),'bounds':[bb.xmin,bb.ymin,bb.zmin,bb.xmax,bb.ymax,bb.zmax],'volume_mm3':s.Volume()})
+    obj=ET.SubElement(resources,'{'+ns+'}object',id=str(i),type='model',name=part['name']);m=ET.SubElement(obj,'{'+ns+'}mesh');v=ET.SubElement(m,'{'+ns+'}vertices');f=ET.SubElement(m,'{'+ns+'}triangles')
+    for xyz in mesh.vertices:ET.SubElement(v,'{'+ns+'}vertex',**dict(zip('xyz',map(lambda n:format(n,'.9f'),xyz))))
+    for face in mesh.faces:ET.SubElement(f,'{'+ns+'}triangle',**{f'v{k+1}':str(n) for k,n in enumerate(face)})
+    ET.SubElement(build,'{'+ns+'}item',objectid=str(i))
+compound=cq.Compound.makeCompound([a['shape'].Solids()[0] for a in parts]);compound.exportStep(str(OUT/'cabinet-r6.step'),write_pcurves=False);cq.exporters.export(compound,str(OUT/'cabinet-r6.stl'),tolerance=.045,angularTolerance=.07)
+# Z-up derived mesh for the library's standard preview camera.
+cq.exporters.export(compound.rotate((0,0,0),(1,0,0),90),str(OUT/'cabinet-r6-preview.stl'),tolerance=.045,angularTolerance=.07)
+with zipfile.ZipFile(OUT/'cabinet-r6.3mf','w',zipfile.ZIP_DEFLATED) as z:
+    z.writestr('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/></Types>')
+    z.writestr('_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/3D/3dmodel.model" Id="rel0" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/></Relationships>')
+    z.writestr('3D/3dmodel.model',ET.tostring(root,encoding='utf-8',xml_declaration=True))
+# Verify solid envelope, groove fit, dovetail mating and selected hinge swing samples.
+body=cq.Compound.makeCompound([a['shape'] for a in parts if a['name'] not in ['Tiger eye stone','Knob mount']]);exact=Bnd_Box();BRepBndLib.AddOptimal_s(body.wrapped,exact,False,False);bb=cq.BoundBox(exact);assert abs(bb.xlen-W)<1e-5 and abs(bb.ylen-H)<1e-5 and abs(bb.zlen-p['overall_depth'])<1e-5,(bb.xlen,bb.ylen,bb.zlen)
+for f in frame:assert f.intersect(panel).Volume()<1e-5
+for c in case_shapes[:2]:
+    for horizontal in case_shapes[2:4]:assert c.intersect(horizontal).Volume()<1e-5
+fixed=cq.Compound.makeCompound([a['shape'] for a in parts if a['group'] in ['case','knifeFixed','wallCleat']]);moving=cq.Compound.makeCompound([a['shape'] for a in parts if a['group'] in ['door','knifeDoor']])
+samples=[]
+for angle in [0,15,30,45,60,75,90,100,110]:
+    volume=moving.rotate((PX,0,PZ),(PX,1,PZ),angle).intersect(fixed).Volume();samples.append({'angle':angle,'overlap_mm3':volume});assert volume<1e-4,(angle,volume)
+reimport=cq.importers.importStep(str(OUT/'cabinet-r6.step')).val();assert reimport.isValid() and len(reimport.Solids())==len(parts)
+full_bounds=Bnd_Box();BRepBndLib.AddOptimal_s(compound.wrapped,full_bounds,False,False);full_depth=cq.BoundBox(full_bounds).zlen
+validation={'revision':'R6','door_bow':BOW,'bow_radius_mm':bend_radius,'bow_edge_angle_degrees':math.degrees(math.asin(DW/(2*bend_radius))) if BOW else 0,'case_unchanged':True,'door_back_flat':True,'grooves_and_laps_flat':True,'rail_max_thickness':T+BOW,'option':p['option'],'units':'mm','case_and_door_size':[bb.xlen,bb.ylen,bb.zlen],'depth_including_knob':full_depth,'knob_projection_from_stile':p['knob_projection'],'tail_boards':'vertical sides','pin_boards':'top and bottom','case_depth':D,'open_back':True,'interior_depth_gain_below_cleat':S,'cleat_thickness':CT,'cleat_height':CH,'cleat_bevel_degrees':45,'cleat_overlap_mm3':0,'center_rise':raised_height,'center_max_thickness':p['panel_thickness']+raised_height+BOW,'field_bevel_width':0,'perimeter_channel_width':channel_width,'perimeter_channel_depth':channel_depth,'channel_removed_mm3':removed,'veneer_thickness':p['veneer_thickness'],'remaining_veneer_under_channel':p['veneer_thickness']-channel_depth,'panel_construction':p['panel_construction'],'rail_edge_face_z':G+T,'rail_crown_face_z':G+T+BOW,'stile_edge_face_z':G+ST,'center_face_z':bounds.zmax+raised_height+BOW,'side_panel_base_face_z':bounds.zmax,'panel_count':len(panels),'vertical_seams':seams,'face_gap':p['seam_gap'],'lap_length':p['lap_width'],'lap_remaining_overlap':p['lap_width']-p['lap_edge_clearance']-p['seam_gap']/2,'lap_face_clearance':p['lap_face_clearance'],'board_overlap_mm3':0,'stile_shadow_line':T-ST,'groove_width':GW,'groove_depth':GD,'panel_thickness':p['panel_thickness'],'panel_edge_clearance':p['panel_edge_clearance'],'panel_engagement':GD-p['panel_edge_clearance'],'full_pin_narrow_width_before':old_pin_narrow,'full_pin_narrow_widths':full_pins,'full_pin_wide_width':pin_narrow+2*flare,'outside_half_pin_narrow_widths':outer_pins,'outside_half_pins_unchanged':True,'tail_root_widths':[t['root'][1]-t['root'][0] for t in profiles],'tail_tip_widths':[t['tip'][1]-t['tip'][0] for t in profiles],'dovetails_per_corner':3,'dovetail_slope':'1:'+str(p['dovetail_slope']),'total_tails':len(tails),'part_count':len(parts),'step_reimport_valid':True,'all_meshes_watertight':True,'panel_frame_overlap_mm3':0,'dovetail_overlap_mm3':0,'hinge_sweep_samples':samples,'hardware':'Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated','assumptions':p['provenance']['assumptions']}
+(OUT/'validation.json').write_text(json.dumps(validation,indent=2)+'\n')
+(OUT/'model-data.js').write_text('export const MODEL = '+json.dumps({'parameters':p,'derived':{'doorBow':BOW,'bendRadius':bend_radius,'midheight_sections':sections,'doorWidth':DW,'axisX':PX,'axisZ':PZ,'grooveZ':G+GZ,'ellipseA':A,'ellipseB':B,'ellipseCy':CY},'parts':meshes,'validation':validation},separators=(',',':'))+';\n')
+print(json.dumps(validation,indent=2))
