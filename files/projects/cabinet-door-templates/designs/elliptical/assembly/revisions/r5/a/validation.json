@@ -1,0 +1,102 @@
+{
+  "revision": "R5",
+  "option": "a",
+  "units": "mm",
+  "case_and_door_size": [
+    457.2,
+    685.8000000000001,
+    152.4000001
+  ],
+  "depth_including_knob": 168.275,
+  "knob_projection_from_stile": 19.05,
+  "tail_boards": "vertical sides",
+  "pin_boards": "top and bottom",
+  "case_depth": 130.35,
+  "open_back": true,
+  "interior_depth_gain_below_cleat": 19.05,
+  "cleat_thickness": 19.05,
+  "cleat_height": 57.15,
+  "cleat_bevel_degrees": 45,
+  "cleat_overlap_mm3": 0,
+  "center_rise": 0,
+  "center_max_thickness": 6.1,
+  "field_bevel_width": 0,
+  "perimeter_channel_width": 1.5875,
+  "perimeter_channel_depth": 0.396875,
+  "channel_removed_mm3": [
+    477.26991451735375,
+    143.43208571965806,
+    477.26991632930003
+  ],
+  "panel_construction": "Quilted-maple veneer over core; CAD represents finished composite envelope",
+  "rail_face_z": 22.05,
+  "stile_face_z": 18.875,
+  "center_face_z": 13.9875001,
+  "side_panel_face_z": 13.9875001,
+  "panel_count": 3,
+  "vertical_seams": [
+    171.45,
+    285.75
+  ],
+  "face_gap": 1.0,
+  "lap_length": 6.35,
+  "lap_remaining_overlap": 5.699999999999999,
+  "lap_face_clearance": 0.1,
+  "board_overlap_mm3": 0,
+  "stile_shadow_line": 3.1750000000000007,
+  "groove_width": 6.35,
+  "groove_depth": 6.35,
+  "panel_thickness": 6.1,
+  "panel_edge_clearance": 2.0,
+  "panel_engagement": 4.35,
+  "dovetails_per_corner": 3,
+  "dovetail_slope": "1:6",
+  "total_tails": 12,
+  "part_count": 21,
+  "step_reimport_valid": true,
+  "all_meshes_watertight": true,
+  "panel_frame_overlap_mm3": 0,
+  "dovetail_overlap_mm3": 0,
+  "hinge_sweep_samples": [
+    {
+      "angle": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 15,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 30,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 45,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 60,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 75,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 100,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 110,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
+  "assumptions": "4 1/2-inch center bay, flat reference panel. Confirmed 3/32-inch face veneer over an unspecified core; finished panel body 6.10 mm at grooves and laps. Raised center total 9.275 mm. Finished composite shapes are modeled; separate veneer, balancing back veneer, core and maple edge lippings are not resolved. Groove/lap clearances, movement, retention, joinery, cleat attachment and hardware remain provisional.",
+  "veneer_thickness": 2.38125,
+  "remaining_veneer_under_channel": 1.984375
+}
