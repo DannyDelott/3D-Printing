@@ -710,6 +710,512 @@
             "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/index.html?option=b&wood=quilted"
           ]
         ]
+      },
+      {
+        "id": "crown-jig-guide-1",
+        "group": "Crown jig",
+        "label": "Guide 1 \u00b7 outer left",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-guide-1.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-1.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "One of four numbered curved guide sections. Print two of each section for the pair of rails, then bolt them to straight wooden backers. The profile is specific to the R7 \u00be-inch crown and the recorded bridge and cutter dimensions.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "150.00 \u00d7 61.15 \u00d7 18.00 mm / 5.91 \u00d7 2.41 \u00d7 0.71 in"
+          ],
+          [
+            "Quantity",
+            "2"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide 1 \u00b7 outer left \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-1.3mf"
+          ],
+          [
+            "Guide 1 \u00b7 outer left \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-1.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-guide-2",
+        "group": "Crown jig",
+        "label": "Guide 2 \u00b7 inner left",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-guide-2.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-2.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "One of four numbered curved guide sections. Print two of each section for the pair of rails, then bolt them to straight wooden backers. The profile is specific to the R7 \u00be-inch crown and the recorded bridge and cutter dimensions.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "150.00 \u00d7 69.52 \u00d7 18.00 mm / 5.91 \u00d7 2.74 \u00d7 0.71 in"
+          ],
+          [
+            "Quantity",
+            "2"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide 2 \u00b7 inner left \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-2.3mf"
+          ],
+          [
+            "Guide 2 \u00b7 inner left \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-2.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-guide-3",
+        "group": "Crown jig",
+        "label": "Guide 3 \u00b7 inner right",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-guide-3.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-3.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "One of four numbered curved guide sections. Print two of each section for the pair of rails, then bolt them to straight wooden backers. The profile is specific to the R7 \u00be-inch crown and the recorded bridge and cutter dimensions.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "150.00 \u00d7 69.52 \u00d7 18.00 mm / 5.91 \u00d7 2.74 \u00d7 0.71 in"
+          ],
+          [
+            "Quantity",
+            "2"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide 3 \u00b7 inner right \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-3.3mf"
+          ],
+          [
+            "Guide 3 \u00b7 inner right \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-3.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-guide-4",
+        "group": "Crown jig",
+        "label": "Guide 4 \u00b7 outer right",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-guide-4.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-4.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "One of four numbered curved guide sections. Print two of each section for the pair of rails, then bolt them to straight wooden backers. The profile is specific to the R7 \u00be-inch crown and the recorded bridge and cutter dimensions.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "150.00 \u00d7 61.15 \u00d7 18.00 mm / 5.91 \u00d7 2.41 \u00d7 0.71 in"
+          ],
+          [
+            "Quantity",
+            "2"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide 4 \u00b7 outer right \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-4.3mf"
+          ],
+          [
+            "Guide 4 \u00b7 outer right \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-4.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-rail-foot",
+        "group": "Crown jig",
+        "label": "Guide foot",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-rail-foot.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/rail-foot.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Bolts each guide section to a wooden backer. Use with the matching guide fit coupon before printing all sixteen feet.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "35.00 \u00d7 70.00 \u00d7 22.00 mm / 1.38 \u00d7 2.76 \u00d7 0.87 in"
+          ],
+          [
+            "Quantity",
+            "16"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide foot \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/rail-foot.3mf"
+          ],
+          [
+            "Guide foot \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/rail-foot.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-guide-fit-coupon",
+        "group": "Crown jig",
+        "label": "Guide fit coupon",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-guide-fit-coupon.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-fit-coupon.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Print with one guide foot to check the 18.4 mm slot and M5 retaining bolt before printing the full guides.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "40.00 \u00d7 69.52 \u00d7 18.00 mm / 1.57 \u00d7 2.74 \u00d7 0.71 in"
+          ],
+          [
+            "Quantity",
+            "1"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Guide fit coupon \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-fit-coupon.3mf"
+          ],
+          [
+            "Guide fit coupon \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/guide-fit-coupon.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-bridge-truck",
+        "group": "Crown jig",
+        "label": "Bridge truck",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-bridge-truck.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/bridge-truck.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Two bearing axles carry each end of the wooden bridge. Use two trucks and four 608 bearings. Check the matching roller coupon first.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "140.00 \u00d7 60.00 \u00d7 42.00 mm / 5.51 \u00d7 2.36 \u00d7 1.65 in"
+          ],
+          [
+            "Quantity",
+            "2"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Bridge truck \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/bridge-truck.3mf"
+          ],
+          [
+            "Bridge truck \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/bridge-truck.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-roller-fit-coupon",
+        "group": "Crown jig",
+        "label": "Roller fit coupon",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-roller-fit-coupon.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/roller-fit-coupon.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Print with one 608 bearing, M8 axle and two 0.5 mm inner-race shims to check free rotation before printing the bridge trucks.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "30.00 \u00d7 30.00 \u00d7 27.00 mm / 1.18 \u00d7 1.18 \u00d7 1.06 in"
+          ],
+          [
+            "Quantity",
+            "1"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Roller fit coupon \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/roller-fit-coupon.3mf"
+          ],
+          [
+            "Roller fit coupon \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/roller-fit-coupon.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-alignment-pin",
+        "group": "Crown jig",
+        "label": "Alignment pin",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-alignment-pin.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/alignment-pin.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Locates the butt seams between guide segments. Structural retention comes from the bolted feet, not these pins.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "5.90 \u00d7 5.90 \u00d7 22.00 mm / 0.23 \u00d7 0.23 \u00d7 0.87 in"
+          ],
+          [
+            "Quantity",
+            "6"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Alignment pin \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/alignment-pin.3mf"
+          ],
+          [
+            "Alignment pin \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/alignment-pin.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-projection-gauge",
+        "group": "Crown jig",
+        "label": "Projection gauge",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-projection-gauge.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/projection-gauge.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Checks the assumed 25.4 mm cutter projection below the factory router base. Remove the battery before using this gauge.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "70.00 \u00d7 30.00 \u00d7 25.40 mm / 2.76 \u00d7 1.18 \u00d7 1.00 in"
+          ],
+          [
+            "Quantity",
+            "1"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Projection gauge \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/projection-gauge.3mf"
+          ],
+          [
+            "Projection gauge \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/projection-gauge.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
+      },
+      {
+        "id": "crown-jig-travel-stop",
+        "group": "Crown jig",
+        "label": "Travel stop",
+        "revision": "R1",
+        "preview": "assets/crown-jig-r1-travel-stop.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/travel-stop.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html",
+        "description": "Screws to the wooden backers to stop bridge travel before rollers leave the curved guides. Install left and right stops in mirrored orientations.",
+        "dimensions": [
+          [
+            "Print dimensions",
+            "30.00 \u00d7 70.00 \u00d7 73.00 mm / 1.18 \u00d7 2.76 \u00d7 2.87 in"
+          ],
+          [
+            "Quantity",
+            "4"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Door crown",
+            "19.05 mm / 0.75 in"
+          ]
+        ],
+        "notes": "CAD and mesh checks passed. Physical fit, assembled stiffness and powered routing untested. Confirm router reach before full printing.",
+        "print": "Supplied orientation. 0.20 mm layers, 6 walls, 35% gyroid, no supports. P1S used only for estimates; printer model unconfirmed.",
+        "downloads": [
+          [
+            "Travel stop \u00b7 3MF",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/travel-stop.3mf"
+          ],
+          [
+            "Travel stop \u00b7 STEP",
+            "projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/models/travel-stop.step"
+          ]
+        ],
+        "related": [
+          [
+            "Interactive jig and setup",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-jig/revisions/r1/index.html"
+          ]
+        ]
       }
     ]
   },
