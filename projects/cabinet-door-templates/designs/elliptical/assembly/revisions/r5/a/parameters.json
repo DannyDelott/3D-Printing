@@ -26,9 +26,9 @@
   "knife_bearing_gap": 0.8,
   "hinge_open_limit": 110,
   "provenance": {
-    "user_confirmed": "18 \u00d7 27 \u00d7 6 inch overall; 3/4 inch case and rails; 5/8 inch stiles; mortised knife hinges; quarter-inch panel grooves; three dovetails per corner; vertical sides carry tails, top/bottom carry pins; 1:6 dovetail slope; open back with top French cleat; tiger eye knob direction; new design proportions on 3/4 inch module; R3 option A rail proportions preferred; vertical segmentation rather than horizontal divider; curly maple rather than walnut; dragon eye inspiration; narrow-center five-board layout rejected; three boards with a broader middle and narrower side boards; emphasize layered depth within 6-inch envelope; quilted-maple reference; quilted maple veneer over core; outer perimeter channel 1/16 inch wide by 1/64 inch deep; face veneer thickness 3/32 inch",
+    "user_confirmed": "18 \u00d7 27 \u00d7 6 inch overall; 3/4 inch case and rails; 5/8 inch stiles; mortised knife hinges; quarter-inch panel grooves; three dovetails per corner; vertical sides carry tails, top/bottom carry pins; 1:6 dovetail slope; open back with top French cleat; tiger eye knob direction; new design proportions on 3/4 inch module; R3 option A rail proportions preferred; vertical segmentation rather than horizontal divider; curly maple rather than walnut; dragon eye inspiration; narrow-center five-board layout rejected; three boards with a broader middle and narrower side boards; emphasize layered depth within 6-inch envelope; quilted-maple reference; quilted maple veneer over core; outer perimeter channel 1/16 inch wide by 1/64 inch deep; face veneer thickness 3/32 inch; interior full pins half their prior narrow-face width; outside half-pins unchanged",
     "retained_from_source": "R3 A rail ends 2 1/4 / 4 1/2 inches; 2 1/4 inch stiles; q=0.95 ellipse; right-hand hinges; R4 outer panel grooves and lap geometry",
-    "assumptions": "4 1/2-inch center bay, flat reference panel. Confirmed 3/32-inch face veneer over an unspecified core; finished panel body 6.10 mm at grooves and laps. Raised center total 9.275 mm. Finished composite shapes are modeled; separate veneer, balancing back veneer, core and maple edge lippings are not resolved. Groove/lap clearances, movement, retention, joinery, cleat attachment and hardware remain provisional.",
+    "assumptions": "4 1/2-inch center bay, flat reference panel. Confirmed 3/32-inch face veneer over an unspecified core; finished panel body 6.10 mm at grooves and laps. Finished composite shapes are modeled; separate veneer, balancing back veneer, core and maple edge lippings are not resolved. Groove/lap clearances, movement, retention, joinery, cleat attachment and hardware remain provisional.",
     "hardware": "Custom mortised knife geometry, not a manufacturer-specified hinge; load, screws and bearing retention unverified"
   },
   "option": "a",
@@ -56,5 +56,6 @@
   "perimeter_channel_depth": 0.396875,
   "panel_construction": "Quilted-maple veneer over core; CAD represents finished composite envelope",
   "veneer_thickness": 2.38125,
-  "case_depth": 130.35
+  "case_depth": 130.35,
+  "full_pin_narrow_width_scale": 0.5
 }

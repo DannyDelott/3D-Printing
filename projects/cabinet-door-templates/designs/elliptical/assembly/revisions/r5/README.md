@@ -30,6 +30,10 @@ The proposed board layout, stock thickness and clearances are assumptions. The e
 
 A 1/16-inch-wide (1.5875 mm), 1/64-inch-deep (0.396875 mm) channel follows the whole panel opening along the curved rails and straight stiles. Its floor sits below the ordinary panel face, and it does not run down the internal seams. The dimensions are user-specified. The user confirmed 3/32-inch (2.38125 mm) face veneer, leaving 5/64 inch (1.984375 mm) below the channel. The cutter setup still needs confirmation before machining. The core material, balancing back veneer, adhesive and edge lippings remain unspecified. Both comparison options include the channel.
 
+## Dovetail proportions
+
+The three-tail, 1:6 layout retains the outside half-pins. The two interior full pins are halved at their narrow faces: 15.375 mm to 7.6875 mm (approximately 0.605 to 0.303 inch). Their wide ends are 14.0375 mm; outside half-pins remain 7.6875 mm at their narrow ends. Only the interior-facing boundaries of the adjacent tails move, so the middle tail grows on both sides and the outer tails grow inward. This preserves the case envelope and all corner slopes.
+
 ## Materials
 
 The default face veneer is quilted maple, using the user's supplied photograph; curly maple remains selectable. The quilted photograph is mapped at its original aspect ratio with an illustrative 350 mm image width. It is a visual sample, not a scan of selected stock or a physical simulation of chatoyance. Color and figure continuity between boards depend on the eventual stock and finish.

@@ -19,5 +19,8 @@
   "channel_width_mm": 1.5875,
   "channel_depth_mm": 0.396875,
   "center_rise_mm": 0,
-  "all_panel_faces_flush": true
+  "all_panel_faces_flush": true,
+  "dovetail_detail_view": true,
+  "full_pin_narrow_width_scale": 0.5,
+  "outside_half_pins_unchanged": true
 }

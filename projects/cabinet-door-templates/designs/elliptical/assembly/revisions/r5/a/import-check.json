@@ -103,7 +103,7 @@
       "manifold": true
     },
     {
-      "volume_mm3": 1662566.0,
+      "volume_mm3": 1673724.625,
       "facets": 108,
       "dimensions_mm": [
         19.049999,
@@ -113,7 +113,7 @@
       "manifold": true
     },
     {
-      "volume_mm3": 1660734.625,
+      "volume_mm3": 1671893.375,
       "facets": 3188,
       "dimensions_mm": [
         19.050018,
@@ -123,7 +123,7 @@
       "manifold": true
     },
     {
-      "volume_mm3": 1080762.75,
+      "volume_mm3": 1069603.375,
       "facets": 246,
       "dimensions_mm": [
         457.200012,
@@ -133,7 +133,7 @@
       "manifold": true
     },
     {
-      "volume_mm3": 1080762.375,
+      "volume_mm3": 1069603.0,
       "facets": 246,
       "dimensions_mm": [
         457.200012,
