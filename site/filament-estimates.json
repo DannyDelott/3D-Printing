@@ -3330,5 +3330,445 @@
       }
     ],
     "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-core.3mf": {
+    "sha256": "3215578ffd5f79b83e9a61026c2fbc0a42ebe3ea074f206ead7f8745fb52f68b",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 8.185518264770508,
+        "cost": 0.16371036529541017,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 8.185518264770508,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "19 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-finished.3mf": {
+    "sha256": "b1077cdad1beae27e1980ebc3e8aee3927e8aaeb2e72b5db64b75711524875d4",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 8.570587158203125,
+        "cost": 0.1714117431640625,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 8.570587158203125,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "19 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-core.3mf": {
+    "sha256": "aca86394f047899988e82c4f1b73ce83ffe11bed7cd9b4d21f54488c9ee1becc",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 4.011608123779297,
+        "cost": 0.08023216247558594,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 4.011608123779297,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "13 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-finished.3mf": {
+    "sha256": "80441d4c521f18b781106a752f0026fd6435628b2d3b73d59fbe09c99b40e67a",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 4.252584457397461,
+        "cost": 0.08505168914794922,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 4.252584457397461,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "13 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-core.3mf": {
+    "sha256": "ec222e13f011072e50caa26ea2bf5230dba6037d8e5a1fa44710471635eff068",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 4.33521842956543,
+        "cost": 0.08670436859130859,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 4.33521842956543,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "14 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-finished.3mf": {
+    "sha256": "5d71a225c21f5d00595903490427cbdb0c7543efa0435defad59c6e619a66861",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 4.593092441558838,
+        "cost": 0.09186184883117676,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 4.593092441558838,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "14 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-left.3mf": {
+    "sha256": "16377dc9057f9248655d16908cd713c64fc4f9cd96f6b01780507a7e20fc60ff",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 15.834429740905762,
+        "cost": 0.31668859481811523,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 15.834429740905762,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "28 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-right.3mf": {
+    "sha256": "006f37607bb79c34e0759b061fb8641f1a7e11280fe1c02f75c02c307dd8bbfe",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 15.83935546875,
+        "cost": 0.316787109375,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 15.83935546875,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "28 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-left.3mf": {
+    "sha256": "bccfb3ab20f10c3e0efaa47c2b200be0057c8462a25186873fbb0e86705ae446",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 2.6891767978668213,
+        "cost": 0.053783535957336426,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.6891767978668213,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "11 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-right.3mf": {
+    "sha256": "5af010ac2a79b22c79f838dd92fbf9ef856c63b99de1b6a02f11369b7bd5e131",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "4",
+      "sparse_infill_density": "20%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 2.6911911964416504,
+        "cost": 0.05382382392883301,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.6911911964416504,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "11 min"
+      }
+    ],
+    "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
   }
 }

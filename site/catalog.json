@@ -588,126 +588,134 @@
         ]
       },
       {
-        "id": "curved-door-r7",
+        "id": "curved-door-r8",
         "group": "Cabinet",
         "label": "Adjustable curved face",
-        "revision": "R7",
+        "revision": "R8",
         "fabrication": "woodworking",
         "status": "Geometry checked; construction details provisional",
-        "description": "Tune the Broad Center front crown from flat to \u00be inch in \u215b-inch steps. Each setting keeps a flat back and the same case, and has matching CAD downloads.",
-        "preview": "assets/cabinet-curved-door-r7.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/b/cabinet-r7-preview.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/index.html",
-        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/README.md",
+        "description": "Broad Center door with a \u00be-inch crown, a 0.2 mm panel shadow line, 0.6 mm maple veneer on both sides, and a 3-inch assembled French-cleat band spanning the full inside width. Crown remains adjustable in \u215b-inch steps.",
+        "preview": "assets/cabinet-curved-door-r8.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/f/cabinet-r8-preview.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/index.html",
+        "readme": "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/README.md",
         "source": [
-          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/source/build_model.py"
+          "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/source/build_model.py"
         ],
         "dimensions": [
           [
-            "Default \u00bc-inch setting W \u00d7 H \u00d7 D",
-            "457.2 \u00d7 685.8 \u00d7 158.75 mm \u00b7 18 \u00d7 27 \u00d7 6.25 in"
+            "Selected setting W \u00d7 H \u00d7 D",
+            "457.2 \u00d7 685.8 \u00d7 171.45 mm \u00b7 18 \u00d7 27 \u00d7 6.75 in"
           ],
           [
             "Crown slider range",
             "0\u201319.05 mm / 0\u20130.75 in, in 3.175 mm / 0.125 in steps"
           ],
           [
-            "Case + door depth range",
-            "152.4\u2013171.45 mm / 6\u20136.75 in; excludes knob"
-          ],
-          [
-            "Rails, fuller option",
-            "19.05\u201325.4 mm / 0.75\u20131 in"
-          ],
-          [
-            "Case depth, unchanged",
+            "Case depth",
             "130.35 mm / 5.132 in"
           ],
           [
-            "Panel at fuller crown (assumed)",
-            "12.45 mm / 0.490 in; base and groove tongues 6.10 mm / 0.240 in"
+            "Rails at selected crown",
+            "19.05\u201338.10 mm / 0.75\u20131.50 in"
           ],
           [
-            "Center bay (proposed)",
-            "152.4 mm / 6 in; side bays approximately 3.75 in before fitting"
+            "Panel maximum thickness",
+            "25.15 mm / 0.990 in; assumed base and groove tongues 6.10 mm / 0.240 in"
+          ],
+          [
+            "Center bay",
+            "152.4 mm / 6 in"
           ],
           [
             "Perimeter channel",
-            "1.5875 mm / 0.0625 in wide \u00d7 0.396875 mm / 0.015625 in deep"
+            "1.5875 mm / 0.0625 in wide \u00d7 0.2 mm / 0.0079 in deep"
           ],
           [
-            "Face veneer (confirmed)",
-            "2.38125 mm / 0.09375 in; veneer over core"
+            "Maple veneer, each side",
+            "0.6 mm / 0.0236 in"
           ],
           [
-            "Veneer below channel",
-            "1.984375 mm / 0.078125 in"
+            "Face veneer below channel",
+            "Approximately 0.4 mm / 0.0157 in"
+          ],
+          [
+            "French-cleat assembled band",
+            "76.2 mm / 3 in high \u00d7 19.05 mm / 0.75 in thick"
+          ],
+          [
+            "Both cleats, width",
+            "419.1 mm / 16.5 in; full inside width"
+          ],
+          [
+            "Each cleat, long / short edges",
+            "47.625 / 28.575 mm \u00b7 1.875 / 1.125 in; central 45\u00b0 split"
           ]
         ],
         "downloads": [
           [
             "Flat \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/flat/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/flat/cabinet-r8.3mf"
           ],
           [
             "Flat \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/flat/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/flat/cabinet-r8.step"
           ],
           [
             "\u215b-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/a/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/a/cabinet-r8.3mf"
           ],
           [
             "\u215b-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/a/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/a/cabinet-r8.step"
           ],
           [
             "\u00bc-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/b/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/b/cabinet-r8.3mf"
           ],
           [
             "\u00bc-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/b/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/b/cabinet-r8.step"
           ],
           [
             "\u215c-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/c/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/c/cabinet-r8.3mf"
           ],
           [
             "\u215c-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/c/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/c/cabinet-r8.step"
           ],
           [
             "\u00bd-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/d/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/d/cabinet-r8.3mf"
           ],
           [
             "\u00bd-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/d/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/d/cabinet-r8.step"
           ],
           [
             "\u215d-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/e/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/e/cabinet-r8.3mf"
           ],
           [
             "\u215d-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/e/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/e/cabinet-r8.step"
           ],
           [
             "\u00be-inch crown \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/f/cabinet-r7.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/f/cabinet-r8.3mf"
           ],
           [
             "\u00be-inch crown \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/f/cabinet-r7.step"
+            "projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/f/cabinet-r8.step"
           ]
         ],
-        "notes": "Crown range is exploratory; no final setting selected. All backs and groove joints remain flat. Shape thicker stock and panel core on the visible face. Veneer forming, bonding, panel joinery and hardware need physical verification.",
+        "notes": "Selected crown is \u00be inch. All backs and groove joints remain flat. Both cleats nominally span the 16\u00bd-inch interior; fitting clearance, fasteners and physical strength are unverified. Previous revisions remain available.",
         "print": "Full-size woodworking reference assemblies, not print layouts.",
         "related": [
           [
             "Adjust the door crown",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r7/index.html?option=b&wood=quilted"
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/assembly/revisions/r8/index.html?option=f&wood=quilted"
           ]
         ]
       },
@@ -1313,10 +1321,10 @@
         "id": "crown-trace-rail-left",
         "group": "Crown tracing",
         "label": "Rail \u00b7 left half",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-rail-left.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-left.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-rail-left.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-left.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Left half, viewed from above with the door front at the top of the drawing. Butt at the centerline; align both straight back edges. Fits either rail. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1338,28 +1346,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Rail \u00b7 left half \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-left.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-left.3mf"
           ],
           [
             "Rail \u00b7 left half \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-left.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-left.step"
           ],
           [
             "Rail \u00b7 left half \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-left.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-left.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=rails"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=rails"
           ]
         ]
       },
@@ -1367,10 +1379,10 @@
         "id": "crown-trace-rail-right",
         "group": "Crown tracing",
         "label": "Rail \u00b7 right half",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-rail-right.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-right.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-rail-right.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-right.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Right half. Same arc for top and bottom rails; this is the thickness profile, not their asymmetric elevation outline. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1392,28 +1404,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Rail \u00b7 right half \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-right.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-right.3mf"
           ],
           [
             "Rail \u00b7 right half \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-right.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-right.step"
           ],
           [
             "Rail \u00b7 right half \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/rail-right.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/rail-right.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=rails"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=rails"
           ]
         ]
       },
@@ -1421,10 +1437,10 @@
         "id": "crown-trace-stile-left",
         "group": "Crown tracing",
         "label": "Left stile",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-stile-left.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-left.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-stile-left.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-left.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Outer door edge at left; inner/grooved edge at right. Trace rectangular blank ends before cutting the shaped rail joints. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1446,28 +1462,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Left stile \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-left.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-left.3mf"
           ],
           [
             "Left stile \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-left.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-left.step"
           ],
           [
             "Left stile \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-left.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-left.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=stiles"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=stiles"
           ]
         ]
       },
@@ -1475,10 +1495,10 @@
         "id": "crown-trace-stile-right",
         "group": "Crown tracing",
         "label": "Right stile",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-stile-right.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-right.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-stile-right.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-right.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Inner/grooved edge at left; outer door edge at right. Trace rectangular blank ends before cutting the shaped rail joints. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1500,28 +1520,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Right stile \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-right.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-right.3mf"
           ],
           [
             "Right stile \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-right.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-right.step"
           ],
           [
             "Right stile \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/stile-right.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/stile-right.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=stiles"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=stiles"
           ]
         ]
       },
@@ -1529,10 +1553,10 @@
         "id": "crown-trace-panel-l-core",
         "group": "Crown tracing",
         "label": "Panel L core",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-l-core.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-core.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-l-core.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-core.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Includes 0.6 mm face and backing veneer allowances; align to bare core back.",
         "dimensions": [
           [
@@ -1554,28 +1578,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel L core \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-core.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-core.3mf"
           ],
           [
             "Panel L core \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-core.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-core.step"
           ],
           [
             "Panel L core \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-core.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-core.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=cores"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=cores"
           ]
         ]
       },
@@ -1583,10 +1611,10 @@
         "id": "crown-trace-panel-l-finished",
         "group": "Crown tracing",
         "label": "Panel L finished",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-l-finished.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-finished.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-l-finished.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-finished.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1608,28 +1636,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel L finished \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-finished.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-finished.3mf"
           ],
           [
             "Panel L finished \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-finished.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-finished.step"
           ],
           [
             "Panel L finished \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-l-finished.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-l-finished.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=faces"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=faces"
           ]
         ]
       },
@@ -1637,10 +1669,10 @@
         "id": "crown-trace-panel-c-core",
         "group": "Crown tracing",
         "label": "Panel C core",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-c-core.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-core.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-c-core.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-core.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Includes 0.6 mm face and backing veneer allowances; align to bare core back.",
         "dimensions": [
           [
@@ -1662,28 +1694,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel C core \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-core.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-core.3mf"
           ],
           [
             "Panel C core \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-core.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-core.step"
           ],
           [
             "Panel C core \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-core.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-core.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=cores"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=cores"
           ]
         ]
       },
@@ -1691,10 +1727,10 @@
         "id": "crown-trace-panel-c-finished",
         "group": "Crown tracing",
         "label": "Panel C finished",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-c-finished.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-finished.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-c-finished.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-finished.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1716,28 +1752,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel C finished \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-finished.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-finished.3mf"
           ],
           [
             "Panel C finished \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-finished.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-finished.step"
           ],
           [
             "Panel C finished \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-c-finished.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-c-finished.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=faces"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=faces"
           ]
         ]
       },
@@ -1745,10 +1785,10 @@
         "id": "crown-trace-panel-r-core",
         "group": "Crown tracing",
         "label": "Panel R core",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-r-core.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-core.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-r-core.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-core.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Includes 0.6 mm face and backing veneer allowances; align to bare core back.",
         "dimensions": [
           [
@@ -1770,28 +1810,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel R core \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-core.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-core.3mf"
           ],
           [
             "Panel R core \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-core.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-core.step"
           ],
           [
             "Panel R core \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-core.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-core.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=cores"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=cores"
           ]
         ]
       },
@@ -1799,10 +1843,10 @@
         "id": "crown-trace-panel-r-finished",
         "group": "Crown tracing",
         "label": "Panel R finished",
-        "revision": "R1 \u00b7 R7 \u00be\u2033 crown",
-        "preview": "assets/crown-trace-r1-panel-r-finished.png",
-        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-finished.stl",
-        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html",
+        "revision": "R2 \u00b7 \u00be\u2033 crown",
+        "preview": "assets/crown-trace-r2-panel-r-finished.png",
+        "previewModel": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-finished.stl",
+        "datasheet": "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html",
         "description": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction. Align the straight datum with the flat back and trace the curved edge.",
         "dimensions": [
           [
@@ -1824,28 +1868,32 @@
           [
             "Maple veneer, each side",
             "0.6 mm / 0.024 in"
+          ],
+          [
+            "Panel channel depth",
+            "0.2 mm / 0.0079 in"
           ]
         ],
-        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted.",
+        "notes": "Analytic curve, watertight mesh and STEP checked. Print accuracy unmeasured. Panel tongues/laps and asymmetric outlines are separate operations. Glue lines omitted. Shadow-line depth is now 0.2 mm; tracing geometry is unchanged from R1.",
         "print": "PLA; lettering up; 0.20 mm layer; 4 walls; 20% gyroid; no supports or brim; 100% scale. Measure the printed width before use.",
         "downloads": [
           [
             "Panel R finished \u00b7 3MF",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-finished.3mf"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-finished.3mf"
           ],
           [
             "Panel R finished \u00b7 STEP",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-finished.step"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-finished.step"
           ],
           [
             "Panel R finished \u00b7 STL",
-            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/models/panel-r-finished.stl"
+            "projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/models/panel-r-finished.stl"
           ]
         ],
         "related": [
           [
-            "Crown tracing set \u00b7 R1",
-            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r1/index.html?group=faces"
+            "Crown tracing set \u00b7 R2",
+            "https://dannydelott.github.io/3D-Printing/files/projects/cabinet-door-templates/designs/elliptical/crown-templates/revisions/r2/index.html?group=faces"
           ]
         ]
       }

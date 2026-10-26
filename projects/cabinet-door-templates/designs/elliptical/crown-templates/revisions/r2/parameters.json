@@ -1,0 +1,310 @@
+{
+  "revision": "R2",
+  "units": "mm",
+  "source": "Cabinet R7 / option f",
+  "door_width": 454.025,
+  "crown": 19.049999999999997,
+  "radius": 1362.1411458333334,
+  "template_thickness": 2.0,
+  "front_veneer": 0.6,
+  "back_veneer": 0.6,
+  "panel_finished_base": 6.1,
+  "confirmed": "3/4-inch crown; flat backs; 0.6 mm maple on both panel faces (supersedes the R7 veneer parameter); original R7 frame dimensions.; perimeter channel reduced to 0.2 mm",
+  "assumptions": "6.10 mm finished panel tongue envelope retained from R7. Glue-line thickness is zero in CAD. Actual veneer thickness, bending/pressing, core material and edge/lap construction must be resolved on a sample.",
+  "orientation": "All drawings: left/right as seen from cabinet front; curved/front face up, flat back down. Trace the opposite blank end with the template flipped, keeping the same physical inner/outer edges.",
+  "parts": {
+    "rail-left": {
+      "id": "rail-left",
+      "label": "RAIL L",
+      "group": "Rails",
+      "kind": "finished",
+      "width": 227.0125,
+      "maximum_height": 38.09999999999991,
+      "template_thickness": 2.0,
+      "door_x": [
+        -227.0125,
+        0
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1324.0411458333335,
+      "left_height": 19.049999999999955,
+      "right_height": 38.09999999999991,
+      "datum": "FLAT BACK",
+      "note": "Left half, viewed from above with the door front at the top of the drawing. Butt at the centerline; align both straight back edges. Fits either rail.",
+      "size": [
+        227.0125,
+        38.09999999999991,
+        2.0
+      ],
+      "volume_mm3": 14417.998142848346,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0018492923270514439,
+      "profile_error_mm": 0.0
+    },
+    "rail-right": {
+      "id": "rail-right",
+      "label": "RAIL R",
+      "group": "Rails",
+      "kind": "finished",
+      "width": 227.0125,
+      "maximum_height": 38.09999999999991,
+      "template_thickness": 2.0,
+      "door_x": [
+        0,
+        227.0125
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1324.0411458333335,
+      "left_height": 38.09999999999991,
+      "right_height": 19.049999999999955,
+      "datum": "FLAT BACK",
+      "note": "Right half. Same arc for top and bottom rails; this is the thickness profile, not their asymmetric elevation outline.",
+      "size": [
+        227.0125,
+        38.09999999999991,
+        2.0
+      ],
+      "volume_mm3": 14417.579507751467,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0018492923270514439,
+      "profile_error_mm": 0.0
+    },
+    "stile-left": {
+      "id": "stile-left",
+      "label": "STILE L",
+      "group": "Stiles",
+      "kind": "finished",
+      "width": 57.150000000000006,
+      "maximum_height": 24.292356643027688,
+      "template_thickness": 2.0,
+      "door_x": [
+        -227.0125,
+        -169.86249999999998
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1327.2161458333335,
+      "left_height": 15.875,
+      "right_height": 24.292356643027688,
+      "datum": "FLAT BACK",
+      "note": "Outer door edge at left; inner/grooved edge at right. Trace rectangular blank ends before cutting the shaped rail joints.",
+      "size": [
+        57.150000000000006,
+        24.292356643027688,
+        2.0
+      ],
+      "volume_mm3": 2313.295150537978,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0015951607285842329,
+      "profile_error_mm": 0.0
+    },
+    "stile-right": {
+      "id": "stile-right",
+      "label": "STILE R",
+      "group": "Stiles",
+      "kind": "finished",
+      "width": 57.150000000000006,
+      "maximum_height": 24.292356643027688,
+      "template_thickness": 2.0,
+      "door_x": [
+        169.86249999999998,
+        227.0125
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1327.2161458333335,
+      "left_height": 24.292356643027688,
+      "right_height": 15.875,
+      "datum": "FLAT BACK",
+      "note": "Inner/grooved edge at left; outer door edge at right. Trace rectangular blank ends before cutting the shaped rail joints.",
+      "size": [
+        57.150000000000006,
+        24.292356643027688,
+        2.0
+      ],
+      "volume_mm3": 2312.876515441098,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0015951607285842329,
+      "profile_error_mm": 0.0
+    },
+    "panel-l-core": {
+      "id": "panel-l-core",
+      "label": "PANEL L CORE",
+      "group": "Panels",
+      "kind": "core",
+      "width": 97.51250000000766,
+      "maximum_height": 21.787904246940798,
+      "template_thickness": 2.0,
+      "door_x": [
+        -174.2125,
+        -76.69999999999234
+      ],
+      "radius": 1361.5411458333335,
+      "circle_center_y": -1337.5911458333333,
+      "left_height": 12.758548372170253,
+      "right_height": 21.787904246940798,
+      "datum": "CORE BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        97.51250000000766,
+        21.787904246940798,
+        2.0
+      ],
+      "volume_mm3": 3473.6809340354685,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0018299904547802726,
+      "profile_error_mm": 2.2737367544323206e-13
+    },
+    "panel-l-finished": {
+      "id": "panel-l-finished",
+      "label": "PANEL L FACE",
+      "group": "Panels",
+      "kind": "finished",
+      "width": 97.51250000000766,
+      "maximum_height": 22.9888581270734,
+      "template_thickness": 2.0,
+      "door_x": [
+        -174.2125,
+        -76.69999999999234
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1336.9911458333333,
+      "left_height": 13.963518844906957,
+      "right_height": 22.9888581270734,
+      "datum": "FLAT BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        97.51250000000766,
+        22.9888581270734,
+        2.0
+      ],
+      "volume_mm3": 3709.1168093602405,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0018291698429493408,
+      "profile_error_mm": 2.2737367544323206e-13
+    },
+    "panel-c-core": {
+      "id": "panel-c-core",
+      "label": "PANEL C CORE",
+      "group": "Panels",
+      "kind": "core",
+      "width": 158.10000000000755,
+      "maximum_height": 23.950000000000273,
+      "template_thickness": 2.0,
+      "door_x": [
+        -82.40000000000009,
+        75.70000000000746
+      ],
+      "radius": 1361.5411458333335,
+      "circle_center_y": -1337.5911458333333,
+      "left_height": 21.454302927357276,
+      "right_height": 21.843958096657843,
+      "datum": "CORE BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        158.10000000000755,
+        23.950000000000273,
+        2.0
+      ],
+      "volume_mm3": 7319.429717358581,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0017929652185557643,
+      "profile_error_mm": 2.2737367544323206e-13
+    },
+    "panel-c-finished": {
+      "id": "panel-c-finished",
+      "label": "PANEL C FACE",
+      "group": "Panels",
+      "kind": "finished",
+      "width": 158.10000000000755,
+      "maximum_height": 25.15000000000009,
+      "template_thickness": 2.0,
+      "door_x": [
+        -82.40000000000009,
+        75.70000000000746
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1336.9911458333333,
+      "left_height": 22.655404256853444,
+      "right_height": 23.044887208492128,
+      "datum": "FLAT BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        158.10000000000755,
+        25.15000000000009,
+        2.0
+      ],
+      "volume_mm3": 7699.857175798558,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0017921736614425754,
+      "profile_error_mm": 2.2737367544323206e-13
+    },
+    "panel-r-core": {
+      "id": "panel-r-core",
+      "label": "PANEL R CORE",
+      "group": "Panels",
+      "kind": "core",
+      "width": 104.21250000000106,
+      "maximum_height": 22.14937786857763,
+      "template_thickness": 2.0,
+      "door_x": [
+        69.9999999999998,
+        174.21250000000086
+      ],
+      "radius": 1361.5411458333335,
+      "circle_center_y": -1337.5911458333333,
+      "left_height": 22.14937786857763,
+      "right_height": 12.758548372170253,
+      "datum": "CORE BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        104.21250000000106,
+        22.14937786857763,
+        2.0
+      ],
+      "volume_mm3": 3767.679066531987,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0017102812030316272,
+      "profile_error_mm": 2.2737367544323206e-13
+    },
+    "panel-r-finished": {
+      "id": "panel-r-finished",
+      "label": "PANEL R FACE",
+      "group": "Panels",
+      "kind": "finished",
+      "width": 104.21250000000106,
+      "maximum_height": 23.35017206160819,
+      "template_thickness": 2.0,
+      "door_x": [
+        69.9999999999998,
+        174.21250000000086
+      ],
+      "radius": 1362.1411458333334,
+      "circle_center_y": -1336.9911458333333,
+      "left_height": 23.35017206160819,
+      "right_height": 13.96351884490673,
+      "datum": "FLAT BACK",
+      "note": "Full rectangular blank width, including later tongue/lap stock. Extend the field curve across the blank, then cut the perimeter and reduce tongues/laps separately. Left/right widths differ because the R7 shiplaps face one direction.",
+      "size": [
+        104.21250000000106,
+        23.35017206160819,
+        2.0
+      ],
+      "volume_mm3": 4019.20663751675,
+      "mesh_watertight": true,
+      "step_reimport_valid": true,
+      "exported_arc_chord_error_mm": 0.0017095148614316713,
+      "profile_error_mm": 2.2737367544323206e-13
+    }
+  },
+  "perimeter_channel_depth": 0.2,
+  "perimeter_channel_width": 1.5875,
+  "remaining_face_veneer": 0.4
+}
