@@ -1,0 +1,152 @@
+{
+  "panel-c-core": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 23.94976234436035,
+      "height": 2.0,
+      "width": 158.10000610351562,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 8.185518264770508,
+    "seconds": 1125.707275390625,
+    "source_sha256": "3215578ffd5f79b83e9a61026c2fbc0a42ebe3ea074f206ead7f8745fb52f68b"
+  },
+  "panel-c-finished": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 25.149763107299805,
+      "height": 2.0,
+      "width": 158.10000610351562,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 8.570587158203125,
+    "seconds": 1149.2135009765625,
+    "source_sha256": "b1077cdad1beae27e1980ebc3e8aee3927e8aaeb2e72b5db64b75711524875d4"
+  },
+  "panel-l-core": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 21.787904739379883,
+      "height": 2.0,
+      "width": 97.51249694824219,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 4.011608123779297,
+    "seconds": 788.532470703125,
+    "source_sha256": "aca86394f047899988e82c4f1b73ce83ffe11bed7cd9b4d21f54488c9ee1becc"
+  },
+  "panel-l-finished": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 22.98885726928711,
+      "height": 2.0,
+      "width": 97.51249694824219,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 4.252584457397461,
+    "seconds": 805.2667236328125,
+    "source_sha256": "80441d4c521f18b781106a752f0026fd6435628b2d3b73d59fbe09c99b40e67a"
+  },
+  "panel-r-core": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 22.149377822875977,
+      "height": 2.0,
+      "width": 104.2125015258789,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 4.33521842956543,
+    "seconds": 820.9957885742188,
+    "source_sha256": "ec222e13f011072e50caa26ea2bf5230dba6037d8e5a1fa44710471635eff068"
+  },
+  "panel-r-finished": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 23.35017204284668,
+      "height": 2.0,
+      "width": 104.2125015258789,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 4.593092441558838,
+    "seconds": 839.3251953125,
+    "source_sha256": "5d71a225c21f5d00595903490427cbdb0c7543efa0435defad59c6e619a66861"
+  },
+  "rail-left": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 38.099998474121094,
+      "height": 2.0,
+      "width": 227.0124969482422,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 15.834429740905762,
+    "seconds": 1675.5565185546875,
+    "source_sha256": "16377dc9057f9248655d16908cd713c64fc4f9cd96f6b01780507a7e20fc60ff"
+  },
+  "rail-right": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 38.099998474121094,
+      "height": 2.0,
+      "width": 227.0124969482422,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 15.83935546875,
+    "seconds": 1679.000732421875,
+    "source_sha256": "006f37607bb79c34e0759b061fb8641f1a7e11280fe1c02f75c02c307dd8bbfe"
+  },
+  "stile-left": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 24.292356491088867,
+      "height": 2.0,
+      "width": 57.150001525878906,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 2.6891767978668213,
+    "seconds": 654.7545166015625,
+    "source_sha256": "bccfb3ab20f10c3e0efaa47c2b200be0057c8462a25186873fbb0e86705ae446"
+  },
+  "stile-right": {
+    "return_code": 0,
+    "bounds": {
+      "depth": 24.292356491088867,
+      "height": 2.0,
+      "width": 57.150001525878906,
+      "x": 24.0,
+      "y": 80.0,
+      "z": 0.0
+    },
+    "warning": "",
+    "grams": 2.6911911964416504,
+    "seconds": 658.346435546875,
+    "source_sha256": "5af010ac2a79b22c79f838dd92fbf9ef856c63b99de1b6a02f11369b7bd5e131"
+  }
+}

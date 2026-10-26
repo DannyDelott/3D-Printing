@@ -1,0 +1,137 @@
+{
+  "revision": "R8",
+  "door_bow": 3.175,
+  "bow_radius_mm": 8117.284374999999,
+  "bow_edge_angle_degrees": 1.6025746602140285,
+  "case_unchanged": true,
+  "door_back_flat": true,
+  "grooves_and_laps_flat": true,
+  "rail_max_thickness": 22.225,
+  "option": "a",
+  "units": "mm",
+  "case_and_door_size": [
+    457.2,
+    685.8000001999999,
+    155.57500010000035
+  ],
+  "depth_including_knob": 169.37545231758858,
+  "knob_projection_from_stile": 19.05,
+  "tail_boards": "vertical sides",
+  "pin_boards": "top and bottom",
+  "case_depth": 130.35,
+  "open_back": true,
+  "interior_depth_gain_below_cleat": 19.05,
+  "cleat_thickness": 19.05,
+  "cleat_height": 47.625,
+  "cleat_short_height": 28.575,
+  "cleat_pair_height": 76.2,
+  "cleat_nominal_half_height": 38.1,
+  "cleat_width": 419.09999999999997,
+  "wall_cleat_width": 419.09999999999997,
+  "cleat_bevel_degrees": 45,
+  "cleat_overlap_mm3": 0,
+  "center_rise": 0,
+  "center_max_thickness": 9.274999999999999,
+  "field_bevel_width": 0,
+  "perimeter_channel_width": 1.5875,
+  "perimeter_channel_depth": 0.2,
+  "channel_removed_mm3": [
+    228.34999475628138,
+    96.60779871029081,
+    228.35000636905897
+  ],
+  "veneer_thickness": 0.6,
+  "back_veneer_thickness": 0.6,
+  "remaining_veneer_under_channel": 0.39999999999999997,
+  "panel_construction": "Quilted-maple veneer over core; CAD represents finished composite envelope",
+  "rail_edge_face_z": 22.05,
+  "rail_crown_face_z": 25.225,
+  "stile_edge_face_z": 18.875,
+  "center_face_z": 17.1625001,
+  "side_panel_base_face_z": 13.9875001,
+  "panel_count": 3,
+  "vertical_seams": [
+    152.39999999999998,
+    304.8
+  ],
+  "face_gap": 1.0,
+  "lap_length": 6.35,
+  "lap_remaining_overlap": 5.699999999999999,
+  "lap_face_clearance": 0.1,
+  "board_overlap_mm3": 0,
+  "stile_shadow_line": 3.1750000000000007,
+  "groove_width": 6.35,
+  "groove_depth": 6.35,
+  "panel_thickness": 6.1,
+  "panel_edge_clearance": 2.0,
+  "panel_engagement": 4.35,
+  "full_pin_narrow_width_before": 15.374999999999996,
+  "full_pin_narrow_widths": [
+    7.687500000000014,
+    7.6875
+  ],
+  "full_pin_wide_width": 14.037499999999998,
+  "outside_half_pin_narrow_widths": [
+    7.6875,
+    7.687500000000009
+  ],
+  "outside_half_pins_unchanged": true,
+  "tail_root_widths": [
+    25.568749999999994,
+    29.412499999999994,
+    25.568749999999994
+  ],
+  "tail_tip_widths": [
+    31.91874999999999,
+    35.76249999999999,
+    31.918749999999996
+  ],
+  "dovetails_per_corner": 3,
+  "dovetail_slope": "1:6",
+  "total_tails": 12,
+  "part_count": 21,
+  "step_reimport_valid": true,
+  "all_meshes_watertight": true,
+  "panel_frame_overlap_mm3": 0,
+  "dovetail_overlap_mm3": 0,
+  "hinge_sweep_samples": [
+    {
+      "angle": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 15,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 30,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 45,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 60,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 75,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 100,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle": 110,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "hardware": "Custom mortised knives; sizing, screws, strength and bearing retention not manufacturer-validated",
+  "assumptions": "3.175 mm front crown proposed for comparison; flat backs, case, grooves and laps retained. Shape thicker core before applying veneer. Panel thickness at crown 9.274999999999999 mm; rails 22.225 mm. Veneer forming, bonding, backing, edge treatment, hardware and joinery remain unverified.; Both cleats nominally span the 16.5-inch interior; fit allowance and fasteners not modeled."
+}
