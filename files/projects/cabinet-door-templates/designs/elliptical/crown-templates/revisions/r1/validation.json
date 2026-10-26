@@ -1,0 +1,22 @@
+{
+  "all_meshes_watertight": true,
+  "all_step_reimports_valid": true,
+  "maximum_profile_error_mm": 2.2737367544323206e-13,
+  "maximum_exported_arc_chord_error_mm": 0.0018492923270514439,
+  "rail_join_height_error_mm": 0.0,
+  "source_sha256": "0a637df21583e5d812080f2c0fc2fd3d398c4425c8ec30e6b6c0728d9ca59129",
+  "physical_print_validation": "Not performed",
+  "scope": "Arc and dimensions checked analytically against R7; not a full woodworking joinery or veneer layup validation.",
+  "files": {
+    "rail-left": "16377dc9057f9248655d16908cd713c64fc4f9cd96f6b01780507a7e20fc60ff",
+    "rail-right": "006f37607bb79c34e0759b061fb8641f1a7e11280fe1c02f75c02c307dd8bbfe",
+    "stile-left": "bccfb3ab20f10c3e0efaa47c2b200be0057c8462a25186873fbb0e86705ae446",
+    "stile-right": "5af010ac2a79b22c79f838dd92fbf9ef856c63b99de1b6a02f11369b7bd5e131",
+    "panel-l-core": "aca86394f047899988e82c4f1b73ce83ffe11bed7cd9b4d21f54488c9ee1becc",
+    "panel-l-finished": "80441d4c521f18b781106a752f0026fd6435628b2d3b73d59fbe09c99b40e67a",
+    "panel-c-core": "3215578ffd5f79b83e9a61026c2fbc0a42ebe3ea074f206ead7f8745fb52f68b",
+    "panel-c-finished": "b1077cdad1beae27e1980ebc3e8aee3927e8aaeb2e72b5db64b75711524875d4",
+    "panel-r-core": "ec222e13f011072e50caa26ea2bf5230dba6037d8e5a1fa44710471635eff068",
+    "panel-r-finished": "5d71a225c21f5d00595903490427cbdb0c7543efa0435defad59c6e619a66861"
+  }
+}
