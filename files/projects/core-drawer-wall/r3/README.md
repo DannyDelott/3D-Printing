@@ -1,0 +1,20 @@
+# Cardboard core drawer wall · R3
+
+Bare cardboard tubes nest on shared printed connectors. The front silhouette follows the curved, three-way junctions and flat-bottom shared bases visible in [实用至上’s modular storage drawer](https://makerworld.com/en/models/1940593-filament-spool-paper-tubes-modular-storage-drawer#profileId-2084214). The selected source profile is the front/rear base connector. These are original parametric parts, not a mesh remix or a claim of interchangeability with MakerWorld files. No reference mesh is distributed.
+
+[Interactive assembly, mounting section and downloads](datasheet.html)
+
+## Parts and assembly
+
+- **Start one cell:** one drawer and four half-feet, one at each bottom corner. The outside edges stay flat. On a bank, the outside-end set is needed **once**; each added bottom core uses one shared base pair. Move the two removable edge pieces outward when expanding.
+- **Add an upper cell:** place one Y connector at the front and one at the rear of the triangle formed with its two supporting cores. The two sloping drawer ledges go up. No separate glides, clips, tube liners, or label hardware. The drawer remains removable and needs hand support near full extension.
+- **Mount selected junctions:** choose the mounted pair *instead of* the plain base or upper pair. The rear eye and two small front tie slots are the only mount-specific changes. Slide a 2.5 mm wide × 200 mm long cable tie through the rear slots. Its short crosspiece sits in the board-side recess. Pilot the board for a #8 × ¾″ pan-head wood screw. Drive it through the rear eye **before fitting the front junction**; use a long driver if working through cores already in place. Feed both tie legs through the front slots and cinch on the front. The ties capture both rim faces and stay entirely in the air between the cores. The mounting shoulder is 4.2 mm thick, leaving about 14.9 mm penetration into 19.05 mm plywood.
+- **Where to mount:** the first shared base joint is available with two adjacent bottom cores. Use separated attachment points on a shelf-supported bank. No hanging-cabinet load, max height or safe anchor spacing is established.
+- **Fit and bonding:** test the short base jaw with two rims, one per slot. Try the short drawer section through the bore and against the jaw. Cores are nominal 83 ID / 88 OD × 60 mm. The reference describes walls of 2.1, 2.7 and 3.0 mm; R3 uses a 3.6 mm circular jaw slot and 4.4 mm engagement. These dimensions are design assumptions, not measurements from downloaded reference files. Dry-fit the row before bonding permanent jaws to cardboard with small drops of CA. Keep the outside half-feet removable for lateral expansion. Replace damaged or soft cores.
+- **Print:** the P1S estimates in slice-checks.json use PLA, 0.4 mm nozzle, 0.20 mm layers, 3 walls, 15% gyroid and no support or brim. All 3MFs are geometry-only in print orientation. The five-cell assembly STL includes cardboard and hardware for viewing only.
+
+## Source and checks
+
+Run source/model.py and source/drawing.py with the repo CAD Python. The model script checks straight withdrawal against the nominal cores and every plain and mounted junction. It also checks clearance for a 9.2 mm screw head, 4.7 mm screw shank and 2.5 mm cable tie. The deep drawer has a plain writing face, closed front, 31 mm high rim above center and an external pinch ledge. Its CAD cavity is 242.3 mL level-full (227.9 mL with 5 mm freeboard), versus 163.8 mL for the R2 design. Both use an 83 mm bore × 60 mm nominal core. The 43.8 mm clear mouth was measured between the inner lips. The 1.35 mm walls and low 1.8 mm floor use more of the bore; the 45-degree lower facets still ride on the same base. The upper junction ledges now sit lower inside the core. The alternative drop-in drawer retains the R2 underside level for printed R2 upper junctions and holds 228.8 mL. The assembly illustration shows the tie path without its locking head.
+
+Physical print fit, plywood fastening and loaded strength remain untested.

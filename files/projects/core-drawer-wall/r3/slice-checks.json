@@ -1,0 +1,65 @@
+{
+  "starter": {
+    "source_sha256": "3eafbcd0aac1b054491d1149ae0983661493c347683adaf12de61ad003cbd284",
+    "objects": 5,
+    "grams": 49.333,
+    "minutes": 72,
+    "warning": ""
+  },
+  "drawer": {
+    "source_sha256": "d320594506f15752b8cbd3eb70aa2879409dc5e20d8ea2d4454923dd8a3dc668",
+    "objects": 1,
+    "grams": 40.495,
+    "minutes": 56,
+    "warning": ""
+  },
+  "drop-in": {
+    "source_sha256": "287fd34292ac0233ba17fadb6db4815fcfcf6a8f9938024d39e1dc34db4f7ec8",
+    "objects": 1,
+    "grams": 39.239,
+    "minutes": 53,
+    "warning": ""
+  },
+  "base": {
+    "source_sha256": "217d8a691c9aa1b76fc17840ed9242cab89748fcb9c9912241c2a26ac0677931",
+    "objects": 2,
+    "grams": 8.949,
+    "minutes": 21,
+    "warning": ""
+  },
+  "base-mount": {
+    "source_sha256": "3dbf7c5782028ff6c54db50b4546f0ccdbae0670d6ce7611dacb9568dd750ac9",
+    "objects": 2,
+    "grams": 9.085,
+    "minutes": 23,
+    "warning": ""
+  },
+  "ends": {
+    "source_sha256": "dce4d59f0fcdcffec72eb4121780d779ab63a43835a6f28acf4eed0a3f90cb8a",
+    "objects": 4,
+    "grams": 8.932,
+    "minutes": 23,
+    "warning": ""
+  },
+  "fit": {
+    "source_sha256": "78a476bd163e4e5f895ed8d0cf0aaf29ac170ec9440756ac2d3a111153aad219",
+    "objects": 2,
+    "grams": 3.567,
+    "minutes": 13,
+    "warning": ""
+  },
+  "upper": {
+    "source_sha256": "0fc6625bbc03be4be4e8deada25d84a6bb291958f2de603c3fe8403f293de63b",
+    "objects": 2,
+    "grams": 7.259,
+    "minutes": 21,
+    "warning": ""
+  },
+  "upper-mount": {
+    "source_sha256": "8f845e6bb74ccaaad9ccfb36f8e4d0862a4e11bc60acec526ebdab1bcf4e9e52",
+    "objects": 2,
+    "grams": 7.434,
+    "minutes": 24,
+    "warning": ""
+  }
+}
