@@ -3899,5 +3899,48 @@
         "printTime": "6 h 17 min"
       }
     ]
+  },
+  "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-wide-100mm.3mf": {
+    "sha256": "6d06d79839194e93d5fdb1a3d3beecc19cb96a425315d4e308464ad5784357a4",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 213.06552124023438,
+        "cost": 5.324507375793457,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 213.06552124023438,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "",
+        "printTime": "8 h 13 min"
+      }
+    ]
   }
 }

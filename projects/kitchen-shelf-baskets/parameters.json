@@ -21,6 +21,10 @@
     "originalReference": {
       "innerWidth": 70,
       "outerWidth": 74
+    },
+    "wideTwoAcross": {
+      "innerWidth": 100,
+      "outerWidth": 104
     }
   }
 }

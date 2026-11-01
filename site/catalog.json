@@ -3320,7 +3320,7 @@
         "projects/kitchen-shelf/models/kitchen-shelf-p1s.stl"
       ]
     ],
-    "description": "A raised shelf for kitchen cabinet storage. Use three standard 65 mm-inner-width baskets underneath, or two existing 70 mm-inner-width baskets with one narrow 55 mm replacement. Basket handles extend in front of the shelf.",
+    "description": "A raised shelf for kitchen cabinet storage. Choose two wide baskets, three standard baskets, or a narrow replacement beside two original baskets. The handles extend in front of the shelf.",
     "dimensions": [
       [
         "Overall width",
@@ -3427,8 +3427,8 @@
       ]
     ],
     "description": "Print three of this basket for the kitchen shelf. Each is 69 mm wide outside (65 mm inside), giving 207 mm combined width and 8.86 mm total clearance within the shelf. Inner depth stays 203 mm; handles project in front. Physical fit has not yet been tested.",
-    "print": "Open the saved P1S project. PLA, 0.4 mm nozzle, 0.20 mm layers, 2 walls, 15% infill, supports enabled. Each download contains one basket; use three copies of the standard basket for a new set, or one narrow replacement with two existing original baskets.",
-    "notes": "Only inner width differs between configurations. Inner depth is 203 mm, height 100 mm, width walls 2 mm, depth walls 2.4 mm, floor 1.2 mm, honeycomb 14 mm, border cut disabled, handle width 30 mm. Both 3MFs sliced successfully with saved settings.",
+    "print": "Open the saved P1S project. PLA, 0.4 mm nozzle, 0.20 mm layers, 2 walls, 15% infill, supports enabled. Each file contains one basket. Print two wide baskets or three standard baskets for a new set. Print one narrow replacement to use with two original baskets.",
+    "notes": "Only inner width differs between configurations. Inner depth is 203 mm, height 100 mm, width walls 2 mm, depth walls 2.4 mm, floor 1.2 mm, honeycomb 14 mm, border cut disabled, handle width 30 mm. All three 3MFs sliced successfully with saved settings.",
     "license": "Pantry & Fridge Caddy with Handle by 23 (Moai_23), customized in MakerWorld Parametric Model Maker. MakerWorld Exclusive License; original model terms apply.",
     "related": [
       [
@@ -3480,6 +3480,63 @@
           ]
         ],
         "description": "Print three of this basket for the kitchen shelf. Each is 69 mm wide outside (65 mm inside), giving 207 mm combined width and 8.86 mm total clearance within the shelf. Inner depth stays 203 mm; handles project in front. Physical fit has not yet been tested."
+      },
+      {
+        "id": "wide-two-across",
+        "group": "Basket sizes",
+        "label": "Wide \u00b7 two across",
+        "model": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-wide-100mm.3mf",
+        "preview": "assets/kitchen-basket-wide.png",
+        "previewModel": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-wide-100mm.stl",
+        "dimensions": [
+          [
+            "Outer width",
+            "104 mm \u00b7 4.09 in"
+          ],
+          [
+            "Inner width",
+            "100 mm \u00b7 3.94 in"
+          ],
+          [
+            "Inner depth",
+            "203 mm \u00b7 7.99 in"
+          ],
+          [
+            "Overall depth with handle",
+            "236.783 mm \u00b7 9.32 in"
+          ],
+          [
+            "Body depth",
+            "207.8 mm \u00b7 8.18 in"
+          ],
+          [
+            "Height",
+            "100 mm \u00b7 3.94 in"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Layer height",
+            "0.20 mm"
+          ],
+          [
+            "Saved supports",
+            "Enabled"
+          ]
+        ],
+        "description": "Print two wide baskets for the kitchen shelf. Each measures 100 mm wide inside and 104 mm outside. In the 215.86 mm opening, two baskets leave 7.86 mm of calculated clearance, or about 2.62 mm at each side and between them. The 203 mm inner depth matches the other sizes. Face the handles forward.",
+        "downloads": [
+          [
+            "Wide basket \u00b7 Bambu project",
+            "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-wide-100mm.3mf"
+          ],
+          [
+            "Wide basket \u00b7 STL",
+            "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-wide-100mm.stl"
+          ]
+        ]
       },
       {
         "id": "narrow-replacement",

@@ -8,6 +8,8 @@ Overall: 228.945 × 228.945 × 128.561 mm (9.01 × 9.01 × 5.06 in). Clear inner
 
 Three standard baskets: 3 × 69 = 207 mm outside width. Two original baskets plus one replacement: 74 + 74 + 59 = 207 mm. Both leave 8.862 mm total lateral clearance; two 2 mm gaps leave about 2.431 mm at each side. Three original 74 mm baskets total 222 mm and exceed the opening by 6.138 mm. These are digital dimensional checks, not physical fit tests.
 
+Two wide baskets span 208 mm (2 × 104 mm). The 7.862 mm remaining width gives three equal gaps of about 2.621 mm.
+
 Basket body depth is 207.8 mm; handle-inclusive depth is 236.783 mm. Handles project in front of the shelf.
 
 ## Printing
