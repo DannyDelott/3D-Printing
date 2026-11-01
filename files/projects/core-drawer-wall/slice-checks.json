@@ -1,0 +1,79 @@
+{
+  "starter": {
+    "source_sha256": "abdea98890bca653dddb0348d899e415b591b9a8fd3980d9edbebf6bbb3e8a8d",
+    "objects": 7,
+    "grams": 44.019,
+    "minutes": 65,
+    "warning": ""
+  },
+  "bottom-hardware": {
+    "source_sha256": "0c2c9b9fde9aba5551db7f4eccd4384dc1cb34f22c66f0ef255a9b5f91f56d5e",
+    "objects": 4,
+    "grams": 8.74,
+    "minutes": 23,
+    "warning": ""
+  },
+  "bottom-hardware-anchored": {
+    "source_sha256": "ae7117503d3c5335f99504e5d1192ccfb1a468eb12d5dd898d54d15ec5903c0f",
+    "objects": 6,
+    "grams": 11.552,
+    "minutes": 29,
+    "warning": ""
+  },
+  "foot": {
+    "source_sha256": "9e364bc2b6433651ed4ed785cd51e337bc5d7fcb673e5631d9697799c463cf9a",
+    "objects": 1,
+    "grams": 3.965,
+    "minutes": 13,
+    "warning": ""
+  },
+  "upper-hardware": {
+    "source_sha256": "8b4330971a5db9fc40b0b559abb11ae11c2ba367ee48af03b76f38bf1d4c13ad",
+    "objects": 8,
+    "grams": 6.051,
+    "minutes": 23,
+    "warning": ""
+  },
+  "upper-hardware-anchored": {
+    "source_sha256": "d8aac7b4fc879450fda46d25bec398469f563402bda5df0c5bcfddfef3a17f8f",
+    "objects": 10,
+    "grams": 8.863,
+    "minutes": 28,
+    "warning": ""
+  },
+  "glide": {
+    "source_sha256": "b71d57827ffe4cd0d4c6bb2d0866a5151c6a3960a89c7637eb024471b50b2d22",
+    "objects": 1,
+    "grams": 1.717,
+    "minutes": 11,
+    "warning": ""
+  },
+  "fit": {
+    "source_sha256": "030ca45166f266e4b61278cbe9439187112a740b985e25f11da803a01d99611b",
+    "objects": 3,
+    "grams": 3.634,
+    "minutes": 13,
+    "warning": ""
+  },
+  "drawer": {
+    "source_sha256": "5aaffa3589131f04bf20cce7ebb4e12e4b408f3cde3060f16dbfe14838de605e",
+    "objects": 1,
+    "grams": 32.561,
+    "minutes": 43,
+    "warning": ""
+  },
+  "clip": {
+    "source_sha256": "f799bd71d4bf3d7c0dcea8dcccba2c813e77e6d606a59ac7c973daaef6b8be13",
+    "objects": 1,
+    "grams": 0.545,
+    "minutes": 10,
+    "warning": ""
+  },
+  "anchor": {
+    "source_sha256": "823c51ac7bfd9ab391c7e65cf7c76e9f3893778b7782081d2777ea0b03511425",
+    "objects": 2,
+    "grams": 2.906,
+    "minutes": 13,
+    "warning": ""
+  }
+}
