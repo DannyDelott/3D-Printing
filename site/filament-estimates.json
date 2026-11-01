@@ -3770,5 +3770,134 @@
       }
     ],
     "note": "One part, supplied orientation; P1S assumed for estimates, user printer unconfirmed. Geometry-only download. CLI slice result recorded without thumbnail export."
+  },
+  "projects/kitchen-shelf/models/kitchen-shelf-p1s.3mf": {
+    "sha256": "9dd2cfb701af1dea5c75c8f1f1cab2eaf031f4e66914179978d05da2ebb0efb3",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "8%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 280.65570068359375,
+        "cost": 7.013585960083007,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 280.65570068359375,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "",
+        "printTime": "6 h 19 min"
+      }
+    ]
+  },
+  "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.3mf": {
+    "sha256": "2d1a05fc138eb197fc044c7afb5b7ffbca6f8e850605648eff4df570b53ce338",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 174.75917053222656,
+        "cost": 4.367231671600342,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 174.75917053222656,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "",
+        "printTime": "7 h 5 min"
+      }
+    ]
+  },
+  "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.3mf": {
+    "sha256": "77aebdb79543bf3dfd45508f663a312888256b92a0a0e822b8f5e3dd9f5fe017",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "saved",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.26"
+      ],
+      "filament_cost": [
+        "24.99"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "2",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "grid",
+      "enable_support": "1",
+      "brim_type": "auto_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 155.5163116455078,
+        "cost": 3.88635262802124,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 155.5163116455078,
+            "pricePerKg": 24.99
+          }
+        ],
+        "warning": "",
+        "printTime": "6 h 17 min"
+      }
+    ]
   }
 }

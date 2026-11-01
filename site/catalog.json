@@ -3296,5 +3296,248 @@
         "description": "A four-compartment insert for the cardboard-spool storage can. Drop it inside the container to separate small items; print another whenever you need more divided storage."
       }
     ]
+  },
+  {
+    "category": "Kitchen",
+    "revision": "R1 \u00b7 2026-11-01",
+    "status": "Digital dimensions checked; physical fit unverified",
+    "source": [],
+    "id": "kitchen-shelf",
+    "title": "Kitchen shelf",
+    "slug": "kitchen-shelf",
+    "root": "projects/kitchen-shelf",
+    "readme": "projects/kitchen-shelf/README.md",
+    "model": "projects/kitchen-shelf/models/kitchen-shelf-p1s.3mf",
+    "preview": "assets/kitchen-shelf.png",
+    "previewModel": "assets/kitchen-shelf-upright.stl",
+    "downloads": [
+      [
+        "Kitchen shelf \u00b7 Bambu project",
+        "projects/kitchen-shelf/models/kitchen-shelf-p1s.3mf"
+      ],
+      [
+        "Kitchen shelf \u00b7 STL",
+        "projects/kitchen-shelf/models/kitchen-shelf-p1s.stl"
+      ]
+    ],
+    "description": "A raised shelf for kitchen cabinet storage. Use three standard 65 mm-inner-width baskets underneath, or two existing 70 mm-inner-width baskets with one narrow 55 mm replacement. Basket handles extend in front of the shelf.",
+    "dimensions": [
+      [
+        "Overall width",
+        "228.945 mm \u00b7 9.01 in"
+      ],
+      [
+        "Overall depth",
+        "228.945 mm \u00b7 9.01 in"
+      ],
+      [
+        "Overall height",
+        "128.561 mm \u00b7 5.06 in"
+      ],
+      [
+        "Clear inner width",
+        "215.862 mm \u00b7 8.50 in"
+      ],
+      [
+        "Clear inner depth",
+        "222.007 mm \u00b7 8.74 in"
+      ],
+      [
+        "Clear height below edge frame",
+        "105.667 mm \u00b7 4.16 in"
+      ],
+      [
+        "Material",
+        "PLA"
+      ],
+      [
+        "Layer height",
+        "0.20 mm"
+      ]
+    ],
+    "print": "Retain the saved upside-down print orientation. P1S, 0.4 mm nozzle, PLA, 0.20 mm layers, 3 walls, 8% infill, supports disabled.",
+    "notes": "Dimensions measured from the transformed geometry of the user-confirmed Downloads file. Preview is rotated upright; print downloads retain the original orientation. Physical fit remains unverified.",
+    "license": "Kitchen Cabinet Space Saver by shatrix. Embedded license: Standard Digital File License. Original MakerWorld terms apply.",
+    "related": [
+      [
+        "Original shelf by shatrix",
+        "https://makerworld.com/en/models/2217610-kitchen-cabinet-space-saver"
+      ]
+    ]
+  },
+  {
+    "category": "Kitchen",
+    "revision": "R1 \u00b7 2026-11-01",
+    "status": "Digital dimensions checked; physical fit unverified",
+    "source": [],
+    "id": "kitchen-shelf-baskets",
+    "title": "Kitchen shelf baskets",
+    "slug": "kitchen-shelf-baskets",
+    "root": "projects/kitchen-shelf-baskets",
+    "readme": "projects/kitchen-shelf-baskets/README.md",
+    "model": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.3mf",
+    "preview": "assets/kitchen-basket-standard.png",
+    "previewModel": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.stl",
+    "dimensions": [
+      [
+        "Outer width",
+        "69 mm \u00b7 2.72 in"
+      ],
+      [
+        "Inner width",
+        "65 mm \u00b7 2.56 in"
+      ],
+      [
+        "Inner depth",
+        "203 mm \u00b7 7.99 in"
+      ],
+      [
+        "Overall depth with handle",
+        "236.783 mm \u00b7 9.32 in"
+      ],
+      [
+        "Body depth",
+        "207.8 mm \u00b7 8.18 in"
+      ],
+      [
+        "Height",
+        "100 mm \u00b7 3.94 in"
+      ],
+      [
+        "Material",
+        "PLA"
+      ],
+      [
+        "Layer height",
+        "0.20 mm"
+      ],
+      [
+        "Saved supports",
+        "Enabled"
+      ]
+    ],
+    "downloads": [
+      [
+        "Standard basket \u00b7 Bambu project",
+        "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.3mf"
+      ],
+      [
+        "Standard basket \u00b7 STL",
+        "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.stl"
+      ]
+    ],
+    "description": "Print three of this basket for the kitchen shelf. Each is 69 mm wide outside (65 mm inside), giving 207 mm combined width and 8.86 mm total clearance within the shelf. Inner depth stays 203 mm; handles project in front. Physical fit has not yet been tested.",
+    "print": "Open the saved P1S project. PLA, 0.4 mm nozzle, 0.20 mm layers, 2 walls, 15% infill, supports enabled. Each download contains one basket; use three copies of the standard basket for a new set, or one narrow replacement with two existing original baskets.",
+    "notes": "Only inner width differs between configurations. Inner depth is 203 mm, height 100 mm, width walls 2 mm, depth walls 2.4 mm, floor 1.2 mm, honeycomb 14 mm, border cut disabled, handle width 30 mm. Both 3MFs sliced successfully with saved settings.",
+    "license": "Pantry & Fridge Caddy with Handle by 23 (Moai_23), customized in MakerWorld Parametric Model Maker. MakerWorld Exclusive License; original model terms apply.",
+    "related": [
+      [
+        "Original parametric basket by 23",
+        "https://makerworld.com/en/models/3191169-pantry-fridge-caddy-with-handle"
+      ]
+    ],
+    "views": [
+      {
+        "id": "standard",
+        "group": "Basket sizes",
+        "label": "Standard \u00b7 three across",
+        "dimensions": [
+          [
+            "Outer width",
+            "69 mm \u00b7 2.72 in"
+          ],
+          [
+            "Inner width",
+            "65 mm \u00b7 2.56 in"
+          ],
+          [
+            "Inner depth",
+            "203 mm \u00b7 7.99 in"
+          ],
+          [
+            "Overall depth with handle",
+            "236.783 mm \u00b7 9.32 in"
+          ],
+          [
+            "Body depth",
+            "207.8 mm \u00b7 8.18 in"
+          ],
+          [
+            "Height",
+            "100 mm \u00b7 3.94 in"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Layer height",
+            "0.20 mm"
+          ],
+          [
+            "Saved supports",
+            "Enabled"
+          ]
+        ],
+        "description": "Print three of this basket for the kitchen shelf. Each is 69 mm wide outside (65 mm inside), giving 207 mm combined width and 8.86 mm total clearance within the shelf. Inner depth stays 203 mm; handles project in front. Physical fit has not yet been tested."
+      },
+      {
+        "id": "narrow-replacement",
+        "group": "Basket sizes",
+        "label": "Narrow replacement",
+        "model": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.3mf",
+        "preview": "assets/kitchen-basket-narrow.png",
+        "previewModel": "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.stl",
+        "dimensions": [
+          [
+            "Outer width",
+            "59 mm \u00b7 2.32 in"
+          ],
+          [
+            "Inner width",
+            "55 mm \u00b7 2.17 in"
+          ],
+          [
+            "Inner depth",
+            "203 mm \u00b7 7.99 in"
+          ],
+          [
+            "Overall depth with handle",
+            "236.783 mm \u00b7 9.32 in"
+          ],
+          [
+            "Body depth",
+            "207.8 mm \u00b7 8.18 in"
+          ],
+          [
+            "Height",
+            "100 mm \u00b7 3.94 in"
+          ],
+          [
+            "Material",
+            "PLA"
+          ],
+          [
+            "Layer height",
+            "0.20 mm"
+          ],
+          [
+            "Saved supports",
+            "Enabled"
+          ]
+        ],
+        "description": "Print one narrow replacement beside two already-printed original baskets. The original baskets are 74 mm wide outside; this replacement is 59 mm outside (55 mm inside). Together they use 207 mm, leaving 8.86 mm total clearance. Inner depth stays 203 mm and the handles project in front. Physical fit has not yet been tested.",
+        "downloads": [
+          [
+            "Narrow replacement \u00b7 Bambu project",
+            "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.3mf"
+          ],
+          [
+            "Narrow replacement \u00b7 STL",
+            "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.stl"
+          ]
+        ]
+      }
+    ]
   }
 ]
