@@ -1,0 +1,40 @@
+{
+  "open": {
+    "ml": 241.8,
+    "bounds": [
+      86.8,
+      100.2,
+      97.01
+    ],
+    "bed_mm2": 692,
+    "balance_margin_mm": 8.5
+  },
+  "left-right": {
+    "ml": 235.7,
+    "bounds": [
+      86.8,
+      100.2,
+      97.01
+    ],
+    "bed_mm2": 692,
+    "balance_margin_mm": 9.0
+  },
+  "front-back": {
+    "ml": 235.2,
+    "bounds": [
+      86.8,
+      100.2,
+      97.01
+    ],
+    "bed_mm2": 692,
+    "balance_margin_mm": 8.9
+  },
+  "starter": {
+    "bounds": [
+      204.22,
+      100.2,
+      97.01
+    ],
+    "bodies": 5
+  }
+}

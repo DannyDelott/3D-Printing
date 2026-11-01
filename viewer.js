@@ -4,8 +4,18 @@ import { OrbitControls } from './assets/three/OrbitControls.js';
 import { toCreasedNormals } from './assets/three/BufferGeometryUtils.js';
 
 /** Shared renderer for interactive STL views and the generated PNG thumbnails. */
-export async function createModelView(canvas, url, { width, height, thumbnail = false } = {}) {
+export async function createModelView(canvas, url, { width, height, thumbnail = false, faceGroups = null } = {}) {
   const source = await new STLLoader().loadAsync(url);
+  function applyGroups(g) {
+    if (!faceGroups) return;
+    const colors = new Float32Array(g.attributes.position.count * 3);
+    const palette = ['#b89467','#719885','#4c6359','#e5a45e','#778086'].map(c => new THREE.Color(c));
+    let vertex = 0;
+    for (const [count, index] of faceGroups) for (let i=0; i<count*3; i++, vertex++) palette[index].toArray(colors, vertex*3);
+    if (vertex !== g.attributes.position.count) throw new Error('Assembly colors do not match mesh');
+    g.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+  }
+  applyGroups(source);
   source.computeBoundingBox();
   let origin = source.boundingBox.getCenter(new THREE.Vector3());
   source.translate(-origin.x, -origin.y, -origin.z);
@@ -20,7 +30,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   renderer.setClearColor(0xf4f6ef, 0);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   const scene = new THREE.Scene();
-  const material = new THREE.MeshStandardMaterial({ color: 0x8b9c80, roughness: 0.65, metalness: 0 });
+  const material = new THREE.MeshStandardMaterial({ color: faceGroups ? 0xffffff : 0x8b9c80, vertexColors: !!faceGroups, roughness: 0.65, metalness: 0 });
   const model = new THREE.Mesh(geometry, material);
   scene.add(model);
   scene.add(new THREE.HemisphereLight(0xffffff, 0x747c69, 2.5));
@@ -30,8 +40,11 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
     scene.add(light);
   }
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, radius / 1000, radius * 12);
+  // OrbitControls captures this axis at construction. STL build height is Z.
+  camera.up.set(0, 0, 1);
   const controls = thumbnail ? null : new OrbitControls(camera, canvas);
   if (controls) {
+    controls.rotateSpeed = 0.65;
     controls.minZoom = 0.3;
     controls.maxZoom = 12;
     controls.listenToKeyEvents(canvas);
@@ -55,8 +68,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
     render();
   }
   function fit(top = false) {
-    camera.up.set(0, top ? 1 : 0, top ? 0 : 1);
-    camera.position.copy(new THREE.Vector3(...(top ? [0, 0, 1] : [0.9, -1.3, 1.1])).normalize().multiplyScalar(radius * 4));
+    camera.position.copy(new THREE.Vector3(...(top ? [0, -0.0001, 1] : [0.9, -1.3, 1.1])).normalize().multiplyScalar(radius * 4));
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld();
     // Fit actual projected vertices, including very long templates and thin coupons.
@@ -131,7 +143,9 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
 }
 
 export async function mountViewer(canvas, url) {
-  const view = await createModelView(canvas, url);
+  const groups = canvas.closest('.viewer')?.dataset.faceGroups;
+  const faceGroups = groups ? await fetch(groups).then(r => r.json()) : null;
+  const view = await createModelView(canvas, url, {faceGroups});
   document.querySelector('#zoom-in').onclick = () => view.zoomBy(1.2);
   document.querySelector('#zoom-out').onclick = () => view.zoomBy(1 / 1.2);
   document.querySelector('#reset-view').onclick = () => view.fit();
