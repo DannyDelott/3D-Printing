@@ -100,8 +100,12 @@ def parts_directory(project, page):
     active = [v for v in project_views(project) if v['activeView'] in listed]
     sections = []
     for group in dict.fromkeys(v['group'] for v in active):
-        rows = ''.join(f'<li><a href="{href(page, project_path(v))}">{escape(v["label"])}</a><small>{escape(v["guideNote"])}</small></li>' for v in active if v['group'] == group)
+        rows = ''.join(f'<li data-assembly-id="{v["activeView"]}"><a href="{href(page, project_path(v))}">{escape(v["label"])}</a><small>{escape(v["guideNote"])}</small></li>' for v in active if v['group'] == group)
         sections.append(f'<section><h3>{escape(group)}</h3><ul>{rows}</ul></section>')
+    if not project.get('viewPath') and project.get('faceGroups'):
+        meta = json.loads((ROOT/project['faceGroups']).read_text())
+        rows = ''.join(f'<li data-assembly-id="{key}"><button type="button">{escape(v[0])}</button><small>Not printed</small></li>' for key,v in meta['items'].items() if not v[2])
+        sections.append(f'<details class="assembly-materials"><summary>Core &amp; hardware</summary><ul>{rows}</ul></details>')
     return '<div class="parts-directory">' + ''.join(sections) + '</div>'
 
 
@@ -263,8 +267,8 @@ def project_page(p, published):
     if p.get('faceGroups'):
         groups_attr = f' data-face-groups="{href(page, artifact(p["faceGroups"]))}"'
     if p.get('partsGuide') and not p.get('viewPath'):
-        context = '<h2 class="assembly-title">Mock assembly</h2>'
-        description = (f'<p class="assembly-key"><span><i></i>Cardboard cores</span><span><i></i>Drawers</span><span><i></i>Connectors</span><span><i></i>Wall mounts</span></p>'
+        context = '<h2 class="assembly-title">Mock assembly · 3 rows</h2>'
+        description = (f'<section class="inspect-panel" data-assembly-inspector hidden><div class="inspect-controls"><select aria-label="Identify a part"></select><label><input type="checkbox" data-hide-drawers> Reveal connectors</label></div><div class="inspect-result" aria-live="polite"><strong data-picked-name></strong><p data-picked-use></p><a data-picked-link hidden></a></div></section><p class="assembly-key"><span><i></i>Cardboard cores</span><span><i></i>Drawers</span><span><i></i>Connectors</span><span><i></i>Wall mounts</span></p>'
                        f'<p>{escape(p["description"])}</p><p><a href="{href(page, artifact(p["datasheet"]))}">Print orientation &amp; eight-row mounting diagram →</a></p>')
         starter_links = ''.join(file_link(page, label, path) for label, path in p['downloads'])
         information = (f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Add a cardboard core and two cable ties.</p><div class="download-list starter-download">{starter_links}</div></section>'
@@ -374,7 +378,7 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(SITE / 'assets', OUT / 'assets')
-    for filename in ('style.css', 'client.js', 'viewer.js', 'favicon.svg'):
+    for filename in ('style.css', 'client.js', 'viewer.js', 'assembly-picker.js', 'favicon.svg'):
         shutil.copy2(SITE / filename, OUT / filename)
     for path in published:
         target = OUT / 'files' / path

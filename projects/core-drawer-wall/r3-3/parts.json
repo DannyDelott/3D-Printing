@@ -1,0 +1,15 @@
+{
+  "one-piece-open":["Open drawer","One undivided 241.8 mL bin. It slides out of the core; the face and pull are part of the same print.","models/open-r3-3.3mf"],
+  "one-piece-left-right":["Left / right drawer","The fixed divider runs the length of the bin, creating two long lanes.","models/left-right-r3-3.3mf"],
+  "one-piece-front-back":["Front / back drawer","A crosswise divider keeps frequent-use parts in front and refills behind.","models/front-back-r3-3.3mf"],
+  "dry-ends":["Outside feet","Four half-feet go at the outer ends of the bottom row, one at each front and rear corner. Move them outward as you add cores.","../r3-2/models/dry-ends-r3-2.3mf"],
+  "base-mount":["Shared base","One front and one rear piece sit between neighboring bottom cores. They share a flat base and tie together.","../r3/models/base-mount-r3.3mf"],
+  "upper-mount":["Upper connector","One front and one rear three-way junction seat an upper core between the two below. Tie the pair together.","../r3/models/upper-mount-r3.3mf"],
+  "middle-mount":["Middle mount","Replaces an ordinary upper pair where the bank attaches to the plywood. The wood screw passes through the rear eye.","../r3-2/models/middle-mount-r3-2.3mf"],
+  "top-tier":["Top mount set","The complete hardware for one new anchored top core: its two upper junctions plus front and rear rim clips.","../r3-2/models/top-tier-r3-2.3mf"],
+  "top-clips":["Top clips only","The keeper and screw tab capture the exposed top rim. Use these for an existing cell, or print the complete top set for a new one.","../r3-2/models/top-clips-r3-2.3mf"],
+  "core":["Cardboard core","Reused spool tube, not printed. This example uses nominal 83 mm ID × 88 mm OD × 60 mm length.",null],
+  "tie":["Cable tie","One 2.5 × 200 mm tie captures each ordinary front/rear connector pair without adhesive.",null],
+  "bolt":["Through-bolt","M3 × 70 mm countersunk machine screw with washer and locknut. It holds the front and rear anchor together.",null],
+  "wood-screw":["Backboard screw","A #8 × ¾″ pan-head wood screw through the rear tab fastens it to the plywood. The shelf supports the bank.",null]
+}

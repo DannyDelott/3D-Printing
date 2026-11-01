@@ -419,3 +419,12 @@ button:disabled { cursor: progress; opacity: .6; }
 .assembly-title{font-size:19px;margin:0 0 10px}.assembly-key{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px}
 .assembly-key span{display:inline-flex;align-items:center;gap:5px;margin-right:6px}.assembly-key i{width:11px;height:11px;border-radius:50%;margin-left:8px;background:#b89467}.assembly-key i:first-child{margin-left:0}.assembly-key span:nth-child(2) i{background:#719885}.assembly-key span:nth-child(3) i{background:#4c6359}.assembly-key span:nth-child(4) i{background:#e5a45e}
 .viewer canvas{cursor:grab;touch-action:none}.viewer canvas:active{cursor:grabbing}
+
+.inspect-panel{border:1px solid var(--line);padding:12px;margin:6px 0 12px;border-radius:5px}
+.inspect-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+.inspect-controls select{font:inherit;padding:4px 8px}.inspect-controls label{cursor:pointer}
+.inspect-result{font-size:14px;margin-top:8px}.inspect-result a{text-decoration:underline}
+[data-assembly-id].part-picked{background:#e1f2fb;box-shadow:inset 3px 0 #1688c8;padding-left:8px}
+.assembly-materials{margin-top:16px;font-size:14px}.assembly-materials summary,.assembly-materials button{cursor:pointer}.assembly-materials button{font:inherit;border:0;background:none;padding:0;text-decoration:underline}.parts-directory li[data-assembly-id]{cursor:pointer}
+
+.viewer[data-face-groups]{height:clamp(330px,39vw,490px)}

@@ -3634,7 +3634,7 @@
         "group": "Assembly",
         "label": "Mock assembly",
         "revision": "R3.3",
-        "description": "Five cardboard cores on shared front and rear connectors. The empty right-hand core shows the housing. Two drawers are pulled forward; the amber parts mark the middle and top wall attachments.",
+        "description": "Six cores stack in three rows. The open housing on the bottom row exposes the rim. The middle anchor is on the left of row two; the top tab reaches above the highest core.",
         "preview": "assets/core-wall-r33-assembly.png",
         "previewModel": "projects/core-drawer-wall/r3-3/models/mock-assembly.stl",
         "dimensions": [
