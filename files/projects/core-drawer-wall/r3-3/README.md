@@ -1,6 +1,6 @@
 # Cardboard core drawer wall · R3.3
 
-[Mock assembly, print orientation and mounting diagram](datasheet.html). One drawer per nominal **83 ID × 88 OD × 60 mm** bare cardboard core. The bin, lower pull and full circular front are one solid, including an optional fixed divider. No screws, glue or hinges in any drawer. The Ø86.8 mm face overlaps the nominal bore by 1.9 mm around its whole circumference. It covers the lower opening; the 3.6 mm clearance between adjacent fronts remains for withdrawal.
+[Mock assembly, print orientation and mounting diagram](datasheet.html). The clickable mock assembly has three bottom cores, two in the middle and one on top. Click a solid to identify it, or select a parts-list entry to highlight every matching piece. Reveal connectors hides the drawers and makes the cardboard translucent; orbit to the back to see where the plywood screws go. One drawer per nominal **83 ID × 88 OD × 60 mm** bare cardboard core. The bin, lower pull and full circular front are one solid, including an optional fixed divider. No screws, glue or hinges in any drawer. The Ø86.8 mm face overlaps the nominal bore by 1.9 mm around its whole circumference. It covers the lower opening; the 3.6 mm clearance between adjacent fronts remains for withdrawal.
 
 | Print | Capacity to rim | P1S PLA | Time |
 | --- | ---: | ---: | ---: |

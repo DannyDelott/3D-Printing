@@ -1,6 +1,7 @@
 import * as THREE from './assets/three/three.module.js';
 import { STLLoader } from './assets/three/STLLoader.js';
 import { OrbitControls } from './assets/three/OrbitControls.js';
+import { attachPicker } from './assembly-picker.js';
 import { toCreasedNormals } from './assets/three/BufferGeometryUtils.js';
 
 /** Shared renderer for interactive STL views and the generated PNG thumbnails. */
@@ -11,7 +12,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
     const colors = new Float32Array(g.attributes.position.count * 3);
     const palette = ['#b89467','#719885','#4c6359','#e5a45e','#778086'].map(c => new THREE.Color(c));
     let vertex = 0;
-    for (const [count, index] of faceGroups) for (let i=0; i<count*3; i++, vertex++) palette[index].toArray(colors, vertex*3);
+    for (const [count, index] of (faceGroups.groups ?? faceGroups)) for (let i=0; i<count*3; i++, vertex++) palette[index].toArray(colors, vertex*3);
     if (vertex !== g.attributes.position.count) throw new Error('Assembly colors do not match mesh');
     g.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
   }
@@ -98,6 +99,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   controls?.addEventListener('change', render);
   const observer = thumbnail ? null : new ResizeObserver(resize);
   observer?.observe(canvas);
+  const disposePicker=thumbnail ? null : attachPicker({canvas,camera,model,geometry,material,assembly:faceGroups,url,render});
   let request = 0;
   return {
     fit, zoomBy,
@@ -134,6 +136,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
     dispose() {
       request++;
       observer?.disconnect();
+      disposePicker?.();
       controls?.dispose();
       geometry.dispose();
       material.dispose();

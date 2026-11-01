@@ -20,9 +20,9 @@ def drawer(n):
 def print_pose(m):return m.transform([[1,0,0,0],[0,-k,k,0],[0,k,k,0]])
 def main():
  out.mkdir(exist_ok=True);data={};colors=[];parts=[]
- def add(m,x,y,w,group):
-  mesh=r.mesh(r.world(m.translate((x,y,w))));parts.append(mesh);colors.append([len(mesh.faces),group])
- loc=[(-r.pitch,0,'open',0),(0,0,'front-back',-27),(r.pitch,0,None,0),(-r.half,r.rise,'open',0),(r.half,r.rise,'left-right',-41)]
+ def add(m,x,y,w,group,key,kit=None):
+  mesh=r.mesh(r.world(m.translate((x,y,w))));parts.append(mesh);colors.append([len(mesh.faces),group,key,kit])
+ loc=[(-r.pitch,0,'open',0),(0,0,'front-back',-27),(r.pitch,0,None,0),(-r.half,r.rise,'open',0),(r.half,r.rise,'left-right',-41),(0,2*r.rise,'open',-12)]
  for n in ['open','left-right','front-back']:
   d=drawer(n);shape=print_pose(d)
   plate=r.plate([(n+' one-piece drawer',shape)]);m=plate[0][1]
@@ -62,21 +62,36 @@ def main():
  r.OUT=out;r.write3('starter',starter);(out/'starter-r3.3mf').rename(out/'starter-r3-3.3mf')
  combined=r.trimesh.util.concatenate([m for _,m in starter]);combined.export(out/'starter-r3-3.stl')
  data['starter']=dict(bounds=combined.extents.round(2).tolist(),bodies=5)
+ # Model identification uses each named solid's triangle range, not screen hotspots.
  for x,y,n,w in loc:
-  add(r.core,x,y,0,0)
-  if n:add(drawer(n),x,y,w,1)
+  add(r.core,x,y,0,0,'core')
+  if n:add(drawer(n),x,y,w,1,'one-piece-'+n)
+ def anchor_fasteners(x,y,bolt_y,wood_y):
+  add(mount.shaft(0,bolt_y),x,y,0,4,'bolt')
+  washer=extr(r.circle(3.45,0,bolt_y)-r.circle(1.6,0,bolt_y),-r.lip-.55,-r.lip)
+  nut=extr(r.CS.circle(3.18,6).translate((0,bolt_y))-r.circle(1.6,0,bolt_y),-r.lip-4.55,-r.lip-.55)
+  add(washer+nut,x,y,0,4,'bolt')
+  wood=extr(r.circle(2.1,0,wood_y),-14.85,4.2)+extr(r.circle(4.55,0,wood_y),2.8,5.1)
+  add(r.rear(wood),x,y,0,4,'wood-screw')
  for x,sign in [(-1.5*r.pitch,1),(1.5*r.pitch,-1)]:
   for b in (False,True):
-   foot=mount.tied_end(sign,b);add(r.rear(foot) if b else foot,x,0,0,2)
- for x in [-r.half,r.half]:
-  for ground in [True,False]:
-   for b in (False,True):
-    j=mount.mid(b) if (not ground and x<0) else r.junction(ground,'rear' if b else 'front')
-    add(r.rear(j) if b else j,x,0,0,3 if not ground and x<0 else 2)
- x=r.half;y=r.rise
- for b in (False,True):add(r.rear(mount.top_clip(True)) if b else mount.top_clip(False),x,y,0,3)
- add(mount.shaft(0,48.5),x,y,0,4);add(mount.shaft(0,r.rise/3-3.7),-r.half,0,0,4)
+   foot=mount.tied_end(sign,b);add(r.rear(foot) if b else foot,x,0,0,2,'dry-ends')
+  a,b=sorted([sign*2.7,sign*9.6]);loop=r.rnd(-r.lip-1.1,a-.45,r.L+r.lip-.07,b+.45,.44)
+  wire=extr(loop-loop.offset(-.9),-32.25,-29.75).transform([[0,1,0,0],[0,0,1,0],[1,0,0,0]])
+  add(wire,x,0,0,4,'tie')
+ for x,y,ground,middle,kit in [(-r.half,0,True,False,None),(r.half,0,True,False,None),(-r.half,0,False,True,None),(r.half,0,False,False,None),(0,r.rise,False,False,'top-tier')]:
+  key='middle-mount' if middle else ('base-mount' if ground else 'upper-mount')
+  for b in (False,True):
+   j=mount.mid(b) if middle else r.junction(ground,'rear' if b else 'front')
+   add(r.rear(j) if b else j,x,y,0,3 if middle else 2,key,kit)
+  if middle:anchor_fasteners(x,y,r.rise/3-3.7,r.rise/3+2.9)
+  else:add(r.cable(ground),x,y,0,4,'tie')
+ x=0;y=2*r.rise
+ for b in (False,True):add(r.rear(mount.top_clip(True)) if b else mount.top_clip(False),x,y,0,3,'top-clips','top-tier')
+ anchor_fasteners(x,y,48.5,56.5)
  r.trimesh.util.concatenate(parts).export(out/'mock-assembly.stl')
- (P/'colors.json').write_text(json.dumps(colors))
+ items=json.loads((P/'parts.json').read_text())
+ assert {key for _,_,primary,kit in colors for key in (primary,kit) if key}==set(items)
+ (P/'colors.json').write_text(json.dumps(dict(rows=[3,2,1],groups=colors,items=items),indent=2)+'\n')
  (P/'checks.json').write_text(json.dumps(data,indent=2)+'\n')
 if __name__=='__main__':main()
