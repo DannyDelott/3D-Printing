@@ -1,0 +1,105 @@
+{
+  "drawer": {
+    "print_bounds_mm": [
+      86.0,
+      63.0,
+      44.5
+    ],
+    "bodies": 1
+  },
+  "foot": {
+    "print_bounds_mm": [
+      50.0,
+      19.35,
+      9.6
+    ],
+    "bodies": 1
+  },
+  "glide": {
+    "print_bounds_mm": [
+      16.0,
+      17.15,
+      8.0
+    ],
+    "bodies": 1
+  },
+  "clip": {
+    "print_bounds_mm": [
+      11.7,
+      8.2,
+      8.0
+    ],
+    "bodies": 1
+  },
+  "anchor": {
+    "print_bounds_mm": [
+      39.0,
+      33.0,
+      7.6
+    ],
+    "bodies": 2
+  },
+  "fit": {
+    "print_bounds_mm": [
+      77.0,
+      70.325,
+      8.0
+    ],
+    "bodies": 3
+  },
+  "starter": {
+    "print_bounds_mm": [
+      125.0,
+      111.6,
+      44.5
+    ],
+    "bodies": 7
+  },
+  "bottom-hardware": {
+    "print_bounds_mm": [
+      84.85,
+      41.35,
+      9.6
+    ],
+    "bodies": 4
+  },
+  "upper-hardware": {
+    "print_bounds_mm": [
+      67.85,
+      40.675,
+      8.0
+    ],
+    "bodies": 8
+  },
+  "bottom-hardware-anchored": {
+    "print_bounds_mm": [
+      110.85,
+      54.175,
+      9.6
+    ],
+    "bodies": 6
+  },
+  "upper-hardware-anchored": {
+    "print_bounds_mm": [
+      110.85,
+      54.6,
+      8.0
+    ],
+    "bodies": 10
+  },
+  "nominal": {
+    "core_ID_OD_length_mm": [
+      83.0,
+      88.0,
+      60.0
+    ],
+    "horizontal_pitch_mm": 90.4,
+    "staggered_row_rise_mm": 78.29,
+    "clip_slot_mm": 3.6,
+    "shoe_axial_engagement_mm": 6.4,
+    "drawer_top_above_center_mm": 14.0,
+    "drawer_body_length_mm": 60.6,
+    "cavity_ml": 166.9,
+    "sweep_intersection_mm3": 0
+  }
+}

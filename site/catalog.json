@@ -3596,5 +3596,386 @@
         ]
       }
     ]
+  },
+  {
+    "id": "core-drawer-wall",
+    "title": "Cardboard core drawer wall",
+    "category": "Storage",
+    "description": "A staggered wall of small parts drawers made from cardboard spool cores, short rim clips, flat feet and optional plywood screw tabs.",
+    "revision": "R1",
+    "status": "Digital fit checked \u00b7 unprinted",
+    "slug": "core-drawer-wall",
+    "root": "projects/core-drawer-wall",
+    "model": "projects/core-drawer-wall/models/starter-r1.3mf",
+    "preview": "assets/core-wall-wall-example.png",
+    "readme": "projects/core-drawer-wall/README.md",
+    "datasheet": "projects/core-drawer-wall/datasheet.html",
+    "source": [
+      "projects/core-drawer-wall/source/model.py"
+    ],
+    "license": "",
+    "related": [
+      [
+        "Minimal rim clips \u00b7 shiyin",
+        "https://makerworld.com/en/models/3338387-infinite-stackable-empty-spool-core-drawer#profileId-3792190"
+      ],
+      [
+        "Staggered core drawers \u00b7 \u5b9e\u7528\u81f3\u4e0a",
+        "https://makerworld.com/en/models/2095928-filament-spool-cardboard-core-parts-storage-box-sp#profileId-2266223"
+      ]
+    ],
+    "views": [
+      {
+        "id": "starter",
+        "group": "Wall",
+        "label": "Assembly",
+        "revision": "R1",
+        "description": "Five bare cores in two staggered rows. The starter plate makes one bottom cell: a drawer, two feet, two clips, and an optional wall tab with a front guard. Add the hardware for the next row as needed.",
+        "preview": "assets/core-wall-wall-example.png",
+        "previewModel": "projects/core-drawer-wall/models/wall-example-r1.stl",
+        "dimensions": [
+          [
+            "Bottom cell without wall tab \u00b7 width \u00d7 height",
+            "88 \u00d7 93.2 mm \u00b7 3.46 \u00d7 3.67 in"
+          ],
+          [
+            "Horizontal pitch / row rise",
+            "90.4 / 78.3 mm \u00b7 3.56 / 3.08 in"
+          ],
+          [
+            "Nominal core \u00b7 ID / OD / length",
+            "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
+          ],
+          [
+            "Print bounds",
+            "125 \u00d7 111.6 \u00d7 44.5 mm \u00b7 4.92 \u00d7 4.39 \u00d7 1.75 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Starter cell \u00b7 3MF",
+            "projects/core-drawer-wall/models/starter-r1.3mf"
+          ],
+          [
+            "Assembly \u00b7 plate STL",
+            "projects/core-drawer-wall/models/starter-r1.stl"
+          ],
+          [
+            "Assembly reference \u00b7 not a print plate",
+            "projects/core-drawer-wall/models/wall-example-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "bottom-hardware",
+        "group": "Bottom row",
+        "label": "Hardware",
+        "revision": "R1",
+        "description": "Two flat feet support a core at its front and rear ends. Two small seam clips join it to the neighboring core. Each clip counts once per new seam.",
+        "preview": "assets/core-wall-bottom-hardware.png",
+        "previewModel": "projects/core-drawer-wall/models/bottom-hardware-r1.stl",
+        "dimensions": [
+          [
+            "Parts",
+            "2 feet + 2 clips"
+          ],
+          [
+            "Print bounds",
+            "84.85 \u00d7 41.35 \u00d7 9.6 mm \u00b7 3.34 \u00d7 1.63 \u00d7 0.38 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Hardware \u00b7 3MF",
+            "projects/core-drawer-wall/models/bottom-hardware-r1.3mf"
+          ],
+          [
+            "Hardware \u00b7 plate STL",
+            "projects/core-drawer-wall/models/bottom-hardware-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "bottom-hardware-anchored",
+        "group": "Bottom row",
+        "label": "With wall tab",
+        "revision": "R1",
+        "description": "The same bottom-row hardware plus one screw tab and one front guard for an exposed top rim. Supply a cable tie and wood screw.",
+        "preview": "assets/core-wall-bottom-hardware-anchored.png",
+        "previewModel": "projects/core-drawer-wall/models/bottom-hardware-anchored-r1.stl",
+        "dimensions": [
+          [
+            "Parts",
+            "2 feet + 2 clips + tab and guard"
+          ],
+          [
+            "Print bounds",
+            "110.85 \u00d7 54.17 \u00d7 9.6 mm \u00b7 4.36 \u00d7 2.13 \u00d7 0.38 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "With wall tab \u00b7 3MF",
+            "projects/core-drawer-wall/models/bottom-hardware-anchored-r1.3mf"
+          ],
+          [
+            "With wall tab \u00b7 plate STL",
+            "projects/core-drawer-wall/models/bottom-hardware-anchored-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "foot",
+        "group": "Bottom row",
+        "label": "Single foot",
+        "revision": "R1",
+        "description": "The 50 mm sole sits flat on a shelf; a short jaw holds the lower rim. Put one at each end of a bottom core.",
+        "preview": "assets/core-wall-foot.png",
+        "previewModel": "projects/core-drawer-wall/models/foot-r1.stl",
+        "dimensions": [
+          [
+            "Jaw slot",
+            "3.6 mm \u00b7 0.14 in"
+          ],
+          [
+            "Print bounds",
+            "50 \u00d7 19.35 \u00d7 9.6 mm \u00b7 1.97 \u00d7 0.76 \u00d7 0.38 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Single foot \u00b7 3MF",
+            "projects/core-drawer-wall/models/foot-r1.3mf"
+          ],
+          [
+            "Single foot \u00b7 plate STL",
+            "projects/core-drawer-wall/models/foot-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "upper-hardware",
+        "group": "Upper row",
+        "label": "Hardware",
+        "revision": "R1",
+        "description": "Two glides keep the drawer upright. Six clips cover three new seams: two cores below and one alongside, joined front and rear.",
+        "preview": "assets/core-wall-upper-hardware.png",
+        "previewModel": "projects/core-drawer-wall/models/upper-hardware-r1.stl",
+        "dimensions": [
+          [
+            "Parts",
+            "2 glides + 6 clips"
+          ],
+          [
+            "Print bounds",
+            "67.85 \u00d7 40.67 \u00d7 8 mm \u00b7 2.67 \u00d7 1.60 \u00d7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Hardware \u00b7 3MF",
+            "projects/core-drawer-wall/models/upper-hardware-r1.3mf"
+          ],
+          [
+            "Hardware \u00b7 plate STL",
+            "projects/core-drawer-wall/models/upper-hardware-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "upper-hardware-anchored",
+        "group": "Upper row",
+        "label": "With wall tab",
+        "revision": "R1",
+        "description": "Upper-cell hardware plus one screw tab and front guard. Use at selected top cells to restrain the joined bank against plywood.",
+        "preview": "assets/core-wall-upper-hardware-anchored.png",
+        "previewModel": "projects/core-drawer-wall/models/upper-hardware-anchored-r1.stl",
+        "dimensions": [
+          [
+            "Parts",
+            "2 glides + 6 clips + tab and guard"
+          ],
+          [
+            "Print bounds",
+            "110.85 \u00d7 54.6 \u00d7 8 mm \u00b7 4.36 \u00d7 2.15 \u00d7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "With wall tab \u00b7 3MF",
+            "projects/core-drawer-wall/models/upper-hardware-anchored-r1.3mf"
+          ],
+          [
+            "With wall tab \u00b7 plate STL",
+            "projects/core-drawer-wall/models/upper-hardware-anchored-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "glide",
+        "group": "Upper row",
+        "label": "Single glide",
+        "revision": "R1",
+        "description": "An upper-row drawer runs on a short flat glide at each end. Position them at six o\u2019clock; the rest of the core stays bare.",
+        "preview": "assets/core-wall-glide.png",
+        "previewModel": "projects/core-drawer-wall/models/glide-r1.stl",
+        "dimensions": [
+          [
+            "Jaw slot",
+            "3.6 mm \u00b7 0.14 in"
+          ],
+          [
+            "Print bounds",
+            "16 \u00d7 17.15 \u00d7 8 mm \u00b7 0.63 \u00d7 0.68 \u00d7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Single glide \u00b7 3MF",
+            "projects/core-drawer-wall/models/glide-r1.3mf"
+          ],
+          [
+            "Single glide \u00b7 plate STL",
+            "projects/core-drawer-wall/models/glide-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "fit",
+        "group": "Upper row",
+        "label": "Fit print",
+        "revision": "R1",
+        "description": "Test this working glide and drawer cross section together. Slide the sample through the core, then try the small seam clip on a pair of core ends before printing the hardware plates.",
+        "preview": "assets/core-wall-fit.png",
+        "previewModel": "projects/core-drawer-wall/models/fit-r1.stl",
+        "dimensions": [
+          [
+            "Test pieces",
+            "1 glide + 1 drawer slice + 1 seam clip"
+          ],
+          [
+            "Nominal ID / OD",
+            "83 \u00d7 88 mm \u00b7 3.27 \u00d7 3.46 in"
+          ],
+          [
+            "Print bounds",
+            "77 \u00d7 70.33 \u00d7 8 mm \u00b7 3.03 \u00d7 2.77 \u00d7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Fit print \u00b7 3MF",
+            "projects/core-drawer-wall/models/fit-r1.3mf"
+          ],
+          [
+            "Fit print \u00b7 plate STL",
+            "projects/core-drawer-wall/models/fit-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "drawer",
+        "group": "Drawer",
+        "label": "Drawer",
+        "revision": "R1",
+        "description": "A removable parts drawer with a plain writing face and a finger scallop. The rim extends 14 mm above the core centerline. Support it as you pull it free.",
+        "preview": "assets/core-wall-drawer.png",
+        "previewModel": "projects/core-drawer-wall/models/drawer-r1.stl",
+        "dimensions": [
+          [
+            "Cavity",
+            "\u2248167 mL"
+          ],
+          [
+            "Floor / sidewall",
+            "2.0 / 1.6 mm \u00b7 0.08 / 0.06 in"
+          ],
+          [
+            "Print bounds",
+            "86 \u00d7 63 \u00d7 44.5 mm \u00b7 3.39 \u00d7 2.48 \u00d7 1.75 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Drawer \u00b7 3MF",
+            "projects/core-drawer-wall/models/drawer-r1.3mf"
+          ],
+          [
+            "Drawer \u00b7 plate STL",
+            "projects/core-drawer-wall/models/drawer-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "clip",
+        "group": "Seam clip",
+        "label": "Clip",
+        "revision": "R1",
+        "description": "The three short prongs capture two cardboard rims with a small air gap between them. Use one at each end of every new seam, rotating the same clip for diagonal joins.",
+        "preview": "assets/core-wall-clip.png",
+        "previewModel": "projects/core-drawer-wall/models/clip-r1.stl",
+        "dimensions": [
+          [
+            "Jaw slot",
+            "3.6 mm \u00b7 0.14 in"
+          ],
+          [
+            "Engagement",
+            "6.4 mm \u00b7 0.25 in"
+          ],
+          [
+            "Print bounds",
+            "11.7 \u00d7 8.2 \u00d7 8 mm \u00b7 0.46 \u00d7 0.32 \u00d7 0.31 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Clip \u00b7 3MF",
+            "projects/core-drawer-wall/models/clip-r1.3mf"
+          ],
+          [
+            "Clip \u00b7 plate STL",
+            "projects/core-drawer-wall/models/clip-r1.stl"
+          ]
+        ]
+      },
+      {
+        "id": "anchor",
+        "group": "Wall tab",
+        "label": "Tab and guard",
+        "revision": "R1",
+        "description": "A cable tie loops over the front guard and through two slots in the screwed rear tab, capturing the top wall of the cardboard core. Fit to selected top cells of a shelf-supported bank.",
+        "preview": "assets/core-wall-anchor.png",
+        "previewModel": "projects/core-drawer-wall/models/anchor-r1.stl",
+        "dimensions": [
+          [
+            "Screw / backboard",
+            "#8 \u00d7 \u00be in pan head / \u00be in plywood"
+          ],
+          [
+            "Tie",
+            "4.8 \u00d7 200 mm \u00b7 0.19 \u00d7 7.87 in"
+          ],
+          [
+            "Screw eye",
+            "\u00d84.8 mm \u00b7 0.19 in"
+          ],
+          [
+            "Print bounds",
+            "39 \u00d7 33 \u00d7 7.6 mm \u00b7 1.54 \u00d7 1.30 \u00d7 0.30 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Tab and guard \u00b7 3MF",
+            "projects/core-drawer-wall/models/anchor-r1.3mf"
+          ],
+          [
+            "Tab and guard \u00b7 plate STL",
+            "projects/core-drawer-wall/models/anchor-r1.stl"
+          ]
+        ]
+      }
+    ]
   }
 ]

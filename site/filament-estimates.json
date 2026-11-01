@@ -3942,5 +3942,489 @@
         "printTime": "8 h 13 min"
       }
     ]
+  },
+  "projects/core-drawer-wall/models/starter-r1.3mf": {
+    "sha256": "abdea98890bca653dddb0348d899e415b591b9a8fd3980d9edbebf6bbb3e8a8d",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 44.019405364990234,
+        "cost": 0.8803881072998047,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 44.019405364990234,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "1 h 5 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/bottom-hardware-r1.3mf": {
+    "sha256": "0c2c9b9fde9aba5551db7f4eccd4384dc1cb34f22c66f0ef255a9b5f91f56d5e",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 8.73975658416748,
+        "cost": 0.17479513168334962,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 8.73975658416748,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "23 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/bottom-hardware-anchored-r1.3mf": {
+    "sha256": "ae7117503d3c5335f99504e5d1192ccfb1a468eb12d5dd898d54d15ec5903c0f",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 11.55180835723877,
+        "cost": 0.2310361671447754,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 11.55180835723877,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "29 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/foot-r1.3mf": {
+    "sha256": "9e364bc2b6433651ed4ed785cd51e337bc5d7fcb673e5631d9697799c463cf9a",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 3.965055227279663,
+        "cost": 0.07930110454559326,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 3.965055227279663,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "13 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/upper-hardware-r1.3mf": {
+    "sha256": "8b4330971a5db9fc40b0b559abb11ae11c2ba367ee48af03b76f38bf1d4c13ad",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 6.050602912902832,
+        "cost": 0.12101205825805664,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 6.050602912902832,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "23 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/upper-hardware-anchored-r1.3mf": {
+    "sha256": "d8aac7b4fc879450fda46d25bec398469f563402bda5df0c5bcfddfef3a17f8f",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 8.862656593322754,
+        "cost": 0.17725313186645508,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 8.862656593322754,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "28 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/glide-r1.3mf": {
+    "sha256": "b71d57827ffe4cd0d4c6bb2d0866a5151c6a3960a89c7637eb024471b50b2d22",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 1.7172247171401978,
+        "cost": 0.034344494342803955,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 1.7172247171401978,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "11 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/fit-r1.3mf": {
+    "sha256": "030ca45166f266e4b61278cbe9439187112a740b985e25f11da803a01d99611b",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 3.6341712474823,
+        "cost": 0.072683424949646,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 3.6341712474823,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "13 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/drawer-r1.3mf": {
+    "sha256": "5aaffa3589131f04bf20cce7ebb4e12e4b408f3cde3060f16dbfe14838de605e",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 32.561241149902344,
+        "cost": 0.6512248229980468,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 32.561241149902344,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "43 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/clip-r1.3mf": {
+    "sha256": "f799bd71d4bf3d7c0dcea8dcccba2c813e77e6d606a59ac7c973daaef6b8be13",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 0.5452898740768433,
+        "cost": 0.010905797481536866,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 0.5452898740768433,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "10 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
+  },
+  "projects/core-drawer-wall/models/anchor-r1.3mf": {
+    "sha256": "823c51ac7bfd9ab391c7e65cf7c76e9f3893778b7782081d2777ea0b03511425",
+    "slicer": "BambuStudio-02.08.02.60",
+    "basis": "assumed",
+    "settings": {
+      "printer_model": "Bambu Lab P1S",
+      "nozzle_diameter": [
+        "0.4"
+      ],
+      "filament_type": [
+        "PLA"
+      ],
+      "filament_density": [
+        "1.24"
+      ],
+      "filament_cost": [
+        "20"
+      ],
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "15%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_type": "no_brim",
+      "line_width": "0.42"
+    },
+    "plates": [
+      {
+        "plate": 1,
+        "grams": 2.905555486679077,
+        "cost": 0.058111109733581544,
+        "filaments": [
+          {
+            "id": 1,
+            "grams": 2.905555486679077,
+            "pricePerKg": 20
+          }
+        ],
+        "warning": "",
+        "printTime": "13 min"
+      }
+    ],
+    "note": "Geometry-only 3MF in supplied print orientation."
   }
 }
