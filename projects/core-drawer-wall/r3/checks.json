@@ -1,0 +1,91 @@
+{
+  "base": {
+    "bounds": [
+      102.42,
+      44.8,
+      7.4
+    ],
+    "bodies": 2
+  },
+  "upper": {
+    "bounds": [
+      105.8,
+      43.65,
+      10.6
+    ],
+    "bodies": 2
+  },
+  "ends": {
+    "bounds": [
+      112.42,
+      44.8,
+      7.4
+    ],
+    "bodies": 4
+  },
+  "base-mount": {
+    "bounds": [
+      102.42,
+      44.8,
+      7.4
+    ],
+    "bodies": 2
+  },
+  "upper-mount": {
+    "bounds": [
+      105.8,
+      43.65,
+      10.6
+    ],
+    "bodies": 2
+  },
+  "drawer": {
+    "bounds": [
+      86.0,
+      68.4,
+      66.5
+    ],
+    "bodies": 1
+  },
+  "drop-in": {
+    "bounds": [
+      86.0,
+      68.4,
+      60.5
+    ],
+    "bodies": 1
+  },
+  "fit": {
+    "bounds": [
+      119.6,
+      66.5,
+      5.8
+    ],
+    "bodies": 2
+  },
+  "starter": {
+    "bounds": [
+      203.42,
+      68.4,
+      66.5
+    ],
+    "bodies": 5
+  },
+  "nominal": {
+    "core_ID_OD_L": [
+      83.0,
+      88.0,
+      60.0
+    ],
+    "pitch": 90.4,
+    "rise": 78.29,
+    "socket": 3.6,
+    "cavity_ml": 242.3,
+    "dropin_ml": 228.8,
+    "headspace_5mm_ml": 227.9,
+    "mouth_width_mm": 43.8,
+    "gross_core_ml": 324.6,
+    "drawer_rim_above_center": 31.0,
+    "sweep_intersection_mm3": 0
+  }
+}
