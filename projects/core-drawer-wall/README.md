@@ -1,6 +1,10 @@
 # Cardboard core drawer wall
 
-**Selected design: R3.** One fixed cardboard core holds one removable 242 mL drawer. Shared curved base and upper junctions join the cores; selected rear junctions screw to the plywood backboard. The [R3 design sheet](r3/datasheet.html) includes the mounting drawing, interactive assembly and printable parts. Start with the [3.57 g fit print](r3/models/fit-r3.3mf), then print the [deep drawer](r3/models/drawer-r3.3mf) or [one-cell starter plate](r3/models/starter-r3.3mf).
+**Selected design: R3.2.** Choose an open, left/right or front/back bin with a full circular face. The drawer takes one screw and no glue. Cable ties or through-bolts join the core rims; middle and top tabs accept plywood screws. See the [interactive drawer comparison and eight-row mounting diagram](r3-2/datasheet.html), [print and hardware list](r3-2/README.md), and [small core fit print](r3/models/fit-r3.3mf).
+
+## R3 · earlier open front
+
+ One fixed cardboard core holds one removable 242 mL drawer. Shared curved base and upper junctions join the cores; selected rear junctions screw to the plywood backboard. The [R3 design sheet](r3/datasheet.html) includes the mounting drawing, interactive assembly and printable parts. Start with the [3.57 g fit print](r3/models/fit-r3.3mf), then print the [deep drawer](r3/models/drawer-r3.3mf) or [one-cell starter plate](r3/models/starter-r3.3mf).
 
 For dimensions, print settings, assembly and screw placement, see the [R3 project notes](r3/README.md).
 

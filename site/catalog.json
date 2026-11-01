@@ -3601,17 +3601,17 @@
     "id": "core-drawer-wall",
     "title": "Cardboard core drawer wall",
     "category": "Storage",
-    "description": "High-capacity drawers in staggered cardboard cores, with shared curved junctions and optional plywood screw mounts.",
-    "revision": "R3",
+    "description": "Full-face open and divided drawers for fixed cardboard cores. Shared base and stacking junctions with middle and top plywood mounts.",
+    "revision": "R3.2",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
-    "model": "projects/core-drawer-wall/r3/models/starter-r3.3mf",
-    "preview": "assets/core-wall-r3-wall-example.png",
-    "readme": "projects/core-drawer-wall/r3/README.md",
-    "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+    "model": "projects/core-drawer-wall/r3-2/models/open-r3-2.3mf",
+    "preview": "assets/core-wall-r32-comparison.png",
+    "readme": "projects/core-drawer-wall/r3-2/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3/source/model.py"
+      "projects/core-drawer-wall/r3-2/source/model.py"
     ],
     "license": "",
     "related": [
@@ -3629,6 +3629,221 @@
       ]
     ],
     "views": [
+      {
+        "id": "open-full-face",
+        "group": "Drawer layouts",
+        "label": "Open bin",
+        "revision": "R3.2",
+        "description": "One smooth compartment for mixed sizes.",
+        "preview": "assets/core-wall-r32-open.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/open-assembled-r3-2.stl",
+        "dimensions": [
+          [
+            "CAD volume to rim",
+            "235.0 mL"
+          ],
+          [
+            "Face / core ID",
+            "\u00d886.8 / 83 mm \u00b7 3.42 / 3.27 in"
+          ],
+          [
+            "Print bounds",
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Open bin \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/open-r3-2.3mf"
+          ],
+          [
+            "Open bin \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/open-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "left-right-full-face",
+        "group": "Drawer layouts",
+        "label": "Left / right",
+        "revision": "R3.2",
+        "description": "One fixed divider runs from the drawer front to the rear, forming two long lanes.",
+        "preview": "assets/core-wall-r32-left-right.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/left-right-assembled-r3-2.stl",
+        "dimensions": [
+          [
+            "CAD volume to rim",
+            "114.7 + 114.5 mL"
+          ],
+          [
+            "Face / core ID",
+            "\u00d886.8 / 83 mm \u00b7 3.42 / 3.27 in"
+          ],
+          [
+            "Print bounds",
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Left / right \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/left-right-r3-2.3mf"
+          ],
+          [
+            "Left / right \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/left-right-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "front-back-full-face",
+        "group": "Drawer layouts",
+        "label": "Front / back",
+        "revision": "R3.2",
+        "description": "A fixed cross divider separates frequently used parts at the front from refills behind.",
+        "preview": "assets/core-wall-r32-front-back.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/front-back-assembled-r3-2.stl",
+        "dimensions": [
+          [
+            "CAD volume to rim",
+            "114.2 + 114.3 mL"
+          ],
+          [
+            "Face / core ID",
+            "\u00d886.8 / 83 mm \u00b7 3.42 / 3.27 in"
+          ],
+          [
+            "Print bounds",
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Front / back \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/front-back-r3-2.3mf"
+          ],
+          [
+            "Front / back \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/front-back-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "middle-mount",
+        "group": "Wall mounts",
+        "label": "Middle mounting pair",
+        "revision": "R3.2",
+        "description": "Replaces one ordinary upper junction at an intermediate row. Drive the plywood screw before fitting the front jaw.",
+        "preview": "assets/core-wall-r32-middle-mount.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "105.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Middle mounting pair \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.3mf"
+          ],
+          [
+            "Middle mounting pair \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "top-tier",
+        "group": "Wall mounts",
+        "label": "Anchored top tier",
+        "revision": "R3.2",
+        "description": "One regular upper junction pair and two top rim clips for a new anchored top core.",
+        "preview": "assets/core-wall-r32-top-tier.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "151.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 5.98 \u00d7 1.72 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Anchored top tier \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.3mf"
+          ],
+          [
+            "Anchored top tier \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "top-clips",
+        "group": "Wall mounts",
+        "label": "Top clips only",
+        "revision": "R3.2",
+        "description": "Add an above-rim screw tab and front rim keeper to an existing top cell.",
+        "preview": "assets/core-wall-r32-top-clips.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "41 \u00d7 23.03 \u00d7 5.6 mm \u00b7 1.61 \u00d7 0.91 \u00d7 0.22 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Top clips only \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.3mf"
+          ],
+          [
+            "Top clips only \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl"
+          ]
+        ]
+      },
+      {
+        "id": "dry-ends",
+        "group": "Bottom row",
+        "label": "Outside feet",
+        "revision": "R3.2",
+        "description": "Four flat end feet. Tie each front foot to its rear mate through the printed slots.",
+        "preview": "assets/core-wall-r32-dry-ends.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl",
+        "dimensions": [
+          [
+            "Set",
+            "Four feet, two 2.5 \u00d7 200 mm ties \u00b7 0.10 \u00d7 7.87 in"
+          ],
+          [
+            "Print bounds",
+            "112.42 \u00d7 44.8 \u00d7 7.4 mm \u00b7 4.43 \u00d7 1.76 \u00d7 0.29 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Outside feet \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.3mf"
+          ],
+          [
+            "Outside feet \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl"
+          ]
+        ]
+      },
       {
         "id": "starter",
         "group": "Wall",
@@ -3664,6 +3879,11 @@
             "Assembly reference \u00b7 not a print plate",
             "projects/core-drawer-wall/r3/models/wall-example-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3701,6 +3921,49 @@
             "Deep drawer \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/drawer-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
+        ]
+      },
+      {
+        "id": "round-front",
+        "group": "Drawer",
+        "label": "Round front",
+        "revision": "R3.1",
+        "description": "A one-piece drawer for the R3 wall. Its round front covers the top and sides of the core, with smooth inside corners and a sloping pull. Print floor down without supports.",
+        "preview": "assets/core-wall-r31-drawer.png",
+        "previewModel": "projects/core-drawer-wall/r3-1/models/dust-shield-r3-1.stl",
+        "datasheet": "projects/core-drawer-wall/r3-1/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-1/README.md",
+        "source": [
+          "projects/core-drawer-wall/r3-1/source/model.py"
+        ],
+        "dimensions": [
+          [
+            "Capacity",
+            "241.8 mL \u00b7 unchanged R3 bearings"
+          ],
+          [
+            "Overall",
+            "86.8 \u00d7 68.5 \u00d7 78.9 mm \u00b7 3.42 \u00d7 2.70 \u00d7 3.11 in"
+          ],
+          [
+            "Bore coverage",
+            "1.9 mm overlap above \u00b7 6 mm gap below"
+          ]
+        ],
+        "downloads": [
+          [
+            "Round-front drawer \u00b7 3MF",
+            "projects/core-drawer-wall/r3-1/models/dust-shield-r3-1.3mf"
+          ],
+          [
+            "Round-front drawer \u00b7 STL",
+            "projects/core-drawer-wall/r3-1/models/dust-shield-r3-1.stl"
+          ]
         ]
       },
       {
@@ -3734,6 +3997,11 @@
             "R2-compatible drawer \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/drop-in-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3763,6 +4031,11 @@
             "Shared base \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/base-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3796,6 +4069,11 @@
             "Mounted base \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/base-mount-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3825,6 +4103,11 @@
             "Outside ends \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/ends-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3854,6 +4137,11 @@
             "Fit print \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/fit-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3883,6 +4171,11 @@
             "Three-way junction \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/upper-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       },
       {
@@ -3916,6 +4209,11 @@
             "Mounted junction \u00b7 print STL",
             "projects/core-drawer-wall/r3/models/upper-mount-r3.stl"
           ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
         ]
       }
     ]
