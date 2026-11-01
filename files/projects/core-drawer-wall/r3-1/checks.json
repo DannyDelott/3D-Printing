@@ -1,0 +1,13 @@
+{
+  "cavity_ml": 241.79,
+  "reference_ml": 242.29,
+  "clear_mouth_mm": 43.8,
+  "front_bounds": [
+    86.8,
+    68.5,
+    78.9
+  ],
+  "upper_bore_overlap_mm": 1.8999999999999986,
+  "lower_bore_gap_mm": 6.0,
+  "inside_corner_radius_mm": 2.4
+}

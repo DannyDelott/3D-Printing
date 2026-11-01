@@ -1,0 +1,51 @@
+{
+  "dry-ends": {
+    "source_sha256": "581f1dd59deaa4df17f7538fe3ed2848249c5ac61419e9bafc16534d076cedd3",
+    "objects": 4,
+    "grams": 8.791,
+    "minutes": 24,
+    "warning": ""
+  },
+  "open": {
+    "source_sha256": "3ec1590bdba15171e8048c7b3351d52c8b42de7f3db1234f4c50ab2a7ccbd015",
+    "objects": 2,
+    "grams": 48.546,
+    "minutes": 83,
+    "warning": ""
+  },
+  "left-right": {
+    "source_sha256": "8afe8543564b999e8cd6309366970c90e56dbc7c9e170238f23ebc84baf64a62",
+    "objects": 2,
+    "grams": 55.612,
+    "minutes": 91,
+    "warning": ""
+  },
+  "front-back": {
+    "source_sha256": "d7b1cac51f76e18a089ce7a12e444abd56e999aa07c9e227e36f97451d690dc7",
+    "objects": 2,
+    "grams": 56.35,
+    "minutes": 91,
+    "warning": ""
+  },
+  "middle-mount": {
+    "source_sha256": "6c49f189c89b181e3a1bc160d8fe1b7de913149432ab61d33a45307f79f0265a",
+    "objects": 2,
+    "grams": 7.641,
+    "minutes": 24,
+    "warning": ""
+  },
+  "top-tier": {
+    "source_sha256": "d4db27101478c4058a6c8f889ee68225508d105d3156c6b918d5d64bb2964121",
+    "objects": 4,
+    "grams": 9.35,
+    "minutes": 29,
+    "warning": ""
+  },
+  "top-clips": {
+    "source_sha256": "16ab2dd87fbaf63d481e7d682ecd36068b5ad693f2a4ef7021f5f10e963628a7",
+    "objects": 2,
+    "grams": 2.009,
+    "minutes": 12,
+    "warning": ""
+  }
+}

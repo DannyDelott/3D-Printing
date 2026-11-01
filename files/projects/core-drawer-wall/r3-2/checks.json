@@ -1,0 +1,86 @@
+{
+  "open": {
+    "print_bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "objects": 2,
+    "capacity_ml": 235.0
+  },
+  "left-right": {
+    "print_bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "objects": 2,
+    "capacity_ml": 229.1,
+    "cell_ml": [
+      114.7,
+      114.5
+    ]
+  },
+  "front-back": {
+    "print_bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "objects": 2,
+    "capacity_ml": 228.5,
+    "cell_ml": [
+      114.2,
+      114.3
+    ]
+  },
+  "middle-mount": {
+    "print_bounds": [
+      105.8,
+      43.65,
+      10.6
+    ],
+    "objects": 2
+  },
+  "top-clips": {
+    "print_bounds": [
+      41.0,
+      23.03,
+      5.6
+    ],
+    "objects": 2
+  },
+  "dry-ends": {
+    "print_bounds": [
+      112.42,
+      44.8,
+      7.4
+    ],
+    "objects": 4
+  },
+  "top-tier": {
+    "print_bounds": [
+      151.8,
+      43.65,
+      10.6
+    ],
+    "objects": 4
+  },
+  "layout": {
+    "rows": 8,
+    "counts": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "width_mm": 813.6,
+    "height_with_tab_mm": 654.6,
+    "disk_overlap_mm": 1.9,
+    "disk_clearance_mm": 3.6
+  }
+}
