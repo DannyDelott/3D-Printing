@@ -1,0 +1,26 @@
+{
+  "units": "mm",
+  "innerDepth": 203,
+  "height": 100,
+  "wallWidth": 2,
+  "wallDepth": 2.4,
+  "floorThickness": 1.2,
+  "honeycomb": true,
+  "honeycombDiameter": 14,
+  "allowBorderCut": false,
+  "handleWidth": 30,
+  "configurations": {
+    "standard": {
+      "innerWidth": 65,
+      "outerWidth": 69
+    },
+    "narrowReplacement": {
+      "innerWidth": 55,
+      "outerWidth": 59
+    },
+    "originalReference": {
+      "innerWidth": 70,
+      "outerWidth": 74
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "projects": 14,
+  "projects": 16,
   "files": [
     "NOTICE.md",
     "closet-space-saver-hex/README.md",
@@ -978,6 +978,15 @@
     "projects/gridfinity/rebuilt-bin-4x3x8/models/rebuilt-bin-4x3x8-standard.3mf",
     "projects/gridfinity/tea-drawer/README.md",
     "projects/gridfinity/tea-drawer/models/tea-drawer-baseplate-342x472.3mf",
+    "projects/kitchen-shelf-baskets/README.md",
+    "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.3mf",
+    "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-narrow-55mm.stl",
+    "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.3mf",
+    "projects/kitchen-shelf-baskets/models/kitchen-shelf-basket-standard-65mm.stl",
+    "projects/kitchen-shelf-baskets/parameters.json",
+    "projects/kitchen-shelf/README.md",
+    "projects/kitchen-shelf/models/kitchen-shelf-p1s.3mf",
+    "projects/kitchen-shelf/models/kitchen-shelf-p1s.stl",
     "projects/ping-pong-ball-tail-attachment/README.md",
     "projects/ping-pong-ball-tail-attachment/models/ping-pong-ball-tail-attachment.3mf",
     "projects/quarter-circle-stencil/README.md",
