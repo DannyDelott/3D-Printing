@@ -13,6 +13,17 @@ import filament
 
 
 class PublishingTests(unittest.TestCase):
+    def test_drawer_wall_starts_assembled_and_keeps_old_parts_out_of_picker(self):
+        project = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'core-drawer-wall')
+        home, drawer = build.project_views(project)[:2]
+        self.assertIn('mock-assembly.stl', home['previewModel'])
+        self.assertIn('starter-r3-3.3mf', home['downloads'][0][1])
+        menu = build.component_navigation(drawer, build.project_path(drawer))
+        self.assertIn('<summary>Browse parts</summary>', menu)
+        self.assertIn('Fit sample', menu)
+        self.assertNotIn('R2-compatible', menu)
+        self.assertNotIn('Round front', menu)
+
     def test_woodworking_assembly_has_no_filament_estimate(self):
         project = dict(slug='cabinet-assembly', fabrication='woodworking', downloads=[['Assembly', 'assembly.3mf']])
         self.assertEqual(filament.render(project, {}, Path('.')), ('', ''))

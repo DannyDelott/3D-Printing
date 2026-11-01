@@ -95,10 +95,26 @@ def project_path(project):
     return f'projects/{project["slug"]}/' + (suffix + '/' if suffix else '') + 'index.html'
 
 
+def parts_directory(project, page):
+    listed = {v['id'] for v in project['views'] if v.get('guideNote')}
+    active = [v for v in project_views(project) if v['activeView'] in listed]
+    sections = []
+    for group in dict.fromkeys(v['group'] for v in active):
+        rows = ''.join(f'<li><a href="{href(page, project_path(v))}">{escape(v["label"])}</a><small>{escape(v["guideNote"])}</small></li>' for v in active if v['group'] == group)
+        sections.append(f'<section><h3>{escape(group)}</h3><ul>{rows}</ul></section>')
+    return '<div class="parts-directory">' + ''.join(sections) + '</div>'
+
+
 def component_navigation(project, page):
     views = project.get('views', [])
     if not views:
         return ''
+    if project.get('partsGuide'):
+        home = project_path(project_views(project)[0])
+        if page == home:
+            return ''
+        return (f'<div class="part-crumb"><a href="{href(page, home)}">Mock assembly</a><span>/</span><strong>{escape(project["label"])}</strong>'
+                f'<details><summary>Browse parts</summary>{parts_directory(project, page)}</details></div>')
     if project.get('assemblyShoes'):
         return plane_navigation(project, page)
     groups = dict.fromkeys(view['group'] for view in views)
@@ -243,9 +259,25 @@ def project_page(p, published):
             for profile in p['assemblyShoes']:
                 hidden = '' if profile['id'] == plane_context(p)[0] else ' hidden'
                 context += f'<p class="coupon-companions small" data-shoe-panel="{profile["id"]}"{hidden}>Compatible parts: <a href="{href(page, "projects/"+p["slug"]+"/carrier-coupon/index.html")}?shoe={profile["id"]}">coupon carrier</a> · <a href="{href(page, "projects/"+p["slug"]+"/fit-coupon/index.html")}?shoe={profile["id"]}">assembly fit-test parts</a>.</p>'
+    groups_attr = ''
+    if p.get('faceGroups'):
+        groups_attr = f' data-face-groups="{href(page, artifact(p["faceGroups"]))}"'
+    if p.get('partsGuide') and not p.get('viewPath'):
+        context = '<h2 class="assembly-title">Mock assembly</h2>'
+        description = (f'<p class="assembly-key"><span><i></i>Cardboard cores</span><span><i></i>Drawers</span><span><i></i>Connectors</span><span><i></i>Wall mounts</span></p>'
+                       f'<p>{escape(p["description"])}</p><p><a href="{href(page, artifact(p["datasheet"]))}">Print orientation &amp; eight-row mounting diagram →</a></p>')
+        starter_links = ''.join(file_link(page, label, path) for label, path in p['downloads'])
+        information = (f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Add a cardboard core and two cable ties.</p><div class="download-list starter-download">{starter_links}</div></section>'
+                       + parts_directory(p, page))
+        legacy = ''
+    elif p.get('partsGuide'):
+        context = f'<h2 class="assembly-title">{escape(p["label"])}</h2>'
+        if p.get('supersededBy'):
+            current = next(v for v in project_views(p) if v['activeView'] == p['supersededBy'])
+            context += f'<p class="part-context">Earlier design ({escape(p["revision"])}). <a href="{href(page, project_path(current))}">Current: {escape(current["label"])} →</a></p>'
     body = f'''<a class="back" href="{href(page, 'index.html')}">{icon('left')} All projects</a>
 <div class="detail-heading"><h1>{escape(p['title'])}</h1></div>
-{component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<p id="active-print-label" class="part-context" hidden></p><div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}">
+{component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<p id="active-print-label" class="part-context" hidden></p><div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}"{groups_attr}>
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
 <div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>

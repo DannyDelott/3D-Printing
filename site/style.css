@@ -406,3 +406,16 @@ button:disabled { cursor: progress; opacity: .6; }
 .plane-navigation .plane-subnav a[aria-current=page] { color: var(--accent); background: transparent; box-shadow: inset 0 -2px 0 var(--accent); }
 .coupon-companions { margin: -7px 0 20px; line-height: 1.6; }
 .coupon-companions a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+/* A parts directory is read in assembly order; individual parts keep a short breadcrumb. */
+.part-crumb {display:flex;align-items:center;gap:12px;border-block:1px solid var(--line);padding:12px 0;margin-bottom:18px;font-size:14px;flex-wrap:wrap}
+.part-crumb a,.parts-directory a,.starter-action a{text-decoration:underline;text-underline-offset:3px}
+.part-crumb>span {opacity:.45}.part-crumb details{margin-left:auto;position:relative}
+.part-crumb summary{cursor:pointer}.part-crumb details[open] .parts-directory{position:absolute;right:0;top:100%;z-index:4;background:white;border:1px solid var(--line);padding:16px;width:min(340px,85vw);max-height:65vh;overflow:auto;box-shadow:0 5px 18px #0001}
+.parts-directory section{margin:18px 0 0}.parts-directory h3{font-size:14px;margin:0 0 6px}.parts-directory ul{list-style:none;padding:0;margin:0}
+.parts-directory li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid var(--line);font-size:14px}
+.parts-directory small{font-size:12px;color:var(--muted);text-align:right}
+.starter-action p{margin:7px 0 12px}.starter-download a{padding:4px 0}.starter-download .file-preview{width:46px;height:36px}.starter-download .dl-meta{font-size:11px}
+.assembly-title{font-size:19px;margin:0 0 10px}.assembly-key{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px}
+.assembly-key span{display:inline-flex;align-items:center;gap:5px;margin-right:6px}.assembly-key i{width:11px;height:11px;border-radius:50%;margin-left:8px;background:#b89467}.assembly-key i:first-child{margin-left:0}.assembly-key span:nth-child(2) i{background:#719885}.assembly-key span:nth-child(3) i{background:#4c6359}.assembly-key span:nth-child(4) i{background:#e5a45e}
+.viewer canvas{cursor:grab;touch-action:none}.viewer canvas:active{cursor:grabbing}

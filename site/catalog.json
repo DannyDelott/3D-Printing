@@ -3601,17 +3601,17 @@
     "id": "core-drawer-wall",
     "title": "Cardboard core drawer wall",
     "category": "Storage",
-    "description": "Full-face open and divided drawers for fixed cardboard cores. Shared base and stacking junctions with middle and top plywood mounts.",
-    "revision": "R3.2",
+    "description": "One-piece drawers in bare cardboard cores, with tied connectors and optional plywood wall anchors.",
+    "revision": "R3.3",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
-    "model": "projects/core-drawer-wall/r3-2/models/open-r3-2.3mf",
-    "preview": "assets/core-wall-r32-comparison.png",
-    "readme": "projects/core-drawer-wall/r3-2/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+    "model": "projects/core-drawer-wall/r3-3/models/starter-r3-3.3mf",
+    "preview": "assets/core-wall-r33-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-3/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-3/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3-2/source/model.py"
+      "projects/core-drawer-wall/r3-3/source/model.py"
     ],
     "license": "",
     "related": [
@@ -3629,6 +3629,403 @@
       ]
     ],
     "views": [
+      {
+        "id": "mock-assembly",
+        "group": "Assembly",
+        "label": "Mock assembly",
+        "revision": "R3.3",
+        "description": "Five cardboard cores on shared front and rear connectors. The empty right-hand core shows the housing. Two drawers are pulled forward; the amber parts mark the middle and top wall attachments.",
+        "preview": "assets/core-wall-r33-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-3/models/mock-assembly.stl",
+        "dimensions": [
+          [
+            "Nominal core ID / OD / length",
+            "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
+          ],
+          [
+            "Print bounds",
+            "204.22 \u00d7 100.2 \u00d7 97.01 mm \u00b7 8.04 \u00d7 3.94 \u00d7 3.82 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Download starter 3MF",
+            "projects/core-drawer-wall/r3-3/models/starter-r3-3.3mf"
+          ],
+          [
+            "Starter STL",
+            "projects/core-drawer-wall/r3-3/models/starter-r3-3.stl"
+          ]
+        ],
+        "faceGroups": "projects/core-drawer-wall/r3-3/colors.json"
+      },
+      {
+        "id": "one-piece-open",
+        "group": "Drawers",
+        "label": "Open",
+        "revision": "R3.3",
+        "description": "One large compartment. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
+        "preview": "assets/core-wall-r33-open.png",
+        "previewModel": "projects/core-drawer-wall/r3-3/models/open-in-use.stl",
+        "dimensions": [
+          [
+            "Nominal core ID / OD / length",
+            "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
+          ],
+          [
+            "Usable volume to rim",
+            "241.8 mL"
+          ],
+          [
+            "Face / bottom overlap",
+            "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Open \u00b7 3MF",
+            "projects/core-drawer-wall/r3-3/models/open-r3-3.3mf"
+          ],
+          [
+            "Open \u00b7 print STL",
+            "projects/core-drawer-wall/r3-3/models/open-r3-3.stl"
+          ]
+        ],
+        "guideNote": "One large compartment"
+      },
+      {
+        "id": "one-piece-left-right",
+        "group": "Drawers",
+        "label": "Left / right",
+        "revision": "R3.3",
+        "description": "Two long lanes. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
+        "preview": "assets/core-wall-r33-left-right.png",
+        "previewModel": "projects/core-drawer-wall/r3-3/models/left-right-in-use.stl",
+        "dimensions": [
+          [
+            "Nominal core ID / OD / length",
+            "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
+          ],
+          [
+            "Usable volume to rim",
+            "235.7 mL"
+          ],
+          [
+            "Face / bottom overlap",
+            "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Left / right \u00b7 3MF",
+            "projects/core-drawer-wall/r3-3/models/left-right-r3-3.3mf"
+          ],
+          [
+            "Left / right \u00b7 print STL",
+            "projects/core-drawer-wall/r3-3/models/left-right-r3-3.stl"
+          ]
+        ],
+        "guideNote": "Two long lanes"
+      },
+      {
+        "id": "one-piece-front-back",
+        "group": "Drawers",
+        "label": "Front / back",
+        "revision": "R3.3",
+        "description": "Two short bins. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
+        "preview": "assets/core-wall-r33-front-back.png",
+        "previewModel": "projects/core-drawer-wall/r3-3/models/front-back-in-use.stl",
+        "dimensions": [
+          [
+            "Nominal core ID / OD / length",
+            "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
+          ],
+          [
+            "Usable volume to rim",
+            "235.2 mL"
+          ],
+          [
+            "Face / bottom overlap",
+            "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Front / back \u00b7 3MF",
+            "projects/core-drawer-wall/r3-3/models/front-back-r3-3.3mf"
+          ],
+          [
+            "Front / back \u00b7 print STL",
+            "projects/core-drawer-wall/r3-3/models/front-back-r3-3.stl"
+          ]
+        ],
+        "guideNote": "Two short bins"
+      },
+      {
+        "id": "dry-ends",
+        "group": "Base",
+        "label": "Outside feet",
+        "revision": "R3.2",
+        "description": "One set covers both ends of the entire bottom row. Use one tie to connect each front foot to its rear mate; move the feet outward as the bank grows.",
+        "preview": "assets/core-wall-r32-dry-ends.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl",
+        "dimensions": [
+          [
+            "Set",
+            "Four feet, two 2.5 \u00d7 200 mm ties \u00b7 0.10 \u00d7 7.87 in"
+          ],
+          [
+            "Print bounds",
+            "112.42 \u00d7 44.8 \u00d7 7.4 mm \u00b7 4.43 \u00d7 1.76 \u00d7 0.29 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Outside feet \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.3mf"
+          ],
+          [
+            "Outside feet \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "guideNote": "One set per bank"
+      },
+      {
+        "id": "base-mount",
+        "group": "Base",
+        "label": "Shared base",
+        "revision": "R3",
+        "description": "Use one shared front/rear pair between adjacent bottom cores. Tie the jaws through the slots with one 2.5 \u00d7 200 mm cable tie. Move the outside feet outward as you add cores.",
+        "preview": "assets/core-wall-r3-base-mount.png",
+        "previewModel": "projects/core-drawer-wall/r3/models/base-mount-r3.stl",
+        "dimensions": [
+          [
+            "Plywood / screw",
+            "\u00be in plywood / #8 \u00d7 \u00be in pan head"
+          ],
+          [
+            "Tie",
+            "2.5 \u00d7 200 mm \u00b7 0.10 \u00d7 7.87 in"
+          ],
+          [
+            "Print bounds",
+            "102.42 \u00d7 44.8 \u00d7 7.4 mm \u00b7 4.03 \u00d7 1.76 \u00d7 0.29 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Shared base \u00b7 3MF",
+            "projects/core-drawer-wall/r3/models/base-mount-r3.3mf"
+          ],
+          [
+            "Shared base \u00b7 print STL",
+            "projects/core-drawer-wall/r3/models/base-mount-r3.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
+        ],
+        "guideNote": "Between bottom cores"
+      },
+      {
+        "id": "fit",
+        "group": "Base",
+        "label": "Fit sample",
+        "revision": "R3",
+        "description": "Print this before a bank of drawers. Slide the short drawer section through your core and seat the sample jaw on two neighboring rims.",
+        "preview": "assets/core-wall-r3-fit.png",
+        "previewModel": "projects/core-drawer-wall/r3/models/fit-r3.stl",
+        "dimensions": [
+          [
+            "Set",
+            "One jaw section and one drawer section"
+          ],
+          [
+            "Print bounds",
+            "119.6 \u00d7 66.5 \u00d7 5.8 mm \u00b7 4.71 \u00d7 2.62 \u00d7 0.23 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Fit sample \u00b7 3MF",
+            "projects/core-drawer-wall/r3/models/fit-r3.3mf"
+          ],
+          [
+            "Fit sample \u00b7 print STL",
+            "projects/core-drawer-wall/r3/models/fit-r3.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
+        ],
+        "guideNote": "Check your core first"
+      },
+      {
+        "id": "upper-mount",
+        "group": "Stack",
+        "label": "Upper connector",
+        "revision": "R3",
+        "description": "Use one front/rear pair for each new upper core. Nest the core between two below and tie the jaws together with one 2.5 \u00d7 200 mm cable tie. The screw eye is optional at ordinary joints.",
+        "preview": "assets/core-wall-r3-upper-mount.png",
+        "previewModel": "projects/core-drawer-wall/r3/models/upper-mount-r3.stl",
+        "dimensions": [
+          [
+            "Screw eye",
+            "\u00d84.8 mm \u00b7 0.19 in"
+          ],
+          [
+            "Tie",
+            "2.5 \u00d7 200 mm \u00b7 0.10 \u00d7 7.87 in"
+          ],
+          [
+            "Print bounds",
+            "105.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Upper connector \u00b7 3MF",
+            "projects/core-drawer-wall/r3/models/upper-mount-r3.3mf"
+          ],
+          [
+            "Upper connector \u00b7 print STL",
+            "projects/core-drawer-wall/r3/models/upper-mount-r3.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3/README.md",
+        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3/source/model.py"
+        ],
+        "guideNote": "One pair per upper core"
+      },
+      {
+        "id": "middle-mount",
+        "group": "Wall anchors",
+        "label": "Middle mount",
+        "revision": "R3.2",
+        "description": "Replaces one ordinary upper junction at an intermediate row. Drive the plywood screw before fitting the front jaw.",
+        "preview": "assets/core-wall-r32-middle-mount.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "105.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Middle mounting pair \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.3mf"
+          ],
+          [
+            "Middle mounting pair \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "guideNote": "Replaces an upper pair"
+      },
+      {
+        "id": "top-tier",
+        "group": "Wall anchors",
+        "label": "Top mount set",
+        "revision": "R3.2",
+        "description": "One regular upper junction pair and two top rim clips for a new anchored top core.",
+        "preview": "assets/core-wall-r32-top-tier.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "151.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 5.98 \u00d7 1.72 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Anchored top tier \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.3mf"
+          ],
+          [
+            "Anchored top tier \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "guideNote": "For a new top cell"
+      },
+      {
+        "id": "top-clips",
+        "group": "Wall anchors",
+        "label": "Top clips only",
+        "revision": "R3.2",
+        "description": "Add an above-rim screw tab and front rim keeper to an existing top cell.",
+        "preview": "assets/core-wall-r32-top-clips.png",
+        "previewModel": "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl",
+        "dimensions": [
+          [
+            "Each anchor",
+            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
+          ],
+          [
+            "Print bounds",
+            "41 \u00d7 23.03 \u00d7 5.6 mm \u00b7 1.61 \u00d7 0.91 \u00d7 0.22 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Top clips only \u00b7 3MF",
+            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.3mf"
+          ],
+          [
+            "Top clips only \u00b7 print STL",
+            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl"
+          ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "guideNote": "Retrofit a top cell"
+      },
       {
         "id": "open-full-face",
         "group": "Drawer layouts",
@@ -3660,7 +4057,13 @@
             "Open bin \u00b7 print STL",
             "projects/core-drawer-wall/r3-2/models/open-r3-2.stl"
           ]
-        ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "supersededBy": "one-piece-open"
       },
       {
         "id": "left-right-full-face",
@@ -3693,7 +4096,13 @@
             "Left / right \u00b7 print STL",
             "projects/core-drawer-wall/r3-2/models/left-right-r3-2.stl"
           ]
-        ]
+        ],
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
+        ],
+        "supersededBy": "one-piece-left-right"
       },
       {
         "id": "front-back-full-face",
@@ -3726,123 +4135,13 @@
             "Front / back \u00b7 print STL",
             "projects/core-drawer-wall/r3-2/models/front-back-r3-2.stl"
           ]
-        ]
-      },
-      {
-        "id": "middle-mount",
-        "group": "Wall mounts",
-        "label": "Middle mounting pair",
-        "revision": "R3.2",
-        "description": "Replaces one ordinary upper junction at an intermediate row. Drive the plywood screw before fitting the front jaw.",
-        "preview": "assets/core-wall-r32-middle-mount.png",
-        "previewModel": "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl",
-        "dimensions": [
-          [
-            "Each anchor",
-            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
-          ],
-          [
-            "Print bounds",
-            "105.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.42 in"
-          ]
         ],
-        "downloads": [
-          [
-            "Middle mounting pair \u00b7 3MF",
-            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.3mf"
-          ],
-          [
-            "Middle mounting pair \u00b7 print STL",
-            "projects/core-drawer-wall/r3-2/models/middle-mount-r3-2.stl"
-          ]
-        ]
-      },
-      {
-        "id": "top-tier",
-        "group": "Wall mounts",
-        "label": "Anchored top tier",
-        "revision": "R3.2",
-        "description": "One regular upper junction pair and two top rim clips for a new anchored top core.",
-        "preview": "assets/core-wall-r32-top-tier.png",
-        "previewModel": "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl",
-        "dimensions": [
-          [
-            "Each anchor",
-            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
-          ],
-          [
-            "Print bounds",
-            "151.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 5.98 \u00d7 1.72 \u00d7 0.42 in"
-          ]
+        "readme": "projects/core-drawer-wall/r3-2/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-2/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-2/source/model.py"
         ],
-        "downloads": [
-          [
-            "Anchored top tier \u00b7 3MF",
-            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.3mf"
-          ],
-          [
-            "Anchored top tier \u00b7 print STL",
-            "projects/core-drawer-wall/r3-2/models/top-tier-r3-2.stl"
-          ]
-        ]
-      },
-      {
-        "id": "top-clips",
-        "group": "Wall mounts",
-        "label": "Top clips only",
-        "revision": "R3.2",
-        "description": "Add an above-rim screw tab and front rim keeper to an existing top cell.",
-        "preview": "assets/core-wall-r32-top-clips.png",
-        "previewModel": "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl",
-        "dimensions": [
-          [
-            "Each anchor",
-            "M3 \u00d7 70 mm countersunk screw, washer and locknut; #8 \u00d7 \u00be in pan-head wood screw"
-          ],
-          [
-            "Print bounds",
-            "41 \u00d7 23.03 \u00d7 5.6 mm \u00b7 1.61 \u00d7 0.91 \u00d7 0.22 in"
-          ]
-        ],
-        "downloads": [
-          [
-            "Top clips only \u00b7 3MF",
-            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.3mf"
-          ],
-          [
-            "Top clips only \u00b7 print STL",
-            "projects/core-drawer-wall/r3-2/models/top-clips-r3-2.stl"
-          ]
-        ]
-      },
-      {
-        "id": "dry-ends",
-        "group": "Bottom row",
-        "label": "Outside feet",
-        "revision": "R3.2",
-        "description": "Four flat end feet. Tie each front foot to its rear mate through the printed slots.",
-        "preview": "assets/core-wall-r32-dry-ends.png",
-        "previewModel": "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl",
-        "dimensions": [
-          [
-            "Set",
-            "Four feet, two 2.5 \u00d7 200 mm ties \u00b7 0.10 \u00d7 7.87 in"
-          ],
-          [
-            "Print bounds",
-            "112.42 \u00d7 44.8 \u00d7 7.4 mm \u00b7 4.43 \u00d7 1.76 \u00d7 0.29 in"
-          ]
-        ],
-        "downloads": [
-          [
-            "Outside feet \u00b7 3MF",
-            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.3mf"
-          ],
-          [
-            "Outside feet \u00b7 print STL",
-            "projects/core-drawer-wall/r3-2/models/dry-ends-r3-2.stl"
-          ]
-        ]
+        "supersededBy": "one-piece-front-back"
       },
       {
         "id": "starter",
@@ -3884,7 +4183,8 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        ],
+        "supersededBy": "mock-assembly"
       },
       {
         "id": "drawer",
@@ -3926,7 +4226,8 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        ],
+        "supersededBy": "one-piece-open"
       },
       {
         "id": "round-front",
@@ -3964,7 +4265,8 @@
             "Round-front drawer \u00b7 STL",
             "projects/core-drawer-wall/r3-1/models/dust-shield-r3-1.stl"
           ]
-        ]
+        ],
+        "supersededBy": "one-piece-open"
       },
       {
         "id": "drop-in",
@@ -4002,7 +4304,8 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        ],
+        "supersededBy": "one-piece-open"
       },
       {
         "id": "base",
@@ -4036,45 +4339,8 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
-      },
-      {
-        "id": "base-mount",
-        "group": "Bottom row",
-        "label": "Mounted base",
-        "revision": "R3",
-        "description": "The same shared base with a rear screw eye and a matching front tie face. A cable tie captures both rims through the gap between cores.",
-        "preview": "assets/core-wall-r3-base-mount.png",
-        "previewModel": "projects/core-drawer-wall/r3/models/base-mount-r3.stl",
-        "dimensions": [
-          [
-            "Plywood / screw",
-            "\u00be in plywood / #8 \u00d7 \u00be in pan head"
-          ],
-          [
-            "Tie",
-            "2.5 \u00d7 200 mm \u00b7 0.10 \u00d7 7.87 in"
-          ],
-          [
-            "Print bounds",
-            "102.42 \u00d7 44.8 \u00d7 7.4 mm \u00b7 4.03 \u00d7 1.76 \u00d7 0.29 in"
-          ]
         ],
-        "downloads": [
-          [
-            "Mounted base \u00b7 3MF",
-            "projects/core-drawer-wall/r3/models/base-mount-r3.3mf"
-          ],
-          [
-            "Mounted base \u00b7 print STL",
-            "projects/core-drawer-wall/r3/models/base-mount-r3.stl"
-          ]
-        ],
-        "readme": "projects/core-drawer-wall/r3/README.md",
-        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
-        "source": [
-          "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        "supersededBy": "base-mount"
       },
       {
         "id": "ends",
@@ -4108,41 +4374,8 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
-      },
-      {
-        "id": "fit",
-        "group": "Bottom row",
-        "label": "Fit print",
-        "revision": "R3",
-        "description": "Try the short drawer section through the whole core. Seat the base jaw on two adjacent rims, one in each slot, before printing a full pair.",
-        "preview": "assets/core-wall-r3-fit.png",
-        "previewModel": "projects/core-drawer-wall/r3/models/fit-r3.stl",
-        "dimensions": [
-          [
-            "Set",
-            "One jaw section and one drawer section"
-          ],
-          [
-            "Print bounds",
-            "119.6 \u00d7 66.5 \u00d7 5.8 mm \u00b7 4.71 \u00d7 2.62 \u00d7 0.23 in"
-          ]
         ],
-        "downloads": [
-          [
-            "Fit print \u00b7 3MF",
-            "projects/core-drawer-wall/r3/models/fit-r3.3mf"
-          ],
-          [
-            "Fit print \u00b7 print STL",
-            "projects/core-drawer-wall/r3/models/fit-r3.stl"
-          ]
-        ],
-        "readme": "projects/core-drawer-wall/r3/README.md",
-        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
-        "source": [
-          "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        "supersededBy": "dry-ends"
       },
       {
         "id": "upper",
@@ -4176,46 +4409,10 @@
         "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
         "source": [
           "projects/core-drawer-wall/r3/source/model.py"
-        ]
-      },
-      {
-        "id": "upper-mount",
-        "group": "Upper row",
-        "label": "Mounted junction",
-        "revision": "R3",
-        "description": "Choose this pair at selected upper joints to restrain a shelf-supported bank. Screw the rear connector to the plywood before attaching the front face and tie.",
-        "preview": "assets/core-wall-r3-upper-mount.png",
-        "previewModel": "projects/core-drawer-wall/r3/models/upper-mount-r3.stl",
-        "dimensions": [
-          [
-            "Screw eye",
-            "\u00d84.8 mm \u00b7 0.19 in"
-          ],
-          [
-            "Tie",
-            "2.5 \u00d7 200 mm \u00b7 0.10 \u00d7 7.87 in"
-          ],
-          [
-            "Print bounds",
-            "105.8 \u00d7 43.65 \u00d7 10.6 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.42 in"
-          ]
         ],
-        "downloads": [
-          [
-            "Mounted junction \u00b7 3MF",
-            "projects/core-drawer-wall/r3/models/upper-mount-r3.3mf"
-          ],
-          [
-            "Mounted junction \u00b7 print STL",
-            "projects/core-drawer-wall/r3/models/upper-mount-r3.stl"
-          ]
-        ],
-        "readme": "projects/core-drawer-wall/r3/README.md",
-        "datasheet": "projects/core-drawer-wall/r3/datasheet.html",
-        "source": [
-          "projects/core-drawer-wall/r3/source/model.py"
-        ]
+        "supersededBy": "upper-mount"
       }
-    ]
+    ],
+    "partsGuide": true
   }
 ]
