@@ -438,3 +438,8 @@ button:disabled { cursor: progress; opacity: .6; }
 .part-preview-tools{font-size:12px}
 .part-preview-head button{font-size:18px;line-height:1.2}
 [data-assembly-id].part-picked{background:#e9f1ff;border-color:#2167d8}
+/* Keep the second viewport on screen even when selection comes from the parts list. */
+.part-preview:not([hidden]){position:fixed;z-index:8;right:clamp(12px,3vw,48px);bottom:16px;width:min(34vw,460px);background:#fff;box-shadow:0 6px 30px #19352b2b;margin:0}
+.part-preview:not([hidden]) canvas{height:clamp(180px,29vh,330px)}
+@media(max-width:760px){.part-preview:not([hidden]){left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom));width:auto}.part-preview:not([hidden]) canvas{height:min(24vh,200px)}}
+.part-preview-head h2 small{display:block;color:#526557;font-size:11px;font-weight:500;margin-bottom:2px}

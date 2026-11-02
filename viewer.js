@@ -71,8 +71,9 @@ function createGeometryView(canvas, source, url, { width, height, thumbnail = fa
     camera.updateProjectionMatrix();
     render();
   }
-  function fit(top = false) {
-    camera.position.copy(new THREE.Vector3(...(top ? [0, -0.0001, 1] : [0.9, -1.3, 1.1])).normalize().multiplyScalar(radius * 4));
+  function fit(preset = false) {
+    const direction = preset === 'rear' ? [0, 1, 0] : preset === true ? [0, -0.0001, 1] : [0.9, -1.3, 1.1];
+    camera.position.copy(new THREE.Vector3(...direction).normalize().multiplyScalar(radius * 4));
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld();
     // Fit actual projected vertices, including very long templates and thin coupons.
@@ -159,6 +160,8 @@ export async function mountViewer(canvas, url) {
   document.querySelector('#zoom-out').onclick = () => view.zoomBy(1 / 1.2);
   document.querySelector('#reset-view').onclick = () => view.fit();
   document.querySelector('#top-view').onclick = () => view.fit(true);
+  const rearButton = document.querySelector('#rear-view');
+  if (rearButton) rearButton.onclick = () => view.fit('rear');
   canvas.addEventListener('keydown', event => {
     if (['+', '=', '-'].includes(event.key)) {
       event.preventDefault();
