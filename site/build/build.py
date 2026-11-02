@@ -263,6 +263,7 @@ def project_page(p, published):
             for profile in p['assemblyShoes']:
                 hidden = '' if profile['id'] == plane_context(p)[0] else ' hidden'
                 context += f'<p class="coupon-companions small" data-shoe-panel="{profile["id"]}"{hidden}>Compatible parts: <a href="{href(page, "projects/"+p["slug"]+"/carrier-coupon/index.html")}?shoe={profile["id"]}">coupon carrier</a> · <a href="{href(page, "projects/"+p["slug"]+"/fit-coupon/index.html")}?shoe={profile["id"]}">assembly fit-test parts</a>.</p>'
+    rear_button = '<button id="rear-view" hidden>Rear</button>' if p.get("partsGuide") and not p.get("viewPath") else ''
     groups_attr = ''
     if p.get('faceGroups'):
         groups_attr = f' data-face-groups="{href(page, artifact(p["faceGroups"]))}"'
@@ -271,9 +272,9 @@ def project_page(p, published):
         context = f'<h2 class="assembly-title">Mock assembly · {layout}</h2>'
         description = (f'<section class="inspect-panel" data-assembly-inspector hidden><div class="inspect-controls"><select aria-label="Identify a part"></select><label><input type="checkbox" data-hide-drawers> Reveal connectors</label></div><div class="inspect-result" aria-live="polite"><strong data-picked-name></strong><p data-picked-use></p><a data-picked-link hidden></a></div></section><p class="assembly-key"><span><i></i>Cardboard cores</span><span><i></i>Drawers</span><span><i></i>Connectors</span><span><i></i>Wall mounts</span></p>'
                        f'<p>{escape(p["description"])}</p><p><a href="{href(page, artifact(p["datasheet"]))}">Print orientation &amp; eight-row mounting diagram →</a></p>')
-        isolated = '<section class="part-preview" data-part-preview hidden><div class="part-preview-head"><h2 data-isolated-name></h2><button type="button" data-part-close aria-label="Clear part selection">×</button></div><canvas tabindex="0" aria-label="Isolated selected part. Drag to rotate and scroll to zoom."></canvas><div class="part-preview-tools"><span>Drag to rotate · Scroll to zoom</span><button type="button" data-part-reset>Reset</button></div></section>'
+        isolated = '<section class="part-preview" data-part-preview hidden><div class="part-preview-head"><h2><small>Isolated part</small><span data-isolated-name></span></h2><button type="button" data-part-close aria-label="Clear part selection">×</button></div><canvas tabindex="0" aria-label="Isolated selected part. Drag to rotate and scroll to zoom."></canvas><div class="part-preview-tools"><span>Drag to rotate · Scroll to zoom</span><button type="button" data-part-reset>Reset</button></div></section>'
         starter_links = ''.join(file_link(page, label, path) for label, path in p['downloads'])
-        information = (isolated + f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Add a cardboard core. Press each front foot onto the printed rail from its rear foot.</p><div class="download-list starter-download">{starter_links}</div></section>'
+        information = (isolated + f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Press a foot onto each end of a bare core and slide the drawer in from the front.</p><div class="download-list starter-download">{starter_links}</div></section>'
                        + parts_directory(p, page))
         legacy = ''
     elif p.get('partsGuide'):
@@ -286,7 +287,7 @@ def project_page(p, published):
 {component_navigation(p, page)}<div class="detail-layout"><div>{context}{assembly_selector(p, page)}<p id="active-print-label" class="part-context" hidden></p><div class="viewer" data-viewer="{versioned_asset(page, 'viewer.js')}" data-model="{href(page, artifact(p['previewModel']))}"{groups_attr}>
 <img id="model-poster" src="{href(page, p['preview'])}" alt="{escape(p['title'])} model preview">
 <canvas id="model-viewer" hidden tabindex="0" aria-label="Interactive model. Drag to orbit; arrow keys to pan; plus and minus to zoom."></canvas></div>
-<div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button><button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
+<div class="viewer-caption"><span id="viewer-status" role="status"></span><div class="viewer-controls"><button id="retry-model" hidden>Retry 3D preview</button><button id="top-view" hidden>Top</button>{rear_button}<button id="zoom-in" hidden aria-label="Zoom in">+</button><button id="zoom-out" hidden aria-label="Zoom out">−</button><button id="reset-view" hidden>Reset view</button></div></div>
 {description}
 <div class="detail-footer">{legacy}<a href="{href(page, artifact(p['readme']))}">Original project notes {icon('external')}</a></div>
 </div><aside class="detail-info">{information}

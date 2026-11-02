@@ -43,13 +43,6 @@ export function attachPicker({canvas, camera, model, geometry, material, assembl
     isolatedCanvas.dataset.selectedPart=id;
   }
   if (isolated) {
-    const sidebar=isolated.closest('.detail-info');
-    if (sidebar) {
-      const narrow=matchMedia('(max-width: 760px)');
-      const positionPreview=()=>narrow.matches?panel.after(isolated):sidebar.prepend(isolated);
-      listen(narrow,'change',positionPreview);
-      positionPreview();
-    }
     listen(isolated.querySelector('[data-part-reset]'),'click',()=>isolatedView?.fit());
     listen(isolated.querySelector('[data-part-close]'),'click',()=>pick(''));
   }
