@@ -1,0 +1,87 @@
+{
+  "one-piece-open": [
+    "Open drawer",
+    "One undivided 245.4 mL bin. A flat round face covers the bore and a closed finger cup provides the grip.",
+    "../r3-5/models/open-r3-5.3mf"
+  ],
+  "one-piece-left-right": [
+    "Left / right drawer",
+    "The fixed divider runs the length of the bin, creating two long lanes.",
+    "../r3-5/models/left-right-r3-5.3mf"
+  ],
+  "one-piece-front-back": [
+    "Front / back drawer",
+    "One chevron divider separates front from back. Its pitched shape prints without supports.",
+    "../r3-5/models/front-back-r3-5.3mf"
+  ],
+  "dry-ends": [
+    "Outside feet",
+    "Four feet cradle the two outside ends of the bottom row. Each rear rail clicks into its front foot.",
+    "models/dry-ends-r3-6.3mf"
+  ],
+  "base-mount": [
+    "Shared base",
+    "A shared foot supports adjacent bottom cores. The rear rail clicks into the front socket.",
+    "models/base-mount-r3-6.3mf"
+  ],
+  "upper-mount": [
+    "Upper connector",
+    "Three rim seats join staggered cores. Press the front junction onto the rail from the rear junction.",
+    "models/upper-mount-r3-6.3mf"
+  ],
+  "middle-mount": [
+    "Middle mount",
+    "Fasten the rear junction to plywood with a #8 wood screw. Seat the front junction over its printed rail.",
+    "models/upper-mount-r3-6.3mf"
+  ],
+  "top-tier": [
+    "Top mount set",
+    "A linked upper junction and a linked top clip capture the top cell. Screw the rear tab into plywood.",
+    "models/top-tier-r3-6.3mf"
+  ],
+  "top-clips": [
+    "Top clips only",
+    "A rail on the rear screw tab captures the front keeper over the top rim.",
+    "models/top-clips-r3-6.3mf"
+  ],
+  "core": [
+    "Cardboard core",
+    "Reused spool tube, not printed. This example uses nominal 83 mm ID \u00d7 88 mm OD \u00d7 60 mm length.",
+    null
+  ],
+  "wood-screw": [
+    "Backboard screw",
+    "A #8 \u00d7 \u00be\u2033 pan-head wood screw through the rear tab fastens it to the plywood. The shelf supports the bank.",
+    null
+  ],
+  "triangle-pocket": [
+    "Triangle pocket",
+    "A small removable tray for screws or pins. Its frames stay linked above the tray.",
+    "models/triangle-pocket-r3-6.3mf"
+  ],
+  "triangle-pocket-frame": [
+    "Triangle pocket frame",
+    "The front socket clips onto a rail printed with the rear frame. Both frames stay in place when the drawer slides out.",
+    "models/triangle-pocket-r3-6.3mf"
+  ],
+  "left-pocket": [
+    "Left pocket",
+    "Wide pull-out pocket on the left of row two. The upright sits beside its inner wall.",
+    "models/left-pocket-r3-6.3mf"
+  ],
+  "left-pocket-frame": [
+    "Left pocket frame",
+    "The front socket clips onto a rail printed with the rear frame. Both frames stay in place when the drawer slides out.",
+    "models/left-pocket-r3-6.3mf"
+  ],
+  "right-pocket": [
+    "Right pocket",
+    "Wide pull-out pocket on the right of row two. The upright sits beside its inner wall.",
+    "models/right-pocket-r3-6.3mf"
+  ],
+  "right-pocket-frame": [
+    "Right pocket frame",
+    "The front socket clips onto a rail printed with the rear frame. Both frames stay in place when the drawer slides out.",
+    "models/right-pocket-r3-6.3mf"
+  ]
+}
