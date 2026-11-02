@@ -1,0 +1,467 @@
+{
+  "rows": [
+    3,
+    2,
+    3
+  ],
+  "groups": [
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3970,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      4330,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3970,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      4568,
+      1,
+      "one-piece-left-right",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3970,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      4330,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3970,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      914,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      1122,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      914,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      1122,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      1352,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      2894,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      1352,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      2894,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2154,
+      3,
+      "middle-mount",
+      null
+    ],
+    [
+      3624,
+      3,
+      "middle-mount",
+      null
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2154,
+      2,
+      "upper-mount",
+      null
+    ],
+    [
+      3624,
+      2,
+      "upper-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2154,
+      2,
+      "upper-mount",
+      "top-tier"
+    ],
+    [
+      3624,
+      2,
+      "upper-mount",
+      "top-tier"
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      896,
+      3,
+      "top-clips",
+      "top-tier"
+    ],
+    [
+      2644,
+      3,
+      "top-clips",
+      "top-tier"
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2454,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      2330,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      3392,
+      1,
+      "triangle-pocket",
+      null
+    ],
+    [
+      2454,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      2330,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      3392,
+      1,
+      "triangle-pocket",
+      null
+    ],
+    [
+      2454,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      2330,
+      2,
+      "triangle-pocket-frame",
+      "triangle-pocket"
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      3392,
+      1,
+      "triangle-pocket",
+      null
+    ],
+    [
+      3398,
+      2,
+      "left-pocket-frame",
+      "left-pocket"
+    ],
+    [
+      2806,
+      2,
+      "left-pocket-frame",
+      "left-pocket"
+    ],
+    [
+      2012,
+      1,
+      "left-pocket",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      3398,
+      2,
+      "right-pocket-frame",
+      "right-pocket"
+    ],
+    [
+      2806,
+      2,
+      "right-pocket-frame",
+      "right-pocket"
+    ],
+    [
+      2012,
+      1,
+      "right-pocket",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ]
+  ],
+  "items": {
+    "one-piece-open": [
+      "Open drawer",
+      "One undivided 245.4 mL bin. A flat round face covers the bore and a closed finger cup provides the grip.",
+      "models/open-r3-5.3mf"
+    ],
+    "one-piece-left-right": [
+      "Left / right drawer",
+      "The fixed divider runs the length of the bin, creating two long lanes.",
+      "models/left-right-r3-5.3mf"
+    ],
+    "one-piece-front-back": [
+      "Front / back drawer",
+      "One chevron divider separates front from back. Its pitched shape prints without supports.",
+      "models/front-back-r3-5.3mf"
+    ],
+    "dry-ends": [
+      "Outside feet",
+      "Four half-feet go at the outer ends of the bottom row, one at each front and rear corner. Move them outward as you add cores.",
+      "../r3-2/models/dry-ends-r3-2.3mf"
+    ],
+    "base-mount": [
+      "Shared base",
+      "One front and one rear piece sit between neighboring bottom cores. They share a flat base and tie together.",
+      "../r3/models/base-mount-r3.3mf"
+    ],
+    "upper-mount": [
+      "Upper connector",
+      "One front and one rear three-way junction seat an upper core between the two below. Tie the pair together.",
+      "../r3/models/upper-mount-r3.3mf"
+    ],
+    "middle-mount": [
+      "Middle mount",
+      "This is the same tied junction as the upper connector, with a #8 wood screw through the rear eye into the plywood.",
+      "../r3/models/upper-mount-r3.3mf"
+    ],
+    "top-tier": [
+      "Top mount set",
+      "The tied upper junction and tied rim clips secure a new top cell. Only the rear tab screws to the plywood.",
+      "models/top-tier-r3-5.3mf"
+    ],
+    "top-clips": [
+      "Top clips only",
+      "A cable tie connects the front keeper to the rear screw tab over the top core. The wood screw sits above the rim.",
+      "models/top-clips-r3-5.3mf"
+    ],
+    "core": [
+      "Cardboard core",
+      "Reused spool tube, not printed. This example uses nominal 83 mm ID \u00d7 88 mm OD \u00d7 60 mm length.",
+      null
+    ],
+    "tie": [
+      "Cable tie",
+      "One 2.5 \u00d7 200 mm tie captures each ordinary front/rear connector pair without adhesive.",
+      null
+    ],
+    "wood-screw": [
+      "Backboard screw",
+      "A #8 \u00d7 \u00be\u2033 pan-head wood screw through the rear tab fastens it to the plywood. The shelf supports the bank.",
+      null
+    ],
+    "triangle-pocket": [
+      "Triangle pocket",
+      "A small removable tray for screws or pins, with a recessed nail grip. Its fixed carrier is tied above the tray.",
+      "models/triangle-pocket-r3-5.3mf"
+    ],
+    "triangle-pocket-frame": [
+      "Triangle pocket frame",
+      "This stays on the core rims when you remove the bin. The front and rear pieces tie together.",
+      "models/triangle-pocket-r3-5.3mf"
+    ],
+    "left-pocket": [
+      "Left pocket",
+      "A removable bin for longer small parts in the left half-gap. The fixed front and rear uprights carry the upper core.",
+      "models/left-pocket-r3-5.3mf"
+    ],
+    "left-pocket-frame": [
+      "Left pocket frame",
+      "This stays on the core rims when you remove the bin. The front and rear pieces tie together.",
+      "models/left-pocket-r3-5.3mf"
+    ],
+    "right-pocket": [
+      "Right pocket",
+      "A removable bin for longer small parts in the right half-gap. The fixed front and rear uprights carry the upper core.",
+      "models/right-pocket-r3-5.3mf"
+    ],
+    "right-pocket-frame": [
+      "Right pocket frame",
+      "This stays on the core rims when you remove the bin. The front and rear pieces tie together.",
+      "models/right-pocket-r3-5.3mf"
+    ]
+  }
+}

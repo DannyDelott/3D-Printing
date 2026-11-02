@@ -1,0 +1,107 @@
+{
+  "right-pocket-bin": {
+    "sha256": "e5621f5a1a05e270f006931a52c5b48bd2140125662a95b7001f783d2327ffa7",
+    "bodies": 1,
+    "grams": 24.103,
+    "minutes": 44,
+    "warnings": []
+  },
+  "top-clips": {
+    "sha256": "fba9ec069995b0ba17f46bed042970da9dc945b041c7d476c34453bc1899add8",
+    "bodies": 2,
+    "grams": 1.865,
+    "minutes": 12,
+    "warnings": []
+  },
+  "left-pocket": {
+    "sha256": "a96303d503d403d728c1a814b473d6896ac5e695b443dc59de05d8da83446b72",
+    "bodies": 3,
+    "grams": 33.434,
+    "minutes": 66,
+    "warnings": []
+  },
+  "right-pocket-frame": {
+    "sha256": "2e29f9b32164bcf6fa495d5bd0c0162eae07987f31628b1196eb8d9258669393",
+    "bodies": 2,
+    "grams": 9.423,
+    "minutes": 29,
+    "warnings": []
+  },
+  "open": {
+    "sha256": "d179cce75b075b887a42d5e3975757519575cd19541c8c38bfd81c8d494fc659",
+    "bodies": 1,
+    "grams": 42.109,
+    "minutes": 70,
+    "warnings": []
+  },
+  "triangle-pocket-bin": {
+    "sha256": "1d678a28ca33d3028b0e4ab31da2be9a0aea026973d2bd7df19a5bd5520b46d5",
+    "bodies": 1,
+    "grams": 8.364,
+    "minutes": 37,
+    "warnings": []
+  },
+  "top-tier": {
+    "sha256": "5c110b5e490fbbe6cf9fe5e934c7b5423c754a413b482261d745f8510a99e5fd",
+    "bodies": 4,
+    "grams": 9.206,
+    "minutes": 29,
+    "warnings": []
+  },
+  "left-right": {
+    "sha256": "cffc94eb019d5fa3a70afe4461ada88cfbaa6661ae40c200770f4e7b9d7d5077",
+    "bodies": 1,
+    "grams": 50.639,
+    "minutes": 77,
+    "warnings": []
+  },
+  "front-back": {
+    "sha256": "04e9e9689a2612101520f274b38a5525da8ac38b76eaf8512154f9b59c4b6048",
+    "bodies": 1,
+    "grams": 49.976,
+    "minutes": 86,
+    "warnings": []
+  },
+  "triangle-pocket": {
+    "sha256": "33c2ae67b524d045d3703740279950d92577da26e5a65d1a5126ef2b0b377957",
+    "bodies": 3,
+    "grams": 12.669,
+    "minutes": 45,
+    "warnings": []
+  },
+  "starter": {
+    "sha256": "d628ff6c9a33ed6e6e5e17480919e785b56a900e221e198139f5cc0dd39edcc5",
+    "bodies": 5,
+    "grams": 50.807,
+    "minutes": 88,
+    "warnings": []
+  },
+  "left-pocket-bin": {
+    "sha256": "65f294f2d1588a8efcfa75a6209a56d11497f4e8be5064277f9f0c7d5fcd42ae",
+    "bodies": 1,
+    "grams": 24.103,
+    "minutes": 43,
+    "warnings": []
+  },
+  "right-pocket": {
+    "sha256": "faa4f87cfb0f3974c3f943cf1f65fb8f29af975782a520c4d1260b77bf206805",
+    "bodies": 3,
+    "grams": 33.434,
+    "minutes": 66,
+    "warnings": []
+  },
+  "triangle-pocket-frame": {
+    "sha256": "91a73a133f496e6c6edbd8606eb8fd132b21f8805301a6106b10bc70152097d8",
+    "bodies": 2,
+    "grams": 4.398,
+    "minutes": 16,
+    "warnings": []
+  },
+  "left-pocket-frame": {
+    "sha256": "d7ad51d2ccf18565909b1f1f0942a9b0922e57fb841464e35203a5a609ec850f",
+    "bodies": 2,
+    "grams": 9.423,
+    "minutes": 29,
+    "warnings": []
+  }
+}

@@ -23,13 +23,14 @@ export function attachPicker({canvas, camera, model, geometry, material, assembl
     if(id && !items[id])return;
     selected=id;selector.value=id;
     const record=items[id];
+    const rowId=directory.has(id)?id:(spans.find(s=>s.id===id && s.kit)?.kit ?? id);
     heading.textContent=record?.[0] || 'Explore the assembly';
     purpose.textContent=record?.[1] || 'Click a part to identify it. Drag to rotate.';
     link.hidden=!record?.[2]; if(!link.hidden) {
-      const part=directory.get(id)?.querySelector('a');
+      const part=directory.get(rowId)?.querySelector('a');
       link.textContent=part?'Part details & downloads →':'Download this part →';link.href=part?.href || new URL(record[2],base).href;
     }
-    for(const [key,row] of directory){const active=key===id;row.classList.toggle('part-picked',active);if(active){const fold=row.closest('details');if(fold)fold.open=true;}}
+    for(const [key,row] of directory){const active=key===rowId;row.classList.toggle('part-picked',active);if(active){const fold=row.closest('details');if(fold)fold.open=true;}}
     colors.array.set(initial);
     if(id)for(const span of spans){
       const hit=span.id===id || span.kit===id;
@@ -43,11 +44,11 @@ export function attachPicker({canvas, camera, model, geometry, material, assembl
   function drawers(hide){
     hidden=hide;drawerMaterial.visible=!hide;toggle.checked=hide;
     coreMaterial.transparent=hide;coreMaterial.opacity=hide ? .16 : 1;coreMaterial.depthWrite=!hide;coreMaterial.needsUpdate=true;
-    if(hide && (selected.startsWith('one-piece-') || selected==='core'))pick('');
+    if(hide && (spans.some(s=>s.isDrawer && s.id===selected) || selected==='core'))pick('');
     canvas.dataset.drawersHidden=String(hide);render();
   }
   function show(id){
-    if(hidden && (id.startsWith('one-piece-') || id==='core'))drawers(false);
+    if(hidden && (spans.some(s=>s.isDrawer && s.id===id) || id==='core'))drawers(false);
     pick(id);
   }
   listen(toggle,'change',()=>drawers(toggle.checked));
