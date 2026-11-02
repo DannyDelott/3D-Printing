@@ -1,0 +1,340 @@
+{
+  "rows": [
+    3,
+    2,
+    3
+  ],
+  "groups": [
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      2888,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3884,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      2888,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3020,
+      1,
+      "one-piece-left-right",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      2888,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      3884,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      2888,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      518,
+      2,
+      "dry-ends",
+      null,
+      "Front rim clip"
+    ],
+    [
+      518,
+      2,
+      "dry-ends",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      518,
+      2,
+      "dry-ends",
+      null,
+      "Front rim clip"
+    ],
+    [
+      518,
+      2,
+      "dry-ends",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      1000,
+      2,
+      "base-mount",
+      null,
+      "Front rim clip"
+    ],
+    [
+      2320,
+      2,
+      "base-mount",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      1834,
+      3,
+      "middle-mount",
+      null,
+      "Front rim clip"
+    ],
+    [
+      3084,
+      3,
+      "middle-mount",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      1000,
+      2,
+      "base-mount",
+      null,
+      "Front rim clip"
+    ],
+    [
+      2320,
+      2,
+      "base-mount",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      1834,
+      2,
+      "upper-mount",
+      null,
+      "Front rim clip"
+    ],
+    [
+      3084,
+      2,
+      "upper-mount",
+      null,
+      "Rear rim clip"
+    ],
+    [
+      1834,
+      2,
+      "upper-mount",
+      "top-tier",
+      "Front rim clip"
+    ],
+    [
+      3084,
+      2,
+      "upper-mount",
+      "top-tier",
+      "Rear rim clip"
+    ],
+    [
+      506,
+      3,
+      "top-clips",
+      "top-tier",
+      "Front rim clip"
+    ],
+    [
+      2046,
+      3,
+      "top-clips",
+      "top-tier",
+      "Rear rim clip"
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      3014,
+      2,
+      "left-pocket-frame",
+      "left-pocket",
+      "Front rim clip"
+    ],
+    [
+      2344,
+      2,
+      "left-pocket-frame",
+      "left-pocket",
+      "Rear rim clip"
+    ],
+    [
+      1602,
+      1,
+      "left-pocket",
+      null
+    ],
+    [
+      3014,
+      2,
+      "right-pocket-frame",
+      "right-pocket",
+      "Front rim clip"
+    ],
+    [
+      2344,
+      2,
+      "right-pocket-frame",
+      "right-pocket",
+      "Rear rim clip"
+    ],
+    [
+      1602,
+      1,
+      "right-pocket",
+      null
+    ]
+  ],
+  "items": {
+    "one-piece-open": [
+      "Open drawer",
+      "One open bin with a flat, full-width rear wall and a recessed finger grip.",
+      "../r3-8/models/open-r3-8.3mf"
+    ],
+    "one-piece-left-right": [
+      "Left / right drawer",
+      "A straight divider forms two long lanes in a flat-back drawer.",
+      "../r3-8/models/left-right-r3-8.3mf"
+    ],
+    "one-piece-front-back": [
+      "Front / back drawer",
+      "A transverse divider forms a front and a rear compartment.",
+      "../r3-8/models/front-back-r3-8.3mf"
+    ],
+    "dry-ends": [
+      "Outside feet",
+      "Four independent rim feet sit at the outside ends of the base.",
+      "../r3-7/models/dry-ends-r3-7.3mf"
+    ],
+    "base-mount": [
+      "Shared base",
+      "A shared foot at each rim supports the two neighboring cores.",
+      "../r3-7/models/base-mount-r3-7.3mf"
+    ],
+    "upper-mount": [
+      "Upper connector",
+      "Three curved seats grip the rims where staggered cores meet.",
+      "../r3-7/models/upper-mount-r3-7.3mf"
+    ],
+    "middle-mount": [
+      "Middle mount",
+      "A wood screw fixes the rear junction to the plywood. The front junction grips its own rim.",
+      "../r3-7/models/upper-mount-r3-7.3mf"
+    ],
+    "top-tier": [
+      "Top mount set",
+      "An upper junction and rear screw tab locate an anchored top core.",
+      "../r3-7/models/top-tier-r3-7.3mf"
+    ],
+    "top-clips": [
+      "Top clips only",
+      "The rear tab screws to plywood. The shallow front keeper presses onto the opposite rim.",
+      "../r3-7/models/top-clips-r3-7.3mf"
+    ],
+    "core": [
+      "Cardboard core",
+      "Reused spool tube, not printed. This example uses nominal 83 mm ID \u00d7 88 mm OD \u00d7 60 mm length.",
+      null
+    ],
+    "wood-screw": [
+      "Backboard screw",
+      "A #8 \u00d7 \u00be\u2033 pan-head wood screw through the rear tab fastens it to the plywood. The shelf supports the bank.",
+      null
+    ],
+    "left-pocket": [
+      "Left pocket",
+      "Wide flat-back bin in the left half gap.",
+      "../r3-7/models/left-pocket-r3-7.3mf"
+    ],
+    "left-pocket-frame": [
+      "Left pocket frame",
+      "Independent front and rear frames stay on the rims as the pocket slides out.",
+      "../r3-7/models/left-pocket-r3-7.3mf"
+    ],
+    "right-pocket": [
+      "Right pocket",
+      "Wide flat-back bin in the right half gap.",
+      "../r3-7/models/right-pocket-r3-7.3mf"
+    ],
+    "right-pocket-frame": [
+      "Right pocket frame",
+      "Independent front and rear frames stay on the rims as the pocket slides out.",
+      "../r3-7/models/right-pocket-r3-7.3mf"
+    ]
+  }
+}

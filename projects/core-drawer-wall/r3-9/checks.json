@@ -1,0 +1,26 @@
+{
+  "cubbies": [
+    {
+      "center_xz_mm": [
+        0.0,
+        52.19
+      ],
+      "clear_diameter_mm": 16.38
+    },
+    {
+      "center_xz_mm": [
+        -45.2,
+        130.48
+      ],
+      "clear_diameter_mm": 16.38
+    },
+    {
+      "center_xz_mm": [
+        45.2,
+        130.48
+      ],
+      "clear_diameter_mm": 16.38
+    }
+  ],
+  "removed_groups": 9
+}

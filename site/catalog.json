@@ -3601,16 +3601,17 @@
     "id": "core-drawer-wall",
     "title": "Cardboard core drawer wall",
     "category": "Storage",
-    "description": "Stagger cardboard cores on a shelf against plywood. Short clips grip each cardboard rim independently. Wide side pockets and small triangular drawers use the gaps between cores.",
-    "revision": "R3.8",
+    "description": "Stack cardboard cores on a shelf against plywood using short rim clips. Three triangular openings between the cores serve as pass-through cubbies for pencils. The left and right half-gaps still hold removable pocket drawers.",
+    "revision": "R3.9",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
     "model": "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf",
-    "preview": "assets/core-wall-r38-assembly.png",
-    "readme": "projects/core-drawer-wall/r3-8/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
+    "preview": "assets/core-wall-r39-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-9/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-9/datasheet.html",
     "source": [
+      "projects/core-drawer-wall/r3-9/source/assembly.py",
       "projects/core-drawer-wall/r3-8/source/model.py",
       "projects/core-drawer-wall/r3-8/source/drawers.py",
       "projects/core-drawer-wall/r3-8/source/clips.py",
@@ -3638,14 +3639,22 @@
         "id": "mock-assembly",
         "group": "Assembly",
         "label": "Mock assembly",
-        "revision": "R3.8",
-        "description": "Eight cores in a 3\u20132\u20133 wall. Click a piece to see it in blue and rotate it separately. The side pockets are shown fully seated.",
-        "preview": "assets/core-wall-r38-assembly.png",
-        "previewModel": "projects/core-drawer-wall/r3-8/models/mock-assembly.stl",
+        "revision": "R3.9",
+        "description": "Eight cardboard cores in a 3\u20132\u20133 wall. Three triangular openings between the cores serve as pass-through cubbies for pencils. The left and right half-gaps still hold removable pocket drawers.",
+        "preview": "assets/core-wall-r39-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-9/models/mock-assembly.stl",
         "dimensions": [
           [
             "Print bounds",
             "204.22 \u00d7 86.8 \u00d7 79.2 mm \u00b7 8.04 \u00d7 3.42 \u00d7 3.12 in"
+          ],
+          [
+            "Clear diameter through each triangle",
+            "16.38 mm \u00b7 0.64 in (CAD)"
+          ],
+          [
+            "Depth before plywood",
+            "60 mm \u00b7 2.36 in (nominal core)"
           ]
         ],
         "downloads": [
@@ -3658,10 +3667,11 @@
             "projects/core-drawer-wall/r3-8/models/starter-r3-8.stl"
           ]
         ],
-        "faceGroups": "projects/core-drawer-wall/r3-8/colors.json",
-        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-8/README.md",
+        "faceGroups": "projects/core-drawer-wall/r3-9/colors.json",
+        "datasheet": "projects/core-drawer-wall/r3-9/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-9/README.md",
         "source": [
+          "projects/core-drawer-wall/r3-9/source/assembly.py",
           "projects/core-drawer-wall/r3-8/source/model.py",
           "projects/core-drawer-wall/r3-8/source/drawers.py",
           "projects/core-drawer-wall/r3-8/source/clips.py",
@@ -3966,7 +3976,7 @@
         ],
         "revision": "R3.4",
         "preview": "assets/core-wall-r34-triangle-spacer.png",
-        "supersededBy": "triangle-pocket",
+        "supersededBy": "mock-assembly",
         "readme": "projects/core-drawer-wall/r3-4/README.md",
         "datasheet": "projects/core-drawer-wall/r3-4/datasheet.html",
         "source": [
@@ -4047,7 +4057,6 @@
         "id": "triangle-pocket",
         "label": "Triangle pocket",
         "group": "Gap drawers",
-        "guideNote": "Tiny fasteners",
         "revision": "R3.7",
         "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
         "readme": "projects/core-drawer-wall/r3-7/README.md",
@@ -4093,7 +4102,8 @@
             "Front and rear frames only \u00b7 3MF",
             "projects/core-drawer-wall/r3-7/models/triangle-pocket-frame-r3-7.3mf"
           ]
-        ]
+        ],
+        "supersededBy": "mock-assembly"
       },
       {
         "id": "left-pocket",

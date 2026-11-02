@@ -24,12 +24,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    await p.mouse.click(bb.x+bb.width*xx,bb.y+bb.height*yy);
    const id=await c.getAttribute('data-selected-part');if(id)exposed.add(id);
   }
-  assert.ok([...exposed].some(id=>['upper-mount','base-mount','dry-ends','middle-mount','top-clips','left-pocket-frame','right-pocket-frame','triangle-pocket-frame'].includes(id)),'A visible connector must be selectable through the translucent cardboard');
+  assert.ok([...exposed].some(id=>['upper-mount','base-mount','dry-ends','middle-mount','top-clips','left-pocket-frame','right-pocket-frame'].includes(id)),'A visible connector must be selectable through the translucent cardboard');
   await panel.locator('select').selectOption('middle-mount');
   await c.scrollIntoViewIfNeeded();
   await p.mouse.move(x,y);await p.mouse.down();await p.mouse.move(x+60,y,{steps:8});await p.mouse.up();
   assert.equal(await c.getAttribute('data-selected-part'),'middle-mount','A drag must not repick');
-  for(const id of ['triangle-pocket','left-pocket','right-pocket']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
+  for(const id of ['left-pocket','right-pocket']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
   // Orbit and zoom the isolated print without moving the wall.
   const isolated=p.locator('[data-part-preview] canvas');
   assert.equal(await isolated.getAttribute('data-selected-part'),'right-pocket');
