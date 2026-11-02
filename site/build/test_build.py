@@ -17,7 +17,7 @@ class PublishingTests(unittest.TestCase):
         project = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'core-drawer-wall')
         home, drawer = build.project_views(project)[:2]
         self.assertIn('mock-assembly.stl', home['previewModel'])
-        self.assertIn('starter-r3-5.3mf', home['downloads'][0][1])
+        self.assertIn('starter-r3-6.3mf', home['downloads'][0][1])
         menu = build.component_navigation(drawer, build.project_path(drawer))
         self.assertIn('<summary>Browse parts</summary>', menu)
         self.assertIn('Fit sample', menu)
@@ -31,7 +31,9 @@ class PublishingTests(unittest.TestCase):
         self.assertEqual(meta['rows'], [3, 2, 3])
         self.assertEqual(sum(group[0] for group in meta['groups']), int.from_bytes((build.ROOT/home['previewModel']).read_bytes()[80:84], 'little'))
         self.assertEqual(sum(group[2] == 'core' for group in meta['groups']), 8)
-        installed = {key for _, _, primary, kit in meta['groups'] for key in (primary, kit) if key}
+        self.assertNotIn('tie', meta['items'])
+        self.assertEqual(sum(group[2] == 'wood-screw' for group in meta['groups']), 2)
+        installed = {key for group in meta['groups'] for key in group[2:4] if key}
         self.assertEqual(installed, set(meta['items']))
         self.assertEqual({v['id'] for v in project['views'] if v.get('guideNote') and v['id'] != 'fit'}, {key for key, item in meta['items'].items() if item[2] and not key.endswith('-pocket-frame')})
 

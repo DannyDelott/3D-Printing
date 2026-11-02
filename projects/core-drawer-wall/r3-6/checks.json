@@ -1,0 +1,136 @@
+{
+  "fit": {
+    "bounds": [
+      53.71,
+      44.8,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "dry-ends": {
+    "bounds": [
+      112.42,
+      44.8,
+      65.3
+    ],
+    "bodies": 4
+  },
+  "starter": {
+    "bounds": [
+      204.22,
+      86.8,
+      76.8
+    ],
+    "bodies": 5
+  },
+  "base-mount": {
+    "bounds": [
+      102.42,
+      44.8,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "upper-mount": {
+    "bounds": [
+      105.8,
+      43.65,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "top-clips": {
+    "bounds": [
+      41.0,
+      23.03,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "top-tier": {
+    "bounds": [
+      151.8,
+      43.65,
+      65.3
+    ],
+    "bodies": 4
+  },
+  "triangle-pocket": {
+    "bounds": [
+      146.05,
+      43.65,
+      73.8
+    ],
+    "bodies": 3,
+    "ml": 13.8,
+    "body_width_mm": 32.95
+  },
+  "triangle-pocket-frame": {
+    "bounds": [
+      105.8,
+      43.65,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "triangle-pocket-bin": {
+    "bounds": [
+      35.25,
+      18.52,
+      73.8
+    ],
+    "bodies": 1
+  },
+  "left-pocket": {
+    "bounds": [
+      173.75,
+      156.58,
+      73.8
+    ],
+    "bodies": 3,
+    "ml": 146.3,
+    "body_width_mm": 36.55
+  },
+  "left-pocket-frame": {
+    "bounds": [
+      130.1,
+      156.58,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "left-pocket-bin": {
+    "bounds": [
+      38.65,
+      72.7,
+      73.8
+    ],
+    "bodies": 1
+  },
+  "right-pocket": {
+    "bounds": [
+      173.75,
+      156.58,
+      73.8
+    ],
+    "bodies": 3,
+    "ml": 146.3,
+    "body_width_mm": 36.55
+  },
+  "right-pocket-frame": {
+    "bounds": [
+      130.1,
+      156.58,
+      65.3
+    ],
+    "bodies": 2
+  },
+  "right-pocket-bin": {
+    "bounds": [
+      38.65,
+      72.7,
+      73.8
+    ],
+    "bodies": 1
+  }
+}

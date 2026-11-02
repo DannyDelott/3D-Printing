@@ -1,6 +1,6 @@
 # Cardboard core drawer wall
 
-**Selected design: R3.5.** Flat round drawer fronts, two side pockets and three small triangle pockets. The fixed frames tie to the rims; only wood screws fasten the bank to the backboard. [Clickable mock assembly](r3-5/datasheet.html) · [first-cell plate](r3-5/models/starter-r3-5.3mf) · [parts list and assembly](r3-5/README.md). The [previous beveled face and solid gap panels](r3-4/datasheet.html) remain available as an earlier design.
+**R3.6.** Printed rails connect each rear clip to its front socket. The two side pockets each hold 146.3 mL. The 3–2–3 example uses two wood screws into the backboard. [Interactive assembly](r3-6/datasheet.html) · [first cell](r3-6/models/starter-r3-6.3mf) · [fit sample](r3-6/models/fit-r3-6.3mf) · [parts and installation](r3-6/README.md). The [R3.5 design](r3-5/datasheet.html) retains the earlier narrow side pockets.
 
 **R3.2 · screw-on face.** Choose an open, left/right or front/back bin with a full circular face. The drawer takes one screw and no glue. Cable ties or through-bolts join the core rims; middle and top tabs accept plywood screws. See the [interactive drawer comparison and eight-row mounting diagram](r3-2/datasheet.html), [print and hardware list](r3-2/README.md), and [small core fit print](r3/models/fit-r3.3mf).
 

@@ -271,8 +271,9 @@ def project_page(p, published):
         context = f'<h2 class="assembly-title">Mock assembly · {layout}</h2>'
         description = (f'<section class="inspect-panel" data-assembly-inspector hidden><div class="inspect-controls"><select aria-label="Identify a part"></select><label><input type="checkbox" data-hide-drawers> Reveal connectors</label></div><div class="inspect-result" aria-live="polite"><strong data-picked-name></strong><p data-picked-use></p><a data-picked-link hidden></a></div></section><p class="assembly-key"><span><i></i>Cardboard cores</span><span><i></i>Drawers</span><span><i></i>Connectors</span><span><i></i>Wall mounts</span></p>'
                        f'<p>{escape(p["description"])}</p><p><a href="{href(page, artifact(p["datasheet"]))}">Print orientation &amp; eight-row mounting diagram →</a></p>')
+        isolated = '<section class="part-preview" data-part-preview hidden><div class="part-preview-head"><h2 data-isolated-name></h2><button type="button" data-part-close aria-label="Clear part selection">×</button></div><canvas tabindex="0" aria-label="Isolated selected part. Drag to rotate and scroll to zoom."></canvas><div class="part-preview-tools"><span>Drag to rotate · Scroll to zoom</span><button type="button" data-part-reset>Reset</button></div></section>'
         starter_links = ''.join(file_link(page, label, path) for label, path in p['downloads'])
-        information = (f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Add a cardboard core and two cable ties.</p><div class="download-list starter-download">{starter_links}</div></section>'
+        information = (isolated + f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Add a cardboard core. Press each front foot onto the printed rail from its rear foot.</p><div class="download-list starter-download">{starter_links}</div></section>'
                        + parts_directory(p, page))
         legacy = ''
     elif p.get('partsGuide'):

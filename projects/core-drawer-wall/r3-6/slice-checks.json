@@ -1,0 +1,114 @@
+{
+  "right-pocket-bin": {
+    "sha256": "92327069a31eeaf5ce62de009eefc74d785e7f9609096a44899b82a7f9b93040",
+    "bodies": 1,
+    "grams": 28.861,
+    "minutes": 49,
+    "warnings": []
+  },
+  "top-clips": {
+    "sha256": "fbca8e54bd475e753a5d3bb1dc4d6dffdf53c6a0af0e76aa81ef7071dff0148f",
+    "bodies": 2,
+    "grams": 2.63,
+    "minutes": 19,
+    "warnings": []
+  },
+  "top-tier": {
+    "sha256": "9f974cb9eaa0bdffc13bb6e891552d9fa0657f8e6795c646136803b91f7e90f3",
+    "bodies": 4,
+    "grams": 9.775,
+    "minutes": 42,
+    "warnings": []
+  },
+  "left-pocket": {
+    "sha256": "1abc3cb67f16433248a73394fa461eec86315a908f4ece9da120ff7dea4e9a8f",
+    "bodies": 3,
+    "grams": 37.346,
+    "minutes": 72,
+    "warnings": []
+  },
+  "right-pocket-frame": {
+    "sha256": "4a02036bfa79020d1bff15f41061e54ec3c27c91836c7ae57ec3ce506c44135d",
+    "bodies": 2,
+    "grams": 8.575,
+    "minutes": 34,
+    "warnings": []
+  },
+  "triangle-pocket-bin": {
+    "sha256": "1d678a28ca33d3028b0e4ab31da2be9a0aea026973d2bd7df19a5bd5520b46d5",
+    "bodies": 1,
+    "grams": 8.364,
+    "minutes": 37,
+    "warnings": []
+  },
+  "upper-mount": {
+    "sha256": "4dc8679d02d2f7c091c5fd072470c424908023e02b6909c83ce350600ac1a3a9",
+    "bodies": 2,
+    "grams": 7.238,
+    "minutes": 29,
+    "warnings": []
+  },
+  "fit": {
+    "sha256": "40df9c732e6c6656b7872bb5ae81795ef14397f2b8ff6f0a253b590b876f50ca",
+    "bodies": 2,
+    "grams": 5.254,
+    "minutes": 23,
+    "warnings": []
+  },
+  "left-pocket-bin": {
+    "sha256": "0c6961417caf597a1a51c7a55af8375b97c4842a2e0e5c6319ddf4729ee7fd6b",
+    "bodies": 1,
+    "grams": 28.862,
+    "minutes": 49,
+    "warnings": []
+  },
+  "triangle-pocket": {
+    "sha256": "0739ddd0d4d6b6939ae231ede5f057aa6517078c81f3be806c6ae1a9aa6deaa8",
+    "bodies": 3,
+    "grams": 13.522,
+    "minutes": 46,
+    "warnings": []
+  },
+  "base-mount": {
+    "sha256": "7cd34efc18bb1852df8ef178e60cf6485ca87ee356fbf0c5591a793f55d47426",
+    "bodies": 2,
+    "grams": 9.833,
+    "minutes": 30,
+    "warnings": []
+  },
+  "starter": {
+    "sha256": "2b5240d3b3d8b9ad6b925c09c60644bd871f40bfeed06b5557c39f5a3612578c",
+    "bodies": 5,
+    "grams": 52.405,
+    "minutes": 97,
+    "warnings": []
+  },
+  "right-pocket": {
+    "sha256": "fd03439b36192c0c4c0bb958e3882fc669d9a56b2ceac027f35ae8d61b766206",
+    "bodies": 3,
+    "grams": 37.343,
+    "minutes": 73,
+    "warnings": []
+  },
+  "triangle-pocket-frame": {
+    "sha256": "cb08b01f8ec2e4f9f6a3c72824b9da1e29cc7db38049ecc77b0eee88a63b962a",
+    "bodies": 2,
+    "grams": 5.252,
+    "minutes": 24,
+    "warnings": []
+  },
+  "dry-ends": {
+    "sha256": "d7cc1475fe660d2cb4d14e191228d7c3568ffb9612f9008eee50d7f310ca2840",
+    "bodies": 4,
+    "grams": 10.389,
+    "minutes": 41,
+    "warnings": []
+  },
+  "left-pocket-frame": {
+    "sha256": "941cb7e3481041f5d0700fc2973a12465b81e3ac600c28b99ceb44cff1b53405",
+    "bodies": 2,
+    "grams": 8.577,
+    "minutes": 34,
+    "warnings": []
+  }
+}

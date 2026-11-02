@@ -30,7 +30,22 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   await p.mouse.move(x,y);await p.mouse.down();await p.mouse.move(x+60,y,{steps:8});await p.mouse.up();
   assert.equal(await c.getAttribute('data-selected-part'),'middle-mount','A drag must not repick');
   for(const id of ['triangle-pocket','left-pocket','right-pocket']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
+  // Orbit and zoom the isolated print without moving the wall.
+  const isolated=p.locator('[data-part-preview] canvas');
+  assert.equal(await isolated.getAttribute('data-selected-part'),'right-pocket');
+  const wallBefore=await c.screenshot();
+  const partBefore=await isolated.screenshot();
+  const partBox=await isolated.boundingBox();
+  const px=partBox.x+partBox.width/2,py=partBox.y+partBox.height/2;
+  await p.mouse.move(px,py); await p.mouse.down(); await p.mouse.move(px+40,py+18,{steps:8}); await p.mouse.up();
+  assert.notDeepEqual(await isolated.screenshot(),partBefore);
+  assert.deepEqual(await c.screenshot(),wallBefore);
+  await p.mouse.move(px,py); const beforeZoom=await isolated.screenshot(); await p.mouse.wheel(0,-180);
+  await p.waitForFunction(()=>document.querySelector('[data-part-preview] canvas').dataset.rendered==='true');
+  assert.notDeepEqual(await isolated.screenshot(),beforeZoom);
+  await p.locator('[data-part-close]').click();assert.ok(await isolated.isHidden());
   await panel.locator('select').selectOption('top-tier');assert.equal(await c.getAttribute('data-selected-part'),'top-tier');
+  assert.equal(await isolated.getAttribute('data-selected-part'),'top-tier');
   await p.locator('[data-assembly-id="one-piece-left-right"] a').click();assert.equal(await c.getAttribute('data-drawers-hidden'),'false');
   await panel.locator('[data-picked-link]').click();assert.ok(p.url().includes('/one-piece-left-right/'));
   console.log('Clicked mesh surfaces:',[...hitIds,...exposed].join(', '),'; list selection, orbit, connector reveal and part link passed.');

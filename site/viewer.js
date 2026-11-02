@@ -5,8 +5,11 @@ import { attachPicker } from './assembly-picker.js';
 import { toCreasedNormals } from './assets/three/BufferGeometryUtils.js';
 
 /** Shared renderer for interactive STL views and the generated PNG thumbnails. */
-export async function createModelView(canvas, url, { width, height, thumbnail = false, faceGroups = null } = {}) {
-  const source = await new STLLoader().loadAsync(url);
+export async function createModelView(canvas, url, options = {}) {
+  return createGeometryView(canvas, await new STLLoader().loadAsync(url), url, options);
+}
+
+function createGeometryView(canvas, source, url, { width, height, thumbnail = false, faceGroups = null, color = 0x8b9c80 } = {}) {
   function applyGroups(g) {
     if (!faceGroups) return;
     const colors = new Float32Array(g.attributes.position.count * 3);
@@ -31,7 +34,7 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   renderer.setClearColor(0xf4f6ef, 0);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   const scene = new THREE.Scene();
-  const material = new THREE.MeshStandardMaterial({ color: faceGroups ? 0xffffff : 0x8b9c80, vertexColors: !!faceGroups, roughness: 0.65, metalness: 0 });
+  const material = new THREE.MeshStandardMaterial({ color: faceGroups ? 0xffffff : color, vertexColors: !!faceGroups, roughness: 0.65, metalness: 0 });
   const model = new THREE.Mesh(geometry, material);
   scene.add(model);
   scene.add(new THREE.HemisphereLight(0xffffff, 0x747c69, 2.5));
@@ -99,39 +102,42 @@ export async function createModelView(canvas, url, { width, height, thumbnail = 
   controls?.addEventListener('change', render);
   const observer = thumbnail ? null : new ResizeObserver(resize);
   observer?.observe(canvas);
-  const disposePicker=thumbnail ? null : attachPicker({canvas,camera,model,geometry,material,assembly:faceGroups,url,render});
+  const disposePicker=thumbnail ? null : attachPicker({canvas,camera,model,geometry,material,assembly:faceGroups,url,render,createGeometryView});
   let request = 0;
+  function replaceGeometry(source, nextUrl, refit = true) {
+    if (refit) {
+      source.computeBoundingBox();
+      origin = source.boundingBox.getCenter(new THREE.Vector3());
+    }
+    // Assembly variants share coordinates and keep their camera. Individual
+    // print selections request a fresh center and fit for their own geometry.
+    source.translate(-origin.x, -origin.y, -origin.z);
+    const next = toCreasedNormals(source, Math.PI / 6);
+    source.dispose();
+    next.computeBoundingSphere();
+    const nextRadius = next.boundingSphere.radius + next.boundingSphere.center.length();
+    if (!(nextRadius > 0) || !Number.isFinite(nextRadius)) {
+      next.dispose();
+      throw new Error('Empty model bounds');
+    }
+    geometry.dispose();
+    geometry = next;
+    model.geometry = geometry;
+    radius = nextRadius;
+    camera.far = radius * 12;
+    camera.updateProjectionMatrix();
+    url = nextUrl;
+    if (refit) fit();
+    else render();
+  }
   return {
-    fit, zoomBy,
+    fit, zoomBy, replaceGeometry,
     get loadedUrl() { return url; },
     async setModel(nextUrl, { refit = false } = {}) {
       const current = ++request;
       const source = await new STLLoader().loadAsync(nextUrl);
       if (current !== request) { source.dispose(); return; }
-      if (refit) {
-        source.computeBoundingBox();
-        origin = source.boundingBox.getCenter(new THREE.Vector3());
-      }
-      // Assembly variants share coordinates and keep their camera. Individual
-      // print selections request a fresh center and fit for their own geometry.
-      source.translate(-origin.x, -origin.y, -origin.z);
-      const next = toCreasedNormals(source, Math.PI / 6);
-      source.dispose();
-      next.computeBoundingSphere();
-      const nextRadius = next.boundingSphere.radius + next.boundingSphere.center.length();
-      if (!(nextRadius > 0) || !Number.isFinite(nextRadius)) {
-        next.dispose();
-        throw new Error('Empty model bounds');
-      }
-      geometry.dispose();
-      geometry = next;
-      model.geometry = geometry;
-      radius = nextRadius;
-      camera.far = radius * 12;
-      camera.updateProjectionMatrix();
-      url = nextUrl;
-      if (refit) fit();
-      else render();
+      replaceGeometry(source, nextUrl, refit);
     },
     dispose() {
       request++;
