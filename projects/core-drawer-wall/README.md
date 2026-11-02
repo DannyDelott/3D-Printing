@@ -1,6 +1,6 @@
 # Cardboard core drawer wall
 
-**Selected design: R3.3.** The drawer face and bin print in one piece, resting on the integrated 45° pull. Start with the [mock assembly and parts guide](r3-3/datasheet.html), [first-cell print](r3-3/models/starter-r3-3.3mf), or [technical notes](r3-3/README.md).
+**Selected design: R3.4.** One-piece drawers have a closed recessed finger grip, a full round face and no screws. Explore the [clickable 3–2–3 assembly](r3-4/datasheet.html), download the [first-cell plate](r3-4/models/starter-r3-4.3mf) or read the [parts list and assembly notes](r3-4/README.md). R3.3 with the projecting lower pull is [available here](r3-3/datasheet.html).
 
 **R3.2 · screw-on face.** Choose an open, left/right or front/back bin with a full circular face. The drawer takes one screw and no glue. Cable ties or through-bolts join the core rims; middle and top tabs accept plywood screws. See the [interactive drawer comparison and eight-row mounting diagram](r3-2/datasheet.html), [print and hardware list](r3-2/README.md), and [small core fit print](r3/models/fit-r3.3mf).
 

@@ -1,0 +1,439 @@
+{
+  "rows": [
+    3,
+    2,
+    3
+  ],
+  "groups": [
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      5598,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      6322,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      5598,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      6172,
+      1,
+      "one-piece-left-right",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      5598,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      6322,
+      1,
+      "one-piece-front-back",
+      null
+    ],
+    [
+      1536,
+      0,
+      "core",
+      null
+    ],
+    [
+      5598,
+      1,
+      "one-piece-open",
+      null
+    ],
+    [
+      914,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      1122,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      914,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      1122,
+      2,
+      "dry-ends",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      1352,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      2894,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      1352,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      2894,
+      2,
+      "base-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2562,
+      3,
+      "middle-mount",
+      null
+    ],
+    [
+      4124,
+      3,
+      "middle-mount",
+      null
+    ],
+    [
+      1196,
+      4,
+      "bolt",
+      null
+    ],
+    [
+      2328,
+      4,
+      "bolt",
+      null
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      2154,
+      2,
+      "upper-mount",
+      null
+    ],
+    [
+      3624,
+      2,
+      "upper-mount",
+      null
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2154,
+      2,
+      "upper-mount",
+      "top-tier"
+    ],
+    [
+      3624,
+      2,
+      "upper-mount",
+      "top-tier"
+    ],
+    [
+      416,
+      4,
+      "tie",
+      null
+    ],
+    [
+      1870,
+      3,
+      "top-clips",
+      "top-tier"
+    ],
+    [
+      3826,
+      3,
+      "top-clips",
+      "top-tier"
+    ],
+    [
+      1196,
+      4,
+      "bolt",
+      null
+    ],
+    [
+      2328,
+      4,
+      "bolt",
+      null
+    ],
+    [
+      1532,
+      4,
+      "wood-screw",
+      null
+    ],
+    [
+      2330,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      2538,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2330,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      2538,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2330,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      2538,
+      2,
+      "triangle-spacer",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2902,
+      2,
+      "edge-left",
+      null
+    ],
+    [
+      2690,
+      2,
+      "edge-left",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ],
+    [
+      2902,
+      2,
+      "edge-right",
+      null
+    ],
+    [
+      2690,
+      2,
+      "edge-right",
+      null
+    ],
+    [
+      224,
+      4,
+      "tie",
+      null
+    ]
+  ],
+  "items": {
+    "one-piece-open": [
+      "Open drawer",
+      "One undivided 293.8 mL bin. The finger cup has a closed back.",
+      "models/open-r3-4.3mf"
+    ],
+    "one-piece-left-right": [
+      "Left / right drawer",
+      "The fixed divider runs the length of the bin, creating two long lanes.",
+      "models/left-right-r3-4.3mf"
+    ],
+    "one-piece-front-back": [
+      "Front / back drawer",
+      "A crosswise divider keeps frequent-use parts in front and refills behind.",
+      "models/front-back-r3-4.3mf"
+    ],
+    "dry-ends": [
+      "Outside feet",
+      "Four half-feet go at the outer ends of the bottom row, one at each front and rear corner. Move them outward as you add cores.",
+      "../r3-2/models/dry-ends-r3-2.3mf"
+    ],
+    "base-mount": [
+      "Shared base",
+      "One front and one rear piece sit between neighboring bottom cores. They share a flat base and tie together.",
+      "../r3/models/base-mount-r3.3mf"
+    ],
+    "upper-mount": [
+      "Upper connector",
+      "One front and one rear three-way junction seat an upper core between the two below. Tie the pair together.",
+      "../r3/models/upper-mount-r3.3mf"
+    ],
+    "middle-mount": [
+      "Middle mount",
+      "Replaces an ordinary upper pair where the bank attaches to the plywood. The wood screw passes through the rear eye.",
+      "../r3-2/models/middle-mount-r3-2.3mf"
+    ],
+    "top-tier": [
+      "Top mount set",
+      "The complete hardware for one new anchored top core: its two upper junctions plus front and rear rim clips.",
+      "../r3-2/models/top-tier-r3-2.3mf"
+    ],
+    "top-clips": [
+      "Top clips only",
+      "The keeper and screw tab capture the exposed top rim. Use these for an existing cell, or print the complete top set for a new one.",
+      "../r3-2/models/top-clips-r3-2.3mf"
+    ],
+    "core": [
+      "Cardboard core",
+      "Reused spool tube, not printed. This example uses nominal 83 mm ID \u00d7 88 mm OD \u00d7 60 mm length.",
+      null
+    ],
+    "tie": [
+      "Cable tie",
+      "One 2.5 \u00d7 200 mm tie captures each ordinary front/rear connector pair without adhesive.",
+      null
+    ],
+    "bolt": [
+      "Through-bolt",
+      "M3 \u00d7 70 mm countersunk machine screw with washer and locknut. It holds the front and rear anchor together.",
+      null
+    ],
+    "wood-screw": [
+      "Backboard screw",
+      "A #8 \u00d7 \u00be\u2033 pan-head wood screw through the rear tab fastens it to the plywood. The shelf supports the bank.",
+      null
+    ],
+    "triangle-spacer": [
+      "Triangle spacer",
+      "Fills an inverted three-core opening. A tie captures its front and rear plates. It is a gap cover, not a substitute for an upper connector.",
+      "models/triangle-spacer-r3-4.3mf"
+    ],
+    "edge-left": [
+      "Left side support",
+      "Fills the left half-gap in row two. The front and rear posts seat on the bottom rim and cradle the outside third-row core. Use one tie.",
+      "models/edge-left-r3-4.3mf"
+    ],
+    "edge-right": [
+      "Right side support",
+      "Fills the right half-gap in row two. The front and rear posts seat on the bottom rim and cradle the outside third-row core. Use one tie.",
+      "models/edge-right-r3-4.3mf"
+    ]
+  }
+}

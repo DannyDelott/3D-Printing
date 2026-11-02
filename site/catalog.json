@@ -3601,17 +3601,18 @@
     "id": "core-drawer-wall",
     "title": "Cardboard core drawer wall",
     "category": "Storage",
-    "description": "One-piece drawers in bare cardboard cores, with tied connectors and optional plywood wall anchors.",
-    "revision": "R3.3",
+    "description": "One-piece finger-cup drawers in a 3\u20132\u20133 wall of cardboard cores, with triangle spacers and side supports.",
+    "revision": "R3.4",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
-    "model": "projects/core-drawer-wall/r3-3/models/starter-r3-3.3mf",
-    "preview": "assets/core-wall-r33-assembly.png",
-    "readme": "projects/core-drawer-wall/r3-3/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-3/datasheet.html",
+    "model": "projects/core-drawer-wall/r3-4/models/starter-r3-4.3mf",
+    "preview": "assets/core-wall-r34-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-4/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-4/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3-3/source/model.py"
+      "projects/core-drawer-wall/r3-4/source/model.py",
+      "projects/core-drawer-wall/r3-4/source/spacers.py"
     ],
     "license": "",
     "related": [
@@ -3633,10 +3634,10 @@
         "id": "mock-assembly",
         "group": "Assembly",
         "label": "Mock assembly",
-        "revision": "R3.3",
-        "description": "Six cores stack in three rows. The open housing on the bottom row exposes the rim. The middle anchor is on the left of row two; the top tab reaches above the highest core.",
-        "preview": "assets/core-wall-r33-assembly.png",
-        "previewModel": "projects/core-drawer-wall/r3-3/models/mock-assembly.stl",
+        "revision": "R3.4",
+        "description": "Eight cores in a 3\u20132\u20133 wall. The triangle spacers close the inverted openings. The two side supports fill the ends of row two and seat the outer top cores.",
+        "preview": "assets/core-wall-r34-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/mock-assembly.stl",
         "dimensions": [
           [
             "Nominal core ID / OD / length",
@@ -3644,55 +3645,55 @@
           ],
           [
             "Print bounds",
-            "204.22 \u00d7 100.2 \u00d7 97.01 mm \u00b7 8.04 \u00d7 3.94 \u00d7 3.82 in"
+            "204.22 \u00d7 109.09 \u00d7 97.29 mm \u00b7 8.04 \u00d7 4.29 \u00d7 3.83 in"
           ]
         ],
         "downloads": [
           [
             "Download starter 3MF",
-            "projects/core-drawer-wall/r3-3/models/starter-r3-3.3mf"
+            "projects/core-drawer-wall/r3-4/models/starter-r3-4.3mf"
           ],
           [
             "Starter STL",
-            "projects/core-drawer-wall/r3-3/models/starter-r3-3.stl"
+            "projects/core-drawer-wall/r3-4/models/starter-r3-4.stl"
           ]
         ],
-        "faceGroups": "projects/core-drawer-wall/r3-3/colors.json"
+        "faceGroups": "projects/core-drawer-wall/r3-4/colors.json"
       },
       {
         "id": "one-piece-open",
         "group": "Drawers",
         "label": "Open",
-        "revision": "R3.3",
-        "description": "One large compartment. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
-        "preview": "assets/core-wall-r33-open.png",
-        "previewModel": "projects/core-drawer-wall/r3-3/models/open-in-use.stl",
+        "revision": "R3.4",
+        "description": "One undivided 293.8 mL bin. The finger cup has a closed back. The recessed 34 \u00d7 14 mm finger cup is 9 mm deep and closed at the back. Print on the lower bevel as supplied, without supports.",
+        "preview": "assets/core-wall-r34-open.png",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/open-in-use.stl",
         "dimensions": [
           [
             "Nominal core ID / OD / length",
             "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
           ],
           [
-            "Print bounds",
-            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
-          ],
-          [
-            "Usable volume to rim",
-            "241.8 mL"
+            "Volume to rim",
+            "293.8 mL"
           ],
           [
             "Face / bottom overlap",
             "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 109.09 \u00d7 97.29 mm \u00b7 3.42 \u00d7 4.29 \u00d7 3.83 in"
           ]
         ],
         "downloads": [
           [
             "Open \u00b7 3MF",
-            "projects/core-drawer-wall/r3-3/models/open-r3-3.3mf"
+            "projects/core-drawer-wall/r3-4/models/open-r3-4.3mf"
           ],
           [
             "Open \u00b7 print STL",
-            "projects/core-drawer-wall/r3-3/models/open-r3-3.stl"
+            "projects/core-drawer-wall/r3-4/models/open-r3-4.stl"
           ]
         ],
         "guideNote": "One large compartment"
@@ -3701,36 +3702,36 @@
         "id": "one-piece-left-right",
         "group": "Drawers",
         "label": "Left / right",
-        "revision": "R3.3",
-        "description": "Two long lanes. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
-        "preview": "assets/core-wall-r33-left-right.png",
-        "previewModel": "projects/core-drawer-wall/r3-3/models/left-right-in-use.stl",
+        "revision": "R3.4",
+        "description": "The fixed divider runs the length of the bin, creating two long lanes. The recessed 34 \u00d7 14 mm finger cup is 9 mm deep and closed at the back. Print on the lower bevel as supplied, without supports.",
+        "preview": "assets/core-wall-r34-left-right.png",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/left-right-in-use.stl",
         "dimensions": [
           [
             "Nominal core ID / OD / length",
             "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
           ],
           [
-            "Print bounds",
-            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
-          ],
-          [
-            "Usable volume to rim",
-            "235.7 mL"
+            "Volume to rim",
+            "286.5 mL"
           ],
           [
             "Face / bottom overlap",
             "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 109.09 \u00d7 97.29 mm \u00b7 3.42 \u00d7 4.29 \u00d7 3.83 in"
           ]
         ],
         "downloads": [
           [
             "Left / right \u00b7 3MF",
-            "projects/core-drawer-wall/r3-3/models/left-right-r3-3.3mf"
+            "projects/core-drawer-wall/r3-4/models/left-right-r3-4.3mf"
           ],
           [
             "Left / right \u00b7 print STL",
-            "projects/core-drawer-wall/r3-3/models/left-right-r3-3.stl"
+            "projects/core-drawer-wall/r3-4/models/left-right-r3-4.stl"
           ]
         ],
         "guideNote": "Two long lanes"
@@ -3739,36 +3740,36 @@
         "id": "one-piece-front-back",
         "group": "Drawers",
         "label": "Front / back",
-        "revision": "R3.3",
-        "description": "Two short bins. Face, grip and bin print together. Keep the sloped grip flat on the bed as supplied. No supports, screws or adhesive.",
-        "preview": "assets/core-wall-r33-front-back.png",
-        "previewModel": "projects/core-drawer-wall/r3-3/models/front-back-in-use.stl",
+        "revision": "R3.4",
+        "description": "A crosswise divider keeps frequent-use parts in front and refills behind. The recessed 34 \u00d7 14 mm finger cup is 9 mm deep and closed at the back. Print on the lower bevel as supplied, without supports.",
+        "preview": "assets/core-wall-r34-front-back.png",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/front-back-in-use.stl",
         "dimensions": [
           [
             "Nominal core ID / OD / length",
             "83 \u00d7 88 \u00d7 60 mm \u00b7 3.27 \u00d7 3.46 \u00d7 2.36 in"
           ],
           [
-            "Print bounds",
-            "86.8 \u00d7 100.2 \u00d7 97.01 mm \u00b7 3.42 \u00d7 3.94 \u00d7 3.82 in"
-          ],
-          [
-            "Usable volume to rim",
-            "235.2 mL"
+            "Volume to rim",
+            "287.3 mL"
           ],
           [
             "Face / bottom overlap",
             "\u00d886.8 / 1.9 mm \u00b7 \u00d83.42 / 0.075 in"
+          ],
+          [
+            "Print bounds",
+            "86.8 \u00d7 109.09 \u00d7 97.29 mm \u00b7 3.42 \u00d7 4.29 \u00d7 3.83 in"
           ]
         ],
         "downloads": [
           [
             "Front / back \u00b7 3MF",
-            "projects/core-drawer-wall/r3-3/models/front-back-r3-3.3mf"
+            "projects/core-drawer-wall/r3-4/models/front-back-r3-4.3mf"
           ],
           [
             "Front / back \u00b7 print STL",
-            "projects/core-drawer-wall/r3-3/models/front-back-r3-3.stl"
+            "projects/core-drawer-wall/r3-4/models/front-back-r3-4.stl"
           ]
         ],
         "guideNote": "Two short bins"
@@ -3920,6 +3921,96 @@
           "projects/core-drawer-wall/r3/source/model.py"
         ],
         "guideNote": "One pair per upper core"
+      },
+      {
+        "id": "triangle-spacer",
+        "group": "Gap fillers",
+        "label": "Triangle spacer",
+        "description": "Fills an inverted three-core opening. A tie captures its front and rear plates. It is a gap cover, not a substitute for an upper connector.",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/triangle-spacer-r3-4.stl",
+        "guideNote": "Three inverted openings",
+        "dimensions": [
+          [
+            "Set",
+            "Front and rear \u00b7 one 2.5 \u00d7 200 mm tie"
+          ],
+          [
+            "Print bounds",
+            "105.8 \u00d7 43.65 \u00d7 4.8 mm \u00b7 4.17 \u00d7 1.72 \u00d7 0.19 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Triangle spacer \u00b7 3MF",
+            "projects/core-drawer-wall/r3-4/models/triangle-spacer-r3-4.3mf"
+          ],
+          [
+            "Triangle spacer \u00b7 STL",
+            "projects/core-drawer-wall/r3-4/models/triangle-spacer-r3-4.stl"
+          ]
+        ],
+        "revision": "R3.4",
+        "preview": "assets/core-wall-r34-triangle-spacer.png"
+      },
+      {
+        "id": "edge-left",
+        "group": "Gap fillers",
+        "label": "Left side support",
+        "description": "Fills the left half-gap in row two. The front and rear posts seat on the bottom rim and cradle the outside third-row core. Use one tie.",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/edge-left-r3-4.stl",
+        "guideNote": "Outer left position",
+        "dimensions": [
+          [
+            "Set",
+            "Front and rear \u00b7 one 2.5 \u00d7 200 mm tie"
+          ],
+          [
+            "Print bounds",
+            "108.4 \u00d7 156.58 \u00d7 10.6 mm \u00b7 4.27 \u00d7 6.16 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Left side support \u00b7 3MF",
+            "projects/core-drawer-wall/r3-4/models/edge-left-r3-4.3mf"
+          ],
+          [
+            "Left side support \u00b7 STL",
+            "projects/core-drawer-wall/r3-4/models/edge-left-r3-4.stl"
+          ]
+        ],
+        "revision": "R3.4",
+        "preview": "assets/core-wall-r34-edge-left.png"
+      },
+      {
+        "id": "edge-right",
+        "group": "Gap fillers",
+        "label": "Right side support",
+        "description": "Fills the right half-gap in row two. The front and rear posts seat on the bottom rim and cradle the outside third-row core. Use one tie.",
+        "previewModel": "projects/core-drawer-wall/r3-4/models/edge-right-r3-4.stl",
+        "guideNote": "Outer right position",
+        "dimensions": [
+          [
+            "Set",
+            "Front and rear \u00b7 one 2.5 \u00d7 200 mm tie"
+          ],
+          [
+            "Print bounds",
+            "108.4 \u00d7 156.58 \u00d7 10.6 mm \u00b7 4.27 \u00d7 6.16 \u00d7 0.42 in"
+          ]
+        ],
+        "downloads": [
+          [
+            "Right side support \u00b7 3MF",
+            "projects/core-drawer-wall/r3-4/models/edge-right-r3-4.3mf"
+          ],
+          [
+            "Right side support \u00b7 STL",
+            "projects/core-drawer-wall/r3-4/models/edge-right-r3-4.stl"
+          ]
+        ],
+        "revision": "R3.4",
+        "preview": "assets/core-wall-r34-edge-right.png"
       },
       {
         "id": "middle-mount",

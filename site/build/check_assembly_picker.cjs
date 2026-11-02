@@ -29,6 +29,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   await c.scrollIntoViewIfNeeded();
   await p.mouse.move(x,y);await p.mouse.down();await p.mouse.move(x+60,y,{steps:8});await p.mouse.up();
   assert.equal(await c.getAttribute('data-selected-part'),'middle-mount','A drag must not repick');
+  for(const id of ['triangle-spacer','edge-left','edge-right']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
   await panel.locator('select').selectOption('top-tier');assert.equal(await c.getAttribute('data-selected-part'),'top-tier');
   await p.locator('[data-assembly-id="one-piece-left-right"] a').click();assert.equal(await c.getAttribute('data-drawers-hidden'),'false');
   await panel.locator('[data-picked-link]').click();assert.ok(p.url().includes('/one-piece-left-right/'));
