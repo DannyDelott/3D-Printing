@@ -12,7 +12,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    await p.mouse.click(box.x+xx*box.width,box.y+yy*box.height);
    const id=await c.getAttribute('data-selected-part');
    if(!id)continue;hitIds.add(id);
-   assert.equal(await p.locator('[data-assembly-id].part-picked').getAttribute('data-assembly-id'),id);
+   assert.equal(await p.locator('[data-assembly-id].part-picked').getAttribute('data-assembly-id'),id.replace(/-pocket-frame$/, '-pocket'));
   }
   assert.ok([...hitIds].some(s=>s.startsWith('one-piece-')) && hitIds.has('core'),'Physical hits must identify both a printed drawer and cardboard');
   await p.locator('[data-assembly-id="middle-mount"] a').click();assert.equal(await c.getAttribute('data-selected-part'),'middle-mount');
@@ -24,12 +24,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    await p.mouse.click(bb.x+bb.width*xx,bb.y+bb.height*yy);
    const id=await c.getAttribute('data-selected-part');if(id)exposed.add(id);
   }
-  assert.ok([...exposed].some(id=>['upper-mount','base-mount','dry-ends','middle-mount','top-clips'].includes(id)),'A visible connector must be selectable through the translucent cardboard');
+  assert.ok([...exposed].some(id=>['upper-mount','base-mount','dry-ends','middle-mount','top-clips','left-pocket-frame','right-pocket-frame','triangle-pocket-frame'].includes(id)),'A visible connector must be selectable through the translucent cardboard');
   await panel.locator('select').selectOption('middle-mount');
   await c.scrollIntoViewIfNeeded();
   await p.mouse.move(x,y);await p.mouse.down();await p.mouse.move(x+60,y,{steps:8});await p.mouse.up();
   assert.equal(await c.getAttribute('data-selected-part'),'middle-mount','A drag must not repick');
-  for(const id of ['triangle-spacer','edge-left','edge-right']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
+  for(const id of ['triangle-pocket','left-pocket','right-pocket']){await p.locator('[data-assembly-id="'+id+'"] a').click();assert.equal(await c.getAttribute('data-selected-part'),id);assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/'+id+'/'));}
   await panel.locator('select').selectOption('top-tier');assert.equal(await c.getAttribute('data-selected-part'),'top-tier');
   await p.locator('[data-assembly-id="one-piece-left-right"] a').click();assert.equal(await c.getAttribute('data-drawers-hidden'),'false');
   await panel.locator('[data-picked-link]').click();assert.ok(p.url().includes('/one-piece-left-right/'));
