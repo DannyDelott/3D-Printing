@@ -1,0 +1,42 @@
+{
+  "starter": {
+    "sha256": "a94961d604deca2d5bb2f19e722ee82a796de88e6fed63ce580a5437542cfec9",
+    "bodies": 5,
+    "grams": 69.885,
+    "minutes": 110,
+    "warnings": [],
+    "supports": false,
+    "brim": false,
+    "max_unsupported_bridge_segment_mm": 11.9
+  },
+  "front-back": {
+    "sha256": "5d08bb6961ddefd70d971891ca3848b4b896c319f03688ddd418393010fc383f",
+    "bodies": 1,
+    "grams": 76.041,
+    "minutes": 120,
+    "warnings": [],
+    "supports": false,
+    "brim": false,
+    "max_unsupported_bridge_segment_mm": 11.9
+  },
+  "left-right": {
+    "sha256": "1e97388cb189104c5e535ecd7678635c3e54e268fea01c05b3c52a0cfd7c97b5",
+    "bodies": 1,
+    "grams": 69.922,
+    "minutes": 101,
+    "warnings": [],
+    "supports": false,
+    "brim": false,
+    "max_unsupported_bridge_segment_mm": 11.9
+  },
+  "open": {
+    "sha256": "b940934161231c5c16b4bb8f359c39d7c7ece98d36d9ee70400648e46d11bc12",
+    "bodies": 1,
+    "grams": 61.028,
+    "minutes": 93,
+    "warnings": [],
+    "supports": false,
+    "brim": false,
+    "max_unsupported_bridge_segment_mm": 11.9
+  }
+}

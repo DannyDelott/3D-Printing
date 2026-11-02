@@ -17,7 +17,7 @@ class PublishingTests(unittest.TestCase):
         project = next(p for p in json.loads((build.SITE / 'catalog.json').read_text()) if p['slug'] == 'core-drawer-wall')
         home, drawer = build.project_views(project)[:2]
         self.assertIn('mock-assembly.stl', home['previewModel'])
-        self.assertIn('starter-r3-7.3mf', home['downloads'][0][1])
+        self.assertIn('starter-'+home['revision'].lower().replace('.', '-')+'.3mf', home['downloads'][0][1])
         menu = build.component_navigation(drawer, build.project_path(drawer))
         self.assertIn('<summary>Browse parts</summary>', menu)
         self.assertIn('Fit sample', menu)

@@ -3602,21 +3602,21 @@
     "title": "Cardboard core drawer wall",
     "category": "Storage",
     "description": "Stagger cardboard cores on a shelf against plywood. Short clips grip each cardboard rim independently. Wide side pockets and small triangular drawers use the gaps between cores.",
-    "revision": "R3.7",
+    "revision": "R3.8",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
-    "model": "projects/core-drawer-wall/r3-7/models/starter-r3-7.3mf",
-    "preview": "assets/core-wall-r37-assembly.png",
-    "readme": "projects/core-drawer-wall/r3-7/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
+    "model": "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf",
+    "preview": "assets/core-wall-r38-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-8/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3-7/source/model.py",
-      "projects/core-drawer-wall/r3-7/source/drawers.py",
-      "projects/core-drawer-wall/r3-7/source/clips.py",
-      "projects/core-drawer-wall/r3-7/source/pockets.py",
-      "projects/core-drawer-wall/r3-7/source/spacers.py",
-      "projects/core-drawer-wall/r3-7/source/validation.py"
+      "projects/core-drawer-wall/r3-8/source/model.py",
+      "projects/core-drawer-wall/r3-8/source/drawers.py",
+      "projects/core-drawer-wall/r3-8/source/clips.py",
+      "projects/core-drawer-wall/r3-8/source/pockets.py",
+      "projects/core-drawer-wall/r3-8/source/spacers.py",
+      "projects/core-drawer-wall/r3-8/source/validation.py"
     ],
     "license": "",
     "related": [
@@ -3638,156 +3638,156 @@
         "id": "mock-assembly",
         "group": "Assembly",
         "label": "Mock assembly",
-        "revision": "R3.7",
+        "revision": "R3.8",
         "description": "Eight cores in a 3\u20132\u20133 wall. Click a piece to see it in blue and rotate it separately. The side pockets are shown fully seated.",
-        "preview": "assets/core-wall-r37-assembly.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/mock-assembly.stl",
+        "preview": "assets/core-wall-r38-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-8/models/mock-assembly.stl",
         "dimensions": [
           [
             "Print bounds",
-            "201.68 \u00d7 136.59 \u00d7 99.26 mm \u00b7 7.94 \u00d7 5.38 \u00d7 3.91 in"
+            "204.22 \u00d7 86.8 \u00d7 79.2 mm \u00b7 8.04 \u00d7 3.42 \u00d7 3.12 in"
           ]
         ],
         "downloads": [
           [
             "Download first cell 3MF",
-            "projects/core-drawer-wall/r3-7/models/starter-r3-7.3mf"
+            "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/starter-r3-7.stl"
+            "projects/core-drawer-wall/r3-8/models/starter-r3-8.stl"
           ]
         ],
-        "faceGroups": "projects/core-drawer-wall/r3-7/colors.json",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "faceGroups": "projects/core-drawer-wall/r3-8/colors.json",
+        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-8/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-8/source/model.py",
+          "projects/core-drawer-wall/r3-8/source/drawers.py",
+          "projects/core-drawer-wall/r3-8/source/clips.py",
+          "projects/core-drawer-wall/r3-8/source/pockets.py",
+          "projects/core-drawer-wall/r3-8/source/spacers.py",
+          "projects/core-drawer-wall/r3-8/source/validation.py"
         ]
       },
       {
         "id": "one-piece-open",
         "group": "Drawers",
         "label": "Open",
-        "revision": "R3.7",
-        "description": "One open bin with a flat, full-width rear wall and a recessed finger grip. The round front flares ahead of the clips. Print on the angled rear corner in the supplied orientation.",
-        "preview": "assets/core-wall-r37-open.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/open-in-use.stl",
+        "revision": "R3.8",
+        "description": "One open bin with a flat, full-width rear wall and a recessed finger grip. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
+        "preview": "assets/core-wall-r38-open.png",
+        "previewModel": "projects/core-drawer-wall/r3-8/models/open-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "113.62 \u00d7 86.79 \u00d7 99.26 mm \u00b7 4.47 \u00d7 3.42 \u00d7 3.91 in"
+            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
           ],
           [
             "Volume to rim",
-            "298.5 mL"
+            "301.2 mL"
           ]
         ],
         "downloads": [
           [
             "Download Open 3MF",
-            "projects/core-drawer-wall/r3-7/models/open-r3-7.3mf"
+            "projects/core-drawer-wall/r3-8/models/open-r3-8.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/open-r3-7.stl"
+            "projects/core-drawer-wall/r3-8/models/open-r3-8.stl"
           ]
         ],
         "guideNote": "One large compartment",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-8/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-8/source/model.py",
+          "projects/core-drawer-wall/r3-8/source/drawers.py",
+          "projects/core-drawer-wall/r3-8/source/clips.py",
+          "projects/core-drawer-wall/r3-8/source/pockets.py",
+          "projects/core-drawer-wall/r3-8/source/spacers.py",
+          "projects/core-drawer-wall/r3-8/source/validation.py"
         ]
       },
       {
         "id": "one-piece-left-right",
         "group": "Drawers",
         "label": "Left / right",
-        "revision": "R3.7",
-        "description": "A straight divider forms two long lanes in a flat-back drawer. The round front flares ahead of the clips. Print on the angled rear corner in the supplied orientation.",
-        "preview": "assets/core-wall-r37-left-right.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/left-right-in-use.stl",
+        "revision": "R3.8",
+        "description": "A straight divider forms two long lanes in a flat-back drawer. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
+        "preview": "assets/core-wall-r38-left-right.png",
+        "previewModel": "projects/core-drawer-wall/r3-8/models/left-right-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "113.62 \u00d7 86.79 \u00d7 99.26 mm \u00b7 4.47 \u00d7 3.42 \u00d7 3.91 in"
+            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
           ],
           [
             "Volume to rim",
-            "291.2 mL"
+            "293.7 mL"
           ]
         ],
         "downloads": [
           [
             "Download Left / right 3MF",
-            "projects/core-drawer-wall/r3-7/models/left-right-r3-7.3mf"
+            "projects/core-drawer-wall/r3-8/models/left-right-r3-8.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/left-right-r3-7.stl"
+            "projects/core-drawer-wall/r3-8/models/left-right-r3-8.stl"
           ]
         ],
         "guideNote": "Two long lanes",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-8/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-8/source/model.py",
+          "projects/core-drawer-wall/r3-8/source/drawers.py",
+          "projects/core-drawer-wall/r3-8/source/clips.py",
+          "projects/core-drawer-wall/r3-8/source/pockets.py",
+          "projects/core-drawer-wall/r3-8/source/spacers.py",
+          "projects/core-drawer-wall/r3-8/source/validation.py"
         ]
       },
       {
         "id": "one-piece-front-back",
         "group": "Drawers",
         "label": "Front / back",
-        "revision": "R3.7",
-        "description": "A transverse divider forms a front and a rear compartment. The round front flares ahead of the clips. Print on the angled rear corner in the supplied orientation.",
-        "preview": "assets/core-wall-r37-front-back.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/front-back-in-use.stl",
+        "revision": "R3.8",
+        "description": "A transverse divider forms a front and a rear compartment. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
+        "preview": "assets/core-wall-r38-front-back.png",
+        "previewModel": "projects/core-drawer-wall/r3-8/models/front-back-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "113.62 \u00d7 86.79 \u00d7 99.26 mm \u00b7 4.47 \u00d7 3.42 \u00d7 3.91 in"
+            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
           ],
           [
             "Volume to rim",
-            "291.9 mL"
+            "288.6 mL"
           ]
         ],
         "downloads": [
           [
             "Download Front / back 3MF",
-            "projects/core-drawer-wall/r3-7/models/front-back-r3-7.3mf"
+            "projects/core-drawer-wall/r3-8/models/front-back-r3-8.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/front-back-r3-7.stl"
+            "projects/core-drawer-wall/r3-8/models/front-back-r3-8.stl"
           ]
         ],
         "guideNote": "Two short bins",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-8/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-8/source/model.py",
+          "projects/core-drawer-wall/r3-8/source/drawers.py",
+          "projects/core-drawer-wall/r3-8/source/clips.py",
+          "projects/core-drawer-wall/r3-8/source/pockets.py",
+          "projects/core-drawer-wall/r3-8/source/spacers.py",
+          "projects/core-drawer-wall/r3-8/source/validation.py"
         ]
       },
       {

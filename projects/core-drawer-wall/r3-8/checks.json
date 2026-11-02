@@ -1,0 +1,172 @@
+{
+  "open": {
+    "bounds": [
+      86.8,
+      86.8,
+      79.2
+    ],
+    "bodies": 1,
+    "ml": 301.2,
+    "bed_contact_mm2": 5425.3,
+    "minimum_sampled_balance_margin_mm": 41.17
+  },
+  "left-right": {
+    "bounds": [
+      86.8,
+      86.8,
+      79.2
+    ],
+    "bodies": 1,
+    "ml": 293.7,
+    "bed_contact_mm2": 5425.3,
+    "minimum_sampled_balance_margin_mm": 41.16
+  },
+  "front-back": {
+    "bounds": [
+      86.8,
+      86.8,
+      79.2
+    ],
+    "bodies": 1,
+    "ml": 288.6,
+    "bed_contact_mm2": 5425.3,
+    "minimum_sampled_balance_margin_mm": 41.63
+  },
+  "fit": {
+    "bounds": [
+      53.71,
+      44.8,
+      7.4
+    ],
+    "bodies": 2
+  },
+  "dry-ends": {
+    "bounds": [
+      112.42,
+      44.8,
+      7.4
+    ],
+    "bodies": 4
+  },
+  "starter": {
+    "bounds": [
+      204.22,
+      86.8,
+      79.2
+    ],
+    "bodies": 5
+  },
+  "base-mount": {
+    "bounds": [
+      102.42,
+      44.8,
+      7.4
+    ],
+    "bodies": 2
+  },
+  "upper-mount": {
+    "bounds": [
+      105.8,
+      43.65,
+      10.6
+    ],
+    "bodies": 2
+  },
+  "top-clips": {
+    "bounds": [
+      41.0,
+      23.03,
+      5.6
+    ],
+    "bodies": 2
+  },
+  "top-tier": {
+    "bounds": [
+      151.8,
+      43.65,
+      10.6
+    ],
+    "bodies": 4
+  },
+  "triangle-pocket": {
+    "bounds": [
+      144.03,
+      77.4,
+      17.7
+    ],
+    "bodies": 3,
+    "ml": 14.1,
+    "body_width_mm": 30.93,
+    "bed_contact_mm2": 2400.9
+  },
+  "triangle-pocket-frame": {
+    "bounds": [
+      105.8,
+      43.65,
+      4.4
+    ],
+    "bodies": 2
+  },
+  "triangle-pocket-bin": {
+    "bounds": [
+      33.23,
+      77.4,
+      17.7
+    ],
+    "bodies": 1
+  },
+  "left-pocket": {
+    "bounds": [
+      173.75,
+      156.58,
+      71.65
+    ],
+    "bodies": 3,
+    "ml": 166.8,
+    "body_width_mm": 36.55,
+    "bed_contact_mm2": 2158.1
+  },
+  "left-pocket-frame": {
+    "bounds": [
+      130.1,
+      156.58,
+      10.6
+    ],
+    "bodies": 2
+  },
+  "left-pocket-bin": {
+    "bounds": [
+      38.65,
+      77.4,
+      71.65
+    ],
+    "bodies": 1
+  },
+  "right-pocket": {
+    "bounds": [
+      173.75,
+      156.58,
+      71.65
+    ],
+    "bodies": 3,
+    "ml": 166.8,
+    "body_width_mm": 36.55,
+    "bed_contact_mm2": 2158.1
+  },
+  "right-pocket-frame": {
+    "bounds": [
+      130.1,
+      156.58,
+      10.6
+    ],
+    "bodies": 2
+  },
+  "right-pocket-bin": {
+    "bounds": [
+      38.65,
+      77.4,
+      71.65
+    ],
+    "bodies": 1
+  }
+}
