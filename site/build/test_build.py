@@ -33,7 +33,7 @@ class PublishingTests(unittest.TestCase):
         self.assertEqual(sum(group[2] == 'core' for group in meta['groups']), 8)
         self.assertNotIn('tie', meta['items'])
         self.assertFalse(any('triangle-pocket' in k for k in meta['items']))
-        self.assertEqual(sum(group[2] == 'wood-screw' for group in meta['groups']), 2)
+        self.assertEqual(sum(group[2] == 'wood-screw' for group in meta['groups']), 4)
         installed = {key for group in meta['groups'] for key in group[2:4] if key}
         self.assertEqual(installed, set(meta['items']))
         self.assertEqual({v['id'] for v in project['views'] if v.get('guideNote') and v['id'] != 'fit'}, {key for key, item in meta['items'].items() if item[2] and not key.endswith('-pocket-frame')})

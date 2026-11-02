@@ -3601,23 +3601,17 @@
     "id": "core-drawer-wall",
     "title": "Cardboard core drawer wall",
     "category": "Storage",
-    "description": "Stack cardboard cores on a shelf against plywood using short rim clips. Three triangular openings between the cores serve as pass-through cubbies for pencils. The left and right half-gaps still hold removable pocket drawers.",
-    "revision": "R3.9",
+    "description": "Stack cardboard cores against plywood. Three triangular gaps stay open for pencils. Enclosed, screw-mounted housings support the side drawers.",
+    "revision": "R3.10",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
     "model": "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf",
-    "preview": "assets/core-wall-r39-assembly.png",
-    "readme": "projects/core-drawer-wall/r3-9/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-9/datasheet.html",
+    "preview": "assets/core-wall-r310-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-10/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3-9/source/assembly.py",
-      "projects/core-drawer-wall/r3-8/source/model.py",
-      "projects/core-drawer-wall/r3-8/source/drawers.py",
-      "projects/core-drawer-wall/r3-8/source/clips.py",
-      "projects/core-drawer-wall/r3-8/source/pockets.py",
-      "projects/core-drawer-wall/r3-8/source/spacers.py",
-      "projects/core-drawer-wall/r3-8/source/validation.py"
+      "projects/core-drawer-wall/r3-10/source/model.py"
     ],
     "license": "",
     "related": [
@@ -3639,10 +3633,10 @@
         "id": "mock-assembly",
         "group": "Assembly",
         "label": "Mock assembly",
-        "revision": "R3.9",
-        "description": "Eight cardboard cores in a 3\u20132\u20133 wall. Three triangular openings between the cores serve as pass-through cubbies for pencils. The left and right half-gaps still hold removable pocket drawers.",
-        "preview": "assets/core-wall-r39-assembly.png",
-        "previewModel": "projects/core-drawer-wall/r3-9/models/mock-assembly.stl",
+        "revision": "R3.10",
+        "description": "Three open pencil cubbies between eight cores. The left pocket drawer is partly open to show its fixed housing; the right drawer is closed.",
+        "preview": "assets/core-wall-r310-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-10/models/mock-assembly.stl",
         "dimensions": [
           [
             "Print bounds",
@@ -3667,17 +3661,11 @@
             "projects/core-drawer-wall/r3-8/models/starter-r3-8.stl"
           ]
         ],
-        "faceGroups": "projects/core-drawer-wall/r3-9/colors.json",
-        "datasheet": "projects/core-drawer-wall/r3-9/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-9/README.md",
+        "faceGroups": "projects/core-drawer-wall/r3-10/colors.json",
+        "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-10/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-9/source/assembly.py",
-          "projects/core-drawer-wall/r3-8/source/model.py",
-          "projects/core-drawer-wall/r3-8/source/drawers.py",
-          "projects/core-drawer-wall/r3-8/source/clips.py",
-          "projects/core-drawer-wall/r3-8/source/pockets.py",
-          "projects/core-drawer-wall/r3-8/source/spacers.py",
-          "projects/core-drawer-wall/r3-8/source/validation.py"
+          "projects/core-drawer-wall/r3-10/source/model.py"
         ]
       },
       {
@@ -4109,51 +4097,50 @@
         "id": "left-pocket",
         "label": "Left pocket",
         "group": "Gap drawers",
-        "guideNote": "Outer half-gap \u00b7 left",
-        "revision": "R3.7",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "guideNote": "Enclosed side drawer \u00b7 left",
+        "revision": "R3.10",
+        "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-10/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-10/source/model.py"
         ],
-        "preview": "assets/core-wall-r37-left-pocket.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/left-pocket-r3-7.stl",
+        "preview": "assets/core-wall-r310-left-pocket.png",
+        "previewModel": "projects/core-drawer-wall/r3-10/models/left-pocket-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "173.75 \u00d7 156.58 \u00d7 71.65 mm \u00b7 6.84 \u00d7 6.16 \u00d7 2.82 in"
+            "186.71 \u00d7 156.58 \u00d7 76.55 mm \u00b7 7.35 \u00d7 6.16 \u00d7 3.01 in"
           ],
           [
             "Volume to rim",
-            "166.8 mL"
+            "120.0 mL"
           ],
           [
-            "Sliding body width",
-            "36.55 mm \u00b7 1.44 in"
+            "Travel to stop",
+            "41.14 mm \u00b7 1.62 in"
+          ],
+          [
+            "Still inside at stop",
+            "28.27 mm \u00b7 1.11 in"
           ]
         ],
-        "description": "Wide flat-back bin in the left half gap.",
+        "description": "A closed sleeve supports the drawer along its floor, sides and roof. The outside keeper stops travel at 41 mm; remove it to take out the drawer. One screw anchors the housing to the plywood.",
         "downloads": [
           [
-            "Download Left pocket 3MF",
-            "projects/core-drawer-wall/r3-7/models/left-pocket-r3-7.3mf"
+            "Complete pocket \u00b7 3MF",
+            "projects/core-drawer-wall/r3-10/models/left-pocket-r3-10.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/left-pocket-r3-7.stl"
+            "projects/core-drawer-wall/r3-10/models/left-pocket-r3-10.stl"
           ],
           [
             "Drawer only \u00b7 3MF",
-            "projects/core-drawer-wall/r3-7/models/left-pocket-bin-r3-7.3mf"
+            "projects/core-drawer-wall/r3-10/models/left-pocket-bin-r3-10.3mf"
           ],
           [
-            "Front and rear frames only \u00b7 3MF",
-            "projects/core-drawer-wall/r3-7/models/left-pocket-frame-r3-7.3mf"
+            "Housing, frame and keeper \u00b7 3MF",
+            "projects/core-drawer-wall/r3-10/models/left-pocket-frame-r3-10.3mf"
           ]
         ]
       },
@@ -4161,51 +4148,50 @@
         "id": "right-pocket",
         "label": "Right pocket",
         "group": "Gap drawers",
-        "guideNote": "Outer half-gap \u00b7 right",
-        "revision": "R3.7",
-        "datasheet": "projects/core-drawer-wall/r3-7/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-7/README.md",
+        "guideNote": "Enclosed side drawer \u00b7 right",
+        "revision": "R3.10",
+        "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-10/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-7/source/model.py",
-          "projects/core-drawer-wall/r3-7/source/drawers.py",
-          "projects/core-drawer-wall/r3-7/source/clips.py",
-          "projects/core-drawer-wall/r3-7/source/pockets.py",
-          "projects/core-drawer-wall/r3-7/source/spacers.py",
-          "projects/core-drawer-wall/r3-7/source/validation.py"
+          "projects/core-drawer-wall/r3-10/source/model.py"
         ],
-        "preview": "assets/core-wall-r37-right-pocket.png",
-        "previewModel": "projects/core-drawer-wall/r3-7/models/right-pocket-r3-7.stl",
+        "preview": "assets/core-wall-r310-right-pocket.png",
+        "previewModel": "projects/core-drawer-wall/r3-10/models/right-pocket-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "173.75 \u00d7 156.58 \u00d7 71.65 mm \u00b7 6.84 \u00d7 6.16 \u00d7 2.82 in"
+            "146.24 \u00d7 197.05 \u00d7 76.55 mm \u00b7 5.76 \u00d7 7.76 \u00d7 3.01 in"
           ],
           [
             "Volume to rim",
-            "166.8 mL"
+            "121.6 mL"
           ],
           [
-            "Sliding body width",
-            "36.55 mm \u00b7 1.44 in"
+            "Travel to stop",
+            "41.14 mm \u00b7 1.62 in"
+          ],
+          [
+            "Still inside at stop",
+            "28.27 mm \u00b7 1.11 in"
           ]
         ],
-        "description": "Wide flat-back bin in the right half gap.",
+        "description": "A closed sleeve supports the drawer along its floor, sides and roof. The outside keeper stops travel at 41 mm; remove it to take out the drawer. One screw anchors the housing to the plywood.",
         "downloads": [
           [
-            "Download Right pocket 3MF",
-            "projects/core-drawer-wall/r3-7/models/right-pocket-r3-7.3mf"
+            "Complete pocket \u00b7 3MF",
+            "projects/core-drawer-wall/r3-10/models/right-pocket-r3-10.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-7/models/right-pocket-r3-7.stl"
+            "projects/core-drawer-wall/r3-10/models/right-pocket-r3-10.stl"
           ],
           [
             "Drawer only \u00b7 3MF",
-            "projects/core-drawer-wall/r3-7/models/right-pocket-bin-r3-7.3mf"
+            "projects/core-drawer-wall/r3-10/models/right-pocket-bin-r3-10.3mf"
           ],
           [
-            "Front and rear frames only \u00b7 3MF",
-            "projects/core-drawer-wall/r3-7/models/right-pocket-frame-r3-7.3mf"
+            "Housing, frame and keeper \u00b7 3MF",
+            "projects/core-drawer-wall/r3-10/models/right-pocket-frame-r3-10.3mf"
           ]
         ]
       },

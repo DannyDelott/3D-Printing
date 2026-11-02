@@ -1,0 +1,82 @@
+{
+  "left-pocket": {
+    "bodies": 4,
+    "bounds_mm": [
+      186.71,
+      156.58,
+      76.55
+    ],
+    "clearance_mm": 0.44,
+    "stop_travel_mm": 41.14,
+    "engagement_at_stop_mm": 28.27,
+    "capacity_ml": 120.0,
+    "Front face frame": {
+      "bed_contact_mm2": 2852.7
+    },
+    "Enclosed housing, rear on bed": {
+      "bed_contact_mm2": 3165.7
+    },
+    "Removable keeper": {
+      "bed_contact_mm2": 63.6
+    },
+    "Drawer, open side up": {
+      "bed_contact_mm2": 1809.0
+    }
+  },
+  "left-pocket-frame": {
+    "bodies": 3,
+    "bounds_mm": [
+      146.24,
+      156.58,
+      76.55
+    ]
+  },
+  "left-pocket-bin": {
+    "bodies": 1,
+    "bounds_mm": [
+      35.47,
+      72.06,
+      62.71
+    ]
+  },
+  "right-pocket": {
+    "bodies": 4,
+    "bounds_mm": [
+      146.24,
+      197.05,
+      76.55
+    ],
+    "clearance_mm": 0.44,
+    "stop_travel_mm": 41.14,
+    "engagement_at_stop_mm": 28.27,
+    "capacity_ml": 121.6,
+    "Front face frame": {
+      "bed_contact_mm2": 2852.7
+    },
+    "Enclosed housing, rear on bed": {
+      "bed_contact_mm2": 3165.7
+    },
+    "Removable keeper": {
+      "bed_contact_mm2": 63.6
+    },
+    "Drawer, open side up": {
+      "bed_contact_mm2": 1809.0
+    }
+  },
+  "right-pocket-frame": {
+    "bodies": 3,
+    "bounds_mm": [
+      146.24,
+      156.58,
+      76.55
+    ]
+  },
+  "right-pocket-bin": {
+    "bodies": 1,
+    "bounds_mm": [
+      72.06,
+      35.47,
+      62.71
+    ]
+  }
+}
