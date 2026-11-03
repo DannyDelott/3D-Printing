@@ -3602,16 +3602,16 @@
     "title": "Cardboard core drawer wall",
     "category": "Storage",
     "description": "Stack cardboard cores against plywood. Three triangular gaps stay open for pencils. Enclosed, screw-mounted housings support the side drawers.",
-    "revision": "R3.10",
+    "revision": "R3.11",
     "status": "Digital fit checked \u00b7 unprinted",
     "slug": "core-drawer-wall",
     "root": "projects/core-drawer-wall",
-    "model": "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf",
-    "preview": "assets/core-wall-r310-assembly.png",
-    "readme": "projects/core-drawer-wall/r3-10/README.md",
-    "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
+    "model": "projects/core-drawer-wall/r3-11/models/starter-r3-11.3mf",
+    "preview": "assets/core-wall-r311-assembly.png",
+    "readme": "projects/core-drawer-wall/r3-11/README.md",
+    "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
     "source": [
-      "projects/core-drawer-wall/r3-10/source/model.py"
+      "projects/core-drawer-wall/r3-11/source/model.py"
     ],
     "license": "",
     "related": [
@@ -3633,14 +3633,14 @@
         "id": "mock-assembly",
         "group": "Assembly",
         "label": "Mock assembly",
-        "revision": "R3.10",
+        "revision": "R3.11",
         "description": "Three open pencil cubbies between eight cores. The left pocket drawer is partly open to show its fixed housing; the right drawer is closed.",
-        "preview": "assets/core-wall-r310-assembly.png",
-        "previewModel": "projects/core-drawer-wall/r3-10/models/mock-assembly.stl",
+        "preview": "assets/core-wall-r311-assembly.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/mock-assembly.stl",
         "dimensions": [
           [
-            "Print bounds",
-            "204.22 \u00d7 86.8 \u00d7 79.2 mm \u00b7 8.04 \u00d7 3.42 \u00d7 3.12 in"
+            "First-cell print bounds",
+            "199.75 \u00d7 136.6 \u00d7 66.5 mm \u00b7 7.86 \u00d7 5.38 \u00d7 2.62 in"
           ],
           [
             "Clear diameter through each triangle",
@@ -3654,138 +3654,193 @@
         "downloads": [
           [
             "Download first cell 3MF",
-            "projects/core-drawer-wall/r3-8/models/starter-r3-8.3mf"
+            "projects/core-drawer-wall/r3-11/models/starter-r3-11.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-8/models/starter-r3-8.stl"
+            "projects/core-drawer-wall/r3-11/models/starter-r3-11.stl"
           ]
         ],
-        "faceGroups": "projects/core-drawer-wall/r3-10/colors.json",
-        "datasheet": "projects/core-drawer-wall/r3-10/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-10/README.md",
+        "faceGroups": "projects/core-drawer-wall/r3-11/colors.json",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-10/source/model.py"
+          "projects/core-drawer-wall/r3-11/source/model.py"
         ]
       },
       {
         "id": "one-piece-open",
         "group": "Drawers",
         "label": "Open",
-        "revision": "R3.8",
-        "description": "One open bin with a flat, full-width rear wall and a recessed finger grip. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
-        "preview": "assets/core-wall-r38-open.png",
-        "previewModel": "projects/core-drawer-wall/r3-8/models/open-in-use.stl",
+        "revision": "R3.11",
+        "description": "One large compartment. Print the tray on its floor and the round face label-side down. Slide the face down both rails until the tab clicks.",
+        "preview": "assets/core-wall-r311-open.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/open-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
           ],
           [
             "Volume to rim",
-            "301.2 mL"
+            "286.3 mL"
           ]
         ],
         "downloads": [
           [
-            "Download Open 3MF",
-            "projects/core-drawer-wall/r3-8/models/open-r3-8.3mf"
+            "Tray and face \u00b7 3MF",
+            "projects/core-drawer-wall/r3-11/models/open-r3-11.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-8/models/open-r3-8.stl"
+            "projects/core-drawer-wall/r3-11/models/open-r3-11.stl"
           ]
         ],
         "guideNote": "One large compartment",
-        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-8/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-8/source/model.py",
-          "projects/core-drawer-wall/r3-8/source/drawers.py",
-          "projects/core-drawer-wall/r3-8/source/clips.py",
-          "projects/core-drawer-wall/r3-8/source/pockets.py",
-          "projects/core-drawer-wall/r3-8/source/spacers.py",
-          "projects/core-drawer-wall/r3-8/source/validation.py"
+          "projects/core-drawer-wall/r3-11/source/model.py"
         ]
       },
       {
         "id": "one-piece-left-right",
         "group": "Drawers",
         "label": "Left / right",
-        "revision": "R3.8",
-        "description": "A straight divider forms two long lanes in a flat-back drawer. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
-        "preview": "assets/core-wall-r38-left-right.png",
-        "previewModel": "projects/core-drawer-wall/r3-8/models/left-right-in-use.stl",
+        "revision": "R3.11",
+        "description": "Two long lanes. Print the tray on its floor and the round face label-side down. Slide the face down both rails until the tab clicks.",
+        "preview": "assets/core-wall-r311-left-right.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/left-right-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
           ],
           [
             "Volume to rim",
-            "293.7 mL"
+            "279.3 mL"
           ]
         ],
         "downloads": [
           [
-            "Download Left / right 3MF",
-            "projects/core-drawer-wall/r3-8/models/left-right-r3-8.3mf"
+            "Tray and face \u00b7 3MF",
+            "projects/core-drawer-wall/r3-11/models/left-right-r3-11.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-8/models/left-right-r3-8.stl"
+            "projects/core-drawer-wall/r3-11/models/left-right-r3-11.stl"
           ]
         ],
         "guideNote": "Two long lanes",
-        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-8/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-8/source/model.py",
-          "projects/core-drawer-wall/r3-8/source/drawers.py",
-          "projects/core-drawer-wall/r3-8/source/clips.py",
-          "projects/core-drawer-wall/r3-8/source/pockets.py",
-          "projects/core-drawer-wall/r3-8/source/spacers.py",
-          "projects/core-drawer-wall/r3-8/source/validation.py"
+          "projects/core-drawer-wall/r3-11/source/model.py"
         ]
       },
       {
         "id": "one-piece-front-back",
         "group": "Drawers",
         "label": "Front / back",
-        "revision": "R3.8",
-        "description": "A transverse divider forms a front and a rear compartment. Place the round front flat on the bed. Short bridges close the full back without slicer supports.",
-        "preview": "assets/core-wall-r38-front-back.png",
-        "previewModel": "projects/core-drawer-wall/r3-8/models/front-back-in-use.stl",
+        "revision": "R3.11",
+        "description": "Two short bins. Print the tray on its floor and the round face label-side down. Slide the face down both rails until the tab clicks.",
+        "preview": "assets/core-wall-r311-front-back.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/front-back-in-use.stl",
         "dimensions": [
           [
             "Print bounds",
-            "86.8 \u00d7 86.8 \u00d7 79.2 mm \u00b7 3.42 \u00d7 3.42 \u00d7 3.12 in"
+            "170.4 \u00d7 86.8 \u00d7 66.5 mm \u00b7 6.71 \u00d7 3.42 \u00d7 2.62 in"
           ],
           [
             "Volume to rim",
-            "288.6 mL"
+            "279.7 mL"
           ]
         ],
         "downloads": [
           [
-            "Download Front / back 3MF",
-            "projects/core-drawer-wall/r3-8/models/front-back-r3-8.3mf"
+            "Tray and face \u00b7 3MF",
+            "projects/core-drawer-wall/r3-11/models/front-back-r3-11.3mf"
           ],
           [
             "Print STL",
-            "projects/core-drawer-wall/r3-8/models/front-back-r3-8.stl"
+            "projects/core-drawer-wall/r3-11/models/front-back-r3-11.stl"
           ]
         ],
         "guideNote": "Two short bins",
-        "datasheet": "projects/core-drawer-wall/r3-8/datasheet.html",
-        "readme": "projects/core-drawer-wall/r3-8/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
         "source": [
-          "projects/core-drawer-wall/r3-8/source/model.py",
-          "projects/core-drawer-wall/r3-8/source/drawers.py",
-          "projects/core-drawer-wall/r3-8/source/clips.py",
-          "projects/core-drawer-wall/r3-8/source/pockets.py",
-          "projects/core-drawer-wall/r3-8/source/spacers.py",
-          "projects/core-drawer-wall/r3-8/source/validation.py"
+          "projects/core-drawer-wall/r3-11/source/model.py"
+        ]
+      },
+      {
+        "id": "drawer-face",
+        "group": "Drawers",
+        "label": "Common drawer front",
+        "guideNote": "Fits all three trays",
+        "description": "One round front with a blind finger cup and two dovetail sockets. Included on each drawer plate.",
+        "preview": "assets/core-wall-r311-face.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/face-r3-11.stl",
+        "downloads": [
+          [
+            "Common drawer front \u00b7 3MF",
+            "projects/core-drawer-wall/r3-11/models/face-r3-11.3mf"
+          ],
+          [
+            "Print STL",
+            "projects/core-drawer-wall/r3-11/models/face-r3-11.stl"
+          ]
+        ],
+        "dimensions": [
+          [
+            "Print bounds",
+            "86.8 \u00d7 86.8 \u00d7 15.6 mm \u00b7 3.42 \u00d7 3.42 \u00d7 0.61 in"
+          ],
+          [
+            "Front diameter",
+            "86.8 mm \u00b7 3.42 in"
+          ]
+        ],
+        "revision": "R3.11",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-11/source/model.py"
+        ]
+      },
+      {
+        "id": "front-fit",
+        "group": "Drawers",
+        "label": "Front joint fit sample",
+        "guideNote": "Check the snap fit first",
+        "description": "One tray rail, its full-size spring tab and the matching face socket. Print in the same material as the drawer.",
+        "preview": "assets/core-wall-r311-front-fit.png",
+        "previewModel": "projects/core-drawer-wall/r3-11/models/front-fit-r3-11.stl",
+        "downloads": [
+          [
+            "Front joint fit sample \u00b7 3MF",
+            "projects/core-drawer-wall/r3-11/models/front-fit-r3-11.3mf"
+          ],
+          [
+            "Print STL",
+            "projects/core-drawer-wall/r3-11/models/front-fit-r3-11.stl"
+          ]
+        ],
+        "dimensions": [
+          [
+            "Print bounds",
+            "77 \u00d7 33 \u00d7 33 mm \u00b7 3.03 \u00d7 1.30 \u00d7 1.30 in"
+          ],
+          [
+            "Rail side clearance",
+            "0.22 mm \u00b7 0.01 in"
+          ]
+        ],
+        "revision": "R3.11",
+        "readme": "projects/core-drawer-wall/r3-11/README.md",
+        "datasheet": "projects/core-drawer-wall/r3-11/datasheet.html",
+        "source": [
+          "projects/core-drawer-wall/r3-11/source/model.py"
         ]
       },
       {

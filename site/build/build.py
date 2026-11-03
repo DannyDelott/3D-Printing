@@ -274,7 +274,7 @@ def project_page(p, published):
                        f'<p>{escape(p["description"])}</p><p><a href="{href(page, artifact(p["datasheet"]))}">Print orientation &amp; eight-row mounting diagram →</a></p>')
         isolated = '<section class="part-preview" data-part-preview hidden><div class="part-preview-head"><h2><small>Isolated part</small><span data-isolated-name></span></h2><button type="button" data-part-close aria-label="Clear part selection">×</button></div><canvas tabindex="0" aria-label="Isolated selected part. Drag to rotate and scroll to zoom."></canvas><div class="part-preview-tools"><span>Drag to rotate · Scroll to zoom</span><button type="button" data-part-reset>Reset</button></div></section>'
         starter_links = ''.join(file_link(page, label, path) for label, path in p['downloads'])
-        information = (isolated + f'<section class="starter-action"><h2>Print your first cell</h2><p>One open drawer and four feet. Press a foot onto each end of a bare core and slide the drawer in from the front.</p><div class="download-list starter-download">{starter_links}</div></section>'
+        information = (isolated + f'<section class="starter-action"><h2>Print your first cell</h2><p>Print the tray, round front and four feet. Slide the front down the tray rails until it clicks, then install the feet and drawer in a bare core.</p><div class="download-list starter-download">{starter_links}</div></section>'
                        + parts_directory(p, page))
         legacy = ''
     elif p.get('partsGuide'):

@@ -36,7 +36,7 @@ class PublishingTests(unittest.TestCase):
         self.assertEqual(sum(group[2] == 'wood-screw' for group in meta['groups']), 4)
         installed = {key for group in meta['groups'] for key in group[2:4] if key}
         self.assertEqual(installed, set(meta['items']))
-        self.assertEqual({v['id'] for v in project['views'] if v.get('guideNote') and v['id'] != 'fit'}, {key for key, item in meta['items'].items() if item[2] and not key.endswith('-pocket-frame')})
+        self.assertEqual({v['id'] for v in project['views'] if v.get('guideNote') and v['id'] not in {'fit','front-fit'}}, {key for key, item in meta['items'].items() if item[2] and not key.endswith('-pocket-frame')})
 
     def test_woodworking_assembly_has_no_filament_estimate(self):
         project = dict(slug='cabinet-assembly', fabrication='woodworking', downloads=[['Assembly', 'assembly.3mf']])

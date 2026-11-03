@@ -14,7 +14,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
    if(!id)continue;hitIds.add(id);
    assert.equal(await p.locator('[data-assembly-id].part-picked').getAttribute('data-assembly-id'),id.replace(/-pocket-frame$/, '-pocket'));
   }
-  assert.ok([...hitIds].some(s=>s.startsWith('one-piece-')) && hitIds.has('core'),'Physical hits must identify both a printed drawer and cardboard');
+  assert.ok([...hitIds].some(s=>s.startsWith('one-piece-')||s==='drawer-face') && hitIds.has('core'),'Physical hits must identify both a printed drawer and cardboard');
   await p.locator('[data-assembly-id="middle-mount"] a').click();assert.equal(await c.getAttribute('data-selected-part'),'middle-mount');
   assert.ok((await panel.locator('[data-picked-link]').getAttribute('href')).includes('/middle-mount/'));
   await panel.getByLabel('Reveal connectors').check();assert.equal(await c.getAttribute('data-drawers-hidden'),'true');

@@ -1,0 +1,56 @@
+{
+  "front-fit": {
+    "sha256": "2a25311970bb42b7d22f4757f203e53901d20ab4a04f36e00df55ec227c56942",
+    "bodies": 2,
+    "grams": 6.92,
+    "minutes": 24,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  },
+  "face": {
+    "sha256": "92883ba4d794ce6a0a90a606de2b8a37d32f1d13ded79a0bf268ade1d457b62e",
+    "bodies": 1,
+    "grams": 17.94,
+    "minutes": 33,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  },
+  "front-back": {
+    "sha256": "1b825d55368f44c08fdf63f37e987b92eccdb43630b9b197a8c945889e0086a0",
+    "bodies": 2,
+    "grams": 65.1,
+    "minutes": 99,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  },
+  "left-right": {
+    "sha256": "1444328a1955400488ec8027ddd6f70f290302ffd4a7ae9f6fd4e4f752972075",
+    "bodies": 2,
+    "grams": 65.53,
+    "minutes": 96,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  },
+  "starter": {
+    "sha256": "8706c0eb983425b2734d93a07a0856e992953c3caab6aabf5fbae3b54a47276a",
+    "bodies": 6,
+    "grams": 66.15,
+    "minutes": 106,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  },
+  "open": {
+    "sha256": "8c8bfdf94158e9da7d4766e5188161f58167859a62135af26e5eeda5f31ed893",
+    "bodies": 2,
+    "grams": 57.29,
+    "minutes": 90,
+    "supports": false,
+    "brim": false,
+    "warnings": []
+  }
+}
