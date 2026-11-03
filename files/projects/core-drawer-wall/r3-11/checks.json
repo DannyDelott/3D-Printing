@@ -1,0 +1,81 @@
+{
+  "open": {
+    "bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "bodies": 2,
+    "bed_contact_mm2": {
+      "open tray, floor down": 2473.5,
+      "Common round face, label down": 5425.3
+    },
+    "ml": 286.3
+  },
+  "left-right": {
+    "bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "bodies": 2,
+    "bed_contact_mm2": {
+      "left-right tray, floor down": 2473.5,
+      "Common round face, label down": 5425.3
+    },
+    "ml": 279.3
+  },
+  "front-back": {
+    "bounds": [
+      170.4,
+      86.8,
+      66.5
+    ],
+    "bodies": 2,
+    "bed_contact_mm2": {
+      "front-back tray, floor down": 2473.5,
+      "Common round face, label down": 5425.3
+    },
+    "ml": 279.7
+  },
+  "starter": {
+    "bounds": [
+      199.75,
+      136.6,
+      66.5
+    ],
+    "bodies": 6,
+    "bed_contact_mm2": {
+      "open tray, floor down": 2473.5,
+      "Common round face, label down": 5425.3,
+      "Front rim clip": 602.3,
+      "Rear rim clip": 602.3
+    }
+  },
+  "front-fit": {
+    "bounds": [
+      77.0,
+      33.0,
+      33.0
+    ],
+    "bodies": 2,
+    "bed_contact_mm2": {
+      "Rail and latch sample": 252.0,
+      "Face socket sample": 1188.0
+    },
+    "rail_side_clearance_mm": 0.22,
+    "nominal_snap_deflection_mm": 0.45,
+    "rail_pull_undercut_mm": 1.25
+  },
+  "face": {
+    "bounds": [
+      86.8,
+      86.8,
+      15.6
+    ],
+    "bodies": 1,
+    "bed_contact_mm2": {
+      "Common round face, label down": 5425.3
+    }
+  }
+}
